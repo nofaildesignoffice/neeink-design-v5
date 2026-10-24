@@ -1420,6 +1420,34 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .v2-sol .ls-row p{margin:0;padding:0;font-size:15px;color:var(--tx);line-height:1.65;text-align:left}
 .v2-sol .ls-row .txt::after{counter-increment:sz;content:"0" counter(sz);position:absolute;right:20px;top:-.55em;font-family:var(--serif-en);font-size:clamp(60px,5.2vw,100px);line-height:1;color:#505257;opacity:.07;pointer-events:none}
 @media (max-width:768px){.v2-sol .ls-row p{font-size:14px}}
+/* ===== v5 랜딩 재구성: 구조 카드 · 신뢰 밴드 · Q&A ===== */
+.lp-chain{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px 0;margin:0 0 clamp(28px,2.6vw,44px)}
+.lp-chain span{padding:10px 18px;border:1px solid rgba(0,87,255,.28);border-radius:999px;background:#fff;font-size:14px;font-weight:600;color:#000;letter-spacing:-.02em}
+.lp-chain i{position:relative;width:clamp(28px,3.4vw,64px);height:1px;margin:0 10px;background:linear-gradient(90deg,rgba(0,87,255,.15),#0057ff)}
+.lp-chain i::after{content:"";position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;background:#0057ff;animation:lpChain 2.2s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes lpChain{0%{left:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{left:calc(100% - 7px);opacity:0}}
+.lp-cds{display:grid;gap:clamp(12px,1.2vw,20px)}
+.lp-cds.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lp-cds.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.lp-cd{position:relative;padding:clamp(26px,2.4vw,40px) clamp(22px,2vw,32px);border-radius:18px;background:#fff;border:1px solid rgba(0,0,0,.08);text-align:left}
+.bg-light .lp-cd{border-color:transparent}
+.lp-cd-n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#0057ff;color:#fff;font:600 13px/1 var(--serif-en),sans-serif;letter-spacing:0}
+.lp-cd h3{margin-top:18px;font-size:clamp(17px,1.25vw,20px);font-weight:700;line-height:1.4;letter-spacing:-.03em;color:#000}
+.lp-cd p{margin-top:10px;font-size:15px;line-height:1.7;color:var(--tx,#505257)}
+.lp-cds.c4 .lp-cd:not(:last-child)::after{content:"";position:absolute;top:calc(clamp(26px,2.4vw,40px) + 17px);right:calc(-1 * clamp(12px,1.2vw,20px));width:clamp(12px,1.2vw,20px);height:1px;background:#0057ff;opacity:.5}
+.lp-cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:clamp(32px,3vw,48px)}
+.lp-band{background:#000;color:#fff;padding:clamp(56px,5.2vw,96px) 0;text-align:center;position:relative;overflow:hidden}
+.lp-band::before{content:"";position:absolute;left:50%;top:-60%;width:70%;height:160%;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(0,87,255,.35),rgba(0,87,255,0));pointer-events:none}
+.lp-band-in{position:relative}
+.lp-band-ic{width:44px;height:44px;color:#6fa0ff;margin:0 auto 18px;display:block}
+.lp-band-t{font-family:var(--serif-ko);font-size:clamp(22px,2.2vw,36px);line-height:1.4;letter-spacing:-.05em;color:#fff}
+.lp-band-s{margin-top:12px;font-size:15px;color:rgba(255,255,255,.66)}
+.lp-q{font-style:normal;font-family:var(--serif-en);color:#0057ff;margin-right:10px}
+.lp-qna .acc-q>span:first-child{display:flex;align-items:baseline}
+.lp-qna .acc-a{line-height:1.75}
+@media (max-width:1024px){.lp-cds.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-cds.c4 .lp-cd::after{display:none}}
+@media (max-width:768px){.lp-cds.c3,.lp-cds.c4{grid-template-columns:1fr}.lp-chain{flex-direction:column}.lp-chain i{width:1px;height:22px;margin:6px 0;background:linear-gradient(180deg,rgba(0,87,255,.15),#0057ff)}.lp-chain i::after{display:none}}
+.lp-proof-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
 </style>
 </head>
 <body>
@@ -1568,6 +1596,19 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
   <div class="container"><p class="answer">가리면 <b>실력이 보이지 않고</b>, 그대로 올리면 <b>고객이 불편해집니다.</b><br>그렇기 때문에 니잉은 <b>동의 범위부터 정리</b>하고, <b>얼굴만 바꾸는 절차</b>와 <b>시술 결과가 바뀌지 않았는지 확인하는 검수 기준</b>을 함께 가르칩니다.</p></div>
 </section>
 
+<!-- ================= LP : 사진에서 포트폴리오까지 ================= -->
+<section class="section bg-light lp-struct">
+  <div class="container">
+    <div class="text-center lp-hd">
+      <p class="section-label">From Photo to Portfolio</p>
+      <h2 class="section-title">묵혀둔 시술 사진,<br>확인하고 바꾸고 보여주세요</h2>
+      <p class="section-desc">얼굴을 바꾸는 작업에 앞서 사용 범위를 확인해요. 작업 뒤에는 시술 결과를 원본과 비교합니다.</p>
+    </div>
+    <div class="lp-cds c4"><div class="lp-cd"><span class="lp-cd-n">01</span><h3>사용할 수 있는 사진부터 골라요</h3><p>고객이 동의한 범위 안에서 원본을 준비해요. AI 얼굴 변경과 게시에 사용할 범위도 먼저 확인합니다.</p></div><div class="lp-cd"><span class="lp-cd-n">02</span><h3>얼굴을 바꾸는 방법을 배워요</h3><p>기초 세팅과 제공 프롬프트를 활용해 내 작업 사진으로 실습해요. 시술 부위를 유지하는 편집 방법을 익힙니다.</p></div><div class="lp-cd"><span class="lp-cd-n">03</span><h3>원본과 나란히 확인해요</h3><p>속눈썹과 눈 모양이 달라지지 않았는지 살펴봐요. 시술 결과가 달라진 이미지는 사용하지 않습니다.</p></div><div class="lp-cd"><span class="lp-cd-n">04</span><h3>변경 사실을 밝히고 보여줘요</h3><p>얼굴을 AI로 변경했다는 사실을 표시해요. 검수를 마친 이미지를 포트폴리오로 활용하고, 동영상 활용법도 배웁니다.</p></div></div>
+    <p class="micro text-center lp-note">※ 얼굴 변경만으로 모든 사진을 게시할 수 있는 것은 아니에요. 사진의 사용 범위와 원본 대조를 함께 확인해 주세요.</p>
+  </div>
+</section>
+
 <!-- ================= 섹션 7 : Solution 01~03 ================= -->
 <section class="section bg-light v2-sol">
   <div class="container">
@@ -1581,23 +1622,6 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
     <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 01</p><h3>얼굴 공개가 부담스러운 고객 사진도, 포트폴리오로</h3><p>AI 초상권 보호법(얼굴 체인지)으로 고객을 알아볼 수 없게 바꾸고, 서랍 속 작업 사진을 다시 꺼내요. 원본은 고객이 동의한 범위 안에서만 다룹니다.</p></div></div>
     <div class="ls-row"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 02</p><h3>가리지 않고, 얼굴 전체를 보여줘요</h3><p>얼굴 전체가 보이니 고객이 시술 후 모습을 바로 상상할 수 있어요. 사진 한 장으로 여러 포트폴리오는 물론 동영상까지 만듭니다.</p></div></div>
     <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 03</p><h3>올리기 전, 검수 기준으로 한 번 더</h3><p>AI를 진정성 있게 쓰는 원칙과 검수 기준으로 속눈썹·눈썹이 원본과 달라지지 않았는지 확인해요. 그리고 얼굴을 바꿨다는 사실을 밝혀 게시합니다.</p></div></div>
-  </div>
-</section>
-
-<!-- ================= 섹션 2 : How It Works ================= -->
-<section class="section v2-adv">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">How It Works</p>
-      <h2 class="section-title">모든 AI 클래스는<br>이 원칙에서 시작합니다</h2>
-      <p class="section-desc">예쁘게 꾸미는 법이 아니에요. 고객과 원장님을 모두 지키면서 보여주는 법을 배웁니다.</p>
-    </div>
-    <div class="hiw">
-      <div><h3>시술 결과는 손대지 않기</h3><p>바꾸는 건 얼굴뿐, 속눈썹 결과는 원본 그대로 둬요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>진정성 원칙 · 검수 기준</h3><p>올리기 전, 무엇을 확인할지 기준부터 세워요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>내 사진으로 바로 실습</h3><p>쌓아둔 내 고객 사진으로 직접 만들어 봐요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>프롬프트 제공 · 피드백</h3><p>필요한 프롬프트는 드리고, 막히면 바로 물어보세요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-    </div>
   </div>
 </section>
 
@@ -1621,6 +1645,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
   </div>
 </section>
 
+<!-- ================= 섹션 2 : How It Works ================= -->
+<section class="section v2-adv">
+  <div class="container">
+    <div class="text-center">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">모든 AI 클래스는<br>이 원칙에서 시작합니다</h2>
+      <p class="section-desc">예쁘게 꾸미는 법이 아니에요. 고객과 원장님을 모두 지키면서 보여주는 법을 배웁니다.</p>
+    </div>
+    <div class="hiw">
+      <div><h3>시술 결과는 손대지 않기</h3><p>바꾸는 건 얼굴뿐, 속눈썹 결과는 원본 그대로 둬요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
+      <div><h3>진정성 원칙 · 검수 기준</h3><p>올리기 전, 무엇을 확인할지 기준부터 세워요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
+      <div><h3>내 사진으로 바로 실습</h3><p>쌓아둔 내 고객 사진으로 직접 만들어 봐요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
+      <div><h3>프롬프트 제공 · 피드백</h3><p>필요한 프롬프트는 드리고, 막히면 바로 물어보세요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= 섹션 8 : Core — 커리큘럼 ================= -->
 <section class="section v2-core">
   <div class="container">
@@ -1633,17 +1674,6 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
       </div>
       <div class="img-placeholder" style="aspect-ratio:3/4;position:sticky;top:100px"><i data-lucide="play-circle"></i></div>
     </div>
-  </div>
-</section>
-
-<!-- ================= 섹션 11 : CLASS ================= -->
-<section class="section bg-light v2-cls" id="class">
-  <div class="container">
-    <p class="section-label">Class</p>
-    <h2 class="section-title">나에게 맞는<br>AI 클래스를 고르세요</h2>
-    <p class="section-desc">내 속도에 맞춰 듣는 VOD, 현장에서 함께하는 그룹, 내 계정에 맞춘 1:1까지.</p>
-    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-vod.jpg" alt="AI 포트폴리오 제작법 VOD" loading="lazy"></div><span class="who-tag">온라인 VOD</span><h3>AI 포트폴리오 제작법 (VOD)</h3><p>얼굴은 지키고 실력은 보여주는, AI 포트폴리오 제작법</p><div class="hash"><span>수강 1달 + 피드백 1달</span><span>24만 9천원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="0">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-group.jpg" alt="AI 마케팅 그룹 클래스" loading="lazy"></div><span class="who-tag">오프라인 그룹</span><h3>AI 마케팅 그룹 클래스 (3:1)</h3><p>3명이 함께, 3시간 안에 기본기를 확실하게</p><div class="hash"><span>3시간 · 1회</span><span>50만원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="1">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-private.jpg" alt="AI 마케팅 프라이빗 클래스" loading="lazy"></div><span class="who-tag">오프라인 1:1</span><h3>AI 마케팅 프라이빗 클래스 (1:1)</h3><p>내 사진, 내 상황에 맞춰 완성도를 끝까지</p><div class="hash"><span>5시간 · 1회</span><span>100만원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="2">자세히 보기</button></article></div>
-    <p class="micro text-center">AI 오프라인 세미나 참여 시 VOD 수강자 50% 할인권 제공 · 제휴 아카데미 원장님 할인 [클라이언트 확인 필요: 그룹·1:1 현재 운영 여부]</p>
   </div>
 </section>
 
@@ -1667,7 +1697,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 <!-- ================= LP : 숫자·이력 ================= -->
-<section class="section lp-proof">
+<section class="section bg-light lp-proof">
   <div class="container">
     <div class="text-center lp-hd">
       <p class="section-label">Proof</p>
@@ -1675,6 +1705,15 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
     </div>
     <div class="lp-proof-grid"><div><p class="v">87%</p><p class="k">전후 사진을 중요하게 보는 소비자</p><p class="s">Aesthetic Surgery Journal, 2023</p></div><div><p class="v">5개+</p><p class="k">수업 시간 안에 완성하는 콘텐츠</p><p class="s">내 고객 사진으로 직접</p></div><div><p class="v">3 PART</p><p class="k">보여주는 법부터 동영상까지</p><p class="s">단계별 커리큘럼</p></div><div><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">시술하는 사람이 만든 기준</p></div></div>
   </div>
+</section>
+
+<!-- ================= LP : 신뢰 밴드 ================= -->
+<section class="lp-band">
+  <div class="container"><div class="lp-band-in">
+    <svg class="lp-band-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="19" r="12"/><path d="M18.5 19l3.8 3.8 7.2-7.6"/><path d="M16.5 28.5 13 43l11-5 11 5-3.5-14.5"/></svg>
+    <p class="lp-band-t">얼굴만 바꾸고, 시술 결과는 원본 그대로.</p>
+    <p class="lp-band-s">원본과 대조해 확인하고, AI로 얼굴을 변경한 사실을 밝혀 게시합니다.</p>
+  </div></div>
 </section>
 
 <!-- ================= LP : 현장 갤러리 ================= -->
@@ -1692,6 +1731,50 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 <!-- ================= LP : 마무리 한 줄 ================= -->
 <section class="section lp-tagline">
   <div class="container text-center"><p class="lp-tag-t">보여주지 못한 실력은,<br>이제 <em>얼굴 없이도</em> 보여줄 수 있어요.</p></div>
+</section>
+
+<!-- ================= LP : 시작 전 점검 ================= -->
+<section class="section bg-light lp-struct lp-assure">
+  <div class="container">
+    <div class="text-center lp-hd">
+      <p class="section-label">Before You Start</p>
+      <h2 class="section-title">처음이라면,<br>준비할 것부터 확인해요</h2>
+      <p class="section-desc">내 사진으로 무엇을 만들고 싶은지, 어떤 방식으로 배울지. 시작 전에 하나씩 정리해 주세요.</p>
+    </div>
+    <div class="lp-cds c3"><div class="lp-cd"><span class="lp-cd-n">01</span><h3>내 사진과 만들고 싶은 결과</h3><p>시술 사진 중 사용할 수 있는 원본을 살펴보세요. 사진 포트폴리오부터 동영상까지, 배우고 싶은 활용법을 정리하면 좋아요.</p></div><div class="lp-cd"><span class="lp-cd-n">02</span><h3>내 속도에 맞는 수업</h3><p>VOD, 그룹, 프라이빗 과정이 있어요. 수강 방식과 질문할 수 있는 기간을 함께 비교해 주세요.</p></div><div class="lp-cd"><span class="lp-cd-n">03</span><h3>기기와 추가 비용</h3><p>준비물은 노트북 또는 태블릿이에요. 사용하실 기기와 AI 서비스 구독료는 신청 전 상담에서 안내해 드려요.</p></div></div>
+    <div class="lp-cta-row"><a href="page_09.html" class="btn btn-primary btn-arrow">내게 맞는 과정 상담하기</a><a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" rel="noopener" class="btn btn-secondary">카카오톡 상담</a></div>
+    <p class="micro text-center lp-note">카카오톡 상담 평일 10:30 ~ 19:00</p>
+  </div>
+</section>
+
+<!-- ================= 섹션 11 : CLASS ================= -->
+<section class="section v2-cls" id="class">
+  <div class="container">
+    <p class="section-label">Class</p>
+    <h2 class="section-title">나에게 맞는<br>AI 클래스를 고르세요</h2>
+    <p class="section-desc">내 속도에 맞춰 듣는 VOD, 현장에서 함께하는 그룹, 내 계정에 맞춘 1:1까지.</p>
+    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-vod.jpg" alt="AI 포트폴리오 제작법 VOD" loading="lazy"></div><span class="who-tag">온라인 VOD</span><h3>AI 포트폴리오 제작법 (VOD)</h3><p>얼굴은 지키고 실력은 보여주는, AI 포트폴리오 제작법</p><div class="hash"><span>수강 1달 + 피드백 1달</span><span>24만 9천원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="0">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-group.jpg" alt="AI 마케팅 그룹 클래스" loading="lazy"></div><span class="who-tag">오프라인 그룹</span><h3>AI 마케팅 그룹 클래스 (3:1)</h3><p>3명이 함께, 3시간 안에 기본기를 확실하게</p><div class="hash"><span>3시간 · 1회</span><span>50만원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="1">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-private.jpg" alt="AI 마케팅 프라이빗 클래스" loading="lazy"></div><span class="who-tag">오프라인 1:1</span><h3>AI 마케팅 프라이빗 클래스 (1:1)</h3><p>내 사진, 내 상황에 맞춰 완성도를 끝까지</p><div class="hash"><span>5시간 · 1회</span><span>100만원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="2">자세히 보기</button></article></div>
+    <p class="micro text-center">AI 오프라인 세미나 참여 시 VOD 수강자 50% 할인권 제공 · 제휴 아카데미 원장님 할인 [클라이언트 확인 필요: 그룹·1:1 현재 운영 여부]</p>
+  </div>
+</section>
+
+<!-- ================= LP : 자주 묻는 질문 ================= -->
+<section class="section bg-light lp-qna">
+  <div class="container" style="max-width:960px">
+    <div class="text-center lp-hd">
+      <p class="section-label">Q&amp;A</p>
+      <h2 class="section-title">내 사진으로 시작하기 전,<br>궁금한 점을 확인해 보세요</h2>
+      <p class="section-desc">사진 사용 범위와 결과 검수, 준비 환경과 피드백까지 안내해 드려요.</p>
+    </div>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>AI나 컴퓨터를 잘 몰라도 배울 수 있나요?</span> <span class="mk">+</span></button><div class="acc-a">커리큘럼에 AI 구독·요금제 설명과 기초 세팅이 포함돼 있고, 작업에 필요한 프롬프트도 제공해요. 사용 경험과 만들고 싶은 결과물을 알려주시면 수강 방식은 상담에서 안내해 드려요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>고객 얼굴을 AI로 바꾸면, 동의받지 않은 사진도 올릴 수 있나요?</span> <span class="mk">+</span></button><div class="acc-a">아니요. 원본 사진은 고객이 동의한 범위 안에서 사용해요. 촬영과 게시 동의를 구분하고, AI 얼굴 변경 여부와 게시 채널·목적·기간도 확인하는 것이 수업의 운영 원칙이에요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>얼굴을 바꾸다가 속눈썹이나 눈 모양까지 달라지면 어떻게 하나요?</span> <span class="mk">+</span></button><div class="acc-a">원본과 비교해 시술 결과와 눈 모양을 확인해요. 달라진 이미지는 게시하지 않아요. 검수를 마친 사진도 얼굴을 AI로 변경했다는 사실을 밝혀 게시하는 원칙을 배워요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>얼굴을 바꾸는 것 외에 무엇을 배우나요?</span> <span class="mk">+</span></button><div class="acc-a">작업물의 화질을 높이는 방법, 사진 한 장으로 여러 포트폴리오를 만드는 방법, 이미지를 동영상으로 만드는 방법을 다뤄요. 가상 인플루언서 활용도 배우며, 가상 모델은 실제 고객 사진이나 후기로 표현하지 않아요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>어떤 기기가 필요하고, 수강료 외에 비용이 더 드나요?</span> <span class="mk">+</span></button><div class="acc-a">실습 준비 기기로 노트북 또는 태블릿을 안내하고 있어요. 사용하실 기기의 실습 가능 여부와 필요한 세팅, AI 서비스 구독료의 별도 부담 여부·요금제는 수강 전 상담에서 안내해 드려요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>수강 후에도 질문할 수 있나요? 오프라인 수업도 있나요?</span> <span class="mk">+</span></button><div class="acc-a">VOD는 수강 1달과 피드백 1달로 안내돼 있어요. 그룹·프라이빗 과정의 현재 개설 여부와 일정, 과정별 피드백 범위는 상담에서 안내해 드려요.</div></div>
+    </div>
+  </div>
 </section>
 
 <!-- ================= 섹션 12 : Notice ================= -->
@@ -1911,7 +1994,7 @@ window.addEventListener('scroll',function(){fx.classList.toggle('is-show',window
 (function(){
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var SKIP='header,footer,.nav,.m-menu,.q-aside,.q-md,.rv-md,.md,.v2-hero,.hero,.loop-track,.arc-track,.ai-stage,.csel,.arc-ring,.page-head';
-  var CARD='.lp-step,.lp-ba-card,.lp-ba-img figure,.lp-proof-grid>div,.lp-offer-box,.card,.prod-card,.cls-card,.v2-rv .loop-vp,#rvArc,.checks li,.stats>div,.hstats>div,.banner,.acc-item,.hiw>*,.ls-row,.core-steps li,.proc>*,.img-placeholder,.ai-stage,.loc-map,.loc-info li,.notice-pin,.tbl-scroll,.emp,.cmp,.split>video,.form-box,.ct-form,.store-list>*,.map-ph,.pc-img,.tabs,.search-box,.store-filter,.pager,.sub-form,.qline>*,.v2-cta .banner';
+  var CARD='.lp-cd,.lp-band-in,.lp-step,.lp-ba-card,.lp-ba-img figure,.lp-proof-grid>div,.lp-offer-box,.card,.prod-card,.cls-card,.v2-rv .loop-vp,#rvArc,.checks li,.stats>div,.hstats>div,.banner,.acc-item,.hiw>*,.ls-row,.core-steps li,.proc>*,.img-placeholder,.ai-stage,.loc-map,.loc-info li,.notice-pin,.tbl-scroll,.emp,.cmp,.split>video,.form-box,.ct-form,.store-list>*,.map-ph,.pc-img,.tabs,.search-box,.store-filter,.pager,.sub-form,.qline>*,.v2-cta .banner';
   var TEXT='h1,h2,h3,h4,h5,p,blockquote,figcaption,dt,dd,.btn,.section-label,.circle-ani,label';
   function ok(e){return !e.closest(SKIP)||e.matches('.ai-stage')}
   var main=[].slice.call(document.querySelectorAll('body>section,body>div.v2-stack>section.v2-info'));

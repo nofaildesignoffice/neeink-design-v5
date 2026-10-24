@@ -1360,6 +1360,34 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .v2-sol .ls-row p{margin:0;padding:0;font-size:15px;color:var(--tx);line-height:1.65;text-align:left}
 .v2-sol .ls-row .txt::after{counter-increment:sz;content:"0" counter(sz);position:absolute;right:20px;top:-.55em;font-family:var(--serif-en);font-size:clamp(60px,5.2vw,100px);line-height:1;color:#505257;opacity:.07;pointer-events:none}
 @media (max-width:768px){.v2-sol .ls-row p{font-size:14px}}
+/* ===== v5 랜딩 재구성: 구조 카드 · 신뢰 밴드 · Q&A ===== */
+.lp-chain{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px 0;margin:0 0 clamp(28px,2.6vw,44px)}
+.lp-chain span{padding:10px 18px;border:1px solid rgba(0,87,255,.28);border-radius:999px;background:#fff;font-size:14px;font-weight:600;color:#000;letter-spacing:-.02em}
+.lp-chain i{position:relative;width:clamp(28px,3.4vw,64px);height:1px;margin:0 10px;background:linear-gradient(90deg,rgba(0,87,255,.15),#0057ff)}
+.lp-chain i::after{content:"";position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;background:#0057ff;animation:lpChain 2.2s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes lpChain{0%{left:0;opacity:0}15%{opacity:1}85%{opacity:1}100%{left:calc(100% - 7px);opacity:0}}
+.lp-cds{display:grid;gap:clamp(12px,1.2vw,20px)}
+.lp-cds.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.lp-cds.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.lp-cd{position:relative;padding:clamp(26px,2.4vw,40px) clamp(22px,2vw,32px);border-radius:18px;background:#fff;border:1px solid rgba(0,0,0,.08);text-align:left}
+.bg-light .lp-cd{border-color:transparent}
+.lp-cd-n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#0057ff;color:#fff;font:600 13px/1 var(--serif-en),sans-serif;letter-spacing:0}
+.lp-cd h3{margin-top:18px;font-size:clamp(17px,1.25vw,20px);font-weight:700;line-height:1.4;letter-spacing:-.03em;color:#000}
+.lp-cd p{margin-top:10px;font-size:15px;line-height:1.7;color:var(--tx,#505257)}
+.lp-cds.c4 .lp-cd:not(:last-child)::after{content:"";position:absolute;top:calc(clamp(26px,2.4vw,40px) + 17px);right:calc(-1 * clamp(12px,1.2vw,20px));width:clamp(12px,1.2vw,20px);height:1px;background:#0057ff;opacity:.5}
+.lp-cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:clamp(32px,3vw,48px)}
+.lp-band{background:#000;color:#fff;padding:clamp(56px,5.2vw,96px) 0;text-align:center;position:relative;overflow:hidden}
+.lp-band::before{content:"";position:absolute;left:50%;top:-60%;width:70%;height:160%;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(0,87,255,.35),rgba(0,87,255,0));pointer-events:none}
+.lp-band-in{position:relative}
+.lp-band-ic{width:44px;height:44px;color:#6fa0ff;margin:0 auto 18px;display:block}
+.lp-band-t{font-family:var(--serif-ko);font-size:clamp(22px,2.2vw,36px);line-height:1.4;letter-spacing:-.05em;color:#fff}
+.lp-band-s{margin-top:12px;font-size:15px;color:rgba(255,255,255,.66)}
+.lp-q{font-style:normal;font-family:var(--serif-en);color:#0057ff;margin-right:10px}
+.lp-qna .acc-q>span:first-child{display:flex;align-items:baseline}
+.lp-qna .acc-a{line-height:1.75}
+@media (max-width:1024px){.lp-cds.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-cds.c4 .lp-cd::after{display:none}}
+@media (max-width:768px){.lp-cds.c3,.lp-cds.c4{grid-template-columns:1fr}.lp-chain{flex-direction:column}.lp-chain i{width:1px;height:22px;margin:6px 0;background:linear-gradient(180deg,rgba(0,87,255,.15),#0057ff)}.lp-chain i::after{display:none}}
+.lp-proof-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
 </style>
 </head>
 <body>
@@ -1523,7 +1551,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 <!-- ================= 섹션 2 : How It Works ================= -->
-<section class="section v2-adv">
+<section class="section bg-light v2-adv">
   <div class="container">
     <div class="text-center">
       <p class="section-label">How It Works</p>
@@ -1540,7 +1568,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 <!-- ================= 섹션 9 : Difference ================= -->
-<section class="section bg-light v2-cmp">
+<section class="section v2-cmp">
   <div class="container">
     <div class="text-center">
       <p class="section-label">Difference</p>
@@ -1576,16 +1604,6 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
   </div>
 </section>
 
-<!-- ================= 섹션 11 : PRODUCT ================= -->
-<section class="section bg-light v2-cls" id="product">
-  <div class="container">
-    <p class="section-label">Product</p>
-    <h2 class="section-title">함께 판매할<br>래쉬애딕트마스터 3종</h2>
-    <p class="section-desc">마스터크루가 되면 사업자 공급가로 들여와 판매하는 제품이에요. 공급가와 가입 조건은 상담에서 알려드려요.</p>
-    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/LashAddict.jpg" alt="래쉬애딕트마스터 LashAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>LashAddict</h3><p>속눈썹 세럼. 시술 후 고객 관리 루틴으로 자연스럽게 이어 권하기 좋아요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/BrowAddict.jpg" alt="래쉬애딕트마스터 BrowAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>BrowAddict</h3><p>눈썹 세럼. 속눈썹 시술 고객에게 함께 제안하기 좋은 제품이에요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/HairAddict.jpg" alt="래쉬애딕트마스터 HairAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>HairAddict</h3><p>모발 밀도 세럼. 판매 라인을 새롭게 넓히고 싶은 원장님께 권해요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article></div>
-  </div>
-</section>
-
 <!-- ================= 섹션 10 : Process — 가입 단계 ================= -->
 <section class="section v2-step">
   <div class="container">
@@ -1605,14 +1623,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 <!-- ================= LP : 숫자·이력 ================= -->
-<section class="section lp-proof">
+<section class="section bg-light lp-proof">
   <div class="container">
     <div class="text-center lp-hd">
       <p class="section-label">Proof</p>
       <h2 class="section-title">숫자와 이력으로,<br>먼저 보여드려요</h2>
     </div>
-    <div class="lp-proof-grid"><div><p class="v">200+</p><p class="k">마스터크루 원장님</p><p class="s">이미 함께 판매하고 있어요</p></div><div><p class="v">1분</p><p class="k">단톡방 응답</p><p class="s">대부분 1분 안에 답이 와요</p></div><div><p class="v">3종</p><p class="k">함께 판매하는 세럼</p><p class="s">Lash · Brow · Hair</p></div><div><p class="v">수상</p><p class="k">래쉬애딕트 최고 교육지사상</p><p class="s">교육으로 인정받은 크루</p></div></div>
+    <div class="lp-proof-grid c3"><div><p class="v">200+</p><p class="k">마스터크루 원장님</p><p class="s">이미 함께 판매하고 있어요</p></div><div><p class="v">1분</p><p class="k">단톡방 응답</p><p class="s">대부분 1분 안에 답이 와요</p></div><div><p class="v">3종</p><p class="k">함께 판매하는 세럼</p><p class="s">Lash · Brow · Hair</p></div></div>
   </div>
+</section>
+
+<!-- ================= LP : 신뢰 밴드 ================= -->
+<section class="lp-band">
+  <div class="container"><div class="lp-band-in">
+    <svg class="lp-band-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="19" r="12"/><path d="M18.5 19l3.8 3.8 7.2-7.6"/><path d="M16.5 28.5 13 43l11-5 11 5-3.5-14.5"/></svg>
+    <p class="lp-band-t">래쉬애딕트 최고 교육지사상 수상</p>
+    <p class="lp-band-s">제품 지식부터 고객 상담까지, 마스터크루와 함께 배워요.</p>
+  </div></div>
 </section>
 
 <!-- ================= LP : 현장 갤러리 ================= -->
@@ -1632,16 +1659,45 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
   <div class="container text-center"><p class="lp-tag-t">혼자 팔던 제품이,<br><em>함께라서</em> 설명되기 시작합니다.</p></div>
 </section>
 
-<!-- ================= LP : 첫걸음 상담 ================= -->
-<section class="section lp-offer">
+<!-- ================= LP : 가입 전 확인 ================= -->
+<section class="section bg-light lp-struct lp-assure">
   <div class="container">
-    <div class="lp-offer-box">
-      <ul class="circle-ani" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ul>
-      <p class="section-label">First Step</p>
-      <h2 class="section-title">가입 조건이 궁금하다면,<br>먼저 물어보세요</h2>
-      <p class="section-desc">샵 고객층과 판매 계획을 알려주시면, 가입 조건과 공급가를 상담으로 안내해 드려요.</p>
-      <div class="lp-offer-btns"><a href="page_09.html" class="btn btn-primary btn-arrow">1:1 상담 남기기</a><a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" rel="noopener" class="btn btn-secondary">카카오톡 상담</a></div>
-      <p class="micro">카카오톡 상담 평일 10:30 ~ 19:00</p>
+    <div class="text-center lp-hd">
+      <p class="section-label">Before You Join</p>
+      <h2 class="section-title">가입 전, 우리 샵에 맞는 조건인지<br>먼저 확인하세요</h2>
+      <p class="section-desc">공급가와 최소 발주 조건, 사업자 승인 절차와 판매 지원까지. 샵 고객층과 판매 계획을 알려주시면 상담에서 하나씩 안내해 드려요.</p>
+    </div>
+    <div class="lp-cds c3"><div class="lp-cd"><span class="lp-cd-n">01</span><h3>공급가와 발주 조건부터</h3><p>공급가는 사업자등록증 확인 후 안내해 드려요. 최소 발주 수량과 추가 구매 조건도 가입 전에 상담으로 확인해 주세요.</p></div><div class="lp-cd"><span class="lp-cd-n">02</span><h3>사업자 확인 후 승인</h3><p>회원가입 후 사업자등록증을 제출해 주세요. 사업자 회원 승인이 완료되면 공급가를 확인하고 발주할 수 있어요.</p></div><div class="lp-cd"><span class="lp-cd-n">03</span><h3>판매를 도울 지원까지</h3><p>단톡방 Q&amp;A, 영양제 세미나와 세일즈 특강, 상담 가이드를 제공해요. 참여 방법과 지원 기간·운영 시간은 상담에서 안내해 드려요.</p></div></div>
+    <div class="lp-cta-row"><a href="page_09.html" class="btn btn-primary btn-arrow">가입 조건 상담하기</a><a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" rel="noopener" class="btn btn-secondary">카카오톡 상담</a></div>
+    <p class="micro text-center lp-note">카카오톡 상담 평일 10:30 ~ 19:00</p>
+  </div>
+</section>
+
+<!-- ================= 섹션 11 : PRODUCT ================= -->
+<section class="section v2-cls" id="product">
+  <div class="container">
+    <p class="section-label">Product</p>
+    <h2 class="section-title">함께 판매할<br>래쉬애딕트마스터 3종</h2>
+    <p class="section-desc">마스터크루가 되면 사업자 공급가로 들여와 판매하는 제품이에요. 공급가와 가입 조건은 상담에서 알려드려요.</p>
+    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/LashAddict.jpg" alt="래쉬애딕트마스터 LashAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>LashAddict</h3><p>속눈썹 세럼. 시술 후 고객 관리 루틴으로 자연스럽게 이어 권하기 좋아요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/BrowAddict.jpg" alt="래쉬애딕트마스터 BrowAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>BrowAddict</h3><p>눈썹 세럼. 속눈썹 시술 고객에게 함께 제안하기 좋은 제품이에요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/HairAddict.jpg" alt="래쉬애딕트마스터 HairAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>HairAddict</h3><p>모발 밀도 세럼. 판매 라인을 새롭게 넓히고 싶은 원장님께 권해요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article></div>
+  </div>
+</section>
+
+<!-- ================= LP : 자주 묻는 질문 ================= -->
+<section class="section bg-light lp-qna">
+  <div class="container" style="max-width:960px">
+    <div class="text-center lp-hd">
+      <p class="section-label">Q&amp;A</p>
+      <h2 class="section-title">제품 판매를 시작하기 전,<br>궁금한 점부터 확인하세요</h2>
+      <p class="section-desc">판매할 제품과 가입 조건, 발주와 상담 지원까지 안내해 드려요.</p>
+    </div>
+    <div class="acc">
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>마스터크루에서는 어떤 제품을 판매하나요?</span> <span class="mk">+</span></button><div class="acc-a">속눈썹 세럼 LashAddict, 눈썹 세럼 BrowAddict, 모발 세럼 HairAddict 3종을 사업자 공급가로 들여와 판매해요. 샵 고객층과 판매 계획은 가입 상담에서 함께 살펴봐요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>사업자등록증이 있어야 가입할 수 있나요? 아직 준비 중이면요?</span> <span class="mk">+</span></button><div class="acc-a">사업자 회원 승인은 회원가입 후 사업자등록증을 확인하는 절차로 진행돼요. 아직 준비 중이시라면 상담 신청에 현재 상황을 남겨주세요. 가입에 필요한 절차를 안내해 드려요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>공급가는 얼마이고, 처음에 얼마나 주문해야 하나요?</span> <span class="mk">+</span></button><div class="acc-a">공급가는 사업자등록증 확인 후 안내하며, 사업자 회원 승인이 완료되면 확인할 수 있어요. 최소 발주 수량과 추가 구매 조건은 가입 전 상담에서 안내해 드려요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>제품 판매가 처음이라 권하는 말부터 어려워요. 도움을 받을 수 있나요?</span> <span class="mk">+</span></button><div class="acc-a">직접 제작한 상담 가이드와 세일즈 특강을 제공해요. 시술 중 상태 확인부터 제품 특징·사용법 설명까지 상담 순서를 익히고, 다른 원장님의 판매 사례와 시행착오도 함께 나눠요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>효과나 눈 시림을 물어보면 어떻게 설명해야 할지 모르겠어요.</span> <span class="mk">+</span></button><div class="acc-a">영양제 세미나와 케이스 스터디에서 성분·사용법·자주 받는 질문과 쓰면 안 되는 표현을 함께 다뤄요. 판매 중 궁금한 점은 단톡방에 질문할 수 있어요.</div></div>
+      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>발주는 언제 할 수 있나요? SNS나 온라인 판매도 가능한가요?</span> <span class="mk">+</span></button><div class="acc-a">발주 가능 시간은 평일 10:30~15:00예요. SNS·DM·스마트스토어 등에서의 판매 가능 여부와 채널별 조건은 상담에서 안내해 드려요.</div></div>
     </div>
   </div>
 </section>
@@ -1847,7 +1903,7 @@ window.addEventListener('scroll',function(){fx.classList.toggle('is-show',window
 (function(){
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var SKIP='header,footer,.nav,.m-menu,.q-aside,.q-md,.rv-md,.md,.v2-hero,.hero,.loop-track,.arc-track,.ai-stage,.csel,.arc-ring,.page-head';
-  var CARD='.lp-step,.lp-ba-card,.lp-ba-img figure,.lp-proof-grid>div,.lp-offer-box,.card,.prod-card,.cls-card,.v2-rv .loop-vp,#rvArc,.checks li,.stats>div,.hstats>div,.banner,.acc-item,.hiw>*,.ls-row,.core-steps li,.proc>*,.img-placeholder,.ai-stage,.loc-map,.loc-info li,.notice-pin,.tbl-scroll,.emp,.cmp,.split>video,.form-box,.ct-form,.store-list>*,.map-ph,.pc-img,.tabs,.search-box,.store-filter,.pager,.sub-form,.qline>*,.v2-cta .banner';
+  var CARD='.lp-cd,.lp-band-in,.lp-step,.lp-ba-card,.lp-ba-img figure,.lp-proof-grid>div,.lp-offer-box,.card,.prod-card,.cls-card,.v2-rv .loop-vp,#rvArc,.checks li,.stats>div,.hstats>div,.banner,.acc-item,.hiw>*,.ls-row,.core-steps li,.proc>*,.img-placeholder,.ai-stage,.loc-map,.loc-info li,.notice-pin,.tbl-scroll,.emp,.cmp,.split>video,.form-box,.ct-form,.store-list>*,.map-ph,.pc-img,.tabs,.search-box,.store-filter,.pager,.sub-form,.qline>*,.v2-cta .banner';
   var TEXT='h1,h2,h3,h4,h5,p,blockquote,figcaption,dt,dd,.btn,.section-label,.circle-ani,label';
   function ok(e){return !e.closest(SKIP)||e.matches('.ai-stage')}
   var main=[].slice.call(document.querySelectorAll('body>section,body>div.v2-stack>section.v2-info'));
