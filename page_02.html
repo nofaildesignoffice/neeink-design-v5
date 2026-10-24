@@ -1801,6 +1801,261 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
   .z19-k{padding:12px 14px}
   .z16-btns .z-btn{width:100%;justify-content:center}
 }
+/* ===== v5 랜딩 톤앤매너 — 기존 니잉 디자인(v4) 시스템으로 통일 ===== */
+/* 명조 제목(400·-0.06em) · Geist 블루 아이브로 · 흰/연회색 바탕 · 1px 라인 + radius 12~20 · 블랙 알약 버튼 · 다크는 플럼 + 블루 글로우 */
+.z{--zb:var(--pp);--zbs:var(--pp-s);--zd:var(--plum);--zg:var(--iv-2);--zt:#000;--zx:var(--tx);--zl:var(--pp-l);color:var(--tx);letter-spacing:-.03em;padding:clamp(70px,8.333vw,160px) 0}
+.z-hd{max-width:1000px;margin-bottom:clamp(30px,3.125vw,60px)}
+.z-eb{font-family:var(--serif-en);font-size:17px;font-weight:500;letter-spacing:-.01em;text-transform:none;color:var(--pp);line-height:1.2;margin-bottom:20px}
+.z-t{font-family:var(--serif-ko);font-size:clamp(26px,2.19vw,42px);font-weight:400;letter-spacing:-.06em;line-height:1.3;color:#000}
+.z-t em,.z h3 em{color:var(--pp)}
+.z-sub{font-size:clamp(14px,.94vw,18px);line-height:1.6;color:var(--tx);margin-top:24px}
+.z-note{font-size:13px;color:var(--text-muted)}
+.z-btn{height:auto;padding:16px 34px;font-size:16px;font-weight:500;letter-spacing:-.03em;background:#000;border:1px solid #000;color:#fff;transition:background .3s var(--ease),border-color .3s,color .3s}
+.z-btn:hover{transform:none;background:var(--pp);border-color:var(--pp)}
+.z-btn.ghost{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
+.z-btn.ghost:hover{background:var(--pp);border-color:var(--pp)}
+/* 다크 섹션 공통 — 플럼 + 우상단 블루 글로우 */
+.z03,.z08-top,.z16{background:var(--plum)}
+.z08-top{position:relative;overflow:hidden}
+.z08-top:before{content:"";position:absolute;right:-160px;top:-200px;width:620px;height:620px;border-radius:50%;background:rgba(0,87,255,.28);filter:blur(110px);pointer-events:none}
+.z08-top>*{position:relative}
+.z03 .z-t,.z08-top .z-t,.z16 .z-t,.z04-top .z-t,.z19-next .z-t{color:#fff}
+.z03 .z-eb,.z08-top .z-eb,.z16 .z-eb,.z04-top .z-eb,.z19-next .z-eb{color:#fff;opacity:.9}
+/* 01 HERO — 서브 비주얼: 하단 스크림 + 명조 타이틀 + 세로선 */
+.z01-vis{background:var(--plum)}
+.z01-vis>img{opacity:1}
+.z01-vis:before{background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.1) 30%,rgba(0,0,0,.25) 55%,rgba(0,0,0,.6) 100%)}
+.z01-lb{font-family:var(--serif-en);font-size:clamp(18px,1.4vw,26px);font-weight:300;letter-spacing:-.04em;opacity:.95}
+.z01-copy h1{font-family:var(--serif-ko);font-size:clamp(28px,3.2vw,60px);font-weight:500;letter-spacing:-.06em;line-height:1.25}
+.z01-sub{display:flex;flex-direction:column;align-items:center;gap:22px;font-size:clamp(14px,1.05vw,20px);line-height:1.6;opacity:1}
+.z01-sub:before{content:"";flex:none;width:1px;height:clamp(40px,3.6vw,68px);background:rgba(255,255,255,.75)}
+.z01-certs li{font-size:14px;color:rgba(255,255,255,.85);border-left-color:rgba(255,255,255,.25)}
+.z01-certs svg{stroke-width:1.2;border-width:.5px}
+.z01-flow{background:#fff}
+.zflow figure{border:1px solid var(--line);border-radius:12px;box-shadow:none;transition:transform .26s var(--ease),box-shadow .26s var(--ease)}
+.zflow figure:hover{transform:translateY(-6px);box-shadow:var(--hv-shadow)}
+.zflow figure.on{border:1px solid #000}
+.zflow figcaption{font-size:15px;color:#000}
+.zflow figcaption b{font-family:var(--serif-en);font-weight:500}
+.zflow figcaption small{color:var(--tx)}
+.zflow-x{background:var(--pp);font-weight:300}
+.zflow-res{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.05em;color:#000}
+/* 02 변화 */
+.z02{background:var(--iv-2)}
+.z02-ph{border-radius:12px;background:#e9e9e9}
+.z02-ph span{background:rgba(0,0,0,.7);border-radius:999px;font-weight:500;padding:5px 12px}
+.z02-nm{font-size:clamp(16px,1.2vw,19px);font-weight:500;color:var(--tx)}
+.z02-big{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;color:#000}
+.z02-big small{font-family:'Pretendard',sans-serif;font-weight:400;color:var(--tx)}
+.z02-cmp{border-bottom:1px solid #000}
+.z02-cmp>div{border-radius:12px 12px 0 0}
+.z02-cmp em{font-family:var(--serif-en);font-weight:500;letter-spacing:0;opacity:1}
+.z02-cmp .b{background:#fff;border:1px solid var(--line);border-bottom:0;color:var(--tx)}
+.z02-cmp .b em{color:rgba(0,0,0,.45)}
+.z02-cmp .a{background:var(--pp);color:#fff}
+.z02-cmp .a em{color:rgba(255,255,255,.8)}
+.z02-cmp i{border-top:1px dashed #80aaff}
+.z02-cmp i:after{border-left-color:#80aaff;top:-6px;border-width:5px}
+/* 03 대표 */
+.z03-bg:after{background:linear-gradient(90deg,var(--plum) 42%,rgba(13,13,13,.55) 62%,rgba(13,13,13,.05) 100%)}
+.z03-body p{color:rgba(255,255,255,.75);opacity:1}
+.z03-sign{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.04em}
+/* 04·15 후기 — 칼럼 카드 */
+.z04,.z15{background:#fff}
+.z04-top:before{background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,.15) 60%,#fff 100%)}
+.z15-top:after{background:linear-gradient(180deg,rgba(255,255,255,0) 40%,#fff)}
+.z-rv{border:1px solid var(--line);border-radius:20px;box-shadow:none;background:#fff;transition:transform .26s var(--ease),box-shadow .26s var(--ease)}
+.z-rv:hover{transform:translateY(-6px);box-shadow:var(--hv-shadow)}
+.z-rv-img{background:var(--pp-xl)}
+.z-rv-q svg{color:var(--pp-s)}
+.z-rv-who{font-family:var(--serif-en);color:var(--pp);font-size:13px}
+.z-rv h4{font-family:var(--serif-ko);font-weight:400;font-size:clamp(17px,1.25vw,21px);letter-spacing:-.06em;color:#000;line-height:1.4}
+.z-rv-ex{color:rgba(0,0,0,.6)}
+.z-rv-more{font-weight:400;color:#000}
+.z15-tag{font-family:var(--serif-ko);letter-spacing:-.05em;color:#000}
+/* 05 고민 */
+.z05{background:#fff;position:relative}
+.z05:before{content:"";position:absolute;left:71%;top:-180px;width:640px;height:640px;border-radius:50%;background:rgba(0,87,255,.14);filter:blur(100px);pointer-events:none}
+.z05-circle{box-shadow:none;border:1px solid var(--pp-l)}
+.z05-b{border:1px solid var(--line);border-radius:20px 20px 20px 4px;box-shadow:none;color:var(--tx);background:rgba(255,255,255,.75)}
+.z05-b b{font-weight:500;color:#000}
+.z05-b.me{border-color:var(--pp);border-radius:20px 20px 4px 20px;background:var(--pp);color:#fff;font-weight:400}
+.z05-b.me b{color:#fff}
+.z05-band{background:var(--iv-2);color:#000;font-family:var(--serif-ko);font-weight:400;letter-spacing:-.05em;border-top:1px solid var(--line-2)}
+.z05-band b{color:var(--pp);font-weight:700}
+/* 06 원인 — 보더 카드 + 대형 반투명 숫자 */
+.z06-card{text-align:left;border:1px solid var(--line);border-radius:20px;background:#fff;padding:clamp(24px,2.2vw,40px) clamp(20px,2vw,34px) clamp(28px,2.4vw,42px);position:relative;overflow:hidden;transition:transform .26s var(--ease),box-shadow .26s var(--ease)}
+.z06-card:hover{transform:translateY(-6px);box-shadow:var(--hv-shadow)}
+.z06-no{display:block;width:auto;height:auto;border:0;border-radius:0;background:none;font-family:var(--serif-en);font-size:15px;font-weight:500;color:var(--pp)}
+.z06-card .z06-no:before{content:"Cause 0"}
+.z08-st .z06-no:before{content:"Step 0"}
+.z06-card:after{content:attr(data-n);position:absolute;right:20px;top:14px;font-family:var(--serif-en);font-size:clamp(60px,5.2vw,100px);line-height:1;color:#505257;opacity:.07;pointer-events:none}
+.z06-card h3{font-family:var(--serif-ko);font-weight:400;font-size:clamp(20px,1.4vw,26px);letter-spacing:-.06em;color:#000;line-height:1.35;margin:12px 0 18px}
+.z06-img{border-radius:12px}
+.z06-card>p{color:var(--tx);font-size:15px;line-height:1.65}
+.z06-card .z06-src{color:var(--text-muted)}
+/* 07 결론 — 밝은 바탕 + 블루 글로우, 명조 문장 */
+.z07{background:#fff;color:#000}
+.z07:before{content:"";position:absolute;left:50%;top:50%;width:900px;height:520px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(0,87,255,.12),transparent);pointer-events:none}
+.z07-lead,.z07-next{font-family:var(--serif-ko);font-weight:400;font-size:clamp(18px,1.6vw,28px);letter-spacing:-.05em;line-height:1.7;opacity:1;color:#000}
+.z07-lead b,.z07-next b{color:var(--pp);font-weight:700}
+.z07-img{border:0;border-radius:12px}
+/* 08 핵심 해결책 */
+.z08-kick{color:rgba(255,255,255,.75);opacity:1}
+.z08-big{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em}
+.z08-main{border-radius:12px}
+.z08-zoom{border-width:3px}
+.z08-box{border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18)}
+.z08-lb{font-family:var(--serif-en);color:var(--pp-s);opacity:1}
+.z08-nm{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em}
+.z08-desc{color:rgba(255,255,255,.75);opacity:1}
+.z08-cells svg{border-width:.5px;stroke-width:1.2}
+.z08-cells b{font-weight:500}
+.z08-steps{background:var(--iv-2)}
+.z08-st{text-align:left;background:#fff;border:1px solid var(--pp-l);border-radius:12px;padding:14px 14px 24px;transition:transform .26s var(--ease),box-shadow .26s var(--ease)}
+.z08-st:hover{transform:translateY(-6px);box-shadow:var(--hv-shadow)}
+.z08-st .z06-no{display:block}
+.z08-st-img{border-radius:8px;margin:12px 0 18px}
+.z08-st h3{font-size:clamp(16px,1.04vw,19px);font-weight:500;color:#000}
+.z08-st p{color:var(--tx)}
+/* 흐르는 띠 — 블루 바 대신 얇은 라인 + Geist */
+.z-mq{background:#fff;color:#000;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding:20px 0}
+.z-mq-tr{font-weight:300;letter-spacing:-.01em;font-size:clamp(16px,1.25vw,22px)}
+.z-mq-tr b{color:var(--pp);opacity:1}
+/* 09 비교 */
+.z09{background:#fff}
+.z09-col{border:1px solid var(--line);border-radius:20px}
+.z09-col.dia{border:1px solid var(--pp);box-shadow:none;background:rgba(0,87,255,.03)}
+.z09-circle{border:1px solid var(--line)}
+.z09-col.dia .z09-circle{border:1px solid var(--pp)}
+.z09-head{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;font-size:clamp(18px,1.4vw,24px);color:#000;border-bottom:1px solid var(--line-2)}
+.z09-col.base .z09-head{color:rgba(0,0,0,.5)}
+.z09-cell{border-bottom:1px solid var(--line-2)}
+.z09-col.base .z09-cell{color:rgba(0,0,0,.45)}
+.z09-col.dia .z09-cell{color:#000;font-weight:500}
+/* 10 구조 — 밝은 바탕 + 1px 세로축 */
+.z10{background:var(--iv-2);color:var(--tx)}
+.z10 .z-sub{color:var(--tx)}
+.z10 .z-note{color:var(--text-muted)}
+.z10-line{width:1px;border-radius:0;background:linear-gradient(180deg,transparent,#80aaff 8%,#80aaff 92%,transparent);box-shadow:none}
+.z10-in:before{background:#80aaff}
+.z10-th{border:1px solid var(--pp-l);background:#fff}
+.z10-th svg{color:var(--pp)}
+.z10-lb{font-family:var(--serif-en);color:var(--pp);opacity:1;font-size:14px}
+.z10-nm{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;color:#000}
+.z10-bd{opacity:1;color:var(--tx)}
+.z10-th.big{border:1px solid var(--pp);box-shadow:0 0 0 8px rgba(0,87,255,.06)}
+.z10-th.big svg{color:var(--pp)}
+.z10-five{border-top:1px solid var(--line)}
+.z10-five .z-eb{color:var(--pp)}
+.z10-five li{border:1px solid var(--line);border-radius:12px;background:#fff}
+.z10-five b{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.05em;color:#000}
+.z10-five span{color:var(--tx);opacity:1}
+/* 11 구성 */
+.z11-wave{background:radial-gradient(circle,rgba(0,87,255,.1),rgba(0,87,255,.02) 60%,transparent 70%)}
+.z11-core{box-shadow:none;border:1px solid var(--pp-l)}
+.z11-dot{border:1px solid var(--pp-l);box-shadow:none}
+.z11-node b{font-weight:500;color:#000}
+.z11-card{border:1px solid var(--line);border-radius:20px;transition:transform .26s var(--ease),box-shadow .26s var(--ease)}
+.z11-card:hover{transform:translateY(-6px);box-shadow:var(--hv-shadow)}
+.z11-eb{font-size:15px;letter-spacing:-.01em;color:var(--pp);font-weight:500}
+.z11-card h3{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;color:#000;font-size:clamp(20px,1.4vw,26px)}
+.z11-list{border:1px solid var(--pp-l);border-radius:12px;background:var(--iv-2)}
+.z11-list li{color:var(--tx)}
+.z11-gal img{border-radius:12px}
+/* 12 진행 — 잎 모양 STEP 배지 */
+.z12{background:var(--iv-2)}
+.z12-list{border-top:1px solid #000}
+.z12-card{border-bottom:1px solid var(--pp-l);transition:background .3s}
+.z12-card:last-child{border-bottom:1px solid var(--pp-l)}
+.z12-card:hover{background:rgba(255,255,255,.6)}
+.z12-img{border-radius:12px}
+.z12-badge{border:0;border-radius:17px 0 17px 0;background:#505257;color:#fff;padding:7px 14px;font-weight:500;letter-spacing:-.01em;font-family:var(--serif-en);transition:background .3s}
+.z12-card:hover .z12-badge{background:var(--pp)}
+.z12-card h3{font-weight:500;color:#000}
+.z12-card p{color:var(--tx)}
+.z12-alert{border:1px solid var(--pp-l);border-radius:12px;background:#fff}
+.z12-at{font-weight:500;color:#000}
+.z12-at svg{color:var(--pp)}
+.z12-alert>div{color:var(--tx)}
+/* 13 근거 */
+.z13{background:#fff}
+.z13-doc{border:1px solid var(--line);border-radius:12px;box-shadow:none;transition:transform .26s var(--ease),box-shadow .26s var(--ease)}
+.z13-doc:hover{transform:translateY(-6px);box-shadow:var(--hv-shadow)}
+.z13-meta{font-family:var(--serif-en);color:var(--pp);font-size:12.5px}
+.z13-title{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.04em;color:#000}
+.z13-auth{color:var(--tx)}
+.z13-tldr{background:var(--iv-2);color:var(--tx)}
+.z13-tldr b{background:#000;border-radius:999px;padding:1px 8px;font-weight:500}
+.z13-ct{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;color:#000;font-size:clamp(18px,1.3vw,22px)}
+.z13-cb{color:var(--tx)}
+.z13-cb b{color:var(--pp);font-weight:500}
+.z13-dots i.on{background:#000}
+.z13-cert{box-shadow:none;border:1px solid var(--line);border-radius:20px}
+.z13-dip,.z13-law{border:1px solid #000;outline:1px solid var(--pp-l);background:var(--iv)}
+.z13-dip .en{font-family:var(--serif-en);font-weight:300;color:#000;letter-spacing:.1em}
+.z13-dip .ko,.z13-law .ko{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.05em;color:#000}
+.z13-law .en{font-family:var(--serif-en);color:var(--pp);font-weight:500}
+.z13-dip .sm,.z13-law .sm{color:var(--tx)}
+.z13-dip .sg{color:rgba(0,0,0,.5)}
+/* 14 신뢰 밴드 — 연회색 + 명조 */
+.z14{background:var(--iv-2);color:#000}
+.z14-t{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;font-size:clamp(28px,2.8vw,50px)}
+.z14-s{color:var(--tx);opacity:1}
+.z14-card{border:0;border-radius:20px;box-shadow:var(--hv-shadow)}
+.z14 .z-note{color:var(--text-muted)}
+/* 16 부담 완화 */
+.z16-bg img{opacity:.28}
+.z16-bg:after{background:radial-gradient(70% 70% at 50% 50%,rgba(13,13,13,.5),rgba(13,13,13,.92))}
+.z16-badge{background:transparent;border:.5px solid rgba(255,255,255,.6)}
+.z16-badge svg{color:#fff;stroke-width:1.2}
+.z16-body{color:rgba(255,255,255,.75);opacity:1}
+.z16-note{color:rgba(255,255,255,.5);opacity:1}
+/* 17 선택 */
+.z17{background:#fff}
+.z17-card{border:1px solid var(--line);border-radius:20px;padding:14px 14px 24px;transition:transform .26s var(--ease),box-shadow .26s var(--ease)}
+.z17-card:hover{transform:translateY(-6px);box-shadow:var(--hv-shadow)}
+.z17-card.best{border:1px solid var(--pp);box-shadow:none}
+.z17-card>*:not(.z17-img){margin-left:8px;margin-right:8px}
+.z17-tag{margin-top:10px;background:var(--pp-l);color:var(--pp);font-weight:500;letter-spacing:-.01em;font-family:var(--serif-en)}
+.z17-card.best .z17-tag{background:var(--pp);color:#fff}
+.z17-card h3{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;color:#000;font-size:clamp(19px,1.35vw,24px)}
+.z17-img{order:-1;border:0;border-radius:12px;background:var(--pp-xl)}
+.z17-meta{color:#000}
+.z17-desc{color:var(--tx)}
+.z17-pr{color:rgba(0,0,0,.45)}
+.z17-pr.big{font-family:var(--serif-en);font-weight:400;letter-spacing:-.03em;color:#000}
+.z17-bd{background:var(--pp-xl);color:var(--pp);font-weight:500}
+.z17-btn{border-radius:999px;border:1px solid rgba(0,0,0,.35);color:#000;font-weight:500;background:transparent}
+.z17-card.best .z17-btn,.z17-btn:hover{background:#000;border-color:#000;color:#fff}
+.z17-card.best .z17-btn:hover{background:var(--pp);border-color:var(--pp)}
+.z17-bt{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;color:#000;font-size:clamp(20px,1.5vw,28px)}
+.z17-tw{border:0;border-radius:0;border-top:1px solid #000}
+.z17-tbl th{background:transparent;font-weight:500;color:rgba(0,0,0,.5);border-bottom:1px solid var(--line)}
+.z17-tbl td{border-top:0;border-bottom:1px solid var(--line-2);color:var(--tx)}
+.z17-tbl td:first-child{font-weight:500;color:#000}
+.z17-tbl tr.best td{background:rgba(0,87,255,.05);color:#000;font-weight:600;border-top:0;border-bottom:1px solid var(--line-2)}
+/* 18 Q&A — 라벤더 보더 박스 */
+.z18{background:var(--iv-2)}
+.z18-list{gap:0;border:1px solid var(--pp-l);border-radius:12px;background:#fff;padding:clamp(6px,1.2vw,24px) clamp(14px,2vw,39px)}
+.z18-card{background:transparent;border:0;border-radius:0;border-bottom:1px solid var(--pp-l);padding:clamp(20px,1.6vw,30px) 4px}
+.z18-card:last-child{border-bottom:0}
+.z18-q{font-weight:500;color:#000;font-size:clamp(15px,1.04vw,19px);display:flex;gap:12px}
+.z18-q:before{content:"Q";flex:none;width:28px;height:28px;border-radius:50%;background:var(--pp-s);color:#fff;font-family:var(--serif-en);font-size:14px;display:grid;place-items:center;margin-top:-1px}
+.z18-a{padding-left:40px;color:var(--tx)}
+/* 19 안내 */
+.z19-tbl{border-top:1px solid #000}
+.z19-row{border-bottom:1px solid var(--line-2)}
+.z19-k{background:transparent;font-weight:500;color:#000}
+.z19-v{color:var(--tx)}
+.z19-next{border-radius:20px;background:var(--plum);position:relative;overflow:hidden}
+.z19-next:before{content:"";position:absolute;right:-120px;top:-160px;width:420px;height:420px;border-radius:50%;background:rgba(0,87,255,.3);filter:blur(90px);pointer-events:none}
+.z19-next>*{position:relative}
+.z19-next .z-eb{color:var(--pp-s)}
+.z19-nt{font-family:var(--serif-ko);font-weight:400;letter-spacing:-.06em;font-size:clamp(20px,1.8vw,30px)}
+@media (max-width:600px){
+  .z18-a{padding-left:0}
+}
 </style>
 </head>
 <body>
@@ -1875,7 +2130,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 <!-- ================= 06 · 원인 ================= -->
 <section class="z z06"><div class="zc zw">
   <div class="z-hd"><p class="z-eb">Cause</p><h2 class="z-t">문제는 손이 아니라,<br><em>반복할 기회</em>가 없었다는 것입니다</h2><p class="z-sub">같은 영상을 보고도 결과가 갈리는 이유, 세 가지로 좁혀집니다.</p></div>
-  <div class="z06-grid"><article class="z06-card z-c"><span class="z06-no">1</span><h3>눈으로만 배웠다</h3><div class="z06-img"><img src="assets/why/why-2.jpg" alt="" loading="lazy"></div><p>유튜브·인스타그램에서 실습 없이 보기만 했어요. 숙달은 정해진 방법을 반복할 때 오는데, 그 반복의 기회 자체가 없었던 거예요.</p></article><article class="z06-card z-c"><span class="z06-no">2</span><h3>남의 기준을 따라 했다</h3><div class="z06-img"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></div><p>영상마다 방식이 다르니, 확신 없이 남의 기준만 따라 하게 돼요. 눈매가 바뀌면 그 기준은 더 이상 맞지 않습니다.</p></article><article class="z06-card z-c"><span class="z06-no">3</span><h3>막혔을 때 물어볼 곳이 없었다</h3><div class="z06-img"><img src="assets/lp/lash-9.jpg" alt="" loading="lazy"></div><p>심화 케이스에서 막혀도 확인해 줄 사람이 없으니, 늘 같은 자리에서 다시 걸리게 됩니다.</p></article></div>
+  <div class="z06-grid"><article class="z06-card z-c" data-n="01"><span class="z06-no">1</span><h3>눈으로만 배웠다</h3><div class="z06-img"><img src="assets/why/why-2.jpg" alt="" loading="lazy"></div><p>유튜브·인스타그램에서 실습 없이 보기만 했어요. 숙달은 정해진 방법을 반복할 때 오는데, 그 반복의 기회 자체가 없었던 거예요.</p></article><article class="z06-card z-c" data-n="02"><span class="z06-no">2</span><h3>남의 기준을 따라 했다</h3><div class="z06-img"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></div><p>영상마다 방식이 다르니, 확신 없이 남의 기준만 따라 하게 돼요. 눈매가 바뀌면 그 기준은 더 이상 맞지 않습니다.</p></article><article class="z06-card z-c" data-n="03"><span class="z06-no">3</span><h3>막혔을 때 물어볼 곳이 없었다</h3><div class="z06-img"><img src="assets/lp/lash-9.jpg" alt="" loading="lazy"></div><p>심화 케이스에서 막혀도 확인해 줄 사람이 없으니, 늘 같은 자리에서 다시 걸리게 됩니다.</p></article></div>
   <p class="z-note">※ 숙련도는 목표를 정한 반복 연습과 피드백에 따라 달라진다는 연구가 있어요. (Ericsson 외, Psychological Review, 1993)</p>
 </div></section>
 
