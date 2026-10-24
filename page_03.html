@@ -1448,7 +1448,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 @media (max-width:1024px){.lp-cds.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-cds.c4 .lp-cd::after{display:none}}
 @media (max-width:768px){.lp-cds.c3,.lp-cds.c4{grid-template-columns:1fr}.lp-chain{flex-direction:column}.lp-chain i{width:1px;height:22px;margin:6px 0;background:linear-gradient(180deg,rgba(0,87,255,.15),#0057ff)}.lp-chain i::after{display:none}}
 .lp-proof-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* ===== v5 공통 보정: 헤더 높이·상단 간격, 퀵메뉴 예약 버튼, 하단 고정 CTA ===== */
+@media (min-width:769px){
+  .nav{top:23px}
+  .nav-inner{height:64px}
+  .nav.is-scrolled .nav-inner{height:56px}
+}
+.q-call{background:#0057ff}
+.q-call:hover,.q-call:focus-visible{background:#0047d1}
+.fixcta{background:rgba(255,255,255,.96);border-top:1px solid rgba(0,0,0,.08);box-shadow:0 -10px 30px -20px rgba(0,0,0,.3)}
+.fixcta .copy b{color:#000}
+.fixcta .copy span{color:rgba(0,0,0,.55)}
+/* ===== /v5 공통 보정 ===== */
 
+/* ===== v5 랜딩 히어로 간격 ===== */
+.v2-sub .label{margin-bottom:clamp(16px,1.5vw,28px)}
+.v2-sub h1{margin-bottom:clamp(26px,2.2vw,40px)}
+.v2-sub .lp-badges{margin-top:clamp(32px,2.8vw,52px)}
 /* ===== v5 — 대표 사진 · 후기 2부 ===== */
 .v2-emp .split>.emp-photo{position:relative;overflow:hidden;background:#e9e9e9}
 .v2-emp .emp-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
@@ -1488,7 +1504,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </div>
 
 
-<!-- ================= 01 · Hero — 약속 · 신뢰 배지 · 배우는 방식 2단계 ================= -->
+<!-- ================= 01 · Hero — 약속 · 신뢰 배지 ================= -->
 <section class="sub-hero v2-sub">
   <div class="hero-ph float-cards" aria-hidden="true"><div class="fc" style="--x:7%;--y:15%;--z:0.85;--r:-6deg;--d:0ms" data-z="0.85"><div class="fc-in"><img src="assets/ai/ba-1.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:21%;--y:36%;--z:0.65;--r:4deg;--d:60ms" data-z="0.65"><div class="fc-in"><img src="assets/ai/ba-2.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:5%;--y:56%;--z:1;--r:3deg;--d:120ms" data-z="1"><div class="fc-in"><img src="assets/ai/ba-3.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:19%;--y:77%;--z:0.75;--r:-5deg;--d:180ms" data-z="0.75"><div class="fc-in"><img src="assets/ai/ba-1.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:8%;--y:95%;--z:0.9;--r:4deg;--d:240ms" data-z="0.9"><div class="fc-in"><img src="assets/ai/ba-2.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:93%;--y:14%;--z:0.9;--r:5deg;--d:300ms" data-z="0.9"><div class="fc-in"><img src="assets/ai/ba-3.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:80%;--y:35%;--z:0.7;--r:-4deg;--d:360ms" data-z="0.7"><div class="fc-in"><img src="assets/ai/ba-1.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:95%;--y:57%;--z:1;--r:-3deg;--d:420ms" data-z="1"><div class="fc-in"><img src="assets/ai/ba-2.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:81%;--y:78%;--z:0.7;--r:6deg;--d:480ms" data-z="0.7"><div class="fc-in"><img src="assets/ai/ba-3.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:92%;--y:96%;--z:0.85;--r:-5deg;--d:540ms" data-z="0.85"><div class="fc-in"><img src="assets/ai/ba-1.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:35%;--y:9%;--z:0.6;--r:-3deg;--d:600ms" data-z="0.6"><div class="fc-in"><img src="assets/ai/ba-2.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:65%;--y:11%;--z:0.7;--r:4deg;--d:660ms" data-z="0.7"><div class="fc-in"><img src="assets/ai/ba-3.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div><div class="fc" style="--x:50%;--y:-3%;--z:0.55;--r:2deg;--d:720ms" data-z="0.55"><div class="fc-in"><img src="assets/ai/ba-1.jpg" alt="" width="900" height="562" loading="eager"><span>Before</span><span>After</span></div></div></div>
   <div class="inner">
@@ -1496,15 +1512,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
     <h1>실력은 충분한데,<br>올릴 사진이 없으신가요</h1>
     <p class="lead">고객 얼굴은 AI로 지키고, 시술 결과는 원본 그대로 보여주세요.<br>니잉은 바로 게시할 수 있는 포트폴리오를 만드는 AI 클래스입니다.</p>
     <ul class="lp-badges"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>고객 얼굴은 AI로 보호</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>시술 결과는 원본 그대로</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>수업 중 콘텐츠 5개+</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>카톡 피드백 1달 ~ 1년</li></ul>
-    <div class="hstats">
-      <div><p class="k">누적 시술</p><p class="v">6,000+</p></div>
-      <div><p class="k">교육으로 만난 원장님</p><p class="v">500+</p></div>
-      <div><p class="k">VOD 수강 + 피드백</p><p class="v">1달 + 1달</p></div>
-    </div>
   </div>
 </section>
 
 
+<!-- ================= 02 · 근거 — 숫자와 이력 ================= -->
+<section class="section lp-proof">
+  <div class="container">
+    <div class="text-center lp-hd">
+      <p class="section-label">Proof</p>
+      <h2 class="section-title">숫자로 보는,<br>보여줘야 하는 이유</h2>
+    </div>
+    <div class="lp-proof-grid"><div><p class="v">87%</p><p class="k">전후 사진을 중요하게 보는 소비자</p><p class="s">Aesthetic Surgery Journal, 2023</p></div><div><p class="v">5개+</p><p class="k">수업 시간 안에 완성하는 콘텐츠</p><p class="s">내 고객 사진으로 직접</p></div><div><p class="v">3 PART</p><p class="k">보여주는 법부터 동영상까지</p><p class="s">단계별 커리큘럼</p></div><div><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">시술하는 사람이 만든 기준</p></div></div>
+  </div>
+</section>
+
+
+<!-- ================= 03 · 배우는 방식 2단계 ================= -->
 <section class="section lp-key">
   <div class="container">
     <div class="text-center lp-hd">
@@ -1523,7 +1547,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 02 · 후기 — 원장님 원문 ================= -->
+<!-- ================= 04 · 후기 — 원장님 원문 ================= -->
 <section class="section bg-light v2-rv">
   <div class="container">
     <div class="text-center">
@@ -1539,7 +1563,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 03 · 만든 사람 — 대표의 원칙 ================= -->
+<!-- ================= 05 · 만든 사람 — 대표의 원칙 ================= -->
 <section class="section bg-light v2-emp">
   <div class="container">
     <div class="split">
@@ -1562,7 +1586,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 04 · 고민 — 이런 고민 해당되시나요 ================= -->
+<!-- ================= 06 · 고민 — 이런 고민 해당되시나요 ================= -->
 <section class="section v2-target">
   <div class="container">
     <div class="text-center">
@@ -1583,7 +1607,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 05 · 원인 — 세 가지 ================= -->
+<!-- ================= 07 · 원인 — 세 가지 ================= -->
 <section class="section v2-cause">
   <div class="container">
     <div class="text-center">
@@ -1601,13 +1625,13 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 06 · 결론 — 원인에서 해결로 ================= -->
+<!-- ================= 08 · 결론 — 원인에서 해결로 ================= -->
 <section class="section lp-tagline">
   <div class="container text-center"><p class="lp-tag-t">보여주지 못한 실력은,<br>이제 <em>얼굴 없이도</em> 보여줄 수 있어요.</p></div>
 </section>
 
 
-<!-- ================= 07 · 해결책 — 원인마다 대응 ================= -->
+<!-- ================= 09 · 해결책 — 원인마다 대응 ================= -->
 <section class="section bg-light v2-sol">
   <div class="container">
     <div class="text-center">
@@ -1624,7 +1648,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 08 · 비교 ================= -->
+<!-- ================= 10 · 비교 ================= -->
 <section class="section bg-light v2-cmp">
   <div class="container">
     <div class="text-center">
@@ -1645,7 +1669,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 09 · 작동 원리 — 모든 AI 클래스의 원칙 ================= -->
+<!-- ================= 11 · 작동 원리 — 모든 AI 클래스의 원칙 ================= -->
 <section class="section v2-adv">
   <div class="container">
     <div class="text-center">
@@ -1663,7 +1687,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 10 · 구성 전체 — 커리큘럼 ================= -->
+<!-- ================= 12 · 구성 전체 — 커리큘럼 ================= -->
 <section class="section v2-core">
   <div class="container">
     <div class="split" style="align-items:start">
@@ -1679,7 +1703,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 11 · 진행 방법 — 수강 절차 ================= -->
+<!-- ================= 13 · 진행 방법 — 수강 절차 ================= -->
 <section class="section v2-step">
   <div class="container">
     <div class="text-center">
@@ -1699,19 +1723,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 12 · 근거 — 숫자로 보는 이유 ================= -->
-<section class="section lp-proof">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">Proof</p>
-      <h2 class="section-title">숫자로 보는,<br>보여줘야 하는 이유</h2>
-    </div>
-    <div class="lp-proof-grid"><div><p class="v">87%</p><p class="k">전후 사진을 중요하게 보는 소비자</p><p class="s">Aesthetic Surgery Journal, 2023</p></div><div><p class="v">5개+</p><p class="k">수업 시간 안에 완성하는 콘텐츠</p><p class="s">내 고객 사진으로 직접</p></div><div><p class="v">3 PART</p><p class="k">보여주는 법부터 동영상까지</p><p class="s">단계별 커리큘럼</p></div><div><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">시술하는 사람이 만든 기준</p></div></div>
-  </div>
-</section>
-
-
-<!-- ================= 13 · 신뢰 — 실제 수업 현장 ================= -->
+<!-- ================= 14 · 신뢰 — 실제 수업 현장 ================= -->
 <section class="section bg-light lp-gallery">
   <div class="container">
     <div class="text-center lp-hd">
@@ -1724,7 +1736,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 14 · 이야기 — 더 많은 원장님 후기 ================= -->
+<!-- ================= 15 · 이야기 — 더 많은 원장님 후기 ================= -->
 <section class="section v2-rv lp-rv2">
   <div class="container">
     <div class="text-center">
@@ -1738,7 +1750,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 15 · 부담 완화 — 시작 전 확인 ================= -->
+<!-- ================= 16 · 부담 완화 — 시작 전 확인 ================= -->
 <section class="section bg-light lp-struct lp-assure">
   <div class="container">
     <div class="text-center lp-hd">
@@ -1751,7 +1763,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 16 · 선택 — 클래스와 수강료 ================= -->
+<!-- ================= 17 · 선택 — 클래스와 수강료 ================= -->
 <section class="section bg-light v2-cls" id="class">
   <div class="container">
     <p class="section-label">Class</p>
@@ -1763,7 +1775,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 17 · Q&A — 신청 전 질문 ================= -->
+<!-- ================= 18 · Q&A — 신청 전 질문 ================= -->
 <section class="section bg-light lp-qna">
   <div class="container" style="max-width:960px">
     <div class="text-center lp-hd">
@@ -1783,7 +1795,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 18 · 안내 — 수강 안내 및 환불 규정 ================= -->
+<!-- ================= 19 · 안내 — 수강 안내 및 환불 규정 ================= -->
 <section class="section v2-faq">
   <div class="container" style="max-width:960px">
     <div class="text-center"><p class="section-label">Notice</p><h2 class="section-title">수강 안내 및 환불 규정</h2></div>
@@ -1798,7 +1810,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 19 · 다음 클래스 ================= -->
+<!-- ================= 20 · 다음 클래스 ================= -->
 <section class="letter v2-letter">
   <div class="hero-ph"><i data-lucide="image"></i></div>
   <div class="container" style="position:relative;z-index:2">

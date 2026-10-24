@@ -840,6 +840,18 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .loc-text b{font-weight:600;color:#000;min-width:44px}
 .store-hd .btn{margin-top:28px}
 @media (max-width:768px){.loc-text{font-size:14px}.loc-text li{gap:8px}}
+/* ===== v5 공통 보정: 헤더 높이·상단 간격, 퀵메뉴 예약 버튼, 하단 고정 CTA ===== */
+@media (min-width:769px){
+  .nav{top:23px}
+  .nav-inner{height:64px}
+  .nav.is-scrolled .nav-inner{height:56px}
+}
+.q-call{background:#0057ff}
+.q-call:hover,.q-call:focus-visible{background:#0047d1}
+.fixcta{background:rgba(255,255,255,.96);border-top:1px solid rgba(0,0,0,.08);box-shadow:0 -10px 30px -20px rgba(0,0,0,.3)}
+.fixcta .copy b{color:#000}
+.fixcta .copy span{color:rgba(0,0,0,.55)}
+/* ===== /v5 공통 보정 ===== */
 </style>
 </head>
 <body>

@@ -836,6 +836,27 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .csel-list li{padding:11px 12px;border-radius:6px;font:400 15px/1.4 'Pretendard',sans-serif;letter-spacing:-.03em;color:var(--text-black,#000);cursor:pointer}
 .csel-list li:hover,.csel-list li.is-focus{background:#f3f6ff}
 .csel-list li[aria-selected="true"]{color:#0057ff;font-weight:600}
+/* ===== v5 공통 보정: 헤더 높이·상단 간격, 퀵메뉴 예약 버튼, 하단 고정 CTA ===== */
+@media (min-width:769px){
+  .nav{top:23px}
+  .nav-inner{height:64px}
+  .nav.is-scrolled .nav-inner{height:56px}
+}
+.q-call{background:#0057ff}
+.q-call:hover,.q-call:focus-visible{background:#0047d1}
+.fixcta{background:rgba(255,255,255,.96);border-top:1px solid rgba(0,0,0,.08);box-shadow:0 -10px 30px -20px rgba(0,0,0,.3)}
+.fixcta .copy b{color:#000}
+.fixcta .copy span{color:rgba(0,0,0,.55)}
+/* ===== /v5 공통 보정 ===== */
+
+/* ===== v5 페이지 보정: 히어로 대신 첫 섹션 타이틀 · 검색 바 높이 ===== */
+.ph-first{padding-top:clamp(150px,13vw,210px)!important}
+.store-hd{margin-bottom:clamp(40px,4vw,64px)}
+.store-hd .section-title{font-family:var(--serif-ko);font-weight:400;font-size:clamp(34px,3.2vw,56px);letter-spacing:-.06em;color:#000;margin-bottom:16px}
+.store-hd .section-desc{margin:0 auto}
+.store-filter select,.store-filter input,.csel-btn{padding:9px 16px;font-size:14.5px}
+.store-filter .btn{padding:9px 22px;font-size:14.5px}
+@media (max-width:768px){.ph-first{padding-top:120px!important}}
 </style>
 </head>
 <body>
@@ -862,16 +883,13 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 
 
 <!-- ================= 섹션 1 : 페이지 헤드 ================= -->
-<section class="page-head">
-  <div class="container">
-    <h1>매장 찾기</h1>
-    <p>래쉬애딕트를 취급하는 가까운 샵에서, 직접 상담받고 구매하세요.</p>
-  </div>
-</section>
-
 <!-- ================= 섹션 2 : 지도 기반 매장 검색 ================= -->
-<section class="section">
+<section class="section ph-first">
   <div class="container">
+    <div class="text-center store-hd">
+      <h1 class="section-title">매장 찾기</h1>
+      <p class="section-desc">래쉬애딕트를 취급하는 가까운 샵에서, 직접 상담받고 구매하세요.</p>
+    </div>
     <form class="store-filter" onsubmit="return false">
       <select><option>시 · 도 전체</option><option>서울</option><option>경기</option><option>부산</option></select>
       <select><option>구 · 군 전체</option></select>

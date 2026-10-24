@@ -1388,7 +1388,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 @media (max-width:1024px){.lp-cds.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-cds.c4 .lp-cd::after{display:none}}
 @media (max-width:768px){.lp-cds.c3,.lp-cds.c4{grid-template-columns:1fr}.lp-chain{flex-direction:column}.lp-chain i{width:1px;height:22px;margin:6px 0;background:linear-gradient(180deg,rgba(0,87,255,.15),#0057ff)}.lp-chain i::after{display:none}}
 .lp-proof-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* ===== v5 공통 보정: 헤더 높이·상단 간격, 퀵메뉴 예약 버튼, 하단 고정 CTA ===== */
+@media (min-width:769px){
+  .nav{top:23px}
+  .nav-inner{height:64px}
+  .nav.is-scrolled .nav-inner{height:56px}
+}
+.q-call{background:#0057ff}
+.q-call:hover,.q-call:focus-visible{background:#0047d1}
+.fixcta{background:rgba(255,255,255,.96);border-top:1px solid rgba(0,0,0,.08);box-shadow:0 -10px 30px -20px rgba(0,0,0,.3)}
+.fixcta .copy b{color:#000}
+.fixcta .copy span{color:rgba(0,0,0,.55)}
+/* ===== /v5 공통 보정 ===== */
 
+/* ===== v5 랜딩 히어로 간격 ===== */
+.v2-sub .label{margin-bottom:clamp(16px,1.5vw,28px)}
+.v2-sub h1{margin-bottom:clamp(26px,2.2vw,40px)}
+.v2-sub .lp-badges{margin-top:clamp(32px,2.8vw,52px)}
 /* ===== v5 — 대표 사진 · 후기 2부 ===== */
 .v2-emp .split>.emp-photo{position:relative;overflow:hidden;background:#e9e9e9}
 .v2-emp .emp-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
@@ -1428,7 +1444,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </div>
 
 
-<!-- ================= 01 · Hero — 약속 · 신뢰 배지 · 함께하는 방식 2단계 ================= -->
+<!-- ================= 01 · Hero — 약속 · 신뢰 배지 ================= -->
 <section class="sub-hero v2-sub">
   <div class="hero-ph has-media"><img src="assets/hero3.jpg" alt="" aria-hidden="true"></div>
   <div class="inner">
@@ -1436,15 +1452,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
     <h1>아침부터 밤 9시까지 혼자 시술했는데,<br>정작 손에 남는 건 얼마 안 돼요</h1>
     <p class="lead">시술 매출은 그대로, 제품 판매 매출을 더하세요.<br>이미 200여 명의 원장님이 마스터크루에서 함께하고 있어요.</p>
     <ul class="lp-badges"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>200여 명 원장님 단톡방</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>래쉬애딕트 최고 교육지사상</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>상담 가이드 · 세일즈 특강</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>사업자 공급가 발주</li></ul>
-    <div class="hstats">
-      <div><p class="k">마스터크루 원장님</p><p class="v">200+</p></div>
-      <div><p class="k">래쉬애딕트</p><p class="v">최고 교육지사상</p></div>
-      <div><p class="k">함께 판매하는 세럼</p><p class="v">3종</p></div>
-    </div>
   </div>
 </section>
 
 
+<!-- ================= 02 · 근거 — 숫자와 이력 ================= -->
+<section class="section lp-proof">
+  <div class="container">
+    <div class="text-center lp-hd">
+      <p class="section-label">Proof</p>
+      <h2 class="section-title">숫자와 이력으로,<br>먼저 보여드려요</h2>
+    </div>
+    <div class="lp-proof-grid"><div><p class="v">200+</p><p class="k">마스터크루 원장님</p><p class="s">이미 함께 판매하고 있어요</p></div><div><p class="v">4가지</p><p class="k">계속 이어지는 지원</p><p class="s">단톡방 · 세미나 · 상담 가이드 · 케이스 스터디</p></div><div><p class="v">3종</p><p class="k">함께 판매하는 세럼</p><p class="s">Lash · Brow · Hair</p></div><div><p class="v">수상</p><p class="k">래쉬애딕트 최고 교육지사상</p><p class="s">교육으로 인정받은 크루</p></div></div>
+  </div>
+</section>
+
+
+<!-- ================= 03 · 함께하는 방식 2단계 ================= -->
 <section class="section lp-key">
   <div class="container">
     <div class="text-center lp-hd">
@@ -1463,7 +1487,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 02 · 후기 — 크루 원장님 이야기 ================= -->
+<!-- ================= 04 · 후기 — 크루 원장님 이야기 ================= -->
 <section class="section bg-light v2-rv">
   <div class="container">
     <div class="text-center">
@@ -1479,7 +1503,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 03 · 만든 사람 — 대표의 이야기 ================= -->
+<!-- ================= 05 · 만든 사람 — 대표의 이야기 ================= -->
 <section class="section bg-light v2-emp">
   <div class="container">
     <div class="split">
@@ -1503,7 +1527,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 04 · 고민 — 이런 고민 해당되시나요 ================= -->
+<!-- ================= 06 · 고민 — 이런 고민 해당되시나요 ================= -->
 <section class="section v2-target">
   <div class="container">
     <div class="text-center">
@@ -1524,7 +1548,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 05 · 원인 — 세 가지 ================= -->
+<!-- ================= 07 · 원인 — 세 가지 ================= -->
 <section class="section v2-cause">
   <div class="container">
     <div class="text-center">
@@ -1542,13 +1566,13 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 06 · 결론 — 원인에서 해결로 ================= -->
+<!-- ================= 08 · 결론 — 원인에서 해결로 ================= -->
 <section class="section lp-tagline">
   <div class="container text-center"><p class="lp-tag-t">혼자 팔던 제품이,<br><em>함께라서</em> 설명되기 시작합니다.</p></div>
 </section>
 
 
-<!-- ================= 07 · 해결책 — 원인마다 함께하는 방법 ================= -->
+<!-- ================= 09 · 해결책 — 원인마다 함께하는 방법 ================= -->
 <section class="section bg-light v2-sol">
   <div class="container">
     <div class="text-center">
@@ -1565,7 +1589,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 08 · 비교 ================= -->
+<!-- ================= 10 · 비교 ================= -->
 <section class="section bg-light v2-cmp">
   <div class="container">
     <div class="text-center">
@@ -1588,7 +1612,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 09 · 작동 원리 — 가입부터 판매까지 ================= -->
+<!-- ================= 11 · 작동 원리 — 가입부터 판매까지 ================= -->
 <section class="section v2-adv">
   <div class="container">
     <div class="text-center">
@@ -1606,7 +1630,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 10 · 구성 전체 — 크루가 드리는 것 ================= -->
+<!-- ================= 12 · 구성 전체 — 크루가 드리는 것 ================= -->
 <section class="section v2-core">
   <div class="container">
     <div class="split" style="align-items:start">
@@ -1622,7 +1646,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 11 · 진행 방법 — 가입 단계 ================= -->
+<!-- ================= 13 · 진행 방법 — 가입 단계 ================= -->
 <section class="section v2-step">
   <div class="container">
     <div class="text-center">
@@ -1641,19 +1665,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 12 · 근거 — 숫자와 이력 ================= -->
-<section class="section lp-proof">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">Proof</p>
-      <h2 class="section-title">숫자와 이력으로,<br>먼저 보여드려요</h2>
-    </div>
-    <div class="lp-proof-grid"><div><p class="v">200+</p><p class="k">마스터크루 원장님</p><p class="s">이미 함께 판매하고 있어요</p></div><div><p class="v">4가지</p><p class="k">계속 이어지는 지원</p><p class="s">단톡방 · 세미나 · 상담 가이드 · 케이스 스터디</p></div><div><p class="v">3종</p><p class="k">함께 판매하는 세럼</p><p class="s">Lash · Brow · Hair</p></div><div><p class="v">수상</p><p class="k">래쉬애딕트 최고 교육지사상</p><p class="s">교육으로 인정받은 크루</p></div></div>
-  </div>
-</section>
-
-
-<!-- ================= 13 · 신뢰 — 래쉬애딕트 최고 교육지사상 ================= -->
+<!-- ================= 14 · 신뢰 — 래쉬애딕트 최고 교육지사상 ================= -->
 <section class="lp-band">
   <div class="container"><div class="lp-band-in">
     <svg class="lp-band-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="19" r="12"/><path d="M18.5 19l3.8 3.8 7.2-7.6"/><path d="M16.5 28.5 13 43l11-5 11 5-3.5-14.5"/></svg>
@@ -1663,7 +1675,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 14 · 이야기 — 크루가 함께하는 현장 ================= -->
+<!-- ================= 15 · 이야기 — 크루가 함께하는 현장 ================= -->
 <section class="section bg-light lp-gallery">
   <div class="container">
     <div class="text-center lp-hd">
@@ -1676,7 +1688,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 15 · 부담 완화 — 조건부터 물어보기 ================= -->
+<!-- ================= 16 · 부담 완화 — 조건부터 물어보기 ================= -->
 <section class="section lp-offer">
   <div class="container">
     <div class="lp-offer-box">
@@ -1691,7 +1703,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 16 · 선택 — 함께 판매할 제품 ================= -->
+<!-- ================= 17 · 선택 — 함께 판매할 제품 ================= -->
 <section class="section bg-light v2-cls" id="product">
   <div class="container">
     <p class="section-label">Product</p>
@@ -1702,7 +1714,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 17 · Q&A — 가입 전 질문 ================= -->
+<!-- ================= 18 · Q&A — 가입 전 질문 ================= -->
 <section class="section bg-light lp-qna">
   <div class="container" style="max-width:960px">
     <div class="text-center lp-hd">
@@ -1722,7 +1734,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 18 · 안내 — 가입 안내 ================= -->
+<!-- ================= 19 · 안내 — 가입 안내 ================= -->
 <section class="section v2-faq">
   <div class="container" style="max-width:960px">
     <div class="text-center"><p class="section-label">Notice</p><h2 class="section-title">가입 안내 및 판매 원칙</h2></div>
@@ -1742,7 +1754,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 19 · 마무리 CTA ================= -->
+<!-- ================= 20 · 마무리 CTA ================= -->
 <section class="letter v2-letter">
   <div class="hero-ph"><i data-lucide="image"></i></div>
   <div class="container" style="position:relative;z-index:2">

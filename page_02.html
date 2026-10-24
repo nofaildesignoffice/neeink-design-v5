@@ -1414,7 +1414,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 @media (max-width:1024px){.lp-cds.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-cds.c4 .lp-cd::after{display:none}}
 @media (max-width:768px){.lp-cds.c3,.lp-cds.c4{grid-template-columns:1fr}.lp-chain{flex-direction:column}.lp-chain i{width:1px;height:22px;margin:6px 0;background:linear-gradient(180deg,rgba(0,87,255,.15),#0057ff)}.lp-chain i::after{display:none}}
 .lp-proof-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* ===== v5 공통 보정: 헤더 높이·상단 간격, 퀵메뉴 예약 버튼, 하단 고정 CTA ===== */
+@media (min-width:769px){
+  .nav{top:23px}
+  .nav-inner{height:64px}
+  .nav.is-scrolled .nav-inner{height:56px}
+}
+.q-call{background:#0057ff}
+.q-call:hover,.q-call:focus-visible{background:#0047d1}
+.fixcta{background:rgba(255,255,255,.96);border-top:1px solid rgba(0,0,0,.08);box-shadow:0 -10px 30px -20px rgba(0,0,0,.3)}
+.fixcta .copy b{color:#000}
+.fixcta .copy span{color:rgba(0,0,0,.55)}
+/* ===== /v5 공통 보정 ===== */
 
+/* ===== v5 랜딩 히어로 간격 ===== */
+.v2-sub .label{margin-bottom:clamp(16px,1.5vw,28px)}
+.v2-sub h1{margin-bottom:clamp(26px,2.2vw,40px)}
+.v2-sub .lp-badges{margin-top:clamp(32px,2.8vw,52px)}
 /* ===== v5 — 대표 사진 · 후기 2부 ===== */
 .v2-emp .split>.emp-photo{position:relative;overflow:hidden;background:#e9e9e9}
 .v2-emp .emp-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
@@ -1454,7 +1470,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </div>
 
 
-<!-- ================= 01 · Hero — 약속 · 신뢰 배지 · 배우는 방식 2단계 ================= -->
+<!-- ================= 01 · Hero — 약속 · 신뢰 배지 ================= -->
 <section class="sub-hero v2-sub">
   <div class="hero-ph has-media"><img src="assets/hero2.jpg" alt="" aria-hidden="true"></div>
   <div class="inner">
@@ -1462,15 +1478,23 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
     <h1>배운 적은 있는데,<br>할 때마다 결과가 달라 불안하셨죠</h1>
     <p class="lead">기술이 부족해서가 아니에요. 눈매를 판단할 기준이 없었을 뿐이에요.<br>니잉 속눈썹펌 급속교정 클래스는, 그 기준을 만드는 수업입니다.</p>
     <ul class="lp-badges"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>래쉬애딕트 최고 교육지사상</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>100% 직접 실습</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>수료 후 카톡 피드백</li></ul>
-    <div class="hstats">
-      <div><p class="k">누적 시술</p><p class="v">6,000+</p></div>
-      <div><p class="k">교육으로 만난 원장님</p><p class="v">500+</p></div>
-      <div><p class="k">네이버 리뷰</p><p class="v">1,000+</p></div>
-    </div>
   </div>
 </section>
 
 
+<!-- ================= 02 · 근거 — 숫자와 이력 ================= -->
+<section class="section lp-proof">
+  <div class="container">
+    <div class="text-center lp-hd">
+      <p class="section-label">Proof</p>
+      <h2 class="section-title">숫자와 이력으로,<br>먼저 보여드려요</h2>
+    </div>
+    <div class="lp-proof-grid"><div><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">교과서에 없는 케이스까지 판단 기준으로</p></div><div><p class="v">500+</p><p class="k">교육으로 만난 원장님</p><p class="s">샵에서 바로 쓰는 기준을 함께 만들었어요</p></div><div><p class="v">1,000+</p><p class="k">네이버 리뷰</p><p class="s">고객이 먼저 남긴 결과</p></div><div><p class="v">수상</p><p class="k">래쉬애딕트 최고 교육지사상</p><p class="s">교육으로 인정받은 기준</p></div></div>
+  </div>
+</section>
+
+
+<!-- ================= 03 · 배우는 방식 2단계 ================= -->
 <section class="section lp-key">
   <div class="container">
     <div class="text-center lp-hd">
@@ -1489,7 +1513,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 02 · 후기 — 원장님 원문 ================= -->
+<!-- ================= 04 · 후기 — 원장님 원문 ================= -->
 <section class="section bg-light v2-rv">
   <div class="container">
     <div class="text-center">
@@ -1498,26 +1522,14 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
       <p class="section-desc">수업을 마친 원장님들이 직접 보내주신 메시지예요.</p>
     </div>
     <div class="loop" id="stLoop">
-      <div class="loop-vp"><div class="loop-track"><article class="rv-card" data-rv="0"><div class="img-placeholder has-img"><img src="assets/rv/lash-2.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>첫 시작을 원장님이랑 같이해서 정말 잘했다</h4><p class="ex">처음에 속눈썹펌을 배워야지 라는 생각을 하면서 과연 혼자 할 수 있을까? 했었는데 막상 하나 하나 따라가보니까 더 어렵더라구요 ㅠㅠ 롯드 붙이는 것도 맘 처럼 안되고 결정리도 자꾸 삐뚤빼뚤 해져서 계속 다시 하고 다시하고 귀에서 원장님 다시 다시 맴돌아요..ㅋㅋ 근데 어려운 만큼 원장님 설명 듣고 직접 해볼 수 있어서 좋았어요 처음에는 많이 느리고 중간에 막히는 부분도 많았지만 혼자 해봐야 한다는 원장님 말씀 오히려 너무 좋았어요! 녹화한거 보면서 다시 복습하는데 여기서 내가 이런 걸 못하는 구나 알게되더라구요 아직 완전 잘하는건 절대 아니지만 첫 시작을 원장님이랑 같이해서 정말 잘했다는 생각이 들어요 저 어려워도 절대 포기 안하고 열심히 해볼게용 오늘 수업 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="1"><div class="img-placeholder has-img"><img src="assets/rv/lash-3.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>모델 혼자 해보길 잘했다 싶어요</h4><p class="ex">원장님께서 혼자 다해야한다고 하셔서 사실 등록 고민했잖아요....ㅠㅠ 완전 초보라 혼자 다 할 수 있을까 수업 전날 잠도 못잤어요... 롯드 붙이는 것도 손이 안 따라주고 결 정리도 계속 풀리고 혼자 하면 내가 어디서 잘못한건지 몰라서 더 눈물나고ㅠㅠ 그래도 수업 들으면서 한 단계씩 해보니까 아 여기서 다시 봐야하는구나 하는 순간이 생기더라구요 아직 느리고 부족하지만 그냥 겁먹고 안 하는 것보단 모델 혼자 해보길 잘했다 싶어요 내일 또 모델 잡아놨는데 쪼금 덜 떨릴거 같아요 감사합니다 원장님!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="2"><div class="img-placeholder has-img"><img src="assets/rv/lash-4.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요</h4><p class="ex">원장님 잘 들어가셨어요? 저는 집에와서 남편이랑 저녁 먹고 수업 때 찍은 영상 돌려보고 있어요 내일부터 하루에 한번씩 복습해볼게요 수업 때 말씀드렸던 거 처럼 네일샵 운영 중인데 속눈썹을 계속 잘하고 싶었거든요 괜히 욕심냈다가 오히려 분산되는 거 아닌가 걱정많이 했는데 고객님들이 좋아해주시는 모습 보니까 스킬업을 안 할수 없었어요 제 욕심에 배우기로 결심한건데 원장님께 가길 정말 잘한 거 같아요 오늘 처음 뵙는건데 제 손의 습관이나 브러쉬 잡는거 한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요 원장님이 잘 가르쳐주신 만큼 저도 열심히 계속 정진하겠습니다 오늘 정말 감사했어요 피드백 신청 많이 하라고 하셨으니까 제가 종종 연락드릴게요 저 귀찮아 하시면 안돼요~ 좋은 밤 되세요</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="3"><div class="img-placeholder has-img"><img src="assets/rv/lash-5.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>보람 미쳤어요진짜</h4><p class="ex">허,,,,, 원장님 저 지금 집 도착이요 갈떼마다 느끼는데 서울 너무 멀어요ㅡㅠ 힝// 그래도 오늘 진짜 유익했습니다 좋은 클래스 들은 덕분인지 저 하나도 안피곤해여 오늘 저의 감동뽀인트 연화방법이 진짜 좋았어요 다른 데서는 그냥 시간을 정해줬었거든요 근데 원장님은 원리 설명하면서 엄청 자세하게 알려주시니까 응용이 되겠단 생각이 들었어요 그리고 두번쨰는 원장님 인스타에서 보던 느낌을 제가 실제로 해볼 수 있었다는게 찐이라고 느꼈어요 잘하는거랑 잘 가르치는 거랑 다르다잖아요 하루매출 포기하고 차비들여서 아침부터 부산에서 서울까지간 보람 미쳤어요진짜 다들 니잉했으면!!!! AI 수업도 곧 들으러 갈게요!!!!!!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="4"><div class="img-placeholder has-img"><img src="assets/rv/lash-6.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이제는 눈매를 직접 보고 판단 할 수 있단거예요</h4><p class="ex">펌을 오래한 편은 아닌데 유독 무쌍만 오면 손이 덜덜 떨려서 부담스러웠거든요 정보도 예전에 머물러 있다 보니까 자연스럽게 로만사 씨나 엘만 골랐어요 익숙한 것도 좋지만 제가 만족할 수 있는 시술을 하고 싶은데 방법을 몰라서 한 참 방황했어요 원데이 듣고 가장 크게 바뀌었다고 생각한 건 예전엔 무쌍이다 하면 롯드를 정해두고 맞췄는데 이제는 눈매를 직접 보고 판단 할 수 있단거예요 물론 연습이 더 필요하지만 겁나지 않아요 쫄지말라는 말씀 꼭 기억하면서 시술하겠습니다 좋은 수업을 들어서 정말 다행이고 진짜 좋았던 건 돈이 아깝지 않았어요 원장님 좋은 수업 감사합니다</p><span class="more">자세히 보기</span></article></div></div>
+      <div class="loop-vp"><div class="loop-track"><article class="rv-card" data-rv="0"><div class="img-placeholder has-img"><img src="assets/rv/lash-2.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>첫 시작을 원장님이랑 같이해서 정말 잘했다</h4><p class="ex">처음에 속눈썹펌을 배워야지 라는 생각을 하면서 과연 혼자 할 수 있을까? 했었는데 막상 하나 하나 따라가보니까 더 어렵더라구요 ㅠㅠ 롯드 붙이는 것도 맘 처럼 안되고 결정리도 자꾸 삐뚤빼뚤 해져서 계속 다시 하고 다시하고 귀에서 원장님 다시 다시 맴돌아요..ㅋㅋ 근데 어려운 만큼 원장님 설명 듣고 직접 해볼 수 있어서 좋았어요 처음에는 많이 느리고 중간에 막히는 부분도 많았지만 혼자 해봐야 한다는 원장님 말씀 오히려 너무 좋았어요! 녹화한거 보면서 다시 복습하는데 여기서 내가 이런 걸 못하는 구나 알게되더라구요 아직 완전 잘하는건 절대 아니지만 첫 시작을 원장님이랑 같이해서 정말 잘했다는 생각이 들어요 저 어려워도 절대 포기 안하고 열심히 해볼게용 오늘 수업 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="1"><div class="img-placeholder has-img"><img src="assets/rv/lash-3.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>모델 혼자 해보길 잘했다 싶어요</h4><p class="ex">원장님께서 혼자 다해야한다고 하셔서 사실 등록 고민했잖아요....ㅠㅠ 완전 초보라 혼자 다 할 수 있을까 수업 전날 잠도 못잤어요... 롯드 붙이는 것도 손이 안 따라주고 결 정리도 계속 풀리고 혼자 하면 내가 어디서 잘못한건지 몰라서 더 눈물나고ㅠㅠ 그래도 수업 들으면서 한 단계씩 해보니까 아 여기서 다시 봐야하는구나 하는 순간이 생기더라구요 아직 느리고 부족하지만 그냥 겁먹고 안 하는 것보단 모델 혼자 해보길 잘했다 싶어요 내일 또 모델 잡아놨는데 쪼금 덜 떨릴거 같아요 감사합니다 원장님!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="2"><div class="img-placeholder has-img"><img src="assets/rv/lash-4.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요</h4><p class="ex">원장님 잘 들어가셨어요? 저는 집에와서 남편이랑 저녁 먹고 수업 때 찍은 영상 돌려보고 있어요 내일부터 하루에 한번씩 복습해볼게요 수업 때 말씀드렸던 거 처럼 네일샵 운영 중인데 속눈썹을 계속 잘하고 싶었거든요 괜히 욕심냈다가 오히려 분산되는 거 아닌가 걱정많이 했는데 고객님들이 좋아해주시는 모습 보니까 스킬업을 안 할수 없었어요 제 욕심에 배우기로 결심한건데 원장님께 가길 정말 잘한 거 같아요 오늘 처음 뵙는건데 제 손의 습관이나 브러쉬 잡는거 한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요 원장님이 잘 가르쳐주신 만큼 저도 열심히 계속 정진하겠습니다 오늘 정말 감사했어요 피드백 신청 많이 하라고 하셨으니까 제가 종종 연락드릴게요 저 귀찮아 하시면 안돼요~ 좋은 밤 되세요</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="3"><div class="img-placeholder has-img"><img src="assets/rv/lash-5.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>보람 미쳤어요진짜</h4><p class="ex">허,,,,, 원장님 저 지금 집 도착이요 갈떼마다 느끼는데 서울 너무 멀어요ㅡㅠ 힝// 그래도 오늘 진짜 유익했습니다 좋은 클래스 들은 덕분인지 저 하나도 안피곤해여 오늘 저의 감동뽀인트 연화방법이 진짜 좋았어요 다른 데서는 그냥 시간을 정해줬었거든요 근데 원장님은 원리 설명하면서 엄청 자세하게 알려주시니까 응용이 되겠단 생각이 들었어요 그리고 두번쨰는 원장님 인스타에서 보던 느낌을 제가 실제로 해볼 수 있었다는게 찐이라고 느꼈어요 잘하는거랑 잘 가르치는 거랑 다르다잖아요 하루매출 포기하고 차비들여서 아침부터 부산에서 서울까지간 보람 미쳤어요진짜 다들 니잉했으면!!!! AI 수업도 곧 들으러 갈게요!!!!!!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="4"><div class="img-placeholder has-img"><img src="assets/rv/lash-6.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이제는 눈매를 직접 보고 판단 할 수 있단거예요</h4><p class="ex">펌을 오래한 편은 아닌데 유독 무쌍만 오면 손이 덜덜 떨려서 부담스러웠거든요 정보도 예전에 머물러 있다 보니까 자연스럽게 로만사 씨나 엘만 골랐어요 익숙한 것도 좋지만 제가 만족할 수 있는 시술을 하고 싶은데 방법을 몰라서 한 참 방황했어요 원데이 듣고 가장 크게 바뀌었다고 생각한 건 예전엔 무쌍이다 하면 롯드를 정해두고 맞췄는데 이제는 눈매를 직접 보고 판단 할 수 있단거예요 물론 연습이 더 필요하지만 겁나지 않아요 쫄지말라는 말씀 꼭 기억하면서 시술하겠습니다 좋은 수업을 들어서 정말 다행이고 진짜 좋았던 건 돈이 아깝지 않았어요 원장님 좋은 수업 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="5"><div class="img-placeholder has-img"><img src="assets/rv/lash-7.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>팩폭이랑 응원 완전 채찍과 당근 그 자체였어요</h4><p class="ex">그동안 재료 탓만 했던 과거의 나 반성합니다...ㅋㅋㅋㅋ 저 좀 자아비대였나 봐요 ㅠㅠ 내가 잘못했다는 생각은 1도 안 하고 걍 재료가 문제겠지~ 했던 듯요 알고 보니 터치 너무 많이 하고 있었고, 원장님이 말씀하신 보호제품도 언제 써야 하는지 몰랐더라구요 클리닉이면 무조건 다 좋은 줄 알았는데 오늘 제품에 대한 생각까지 싹 다 갈아엎어 주셔서 진짜 감사해요 오늘 팩폭이랑 응원 완전 채찍과 당근 그 자체였어요 ㅋㅋㅋ 꿈에도 나올 각인데 진짜 너무 잘 가르쳐주셔서 감사합니당 오늘 배운 거 절대 안 까먹고 열심히 할게요 헤헤 데모 일정 텀 너무 길다고 하셔서 바로 조정 완료했어요 니잉 말이 곧 진리... 시키는 대로 잘 해볼게요 지켜봐주세요!!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="6"><div class="img-placeholder has-img"><img src="assets/rv/lash-9.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이론이랑 실습이 진짜 찰떡같이 연결돼 있어요</h4><p class="ex">초보 때는 이론 몰라도 고객만 만족하면 되는 줄 알았거든요? 오늘 수업 듣고 그런 생각 싹 다 쓰레기통에 버리기로 했어요!!! 제가 속눈썹펌이 그 동안 오ㅐ그렇게 힘들었나 곰곰히 생각해보니까 납득이 안 돼서 힘들었던 거더라구욬ㅋ (ISTJ......) 원장님 이론은 딱 필요한 것만 친절하고 쉽게 알려주시는 거 같아요 들으면서 내 문제점이 뭔지도 생각해보고 아 이렇게 해볼 수도 있겠구나~ 이런 생각까지 들더라구요! 뭐랄까.... 이론이랑 실습이 진짜 찰떡같이 연결돼 있어요 재료를 고르는 것부터 다 이유가 있었어요.... 신기해.... 이해가 쏙쏙 됐던 것도 놀랍고 이제는 뭘 확인하면서 연화를 봐야 하는지 시술을 해야 하는지 아니까 힘들지 않을 거 같아요 앞으로 제 펌 인생이! 그리고 원장님이 느끼하지 않아서 개인적으로 더 좋았습니다 ㅋㅋㅋㅋㅋㅋㅋ 다른 데는 좋은 말만 해주고 잘한다 잘한다만 해주는데 여기는 그냥 다시 무새원장님...ㅋㅋㅋㅋㅋ 그 만큼 연습을 더 단단히 했다고 생각해요 더 빨리 들었으면 제 펌인생이 좀 더 빨리 쉬워졌었겠죠? 이제라도 들은게 어디나며~</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="7"><div class="img-placeholder has-img"><img src="assets/rv/lash-11.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이제는 내가 왜 이렇게 하는지 알고 하는 느낌</h4><p class="ex">원장님!! 후기가 너무 늦었죠!!!!! 수강 듣고 연습해보느라 정신없었어요 진짜 수업 너무 좋았어요 연습하면서도 후기를 얼마나 보내드리고 싶었는지ㅋㅋㅋ 속눈썹펌 시작한 지 얼마 안됐는데, 배우면서도 뭔가 머릿속에 정리가 안되는 느낌이 계속 있었거든요 어디 물어볼데도 없고ㅠㅠㅠㅠㅠ 그게 너무 답답해서 신청했는데, 수업 들으면서 딱 정리되는 느낌이었어요 원장님 설명하시는 방식이 저한테 너무 잘 맞아요 어렵게 돌려 말씀하시는게 아니라 바로바로 핵심 짚어주셔서 머릿속에 쏙쏙 들어오고 기억에도 잘 남아요 수업 중간에 이해 안갔던것도 다시 질문하면 아 이게 이런거였구나!! 하는 순간이 진짜 많았어요 연습 꼭 바로 해보라고 하셔서 모델 구했는데 손이 달라진게 느껴졌어요 이 전에는 그냥 인스타보고 따라하고 제 기준없이 하는 느낌이었다면 이제는 내가 왜 이렇게 하는지 알고 하는 느낌 그 차이가 제가 느껴질 정도로 크더라구요 원장님이 하시는 모든 수업 진짜 다들을거예요!!! 아프지마시고 잠 좀 주무시고 항상 건강하게 교육해주세요 정말 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="8"><div class="img-placeholder has-img"><img src="assets/rv/lash-12.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>넘치게 배운거같아 후회없는 시간이였다고</h4><p class="ex">장장 9시간의 원데이(라 쓰고 정규반이라 읽습니다) 이론부터 실습까지 부족함없이 아니 오히려 넘치게 배운거같아 후회없는 시간이였다고 단호하게 말할 수 있을꺼 같아요 펌린이시절 뭔가 문제인지도 몰라 허덕이며 아예 포기해야 하나 할때 알고리즘의 선택으로 원장님계정을 보게된 뒤로 다시 속펌을 시작하게 되고 점점 하면 할수록 이론+클리닉 세부적으로 부족하다고 느끼게 되었던 찰나에 원데이 오픈해주신 원장님께 닝렐루야 외치며 신청하게 되었는데 오늘 드디어 수업듣고 ‘역시는 역시다’ 되뇌이며 귀가중입니다...! 교재분량부터 장난이 아니라 감동먹었고여, 제가 있는 재료, 롯드들을 기준으로 저한테 맞는 방법 만들어주시는거에서 완전 끝-! 이제 그냥 저는 원장님이 북한 땅을 사라해도 살려구요 오늘 다시한번 저의 정체성에 대해 진지하게 생각하게 되는 하루이기도 했습니다 오늘 하루 너무 수고많으셨습니다 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="9"><div class="img-placeholder has-img"><img src="assets/rv/lash-13.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>작게나마 확신과 자신감이 생긴 것 같아요</h4><p class="ex">원장님 안녕하세요 !! 버스타구 이제야 카톡 남겨요 .. 그동안 제대로 된 수업을 못 들어서 항상 시술할 때마다 제 실력에 확신도 없고 걱정이 많았었는데 항상 원장님 라방 보면서 새로 알게 된 내용들이 너무 많고 도움이 많이 되어서 &#x27;꼭 제대로 배워야겠다&#x27; 마음먹고 요번에 찾아뵙게 되었어요 ..! 조금 늦게 원장님을 찾아온 게 너무 너무 아쉽지만 이제라도 제대로 배울 수 있어서 너무 다행이고 감사한 시간이었습니다 늘 자신감이 부족했는데 오늘 수업 덕분에 작게나마 확신과 자신감이 생긴 것 같아요 !! 앞으로 알려주신 대로 차근차근 잘해나갈 수 있을 것 같아요 오늘 귀한 배움 주셔서 정말 너무 너무 감사드립니다 오늘도 편안한 밤 되세요</p><span class="more">자세히 보기</span></article></div></div>
       <div class="tcar-nav"><button data-loop="-1"><i data-lucide="chevron-left"></i></button><button data-loop="1"><i data-lucide="chevron-right"></i></button></div>
     </div>
   </div>
 </section>
 
 
-<!-- ================= 03 · 근거 — 숫자와 이력 ================= -->
-<section class="section lp-proof">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">Proof</p>
-      <h2 class="section-title">숫자와 이력으로,<br>먼저 보여드려요</h2>
-    </div>
-    <div class="lp-proof-grid"><div><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">교과서에 없는 케이스까지 판단 기준으로</p></div><div><p class="v">500+</p><p class="k">교육으로 만난 원장님</p><p class="s">샵에서 바로 쓰는 기준을 함께 만들었어요</p></div><div><p class="v">1,000+</p><p class="k">네이버 리뷰</p><p class="s">고객이 먼저 남긴 결과</p></div><div><p class="v">수상</p><p class="k">래쉬애딕트 최고 교육지사상</p><p class="s">교육으로 인정받은 기준</p></div></div>
-  </div>
-</section>
-
-
-<!-- ================= 04 · 만든 사람 — 대표의 기준 ================= -->
+<!-- ================= 05 · 만든 사람 — 대표의 기준 ================= -->
 <section class="section bg-light v2-emp">
   <div class="container">
     <div class="split">
@@ -1538,7 +1550,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 05 · 고민 — 이런 고민 해당되시나요 ================= -->
+<!-- ================= 06 · 고민 — 이런 고민 해당되시나요 ================= -->
 <section class="section v2-target">
   <div class="container">
     <div class="text-center">
@@ -1559,7 +1571,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 06 · 원인 — 세 가지 ================= -->
+<!-- ================= 07 · 원인 — 세 가지 ================= -->
 <section class="section v2-cause">
   <div class="container">
     <div class="text-center">
@@ -1577,7 +1589,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 07 · 해결책 — 원인마다 대응 ================= -->
+<!-- ================= 08 · 해결책 — 원인마다 대응 ================= -->
 <section class="section bg-light v2-sol">
   <div class="container">
     <div class="text-center">
@@ -1594,7 +1606,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 08 · 비교 — 영상 독학 vs 니잉 ================= -->
+<!-- ================= 09 · 비교 — 영상 독학 vs 니잉 ================= -->
 <section class="section bg-light v2-cmp">
   <div class="container">
     <div class="text-center">
@@ -1614,7 +1626,19 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 09 · 작동 원리 — 이렇게 배웁니다 ================= -->
+<!-- ================= 10 · 선택 — 클래스와 수강료 ================= -->
+<section class="section bg-light v2-cls" id="class">
+  <div class="container">
+    <p class="section-label">Class</p>
+    <h2 class="section-title">나에게 필요한 클래스,<br>더 자세히 알아보세요</h2>
+    <p class="section-desc">급속교정 클래스는 롯드 기초반, 온라인 이론 클래스, 연화 특허기술 패키지, 세 가지로 나뉘어요.</p>
+    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">온라인 + 오프라인</span><h3>속눈썹펌 연화 특허기술 패키지</h3><p>온라인 강의 6개월에 100% 실습을 더한 기존 급속교정 클래스</p><div class="hash"><span>온라인 6개월 + 실습</span><span>79만원부터</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="0">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">VOD + 자료</span><h3>롯드 왕초보 온라인 기초반</h3><p>새 롯드가 나올 때마다 헷갈렸다면, 롯드의 방향·구간·사이즈부터 시작하세요</p><div class="hash"><span>온라인 1개월</span><span>5만 9천원부터</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="1">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">VOD</span><h3>속눈썹펌 온라인 이론 클래스</h3><p>같은 방법인데 결과가 달라졌다면, 속눈썹펌의 메커니즘부터 이해하세요</p><div class="hash"><span>온라인 100일</span><span>29만 9천원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="2">자세히 보기</button></article></div>
+    <p class="micro text-center">롯드 기초반 수강 시 패키지 할인쿠폰 제공 · 패스트캠퍼스 수강자는 패키지의 오프라인 실습만 진행 가능</p>
+  </div>
+</section>
+
+
+<!-- ================= 11 · 작동 원리 — 이렇게 배웁니다 ================= -->
 <section class="section v2-adv">
   <div class="container">
     <div class="text-center">
@@ -1632,7 +1656,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 10 · 구성 전체 — 11단계 상세 교정 ================= -->
+<!-- ================= 12 · 구성 전체 — 11단계 상세 교정 ================= -->
 <section class="section v2-core">
   <div class="container">
     <div class="split" style="align-items:start">
@@ -1648,7 +1672,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 11 · 진행 방법 — 수강 절차 ================= -->
+<!-- ================= 13 · 진행 방법 — 수강 절차 ================= -->
 <section class="section v2-step">
   <div class="container">
     <div class="text-center">
@@ -1668,7 +1692,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 12 · 신뢰 — 실제 수업 현장 ================= -->
+<!-- ================= 14 · 신뢰 — 실제 수업 현장 ================= -->
 <section class="section bg-light lp-gallery">
   <div class="container">
     <div class="text-center lp-hd">
@@ -1681,48 +1705,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 13 · 이야기 — 더 많은 원장님 후기 ================= -->
-<section class="section v2-rv lp-rv2">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">More Stories</p>
-      <h2 class="section-title">수업을 마친 원장님들이<br>직접 보내주신 이야기</h2>
-      <p class="section-desc">카카오톡으로 받은 후기 원문이에요. 카드를 누르면 전체 내용을 볼 수 있어요.</p>
-    </div>
-    <div class="lp-rv-grid"><article class="rv-card" data-rv="5"><div class="img-placeholder has-img"><img src="assets/rv/lash-7.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>팩폭이랑 응원 완전 채찍과 당근 그 자체였어요</h4><p class="ex">그동안 재료 탓만 했던 과거의 나 반성합니다...ㅋㅋㅋㅋ 저 좀 자아비대였나 봐요 ㅠㅠ 내가 잘못했다는 생각은 1도 안 하고 걍 재료가 문제겠지~ 했던 듯요 알고 보니 터치 너무 많이 하고 있었고, 원장님이 말씀하신 보호제품도 언제 써야 하는지 몰랐더라구요 클리닉이면 무조건 다 좋은 줄 알았는데 오늘 제품에 대한 생각까지 싹 다 갈아엎어 주셔서 진짜 감사해요 오늘 팩폭이랑 응원 완전 채찍과 당근 그 자체였어요 ㅋㅋㅋ 꿈에도 나올 각인데 진짜 너무 잘 가르쳐주셔서 감사합니당 오늘 배운 거 절대 안 까먹고 열심히 할게요 헤헤 데모 일정 텀 너무 길다고 하셔서 바로 조정 완료했어요 니잉 말이 곧 진리... 시키는 대로 잘 해볼게요 지켜봐주세요!!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="6"><div class="img-placeholder has-img"><img src="assets/rv/lash-9.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이론이랑 실습이 진짜 찰떡같이 연결돼 있어요</h4><p class="ex">초보 때는 이론 몰라도 고객만 만족하면 되는 줄 알았거든요? 오늘 수업 듣고 그런 생각 싹 다 쓰레기통에 버리기로 했어요!!! 제가 속눈썹펌이 그 동안 오ㅐ그렇게 힘들었나 곰곰히 생각해보니까 납득이 안 돼서 힘들었던 거더라구욬ㅋ (ISTJ......) 원장님 이론은 딱 필요한 것만 친절하고 쉽게 알려주시는 거 같아요 들으면서 내 문제점이 뭔지도 생각해보고 아 이렇게 해볼 수도 있겠구나~ 이런 생각까지 들더라구요! 뭐랄까.... 이론이랑 실습이 진짜 찰떡같이 연결돼 있어요 재료를 고르는 것부터 다 이유가 있었어요.... 신기해.... 이해가 쏙쏙 됐던 것도 놀랍고 이제는 뭘 확인하면서 연화를 봐야 하는지 시술을 해야 하는지 아니까 힘들지 않을 거 같아요 앞으로 제 펌 인생이! 그리고 원장님이 느끼하지 않아서 개인적으로 더 좋았습니다 ㅋㅋㅋㅋㅋㅋㅋ 다른 데는 좋은 말만 해주고 잘한다 잘한다만 해주는데 여기는 그냥 다시 무새원장님...ㅋㅋㅋㅋㅋ 그 만큼 연습을 더 단단히 했다고 생각해요 더 빨리 들었으면 제 펌인생이 좀 더 빨리 쉬워졌었겠죠? 이제라도 들은게 어디나며~</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="7"><div class="img-placeholder has-img"><img src="assets/rv/lash-11.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이제는 내가 왜 이렇게 하는지 알고 하는 느낌</h4><p class="ex">원장님!! 후기가 너무 늦었죠!!!!! 수강 듣고 연습해보느라 정신없었어요 진짜 수업 너무 좋았어요 연습하면서도 후기를 얼마나 보내드리고 싶었는지ㅋㅋㅋ 속눈썹펌 시작한 지 얼마 안됐는데, 배우면서도 뭔가 머릿속에 정리가 안되는 느낌이 계속 있었거든요 어디 물어볼데도 없고ㅠㅠㅠㅠㅠ 그게 너무 답답해서 신청했는데, 수업 들으면서 딱 정리되는 느낌이었어요 원장님 설명하시는 방식이 저한테 너무 잘 맞아요 어렵게 돌려 말씀하시는게 아니라 바로바로 핵심 짚어주셔서 머릿속에 쏙쏙 들어오고 기억에도 잘 남아요 수업 중간에 이해 안갔던것도 다시 질문하면 아 이게 이런거였구나!! 하는 순간이 진짜 많았어요 연습 꼭 바로 해보라고 하셔서 모델 구했는데 손이 달라진게 느껴졌어요 이 전에는 그냥 인스타보고 따라하고 제 기준없이 하는 느낌이었다면 이제는 내가 왜 이렇게 하는지 알고 하는 느낌 그 차이가 제가 느껴질 정도로 크더라구요 원장님이 하시는 모든 수업 진짜 다들을거예요!!! 아프지마시고 잠 좀 주무시고 항상 건강하게 교육해주세요 정말 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="8"><div class="img-placeholder has-img"><img src="assets/rv/lash-12.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>넘치게 배운거같아 후회없는 시간이였다고</h4><p class="ex">장장 9시간의 원데이(라 쓰고 정규반이라 읽습니다) 이론부터 실습까지 부족함없이 아니 오히려 넘치게 배운거같아 후회없는 시간이였다고 단호하게 말할 수 있을꺼 같아요 펌린이시절 뭔가 문제인지도 몰라 허덕이며 아예 포기해야 하나 할때 알고리즘의 선택으로 원장님계정을 보게된 뒤로 다시 속펌을 시작하게 되고 점점 하면 할수록 이론+클리닉 세부적으로 부족하다고 느끼게 되었던 찰나에 원데이 오픈해주신 원장님께 닝렐루야 외치며 신청하게 되었는데 오늘 드디어 수업듣고 ‘역시는 역시다’ 되뇌이며 귀가중입니다...! 교재분량부터 장난이 아니라 감동먹었고여, 제가 있는 재료, 롯드들을 기준으로 저한테 맞는 방법 만들어주시는거에서 완전 끝-! 이제 그냥 저는 원장님이 북한 땅을 사라해도 살려구요 오늘 다시한번 저의 정체성에 대해 진지하게 생각하게 되는 하루이기도 했습니다 오늘 하루 너무 수고많으셨습니다 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="9"><div class="img-placeholder has-img"><img src="assets/rv/lash-13.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>작게나마 확신과 자신감이 생긴 것 같아요</h4><p class="ex">원장님 안녕하세요 !! 버스타구 이제야 카톡 남겨요 .. 그동안 제대로 된 수업을 못 들어서 항상 시술할 때마다 제 실력에 확신도 없고 걱정이 많았었는데 항상 원장님 라방 보면서 새로 알게 된 내용들이 너무 많고 도움이 많이 되어서 &#x27;꼭 제대로 배워야겠다&#x27; 마음먹고 요번에 찾아뵙게 되었어요 ..! 조금 늦게 원장님을 찾아온 게 너무 너무 아쉽지만 이제라도 제대로 배울 수 있어서 너무 다행이고 감사한 시간이었습니다 늘 자신감이 부족했는데 오늘 수업 덕분에 작게나마 확신과 자신감이 생긴 것 같아요 !! 앞으로 알려주신 대로 차근차근 잘해나갈 수 있을 것 같아요 오늘 귀한 배움 주셔서 정말 너무 너무 감사드립니다 오늘도 편안한 밤 되세요</p><span class="more">자세히 보기</span></article></div>
-    <p class="answer lp-rv-tag">혼자 고민하던 시간이, <b>판단할 수 있는 기준</b>으로 바뀝니다.</p>
-  </div>
-</section>
-
-
-<!-- ================= 14 · 부담 완화 — 상담부터 시작 ================= -->
-<section class="section lp-offer">
-  <div class="container">
-    <div class="lp-offer-box">
-      <ul class="circle-ani" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ul>
-      <p class="section-label">First Step</p>
-      <h2 class="section-title">처음이라 망설여진다면,<br>상담부터 시작하세요</h2>
-      <p class="section-desc">지금 어느 단계에서 막혀 있는지 남겨주시면, 맞는 클래스부터 안내해 드려요.</p>
-      <div class="lp-offer-btns"><a href="page_09.html" class="btn btn-primary btn-arrow">1:1 상담 남기기</a><a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" rel="noopener" class="btn btn-secondary">카카오톡 상담</a></div>
-      <p class="micro">카카오톡 상담 평일 10:30 ~ 19:00</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= 15 · 선택 — 클래스와 수강료 ================= -->
-<section class="section bg-light v2-cls" id="class">
-  <div class="container">
-    <p class="section-label">Class</p>
-    <h2 class="section-title">나에게 필요한 클래스,<br>더 자세히 알아보세요</h2>
-    <p class="section-desc">급속교정 클래스는 롯드 기초반, 온라인 이론 클래스, 연화 특허기술 패키지, 세 가지로 나뉘어요.</p>
-    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">온라인 + 오프라인</span><h3>속눈썹펌 연화 특허기술 패키지</h3><p>온라인 강의 6개월에 100% 실습을 더한 기존 급속교정 클래스</p><div class="hash"><span>온라인 6개월 + 실습</span><span>79만원부터</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="0">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">VOD + 자료</span><h3>롯드 왕초보 온라인 기초반</h3><p>새 롯드가 나올 때마다 헷갈렸다면, 롯드의 방향·구간·사이즈부터 시작하세요</p><div class="hash"><span>온라인 1개월</span><span>5만 9천원부터</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="1">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">VOD</span><h3>속눈썹펌 온라인 이론 클래스</h3><p>같은 방법인데 결과가 달라졌다면, 속눈썹펌의 메커니즘부터 이해하세요</p><div class="hash"><span>온라인 100일</span><span>29만 9천원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="2">자세히 보기</button></article></div>
-    <p class="micro text-center">롯드 기초반 수강 시 패키지 할인쿠폰 제공 · 패스트캠퍼스 수강자는 패키지의 오프라인 실습만 진행 가능</p>
-  </div>
-</section>
-
-
-<!-- ================= 16 · Q&A — 신청 전 질문 ================= -->
+<!-- ================= 15 · Q&A — 신청 전 질문 ================= -->
 <section class="section bg-light lp-qna">
   <div class="container" style="max-width:960px">
     <div class="text-center lp-hd">
@@ -1742,7 +1725,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 17 · 안내 — 수강 안내 및 환불 규정 ================= -->
+<!-- ================= 16 · 안내 — 수강 안내 및 환불 규정 ================= -->
 <section class="section v2-faq">
   <div class="container" style="max-width:960px">
     <div class="text-center"><p class="section-label">Notice</p><h2 class="section-title">수강 안내 및 환불 규정</h2></div>
@@ -1757,7 +1740,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </section>
 
 
-<!-- ================= 18 · 다음 클래스 ================= -->
+<!-- ================= 17 · 다음 클래스 ================= -->
 <section class="letter v2-letter">
   <div class="hero-ph"><i data-lucide="image"></i></div>
   <div class="container" style="position:relative;z-index:2">
