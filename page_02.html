@@ -1414,6 +1414,393 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 @media (max-width:1024px){.lp-cds.c4{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-cds.c4 .lp-cd::after{display:none}}
 @media (max-width:768px){.lp-cds.c3,.lp-cds.c4{grid-template-columns:1fr}.lp-chain{flex-direction:column}.lp-chain i{width:1px;height:22px;margin:6px 0;background:linear-gradient(180deg,rgba(0,87,255,.15),#0057ff)}.lp-chain i::after{display:none}}
 .lp-proof-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* ===== v5 랜딩 19단 (s2m-spicule-detail 구성) ===== */
+.z{--zb:#0057ff;--zbs:#4d8bff;--zd:#0b0d12;--zg:#f3f5f9;--zt:#111;--zx:#5b6070;--zl:#e3e8f0;position:relative;font-family:'Pretendard',sans-serif;color:var(--zt);padding:clamp(72px,8vw,128px) 0;overflow:hidden}
+.z img{display:block;max-width:100%}
+.zc{margin:0 auto;padding:0 20px;position:relative;z-index:2}
+.zw{max-width:1160px}.zm{max-width:980px}.zn{max-width:820px}
+.z-hd{text-align:center;margin:0 auto clamp(36px,4vw,56px);max-width:760px}
+.z-eb{font-family:var(--serif-en);font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--zb);margin:0 0 14px}
+.z-t{font-size:clamp(27px,3.3vw,42px);font-weight:700;line-height:1.36;letter-spacing:-.035em;margin:0;color:inherit;word-break:keep-all}
+.z-t em,.z h3 em{font-style:normal;color:var(--zb)}
+.z-sub{margin:16px 0 0;font-size:clamp(15px,1.2vw,17px);line-height:1.7;color:var(--zx);word-break:keep-all}
+.z-note{margin:22px auto 0;font-size:12.5px;line-height:1.7;color:#8a90a0;text-align:center;max-width:760px;word-break:keep-all}
+.z-btn{display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 26px;border-radius:999px;background:var(--zb);color:#fff;font-size:15.5px;font-weight:600;border:0;cursor:pointer;text-decoration:none;transition:transform .25s,background .25s}
+.z-btn:hover{transform:translateY(-2px);background:#0047d1}
+.z-btn.ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.45)}
+.z-btn svg{width:18px;height:18px}
+/* 01 HERO */
+.z01{padding:0;background:#fff}
+.z01-vis{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:var(--zd);padding:clamp(120px,13vw,170px) 20px clamp(28px,3vw,44px)}
+.z01-vis>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+.z01-vis:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.18) 45%,rgba(0,0,0,.75) 100%)}
+.z01-copy{position:relative;z-index:2;text-align:center;max-width:860px;margin:0 auto}
+.z01-lb{font-family:var(--serif-en);font-size:15px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin:0 0 18px}
+.z01-copy h1{font-size:clamp(32px,4.6vw,60px);font-weight:800;line-height:1.28;letter-spacing:-.04em;margin:0;word-break:keep-all}
+.z01-sub{margin:22px 0 0;font-size:clamp(15px,1.3vw,18px);line-height:1.7;opacity:.9;word-break:keep-all}
+.z01-certs{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);max-width:760px;width:100%;margin:56px auto 0;padding:0;list-style:none}
+.z01-certs li{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-size:13.5px;line-height:1.45;padding:0 8px;border-left:1px solid rgba(255,255,255,.28)}
+.z01-certs li:first-child{border-left:0}
+.z01-certs svg{width:46px;height:46px;padding:11px;border:1px solid rgba(255,255,255,.7);border-radius:50%;stroke-width:1.6}
+.z01-flow{padding:clamp(72px,8vw,120px) 0;background:linear-gradient(180deg,#fff,var(--zg))}
+.zflow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;max-width:640px;margin:0 auto}
+.zflow figure{margin:0;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 18px 40px -24px rgba(10,30,80,.35);border:1px solid var(--zl)}
+.zflow figure.on{border:2px solid var(--zb)}
+.zflow img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.zflow figcaption{padding:14px 12px 16px;text-align:center;font-size:15px;line-height:1.45}
+.zflow figcaption b{color:var(--zb);margin-right:4px}
+.zflow figcaption small{color:var(--zx);font-size:12.5px}
+.zflow-x{font-style:normal;width:40px;height:40px;border-radius:50%;background:var(--zb);color:#fff;display:grid;place-items:center;font-size:22px;font-weight:600}
+.zflow-res{text-align:center;margin:26px 0 0;font-size:clamp(17px,1.6vw,21px);font-weight:700;color:var(--zb)}
+/* 02 변화 증거 */
+.z02{background:var(--zg)}
+.z02-rows{display:grid;gap:clamp(40px,5vw,64px)}
+.z02-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(18px,3vw,40px);align-items:center}
+.z02-ims{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.z02-ims.one{grid-template-columns:1fr;max-width:300px;width:100%;justify-self:center}
+.z02-ph{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:3/4;background:#dde3ec}
+.z02-ph img[src*='/rv/']{object-position:top}
+.z02-ims.one .z02-ph{aspect-ratio:4/5}
+.z02-ph img{width:100%;height:100%;object-fit:cover}
+.z02-bg{background-size:200% auto;background-repeat:no-repeat;background-color:#dde3ec}
+.z02-ph span{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.72);color:#fff;font-size:12px;font-weight:600;padding:5px 10px;border-radius:6px}
+.z02-nm{font-size:clamp(18px,1.7vw,22px);font-weight:700;margin:0}
+.z02-big{font-size:clamp(34px,4.2vw,52px);font-weight:800;letter-spacing:-.04em;margin:8px 0 20px;line-height:1.1}
+.z02-big small{font-size:.38em;font-weight:600;margin-left:6px;letter-spacing:-.02em}
+.z02-cmp{display:grid;grid-template-columns:1fr 28px 1fr;align-items:end;gap:6px;border-bottom:2px solid #111;padding-bottom:0}
+.z02-cmp>div{border-radius:10px 10px 0 0;padding:16px 14px 18px;font-size:14.5px;line-height:1.5;word-break:keep-all}
+.z02-cmp em{display:block;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;margin-bottom:8px;opacity:.8}
+.z02-cmp .b{background:linear-gradient(180deg,#aab2c0,#e7ebf1);color:#2a2f3a;min-height:150px}
+.z02-cmp .a{background:linear-gradient(180deg,#5d9bff,#0b3fae);color:#fff;min-height:190px}
+.z02-cmp i{align-self:center;height:2px;border-top:2px dashed #111;position:relative}
+.z02-cmp i:after{content:"";position:absolute;right:-2px;top:-7px;border:6px solid transparent;border-left-color:#111}
+/* 03 대표 */
+.z03{background:var(--zd);color:#fff;min-height:clamp(560px,52vw,720px);display:flex;align-items:center}
+.z03-bg{position:absolute;inset:0}
+.z03-bg img{position:absolute;right:0;top:0;height:100%;width:min(52%,620px);object-fit:cover;object-position:center 20%;opacity:.95}
+.z03-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--zd) 42%,rgba(11,13,18,.55) 62%,rgba(11,13,18,.05) 100%)}
+.z03 .zc{width:100%}
+.z03-tx{max-width:520px}
+.z03-body p{font-size:clamp(15px,1.25vw,17px);line-height:1.85;opacity:.88;margin:22px 0 0;word-break:keep-all}
+.z03-sign{margin:36px 0 0;font-weight:600;font-size:16px}
+.z03-sign:before{content:"";display:inline-block;width:28px;height:1px;background:#fff;vertical-align:middle;margin-right:10px;opacity:.6}
+/* 04 후기 */
+.z04{padding-top:0;background:var(--zg)}
+.z04-top{position:relative;height:clamp(300px,34vw,440px);display:flex;align-items:flex-start;justify-content:center;text-align:center;color:#fff;margin-bottom:clamp(40px,5vw,64px)}
+.z04-top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.z04-top:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.1) 60%,var(--zg) 100%)}
+.z04-top-tx{position:relative;z-index:2;padding-top:clamp(56px,6vw,90px)}
+.z04-top .z-eb{color:#fff;opacity:.9}
+.z-rvs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.z-rv{background:#fff;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:42% 1fr;cursor:pointer;box-shadow:0 14px 34px -26px rgba(10,30,80,.4);transition:transform .3s}
+.z-rv:hover{transform:translateY(-4px)}
+.z-rv-img{background:#eef1f6}
+.z-rv-img img{width:100%;height:100%;object-fit:cover;object-position:top;max-height:300px}
+.z-rv-tx{padding:20px 20px 22px;display:flex;flex-direction:column}
+.z-rv-q svg{width:22px;height:22px;color:var(--zb)}
+.z-rv-q{margin:0 0 6px}
+.z-rv-who{font-size:12.5px;color:#8a90a0;margin:0 0 8px}
+.z-rv h4{font-size:16.5px;font-weight:700;line-height:1.45;margin:0 0 8px;word-break:keep-all}
+.z-rv-ex{font-size:14px;line-height:1.65;color:var(--zx);margin:0;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.z-rv-more{margin-top:auto;padding-top:12px;font-size:13px;font-weight:600;color:var(--zb);display:inline-flex;align-items:center;gap:4px}
+.z-rv-more svg{width:15px;height:15px}
+/* 05 고민 */
+.z05{background:linear-gradient(180deg,#fff,#eef3fb);padding-bottom:0}
+.z05-circle{width:clamp(170px,18vw,220px);aspect-ratio:1;border-radius:50%;overflow:hidden;margin:-8px auto 40px;box-shadow:0 20px 40px -20px rgba(0,40,120,.4)}
+.z05-circle img{width:100%;height:100%;object-fit:cover}
+.z05-chat{display:flex;flex-direction:column;gap:16px}
+.z05-b{max-width:80%;align-self:flex-start;background:#fff;border-radius:22px;padding:18px 22px;font-size:15px;line-height:1.65;box-shadow:0 10px 26px -20px rgba(0,0,0,.35);word-break:keep-all}
+.z05-b b{font-weight:700}
+.z05-b.me{align-self:flex-end;background:var(--zb);color:#fff;font-weight:500}
+.z05-band{margin:56px 0 0;background:var(--zd);color:#fff;text-align:center;padding:30px 20px;font-size:clamp(17px,1.8vw,23px);font-weight:500;word-break:keep-all}
+.z05-band b{color:var(--zbs)}
+/* 06 원인 */
+.z06{background:#fff}
+.z06-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,40px)}
+.z06-card{text-align:center}
+.z06-no{width:42px;height:42px;border-radius:50%;border:1.5px solid #111;display:inline-grid;place-items:center;font-weight:700;font-size:16px;background:#fff}
+.z06-card h3{font-size:clamp(18px,1.6vw,21px);font-weight:700;line-height:1.45;margin:16px 0 18px;min-height:2.9em;word-break:keep-all}
+.z06-img{border-radius:4px;overflow:hidden;aspect-ratio:16/10;background:#eef1f6}
+.z06-img img{width:100%;height:100%;object-fit:cover}
+.z06-card>p{text-align:left;font-size:14.5px;line-height:1.75;color:#333;margin:16px 0 0;word-break:keep-all}
+.z06-card .z06-src{font-size:12px;color:#8a90a0;margin-top:10px;line-height:1.6}
+/* 07 결론 */
+.z07{background:#0d1b3a;color:#fff;text-align:center}
+.z07-lead,.z07-next{font-size:clamp(17px,1.7vw,22px);line-height:1.7;margin:0;word-break:keep-all;opacity:.92}
+.z07-lead b,.z07-next b{font-weight:700;opacity:1}
+.z07-img{margin:32px auto;border-radius:4px;overflow:hidden;aspect-ratio:16/8;max-width:720px;border:1px solid rgba(255,255,255,.15)}
+.z07-img img{width:100%;height:100%;object-fit:cover}
+/* 08 핵심 해결책 */
+.z08{padding:0;background:#fff}
+.z08-top{background:radial-gradient(120% 80% at 50% 0%,#12305f 0%,#0a1630 55%,#060b18 100%);color:#fff;padding:clamp(80px,9vw,130px) 0 clamp(64px,7vw,100px);text-align:center}
+.z08-kick{font-size:clamp(16px,1.5vw,19px);line-height:1.6;opacity:.9;margin:0}
+.z08-big{font-family:var(--serif-en);font-size:clamp(40px,6vw,76px);font-weight:600;letter-spacing:-.02em;margin:10px 0 34px;line-height:1.05}
+.z08-vis{position:relative;max-width:520px;margin:0 auto}
+.z08-main{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;opacity:.95}
+.z08-zoom{position:absolute;left:-18px;bottom:-26px;width:clamp(110px,14vw,150px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,.85);box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.z08-zoom img{width:100%;height:100%;object-fit:cover}
+.z08-box{margin:56px auto 0;max-width:720px;border-radius:24px;padding:clamp(28px,3vw,40px) clamp(20px,3vw,40px);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.z08-lb{font-size:14px;opacity:.85;margin:0}
+.z08-nm{font-size:clamp(26px,3vw,36px);font-weight:800;margin:8px 0 18px;letter-spacing:-.03em}
+.z08-desc{font-size:15.5px;line-height:1.85;margin:0;opacity:.92;word-break:keep-all}
+.z08-note{font-size:12px;opacity:.65;margin:14px 0 0}
+.z08-cells{display:grid;grid-template-columns:repeat(4,1fr);margin-top:26px;border-top:1px solid rgba(255,255,255,.2);padding-top:24px}
+.z08-cells>div{display:flex;flex-direction:column;align-items:center;gap:6px;border-left:1px solid rgba(255,255,255,.2);padding:0 6px}
+.z08-cells>div:first-child{border-left:0}
+.z08-cells svg{width:40px;height:40px;padding:9px;border:1px solid rgba(255,255,255,.6);border-radius:50%;margin-bottom:6px}
+.z08-cells b{font-size:15px}
+.z08-cells span{font-size:12.5px;opacity:.75}
+.z08-steps{padding:clamp(72px,8vw,120px) 0 clamp(56px,6vw,90px);background:#fff}
+.z08-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.z08-st{text-align:center}
+.z08-st-img{margin:16px 0;border-radius:6px;overflow:hidden;aspect-ratio:1/1;background:#eef1f6}
+.z08-st-img img{width:100%;height:100%;object-fit:cover}
+.z08-st h3{font-size:17.5px;font-weight:700;margin:0 0 8px;word-break:keep-all}
+.z08-st p{font-size:14px;line-height:1.7;color:var(--zx);margin:0;text-align:left;word-break:keep-all}
+.z-mq{overflow:hidden;background:var(--zb);color:#fff;padding:16px 0;white-space:nowrap}
+.z-mq-tr{display:inline-flex;gap:26px;animation:zmq 38s linear infinite;font-family:var(--serif-en);font-size:15px;letter-spacing:.12em;font-weight:500}
+.z-mq-tr b{opacity:.7;font-weight:400}
+@keyframes zmq{to{transform:translateX(-50%)}}
+/* 09 비교 */
+.z09{background:#fff}
+.z09-wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,24px);padding-top:70px}
+.z09-col{position:relative;border:1px solid #d5dbe5;border-radius:22px;padding:84px clamp(12px,2vw,26px) 10px;text-align:center}
+.z09-col.dia{border:1.5px solid var(--zb);box-shadow:0 0 0 6px rgba(0,87,255,.08),0 24px 50px -24px rgba(0,87,255,.45)}
+.z09-circle{position:absolute;left:50%;top:-62px;transform:translateX(-50%);width:124px;height:124px;border-radius:50%;overflow:hidden;border:1px solid #d5dbe5;background:#fff}
+.z09-col.dia .z09-circle{border:2px solid var(--zb)}
+.z09-circle img{width:100%;height:100%;object-fit:cover}
+.z09-head{font-size:clamp(16px,1.6vw,20px);font-weight:700;margin:0;padding-bottom:20px;border-bottom:1px dashed #cfd6e2}
+.z09-col.base .z09-head{color:#555}
+.z09-cell{padding:22px 4px;font-size:clamp(13.5px,1.25vw,15.5px);line-height:1.55;border-bottom:1px dashed #cfd6e2;min-height:94px;display:flex;align-items:center;justify-content:center;word-break:keep-all}
+.z09-cell:last-child{border-bottom:0}
+.z09-col.base .z09-cell{color:#7a8090}
+.z09-col.dia .z09-cell{color:#0b2f80;font-weight:700}
+/* 10 구조 상세 */
+.z10{background:radial-gradient(100% 60% at 50% 0%,#0f2a57 0%,#08132a 55%,#050a16 100%);color:#fff;padding-bottom:0}
+.z10 .z-sub{color:rgba(255,255,255,.75)}
+.z10 .z-note{color:rgba(255,255,255,.5)}
+.z10-spine{position:relative;padding:10px 0}
+.z10-line{position:absolute;left:50%;top:0;bottom:0;width:6px;transform:translateX(-50%);border-radius:6px;background:linear-gradient(180deg,#f3e9a8,#c9d6ff 30%,#9fb6ff 70%,#f3e9a8);box-shadow:0 0 22px rgba(160,190,255,.55)}
+.z10-it{display:flex;padding:14px 0}
+.z10-it.r{justify-content:flex-end}
+.z10-it .z10-in{width:calc(50% - 44px);position:relative}
+.z10-it.l .z10-in{text-align:right}
+.z10-in:before{content:"";position:absolute;top:44px;width:34px;height:1px;background:rgba(255,255,255,.5)}
+.z10-it.r .z10-in:before{left:-40px}
+.z10-it.l .z10-in:before{right:-40px}
+.z10-th{width:88px;height:88px;border-radius:50%;overflow:hidden;display:inline-grid;place-items:center;border:2px solid rgba(255,255,255,.7);background:rgba(255,255,255,.08)}
+.z10-th img{width:100%;height:100%;object-fit:cover}
+.z10-th svg{width:36px;height:36px;color:#cfe0ff}
+.z10-lb{font-size:13px;opacity:.75;margin:12px 0 2px}
+.z10-nm{font-size:clamp(18px,1.7vw,22px);font-weight:700;margin:0 0 8px;word-break:keep-all}
+.z10-bd{font-size:14.5px;line-height:1.7;opacity:.85;margin:0;word-break:keep-all}
+.z10-tech{text-align:center;max-width:560px;margin:30px auto 0}
+.z10-th.big{width:104px;height:104px;border-color:#7cf0a6;box-shadow:0 0 30px rgba(124,240,166,.35)}
+.z10-th.big svg{color:#7cf0a6;width:42px;height:42px}
+.z10-five{margin-top:clamp(64px,7vw,100px);padding:clamp(56px,6vw,80px) 0 clamp(48px,5vw,70px);border-top:1px solid rgba(255,255,255,.12)}
+.z10-five .z-eb{color:var(--zbs)}
+.z10-five ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.z10-five li{border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:22px 10px;text-align:center;background:rgba(255,255,255,.04)}
+.z10-five b{display:block;font-size:clamp(17px,1.6vw,21px);font-weight:700;color:#fff}
+.z10-five span{display:block;font-size:13px;opacity:.7;margin-top:6px;word-break:keep-all}
+/* 11 구성 전체 */
+.z11{background:#fff}
+.z11-stage{position:relative;width:min(100%,520px);aspect-ratio:1;margin:0 auto clamp(40px,5vw,64px)}
+.z11-wave{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,rgba(0,87,255,.12),rgba(0,87,255,.02) 60%,transparent 70%);box-shadow:0 0 0 30px rgba(0,87,255,.03),0 0 0 60px rgba(0,87,255,.02)}
+.z11-core{position:absolute;left:50%;top:50%;width:38%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;overflow:hidden;box-shadow:0 18px 40px -16px rgba(0,40,120,.45);border:4px solid #fff}
+.z11-core img{width:100%;height:100%;object-fit:cover}
+.z11-node{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a)) translateX(min(39vw,200px)) rotate(calc(-1 * var(--a)))}
+.z11-node>*{position:absolute;left:0;transform:translateX(-50%)}
+.z11-dot{top:-34px;width:68px;height:68px;border-radius:50%;background:#fff;border:1px solid var(--zl);display:grid;place-items:center;box-shadow:0 10px 24px -14px rgba(0,40,120,.4)}
+.z11-dot svg{width:28px;height:28px;color:var(--zb)}
+.z11-node b{top:40px;white-space:nowrap;font-size:13.5px;font-weight:700}
+.z11-cards{display:grid;gap:18px}
+.z11-card{border:1px solid var(--zl);border-radius:22px;padding:clamp(20px,2.4vw,30px);background:#fff}
+.z11-head{display:grid;grid-template-columns:clamp(84px,10vw,120px) 1fr;gap:clamp(16px,2vw,26px);align-items:center}
+.z11-img{aspect-ratio:1;border-radius:50%;overflow:hidden;background:#eef1f6}
+.z11-img img{width:100%;height:100%;object-fit:cover}
+.z11-eb{font-family:var(--serif-en);font-size:13px;letter-spacing:.16em;color:#5f6b85;font-weight:600;margin:0 0 4px}
+.z11-card h3{font-size:clamp(18px,1.7vw,22px);font-weight:700;margin:0 0 6px;word-break:keep-all}
+.z11-head p{font-size:14.5px;color:var(--zx);line-height:1.65;margin:0;word-break:keep-all}
+.z11-list{list-style:none;margin:18px 0 0;padding:16px 18px;border:1px solid var(--zl);border-radius:14px;background:#fafbfd}
+.z11-list li{font-size:14px;line-height:1.7;color:#333;padding-left:14px;position:relative;word-break:keep-all}
+.z11-list li:before{content:"·";position:absolute;left:2px;color:var(--zb);font-weight:800}
+.z11-p2{margin-top:clamp(72px,8vw,110px)}
+.z11-p2 .zflow{margin-bottom:0}
+.z11-tbl{margin-top:36px}
+.z11-gal{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:36px}
+.z11-gal img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}
+/* 12 진행 방법 */
+.z12{background:#fff}
+.z12-list{display:grid}
+.z12-card{display:grid;grid-template-columns:clamp(110px,15vw,150px) 1fr;gap:clamp(16px,2.4vw,28px);align-items:center;padding:20px 0;border-bottom:1px solid var(--zl)}
+.z12-card:last-child{border-bottom:0}
+.z12-img{aspect-ratio:1;border-radius:14px;overflow:hidden;background:#eef1f6}
+.z12-img img{width:100%;height:100%;object-fit:cover}
+.z12-badge{display:inline-block;border:1.5px solid #111;border-radius:999px;padding:5px 18px;font-size:13px;font-weight:700;letter-spacing:.06em}
+.z12-card h3{font-size:clamp(17px,1.6vw,20px);font-weight:700;margin:12px 0 6px;word-break:keep-all}
+.z12-card p{font-size:14.5px;line-height:1.65;color:var(--zx);margin:0;word-break:keep-all}
+.z12-alert{margin-top:28px;border:1px solid #d8dee8;border-radius:18px;padding:22px 24px;background:#fff}
+.z12-at{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:700;margin:0 0 10px}
+.z12-at svg{width:22px;height:22px;color:#f0a400}
+.z12-alert>div{font-size:14.5px;line-height:1.75;color:#333;word-break:keep-all}
+/* 13 근거 */
+.z13{background:var(--zg)}
+.z13-slider{position:relative}
+.z13-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.z13-slide{text-align:center}
+.z13-doc{text-align:left;background:#fff;border:1px solid #dfe4ec;border-radius:16px;padding:22px 20px;box-shadow:0 16px 36px -28px rgba(10,30,80,.45);min-height:250px;display:flex;flex-direction:column}
+.z13-meta{font-size:11.5px;color:#8a90a0;margin:0 0 10px}
+.z13-title{font-family:Georgia,'Nanum Myeongjo',serif;font-size:17.5px;font-weight:700;line-height:1.35;color:#1d2433;margin:0 0 10px;word-break:keep-all}
+.z13-auth{font-size:12.5px;color:#2c5bd6;margin:0 0 14px}
+.z13-tldr{margin:auto 0 0;font-size:13px;line-height:1.6;color:#444;background:#f3f5f9;border-radius:8px;padding:10px 12px}
+.z13-tldr b{display:inline-block;font-size:11px;background:#1d2433;color:#fff;border-radius:4px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.z13-ct{font-size:17px;font-weight:700;margin:20px 0 6px;word-break:keep-all}
+.z13-cb{font-size:14px;line-height:1.7;color:var(--zx);margin:0;word-break:keep-all}
+.z13-cb b{color:#0b2f80}
+.z13-dots{display:none;justify-content:center;gap:6px;margin-top:20px}
+.z13-dots i{width:8px;height:8px;border-radius:8px;background:#c8cfdb;transition:width .3s}
+.z13-dots i.on{width:22px;background:var(--zb)}
+.z13-single{margin-top:clamp(72px,8vw,110px);text-align:center}
+.z13-cert{max-width:300px;margin:0 auto;background:#fff;border-radius:18px;padding:16px;box-shadow:0 18px 40px -26px rgba(10,30,80,.45)}
+.z13-dip,.z13-law{border:2px solid #c9b77a;outline:1px solid #c9b77a;outline-offset:-10px;border-radius:6px;aspect-ratio:1/1.3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:radial-gradient(circle at 50% 30%,#fffdf4,#f6f1e1)}
+.z13-law{border-color:#9fb3d9;outline-color:#9fb3d9;background:radial-gradient(circle at 50% 30%,#fbfcff,#eaf0fb);aspect-ratio:1/1}
+.z13-dip .en{font-family:Georgia,serif;font-size:30px;letter-spacing:.2em;margin:0;color:#6d5a1f}
+.z13-dip .ko,.z13-law .ko{font-size:20px;font-weight:800;margin:0;color:#1d2433;text-align:center;padding:0 20px}
+.z13-law .en{font-size:16px;font-weight:600;margin:0;color:#2c5bd6}
+.z13-law .ko{font-size:38px}
+.z13-dip .sm,.z13-law .sm{font-size:14px;color:#555;margin:0}
+.z13-dip .sg{font-family:var(--serif-en);letter-spacing:.3em;font-size:13px;margin:26px 0 0;color:#6d5a1f}
+/* 14 신뢰 밴드 */
+.z14{background:#0d1b3a;color:#fff;text-align:center}
+.z14-t{font-size:clamp(30px,4vw,50px);font-weight:800;line-height:1.3;letter-spacing:-.04em;margin:0;word-break:keep-all}
+.z14-s{margin:20px 0 40px;font-size:clamp(15px,1.4vw,18px);opacity:.82}
+.z14-card{max-width:560px;margin:0 auto;border-radius:20px;overflow:hidden;border:6px solid rgba(255,255,255,.95);box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.z14-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.z14 .z-note{color:rgba(255,255,255,.55)}
+/* 15 달라진 이야기 */
+.z15{padding-top:0;background:var(--zg)}
+.z15-top{height:clamp(200px,24vw,320px);position:relative;margin-bottom:clamp(36px,4vw,56px)}
+.z15-top img{width:100%;height:100%;object-fit:cover}
+.z15-top:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(243,245,249,0) 40%,var(--zg))}
+.z15-tag{text-align:center;margin:44px 0 0;font-size:clamp(17px,1.7vw,22px);color:#333}
+.z15-tag b{color:var(--zb)}
+/* 16 부담 완화 */
+.z16{color:#fff;text-align:center;background:#1c1f26}
+.z16-bg{position:absolute;inset:0}
+.z16-bg img{width:100%;height:100%;object-fit:cover;opacity:.32}
+.z16-bg:after{content:"";position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 50%,rgba(28,31,38,.55),rgba(28,31,38,.92))}
+.z16 .z-eb{color:rgba(255,255,255,.8)}
+.z16-badge{display:grid;place-items:center;width:96px;height:96px;margin:30px auto;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35)}
+.z16-badge svg{width:42px;height:42px;color:#7cf0a6}
+.z16-body{font-size:clamp(15px,1.35vw,17.5px);line-height:1.85;margin:0;opacity:.92;word-break:keep-all}
+.z16-body b{color:#fff}
+.z16-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:30px}
+.z16-note{font-size:12.5px;opacity:.6;margin:22px 0 0;line-height:1.7;word-break:keep-all}
+/* 17 선택 */
+.z17{background:#fff}
+.z17-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.z17-card{border:1px solid #d6e3f7;border-radius:20px;padding:24px 22px;display:flex;flex-direction:column;background:#fff}
+.z17-card.best{border:2px solid var(--zb);box-shadow:0 24px 50px -28px rgba(0,87,255,.55)}
+.z17-tag{align-self:flex-start;background:var(--zb);color:#fff;border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.06em}
+.z17-card h3{font-size:clamp(17px,1.6vw,20px);font-weight:700;margin:12px 0 16px;line-height:1.4;word-break:keep-all}
+.z17-img{border:1px solid #edf0f5;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#f6f8fb}
+.z17-img img{width:100%;height:100%;object-fit:cover}
+.z17-meta{font-size:15px;margin:16px 0 4px}
+.z17-desc{font-size:13.5px;color:var(--zx);line-height:1.6;margin:0 0 14px;word-break:keep-all}
+.z17-prs{margin-top:auto}
+.z17-pr{font-size:13.5px;color:#7a8090;margin:2px 0}
+.z17-pr.big{font-size:clamp(21px,2vw,25px);font-weight:800;color:var(--zt);margin-top:6px}
+.z17-bd{align-self:flex-start;margin-top:10px;background:#eef3ff;color:#0b3fae;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:700}
+.z17-btn{margin-top:18px;height:48px;border-radius:12px;border:1.5px solid var(--zb);background:#fff;color:var(--zb);font-size:15px;font-weight:700;cursor:pointer;transition:background .25s,color .25s}
+.z17-card.best .z17-btn,.z17-btn:hover{background:var(--zb);color:#fff}
+.z17-bt{text-align:center;font-size:18px;font-weight:700;margin:clamp(56px,6vw,80px) 0 18px}
+.z17-tw{overflow-x:auto;border:1px solid #e1e6ee;border-radius:16px}
+.z17-tbl{width:100%;border-collapse:collapse;min-width:520px;font-size:14.5px}
+.z17-tbl th{background:#f6f8fb;font-weight:600;color:#555;padding:16px 12px;font-size:13.5px}
+.z17-tbl td{padding:18px 12px;text-align:center;border-top:1px solid #edf0f5}
+.z17-tbl td:first-child{font-weight:600;text-align:left;padding-left:20px}
+.z17-tbl th:first-child{text-align:left;padding-left:20px}
+.z17-tbl tr.best td{background:#eef3ff;color:#0b2f80;font-weight:700;border-top:1.5px solid var(--zb);border-bottom:1.5px solid var(--zb)}
+/* 18 Q&A */
+.z18{background:var(--zg)}
+.z18-list{display:grid;gap:14px}
+.z18-card{background:#fff;border:1px solid #e1e6ee;border-radius:18px;padding:22px 24px}
+.z18-q{font-size:16px;font-weight:700;margin:0 0 10px;line-height:1.5;word-break:keep-all}
+.z18-a{font-size:14.5px;line-height:1.75;color:var(--zx);margin:0;word-break:keep-all}
+/* 19 안내 */
+.z19{background:#fff}
+.z19-tbl{border-top:2px solid #111}
+.z19-row{display:grid;grid-template-columns:clamp(110px,18%,170px) 1fr;border-bottom:1px solid #e6e9ef}
+.z19-k{margin:0;padding:16px 14px;background:#f7f8fa;font-size:14px;font-weight:600;color:#333}
+.z19-v{padding:16px 16px;font-size:14px;line-height:1.75;color:#444;word-break:keep-all}
+.z19-next{margin-top:56px;text-align:center;border-radius:22px;background:var(--zd);color:#fff;padding:40px 20px}
+.z19-next .z-eb{color:var(--zbs)}
+.z19-nt{font-size:clamp(18px,1.8vw,23px);font-weight:700;margin:0 0 22px;word-break:keep-all}
+@media (max-width:900px){
+  .z06-grid,.z13-track{grid-template-columns:1fr}
+  .z17-tbl{min-width:0;font-size:13px}
+  .z17-tbl th,.z17-tbl td{padding:12px 6px}
+  .z17-tbl td:first-child,.z17-tbl th:first-child{padding-left:12px}
+  .z06-grid{gap:56px;max-width:560px;margin:0 auto}
+  .z08-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .z17-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+  .z-rvs{grid-template-columns:1fr}
+  .z10-five ul{grid-template-columns:repeat(3,1fr)}
+  .z13-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:0 20px 6px;margin:0 -20px;scrollbar-width:none}
+  .z13-track::-webkit-scrollbar{display:none}
+  .z13-slide{flex:0 0 84%;scroll-snap-align:center}
+  .z13-dots{display:flex}
+  .z11-gal{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:600px){
+  .z01-certs{margin-top:40px}
+  .z01-certs li{font-size:12px;padding:0 4px}
+  .z01-certs svg{width:40px;height:40px;padding:9px}
+  .zflow{gap:10px}
+  .zflow-x{width:32px;height:32px;font-size:18px}
+  .zflow figcaption{font-size:13.5px;padding:10px 8px 12px}
+  .z02-row{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:14px;align-items:start}
+  .z02-ims{grid-template-columns:1fr}
+  .z02-ph{aspect-ratio:1/1}
+  .z02-big{margin-bottom:12px}
+  .z02-cmp{grid-template-columns:1fr 14px 1fr;gap:3px}
+  .z02-cmp>div{padding:10px 8px 12px;font-size:12.5px}
+  .z02-cmp .b{min-height:120px}.z02-cmp .a{min-height:150px}
+  .z02-cmp em{font-size:10.5px}
+  .z03{align-items:flex-end;min-height:640px}
+  .z03-bg img{width:100%;opacity:.55}
+  .z03-bg:after{background:linear-gradient(180deg,rgba(11,13,18,.2) 0%,rgba(11,13,18,.7) 40%,var(--zd) 75%)}
+  .z03-tx{padding-top:220px}
+  .z-rv{grid-template-columns:38% 1fr}
+  .z-rv-tx{padding:16px}
+  .z05-b{max-width:90%;font-size:14px;padding:15px 18px}
+  .z08-cells{grid-template-columns:repeat(2,1fr);row-gap:20px}
+  .z08-cells>div:nth-child(3){border-left:0}
+  .z08-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;gap:40px}
+  .z08-zoom{left:-6px}
+  .z09-cell{min-height:86px;padding:16px 2px}
+  .z09-circle{width:96px;height:96px;top:-48px}
+  .z09-wrap{padding-top:54px}
+  .z09-col{padding-top:62px}
+  .z10-it .z10-in{width:calc(50% - 22px)}
+  .z10-it.r .z10-in:before{left:-20px;width:16px}
+  .z10-it.l .z10-in:before{right:-20px;width:16px}
+  .z10-th{width:68px;height:68px}
+  .z10-in:before{top:34px}
+  .z10-bd{font-size:13px}
+  .z10-five ul{grid-template-columns:repeat(2,1fr)}
+  .z10-five li:last-child{grid-column:1/-1}
+  .z11-node{transform:rotate(var(--a)) translateX(37vw) rotate(calc(-1 * var(--a)))}
+  .z11-dot{width:54px;height:54px;top:-27px}
+  .z11-dot svg{width:22px;height:22px}
+  .z11-node b{top:32px;font-size:12px}
+  .z11-head{grid-template-columns:76px 1fr}
+  .z12-card{grid-template-columns:104px 1fr}
+  .z19-row{grid-template-columns:1fr}
+  .z19-k{padding:12px 14px}
+  .z16-btns .z-btn{width:100%;justify-content:center}
+}
 </style>
 </head>
 <body>
@@ -1439,330 +1826,165 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 </div>
 
 
-<!-- ================= 섹션 1 : Hero ================= -->
-<section class="sub-hero v2-sub">
-  <div class="hero-ph has-media"><img src="assets/hero2.jpg" alt="" aria-hidden="true"></div>
-  <div class="inner">
-    <p class="label">Lash Lift Correction Class</p>
-    <h1>배운 적은 있는데,<br>할 때마다 결과가 달라 불안하셨죠</h1>
-    <p class="lead">기술이 부족해서가 아니에요. 눈매를 판단할 기준이 없었을 뿐이에요.<br>니잉 속눈썹펌 급속교정 클래스는, 그 기준을 만드는 수업입니다.</p>
-    <ul class="lp-badges"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>래쉬애딕트 최고 교육지사상</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>100% 직접 실습</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>수료 후 카톡 피드백</li></ul>
-    <div class="hstats">
-      <div><p class="k">누적 시술</p><p class="v">6,000+</p></div>
-      <div><p class="k">교육으로 만난 원장님</p><p class="v">500+</p></div>
-      <div><p class="k">네이버 리뷰</p><p class="v">1,000+</p></div>
-    </div>
+<!-- ================= 01 · Hero · 약속과 신뢰 배지 ================= -->
+<section class="z z01 s-hero">
+  <div class="z01-vis"><img src="assets/hero2.jpg" alt="" aria-hidden="true">
+    <div class="z01-copy"><p class="z01-lb">Lash Lift Correction Class</p><h1>배운 적은 있는데,<br>할 때마다 결과가 달라<br>불안하셨죠</h1><p class="z01-sub">기술이 부족해서가 아니에요. 눈매를 판단할 기준이 없었을 뿐이에요.<br>니잉 속눈썹펌 급속교정 클래스는, 그 기준을 만드는 수업입니다.</p></div>
+    <ul class="z01-certs"><li><i data-lucide="award" aria-hidden="true"></i><span>래쉬애딕트<br>최고 교육지사상</span></li><li><i data-lucide="hand" aria-hidden="true"></i><span>100%<br>직접 실습</span></li><li><i data-lucide="message-circle" aria-hidden="true"></i><span>수료 후<br>카톡 피드백</span></li><li><i data-lucide="eye" aria-hidden="true"></i><span>누적 시술<br>6,000+</span></li></ul>
   </div>
-</section>
-
-<!-- ================= LP : 핵심 한 줄 ================= -->
-<section class="section lp-key">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">Key Point</p>
-      <h2 class="section-title">배운 기술은 그대로,<br>판단 기준만 더하세요</h2>
-      <p class="section-desc">온라인 이론으로 기준을 먼저 세우고, 오프라인에서 내 손으로 반복해요. 두 단계가 이어질 때 결과가 일정해집니다.</p>
-    </div>
-    <div class="lp-combo">
-      <div class="lp-step"><em>STEP 1</em><b>온라인 강의</b><span>이론 · 데모 먼저 (6개월)</span></div>
-      <i class="lp-plus" aria-hidden="true">+</i>
-      <div class="lp-step on"><em>STEP 2</em><b>오프라인 실습</b><span>모델 · 재료 준비된 현장에서 100% 내 손으로</span></div>
-    </div>
-    <p class="lp-eq"><span>=</span> 눈매가 달라져도 흔들리지 않는 기준</p>
-    <p class="micro text-center lp-note">※ 패키지 기준 구성이에요. 롯드 기초반 · 이론 클래스는 결제 즉시 온라인으로 수강해요.</p>
-  </div>
-</section>
-
-<!-- ================= LP : 변화 ================= -->
-<section class="section bg-light lp-result">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">After Class</p>
-      <h2 class="section-title">수강 후,<br>이렇게 달라졌어요</h2>
-      <p class="section-desc">수강 원장님 후기에서 옮긴 변화예요.</p>
-    </div>
-    <div class="lp-ba"><div class="lp-ba-card"><p class="b"><em>Before</em>롯드를 감으로 골랐어요</p><span class="lp-ba-ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><p class="a"><em>After</em>이제는 눈매를 직접 보고 판단해요</p></div><div class="lp-ba-card"><p class="b"><em>Before</em>될까? 매번 불안했어요</p><span class="lp-ba-ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><p class="a"><em>After</em>작게나마 확신과 자신감이 생겼어요</p></div><div class="lp-ba-card"><p class="b"><em>Before</em>영상만 보고 따라 했어요</p><span class="lp-ba-ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><p class="a"><em>After</em>왜 이렇게 하는지 알고 해요</p></div><div class="lp-ba-card"><p class="b"><em>Before</em>이론 따로, 실습 따로</p><span class="lp-ba-ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><p class="a"><em>After</em>이론과 실습이 찰떡같이 연결돼요</p></div></div>
-    <p class="micro text-center lp-note">※ 수강 원장님 후기에서 옮긴 내용이며, 개인차가 있을 수 있어요.</p>
-  </div>
-</section>
-
-<!-- ================= 섹션 5 : Empathy ================= -->
-<section class="section bg-light v2-emp">
-  <div class="container">
-    <div class="split">
-      <div class="emp">
-        <p class="emp-big">Your Own Judgment</p>
-        <h2 class="section-title">실력이 없어서가 아닙니다</h2>
-        <blockquote style="margin-top:8px">“원래 이렇게 하는 거예요”라고 말하지 않아요. 왜 그렇게 하는지, 다른 경우엔 어떻게 달라지는지까지 알려드려요.</blockquote>
-        <ul>
-          <li>남의 기준만 따라 하면, 심화 케이스에서 결국 막힙니다.</li>
-          <li>처진 눈, 들린 눈, 컬이 높게 나오는 눈, 컬이 잘 나오지 않는 눈.</li>
-          <li>니잉은 원장님이 샵에 돌아가 혼자서도 판단하고 확신할 수 있는 기준을 세워드려요.</li>
-        </ul>
-      </div>
-      <div class="img-placeholder" style="aspect-ratio:4/5"><i data-lucide="user"></i></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 섹션 3 : Stories (후기 · 클릭 시 원문 모달) ================= -->
-<section class="section bg-light v2-rv">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">NEEINK Stories</p>
-      <h2 class="section-title">진작 올걸 그랬다고,<br>그렇게들 말씀하십니다</h2>
-      <p class="section-desc">수업을 마친 원장님들이 직접 보내주신 메시지예요.</p>
-    </div>
-    <div class="loop" id="stLoop">
-      <div class="loop-vp"><div class="loop-track"><article class="rv-card" data-rv="0"><div class="img-placeholder has-img"><img src="assets/rv/lash-2.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>첫 시작을 원장님이랑 같이해서 정말 잘했다</h4><p class="ex">처음에 속눈썹펌을 배워야지 라는 생각을 하면서 과연 혼자 할 수 있을까? 했었는데 막상 하나 하나 따라가보니까 더 어렵더라구요 ㅠㅠ 롯드 붙이는 것도 맘 처럼 안되고 결정리도 자꾸 삐뚤빼뚤 해져서 계속 다시 하고 다시하고 귀에서 원장님 다시 다시 맴돌아요..ㅋㅋ 근데 어려운 만큼 원장님 설명 듣고 직접 해볼 수 있어서 좋았어요 처음에는 많이 느리고 중간에 막히는 부분도 많았지만 혼자 해봐야 한다는 원장님 말씀 오히려 너무 좋았어요! 녹화한거 보면서 다시 복습하는데 여기서 내가 이런 걸 못하는 구나 알게되더라구요 아직 완전 잘하는건 절대 아니지만 첫 시작을 원장님이랑 같이해서 정말 잘했다는 생각이 들어요 저 어려워도 절대 포기 안하고 열심히 해볼게용 오늘 수업 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="1"><div class="img-placeholder has-img"><img src="assets/rv/lash-3.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>모델 혼자 해보길 잘했다 싶어요</h4><p class="ex">원장님께서 혼자 다해야한다고 하셔서 사실 등록 고민했잖아요....ㅠㅠ 완전 초보라 혼자 다 할 수 있을까 수업 전날 잠도 못잤어요... 롯드 붙이는 것도 손이 안 따라주고 결 정리도 계속 풀리고 혼자 하면 내가 어디서 잘못한건지 몰라서 더 눈물나고ㅠㅠ 그래도 수업 들으면서 한 단계씩 해보니까 아 여기서 다시 봐야하는구나 하는 순간이 생기더라구요 아직 느리고 부족하지만 그냥 겁먹고 안 하는 것보단 모델 혼자 해보길 잘했다 싶어요 내일 또 모델 잡아놨는데 쪼금 덜 떨릴거 같아요 감사합니다 원장님!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="2"><div class="img-placeholder has-img"><img src="assets/rv/lash-4.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요</h4><p class="ex">원장님 잘 들어가셨어요? 저는 집에와서 남편이랑 저녁 먹고 수업 때 찍은 영상 돌려보고 있어요 내일부터 하루에 한번씩 복습해볼게요 수업 때 말씀드렸던 거 처럼 네일샵 운영 중인데 속눈썹을 계속 잘하고 싶었거든요 괜히 욕심냈다가 오히려 분산되는 거 아닌가 걱정많이 했는데 고객님들이 좋아해주시는 모습 보니까 스킬업을 안 할수 없었어요 제 욕심에 배우기로 결심한건데 원장님께 가길 정말 잘한 거 같아요 오늘 처음 뵙는건데 제 손의 습관이나 브러쉬 잡는거 한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요 원장님이 잘 가르쳐주신 만큼 저도 열심히 계속 정진하겠습니다 오늘 정말 감사했어요 피드백 신청 많이 하라고 하셨으니까 제가 종종 연락드릴게요 저 귀찮아 하시면 안돼요~ 좋은 밤 되세요</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="3"><div class="img-placeholder has-img"><img src="assets/rv/lash-5.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>보람 미쳤어요진짜</h4><p class="ex">허,,,,, 원장님 저 지금 집 도착이요 갈떼마다 느끼는데 서울 너무 멀어요ㅡㅠ 힝// 그래도 오늘 진짜 유익했습니다 좋은 클래스 들은 덕분인지 저 하나도 안피곤해여 오늘 저의 감동뽀인트 연화방법이 진짜 좋았어요 다른 데서는 그냥 시간을 정해줬었거든요 근데 원장님은 원리 설명하면서 엄청 자세하게 알려주시니까 응용이 되겠단 생각이 들었어요 그리고 두번쨰는 원장님 인스타에서 보던 느낌을 제가 실제로 해볼 수 있었다는게 찐이라고 느꼈어요 잘하는거랑 잘 가르치는 거랑 다르다잖아요 하루매출 포기하고 차비들여서 아침부터 부산에서 서울까지간 보람 미쳤어요진짜 다들 니잉했으면!!!! AI 수업도 곧 들으러 갈게요!!!!!!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="4"><div class="img-placeholder has-img"><img src="assets/rv/lash-6.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이제는 눈매를 직접 보고 판단 할 수 있단거예요</h4><p class="ex">펌을 오래한 편은 아닌데 유독 무쌍만 오면 손이 덜덜 떨려서 부담스러웠거든요 정보도 예전에 머물러 있다 보니까 자연스럽게 로만사 씨나 엘만 골랐어요 익숙한 것도 좋지만 제가 만족할 수 있는 시술을 하고 싶은데 방법을 몰라서 한 참 방황했어요 원데이 듣고 가장 크게 바뀌었다고 생각한 건 예전엔 무쌍이다 하면 롯드를 정해두고 맞췄는데 이제는 눈매를 직접 보고 판단 할 수 있단거예요 물론 연습이 더 필요하지만 겁나지 않아요 쫄지말라는 말씀 꼭 기억하면서 시술하겠습니다 좋은 수업을 들어서 정말 다행이고 진짜 좋았던 건 돈이 아깝지 않았어요 원장님 좋은 수업 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="5"><div class="img-placeholder has-img"><img src="assets/rv/lash-7.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>팩폭이랑 응원 완전 채찍과 당근 그 자체였어요</h4><p class="ex">그동안 재료 탓만 했던 과거의 나 반성합니다...ㅋㅋㅋㅋ 저 좀 자아비대였나 봐요 ㅠㅠ 내가 잘못했다는 생각은 1도 안 하고 걍 재료가 문제겠지~ 했던 듯요 알고 보니 터치 너무 많이 하고 있었고, 원장님이 말씀하신 보호제품도 언제 써야 하는지 몰랐더라구요 클리닉이면 무조건 다 좋은 줄 알았는데 오늘 제품에 대한 생각까지 싹 다 갈아엎어 주셔서 진짜 감사해요 오늘 팩폭이랑 응원 완전 채찍과 당근 그 자체였어요 ㅋㅋㅋ 꿈에도 나올 각인데 진짜 너무 잘 가르쳐주셔서 감사합니당 오늘 배운 거 절대 안 까먹고 열심히 할게요 헤헤 데모 일정 텀 너무 길다고 하셔서 바로 조정 완료했어요 니잉 말이 곧 진리... 시키는 대로 잘 해볼게요 지켜봐주세요!!</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="6"><div class="img-placeholder has-img"><img src="assets/rv/lash-9.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이론이랑 실습이 진짜 찰떡같이 연결돼 있어요</h4><p class="ex">초보 때는 이론 몰라도 고객만 만족하면 되는 줄 알았거든요? 오늘 수업 듣고 그런 생각 싹 다 쓰레기통에 버리기로 했어요!!! 제가 속눈썹펌이 그 동안 오ㅐ그렇게 힘들었나 곰곰히 생각해보니까 납득이 안 돼서 힘들었던 거더라구욬ㅋ (ISTJ......) 원장님 이론은 딱 필요한 것만 친절하고 쉽게 알려주시는 거 같아요 들으면서 내 문제점이 뭔지도 생각해보고 아 이렇게 해볼 수도 있겠구나~ 이런 생각까지 들더라구요! 뭐랄까.... 이론이랑 실습이 진짜 찰떡같이 연결돼 있어요 재료를 고르는 것부터 다 이유가 있었어요.... 신기해.... 이해가 쏙쏙 됐던 것도 놀랍고 이제는 뭘 확인하면서 연화를 봐야 하는지 시술을 해야 하는지 아니까 힘들지 않을 거 같아요 앞으로 제 펌 인생이! 그리고 원장님이 느끼하지 않아서 개인적으로 더 좋았습니다 ㅋㅋㅋㅋㅋㅋㅋ 다른 데는 좋은 말만 해주고 잘한다 잘한다만 해주는데 여기는 그냥 다시 무새원장님...ㅋㅋㅋㅋㅋ 그 만큼 연습을 더 단단히 했다고 생각해요 더 빨리 들었으면 제 펌인생이 좀 더 빨리 쉬워졌었겠죠? 이제라도 들은게 어디나며~</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="7"><div class="img-placeholder has-img"><img src="assets/rv/lash-11.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>이제는 내가 왜 이렇게 하는지 알고 하는 느낌</h4><p class="ex">원장님!! 후기가 너무 늦었죠!!!!! 수강 듣고 연습해보느라 정신없었어요 진짜 수업 너무 좋았어요 연습하면서도 후기를 얼마나 보내드리고 싶었는지ㅋㅋㅋ 속눈썹펌 시작한 지 얼마 안됐는데, 배우면서도 뭔가 머릿속에 정리가 안되는 느낌이 계속 있었거든요 어디 물어볼데도 없고ㅠㅠㅠㅠㅠ 그게 너무 답답해서 신청했는데, 수업 들으면서 딱 정리되는 느낌이었어요 원장님 설명하시는 방식이 저한테 너무 잘 맞아요 어렵게 돌려 말씀하시는게 아니라 바로바로 핵심 짚어주셔서 머릿속에 쏙쏙 들어오고 기억에도 잘 남아요 수업 중간에 이해 안갔던것도 다시 질문하면 아 이게 이런거였구나!! 하는 순간이 진짜 많았어요 연습 꼭 바로 해보라고 하셔서 모델 구했는데 손이 달라진게 느껴졌어요 이 전에는 그냥 인스타보고 따라하고 제 기준없이 하는 느낌이었다면 이제는 내가 왜 이렇게 하는지 알고 하는 느낌 그 차이가 제가 느껴질 정도로 크더라구요 원장님이 하시는 모든 수업 진짜 다들을거예요!!! 아프지마시고 잠 좀 주무시고 항상 건강하게 교육해주세요 정말 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="8"><div class="img-placeholder has-img"><img src="assets/rv/lash-12.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>넘치게 배운거같아 후회없는 시간이였다고</h4><p class="ex">장장 9시간의 원데이(라 쓰고 정규반이라 읽습니다) 이론부터 실습까지 부족함없이 아니 오히려 넘치게 배운거같아 후회없는 시간이였다고 단호하게 말할 수 있을꺼 같아요 펌린이시절 뭔가 문제인지도 몰라 허덕이며 아예 포기해야 하나 할때 알고리즘의 선택으로 원장님계정을 보게된 뒤로 다시 속펌을 시작하게 되고 점점 하면 할수록 이론+클리닉 세부적으로 부족하다고 느끼게 되었던 찰나에 원데이 오픈해주신 원장님께 닝렐루야 외치며 신청하게 되었는데 오늘 드디어 수업듣고 ‘역시는 역시다’ 되뇌이며 귀가중입니다...! 교재분량부터 장난이 아니라 감동먹었고여, 제가 있는 재료, 롯드들을 기준으로 저한테 맞는 방법 만들어주시는거에서 완전 끝-! 이제 그냥 저는 원장님이 북한 땅을 사라해도 살려구요 오늘 다시한번 저의 정체성에 대해 진지하게 생각하게 되는 하루이기도 했습니다 오늘 하루 너무 수고많으셨습니다 감사합니다</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="9"><div class="img-placeholder has-img"><img src="assets/rv/lash-13.jpg" alt="급속교정 클래스 수강 후기" loading="lazy" draggable="false"></div><h4>작게나마 확신과 자신감이 생긴 것 같아요</h4><p class="ex">원장님 안녕하세요 !! 버스타구 이제야 카톡 남겨요 .. 그동안 제대로 된 수업을 못 들어서 항상 시술할 때마다 제 실력에 확신도 없고 걱정이 많았었는데 항상 원장님 라방 보면서 새로 알게 된 내용들이 너무 많고 도움이 많이 되어서 &#x27;꼭 제대로 배워야겠다&#x27; 마음먹고 요번에 찾아뵙게 되었어요 ..! 조금 늦게 원장님을 찾아온 게 너무 너무 아쉽지만 이제라도 제대로 배울 수 있어서 너무 다행이고 감사한 시간이었습니다 늘 자신감이 부족했는데 오늘 수업 덕분에 작게나마 확신과 자신감이 생긴 것 같아요 !! 앞으로 알려주신 대로 차근차근 잘해나갈 수 있을 것 같아요 오늘 귀한 배움 주셔서 정말 너무 너무 감사드립니다 오늘도 편안한 밤 되세요</p><span class="more">자세히 보기</span></article></div></div>
-      <div class="tcar-nav"><button data-loop="-1"><i data-lucide="chevron-left"></i></button><button data-loop="1"><i data-lucide="chevron-right"></i></button></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 섹션 4 : Problem ================= -->
-<section class="section v2-target">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">Problem</p>
-      <h2 class="section-title">이런 고민,<br>하나라도 해당되시나요</h2>
-      <p class="section-desc">하나라도 해당된다면, 지금 막혀 있는 바로 그 지점부터 다시 잡아드려요.</p>
-    </div>
-    <div class="qline">
-      <div><svg class="qi qi-dice" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="dice"><rect x="9" y="9" width="30" height="30" rx="7"/><circle class="pa acf" stroke="none" cx="17" cy="17" r="2.6"/><circle class="pb acf" stroke="none" cx="24" cy="24" r="2.6"/><circle class="pa acf" stroke="none" cx="31" cy="31" r="2.6"/><circle class="pc acf" stroke="none" cx="31" cy="17" r="2.6"/><circle class="pc acf" stroke="none" cx="17" cy="31" r="2.6"/></g></svg><b>“매번 결과가 달라요.”</b><p>잘 될 때도 있고 안 될 때도 있는데, 그게 왜 그런지를 모르겠어요.</p></div>
-      <div><svg class="qi qi-phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ph"><rect x="13" y="5" width="22" height="38" rx="4.5"/><path d="M21 9h6M22 38h4"/><path d="M18 17h9M18 22h12M18 27h7" opacity=".45"/></g><g class="badge"><circle class="acf" stroke="none" cx="35" cy="9" r="6"/><path stroke="#fff" stroke-width="2" d="M35 6v3.6M35 12.2v.1"/></g></svg><b>“고객 카톡이 올 때마다 겁나요.”</b><p>컴플레인일까 봐, 일 자체를 그만두고 싶을 때가 있어요.</p></div>
-      <div><svg class="qi qi-rod" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="26" width="7" height="16" rx="3.5"/><rect x="20.5" y="22" width="7" height="20" rx="3.5"/><rect x="33" y="18" width="7" height="24" rx="3.5"/><g class="qm"><path class="acs" stroke-width="2.2" d="M20 8.5a4.5 4.5 0 1 1 6.4 4.1c-1.5.7-2.4 1.6-2.4 3.2"/><circle class="acf" stroke="none" cx="24" cy="19.2" r="1.4"/></g></svg><b>“롯드를 감으로 골라요.”</b><p>눈 모양마다 무엇을 보고 골라야 하는지 기준이 없어요.</p></div>
-      <div><svg class="qi qi-vids" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect class="v3" x="11" y="7" width="28" height="18" rx="3" opacity=".35"/><rect class="v2" x="8" y="12" width="30" height="19" rx="3" fill="#fff" opacity=".7"/><g class="v1"><rect x="5" y="17" width="32" height="21" rx="3.5" fill="#fff"/><path class="acf" stroke="none" d="M18 23v9l7.5-4.5z"/></g><path d="M41 31v10M36 36h10" class="plus"/></svg><b>“영상은 몇백 개 저장했어요.”</b><p>영상마다 방식이 다 달라서 뭐가 맞는 건지 더 헷갈려요.</p></div>
-      <div><svg class="qi qi-eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 28q19-16 38 0q-19 14-38 0z"/><circle class="acf" stroke="none" cx="24" cy="27.5" r="4.6"/><g class="lash"><path d="M11 22.5l-2.5-4M17 19.2l-1.3-4.6M24 18v-4.8M31 19.2l1.3-4.6M37 22.5l2.5-4"/></g></svg><b>“잘 안 올라가는 눈이 제일 무서워요.”</b><p>그런 고객님이 오시면 ‘이번엔 어떡하지?’ 걱정이 먼저 들어요.</p></div>
-      <div><svg class="qi qi-ask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h22a3.5 3.5 0 0 1 3.5 3.5v9A3.5 3.5 0 0 1 27 24H14l-6 5v-5H5a3.5 3.5 0 0 1-3.5-3.5v-9A3.5 3.5 0 0 1 5 8z"/><text x="16" y="20.5" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="11" font-weight="700" fill="currentColor" stroke="none">?</text><path class="empty acs" stroke-dasharray="3 3" d="M43 25H22a3.5 3.5 0 0 0-3.5 3.5v8A3.5 3.5 0 0 0 22 40h14l5.5 4.5V40h1.5a3.5 3.5 0 0 0 3.5-3.5v-8A3.5 3.5 0 0 0 43 25z"/></svg><b>“물어볼 사람이 없어요.”</b><p>뭘 고쳐야 할지도 모르겠고, 피드백 받을 곳이 없어요.</p></div>
-    </div>
-    <p class="src text-center">수강 원장님 후기 원문에서 옮긴 고민이에요</p>
-  </div>
-</section>
-
-<!-- ================= 섹션 6 : Cause 01~03 ================= -->
-<section class="section v2-cause">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">Cause of NEEINK</p>
-      <h2 class="section-title">문제는 손이 아니라,<br>반복할 기회가 없었다는 것입니다</h2>
-      <p class="section-desc">같은 영상을 보고도 결과가 갈리는 이유, 세 가지로 좁혀집니다.</p>
-    </div>
-  </div>
-  <div class="ls">
-    <div class="ls-row"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">원인 01</p><h3>눈으로만 배웠다</h3><p>유튜브·인스타그램에서 실습 없이 보기만 했어요. 숙달은 정해진 방법을 반복할 때 오는데, 그 반복의 기회 자체가 없었던 거예요.</p></div></div>
-    <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">원인 02</p><h3>남의 기준을 따라 했다</h3><p>영상마다 방식이 다르니, 확신 없이 남의 기준만 따라 하게 돼요. 눈매가 바뀌면 그 기준은 더 이상 맞지 않습니다.</p></div></div>
-    <div class="ls-row"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">원인 03</p><h3>막혔을 때 물어볼 곳이 없었다</h3><p>심화 케이스에서 막혀도 확인해 줄 사람이 없으니, 늘 같은 자리에서 다시 걸리게 됩니다.</p></div></div>
-  </div>
-  <div class="container"><p class="answer">영상으로 쌓은 지식은 <b>손에 남지 않고</b>, 남의 기준은 <b>심화 케이스에서 무너집니다.</b><br>그렇기 때문에 니잉은 <b>처음부터 끝까지 내 손으로 반복</b>하고, <b>눈매별 판단 기준</b>을 세우고, <b>수료 후에도 질문 창구</b>를 열어둡니다.</p></div>
-</section>
-
-<!-- ================= 섹션 7 : Solution 01~03 ================= -->
-<section class="section bg-light v2-sol">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">Solution of NEEINK</p>
-      <h2 class="section-title">원인마다,<br>대응이 따로 있습니다</h2>
-      <p class="section-desc">모든 급속교정 클래스에 공통으로 적용되는, 니잉의 운영 방식이에요.</p>
-    </div>
-  </div>
-  <div class="ls">
-    <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 01</p><h3>오프라인 시간은 전부 실습에 씁니다</h3><p>이론과 데모는 온라인으로 먼저 보고 와요. 현장에서는 모델과 재료가 준비된 상태에서, 처음부터 끝까지 원장님 손으로 완성합니다.</p></div></div>
-    <div class="ls-row"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 02</p><h3>6,000건에서 나온 판단 기준을 드립니다</h3><p>4초 눈매 분석법과 11단계 상세 교정으로, 어떤 눈매가 와도 무엇을 보고 판단해야 하는지 알려드려요.</p></div></div>
-    <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 03</p><h3>막히는 순간, 현장에서 바로 잡습니다</h3><p>매 단계 1:1 밀착 코칭으로 그 자리에서 바로 교정해요. 수료 후 샵에서 막힐 때는 카카오톡으로 물어보시면 됩니다.</p></div></div>
-  </div>
-</section>
-
-<!-- ================= 섹션 2 : How It Works (클래스 구성) ================= -->
-<section class="section bg-light v2-adv">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">How It Works</p>
-      <h2 class="section-title">급속교정 클래스,<br>이렇게 진행됩니다</h2>
-      <p class="section-desc">롯드 기초에서 이론, 그리고 실습까지. 지금 필요한 단계부터 시작하시면 돼요.</p>
-    </div>
-    <div class="hiw">
-      <div><h3>시작은 온라인으로</h3><p>세 클래스 모두 온라인 강의로 먼저 시작해요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>롯드 → 이론 → 실습</h3><p>기초반, 이론 클래스, 패키지로 단계를 나눠 배워요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>100% 직접 실습</h3><p>패키지는 모델·재료가 준비된 현장에서, 내 손으로 직접 완성해요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>연화 특허 기술</h3><p>니잉이 특허를 출원하는 연화 기술을 직접 배워요 · [출원 확인 필요]</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 섹션 9 : Difference ================= -->
-<section class="section v2-cmp">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">Difference</p>
-      <h2 class="section-title">같은 시간을 써도,<br>남는 것이 다릅니다</h2>
-      <p class="section-desc">급속교정 클래스를 듣고 나면 컴플레인은 줄고, 재방문은 늘고, 시술 앞에서 더 이상 망설이지 않게 돼요.</p>
-    </div>
-    <table class="cmp">
-      <thead><tr><th></th><th>영상으로 독학</th><th class="on">니잉 급속교정 패키지</th></tr></thead>
-      <tbody>
-        <tr><th>실습</th><td>눈으로만 보고 따라 함</td><td class="on">처음부터 끝까지 내 손으로</td></tr>
-        <tr><th>기준</th><td>영상마다 방식이 다름</td><td class="on">눈매별 판단 기준 · 11단계 교정</td></tr>
-        <tr><th>모델·재료</th><td>직접 구하고 직접 삼</td><td class="on">니잉이 전부 준비</td></tr>
-        <tr><th>막힐 때</th><td>물어볼 곳이 없음</td><td class="on">현장 1:1 코칭 + 수료 후 카톡 피드백</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ================= LP : 판단 기준의 구조 ================= -->
-<section class="section bg-light lp-struct">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">How Judgment Works</p>
-      <h2 class="section-title">눈매를 읽고, 모발을 확인하고,<br>내 시술 과정을 점검해요</h2>
-      <p class="section-desc">외워둔 순서에 판단의 이유를 더해요. 눈매와 모발 상태를 살피는 기준을 배우고, 실습 포함 과정에서는 직접 시술하며 막히는 단계를 교정해요.</p>
-    </div>
-    <div class="lp-chain" aria-hidden="true"><span>눈매 · 상담</span><i></i><span>모발 상태 · 연화 판단</span><i></i><span>직접 실습 · 교정</span></div>
-    <div class="lp-cds c3"><div class="lp-cd"><span class="lp-cd-n">01</span><h3>눈매를 보고 롯드를 선택해요</h3><p>익숙한 롯드를 고르기 전에 눈매와 고객이 원하는 결과를 살펴봐요. 상담에서 확인한 내용을 디자인 롯드 선택과 부착 위치로 연결해 배워요.</p></div><div class="lp-cd"><span class="lp-cd-n">02</span><h3>시간만 보지 않고, 모발 상태를 확인해요</h3><p>연화 시간을 외우는 데서 그치지 않고, 과정 중 모발의 어떤 상태를 살펴야 하는지 배워요. 연화 원리와 판단 기준을 함께 익혀요.</p></div><div class="lp-cd"><span class="lp-cd-n">03</span><h3>직접 해보며 손의 습관을 점검해요</h3><p>실습 포함 과정에서는 처음부터 끝까지 직접 시술해요. 롯드 부착과 결 정리, 도구 사용처럼 막히는 단계를 현장 코칭으로 점검하고 교정해요.</p></div></div>
-    <p class="micro text-center lp-note">※ 직접 실습과 현장 코칭은 오프라인 실습 포함 옵션에서 진행돼요.</p>
-  </div>
-</section>
-
-<!-- ================= 섹션 8 : Core — 11단계 상세 교정 ================= -->
-<section class="section v2-core">
-  <div class="container">
-    <div class="split" style="align-items:start">
-      <div>
-        <p class="section-label">Core</p>
-        <h2 class="section-title">시술 흐름 그대로,<br>11단계 상세 교정</h2>
-        <p class="section-desc" style="margin-bottom:16px">상담부터 마무리 멘트까지, 흐름의 어느 지점에서 막히든 거기서부터 잡아드려요. 핵심은 시간이 아니라 모발 상태로 연화를 판단하는 <b>유지력 8주 물광 연화법</b>입니다.</p>
-        <ul class="core-steps"><li><span class="s">STEP 01</span><span><b>상담 및 사진 촬영</b>눈매를 빠르게 읽고, 고객의 기대치까지 맞추는 설계 상담법</span></li><li><span class="s">STEP 02</span><span><b>클렌징 및 전처리</b>모질을 먼저 파악하고, 그에 맞춰 하는 전처리</span></li><li><span class="s">STEP 03</span><span><b>테이핑 및 연화롯드</b>어떤 눈매가 와도 흔들리지 않는 테이핑</span></li><li><span class="s">STEP 04</span><span><b>물광 레이어링 연화법</b>시간이 아니라, 모발 상태로 판단하는 연화</span></li><li><span class="s">STEP 05</span><span><b>디자인 롯드 교체</b>정확한 롯드 부착 위치, 교체할 때 결 정리 실수까지 막는 법</span></li><li><span class="s">STEP 06</span><span><b>산화</b>컬이 꺾이지 않게 만드는 산화 원리</span></li><li><span class="s">STEP 07</span><span><b>중화</b>컬 꺾임·모발 손상은 왜 생기는지, 중화는 왜 필요한지</span></li><li><span class="s">STEP 08</span><span><b>클렌징 및 마무리</b>손님이 거울을 보기 전, 내가 먼저 확인하는 마무리</span></li><li><span class="s">STEP 09</span><span><b>세럼 도포 및 결 정리</b>결을 가지런히 정리하는 세럼 활용법</span></li><li><span class="s">STEP 10</span><span><b>사진 촬영</b>결과물을 마케팅 자산으로 바꾸는 촬영과 보정</span></li><li><span class="s">STEP 11</span><span><b>안내 및 마무리</b>다음 방문으로 이어지는 마무리 멘트</span></li></ul>
-      </div>
-      <div class="img-placeholder" style="aspect-ratio:3/4;position:sticky;top:100px"><i data-lucide="play-circle"></i></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 섹션 10 : Process ================= -->
-<section class="section v2-step">
-  <div class="container">
-    <div class="text-center">
-      <p class="section-label">Process of NEEINK</p>
-      <h2 class="section-title">패키지 수강,<br>이렇게 진행됩니다</h2>
-      <p class="section-desc">롯드 기초반과 이론 클래스는 결제 즉시 온라인으로 바로 수강할 수 있어요. 실습이 포함된 패키지는 아래 순서로 진행합니다.</p>
-    </div>
-    <div class="proc">
-      <div><div class="img-placeholder ps-box"><svg class="ps ps-write" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h40a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H26l-10 9v-9h-6a5 5 0 0 1-5-5V17a5 5 0 0 1 5-5z"/><path class="dr d1" pathLength="1" d="M15 22h30"/><path class="dr d2" pathLength="1" d="M15 29h24"/><path class="dr d3" pathLength="1" d="M15 36h16"/><circle class="acf pen" stroke="none" cx="0" cy="0" r="2.6"/></svg></div><p class="n">01</p><h4>상담 신청</h4><p>지금 어느 단계에서 막혀 있는지 남겨주세요</p></div>
-      <div><div class="img-placeholder ps-box"><svg class="ps ps-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="8" width="32" height="44" rx="5"/><path d="M17 20h18M17 28h18M17 36h10" opacity=".35"/><path class="dr acs ck" pathLength="1" d="M16 44l4 4 7-8"/><g class="mag"><circle cx="42" cy="38" r="9" fill="#fff"/><circle class="acf" stroke="none" cx="42" cy="38" r="9" opacity=".12"/><circle cx="42" cy="38" r="9"/><path stroke-width="3.2" d="M49 45l7 7"/></g></svg></div><p class="n">02</p><h4>사전 문제점 체크</h4><p>상담을 통해 막힌 지점과 맞는 클래스를 정해요</p></div>
-      <div><div class="img-placeholder ps-box"><svg class="ps ps-cal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="12" width="48" height="42" rx="6"/><path d="M8 24h48M20 7v10M44 7v10"/><g opacity=".35"><circle cx="19" cy="33" r="1.6" fill="currentColor"/><circle cx="32" cy="33" r="1.6" fill="currentColor"/><circle cx="19" cy="44" r="1.6" fill="currentColor"/><circle cx="32" cy="44" r="1.6" fill="currentColor"/><circle cx="45" cy="33" r="1.6" fill="currentColor"/></g><circle class="ring acs" cx="45" cy="44" r="6.5"/><circle class="acf" stroke="none" cx="45" cy="44" r="3"/></svg></div><p class="n">03</p><h4>일정 협의 · 등록</h4><p>실습 인원에 맞춰 개별 일정을 확정해요</p></div>
-      <div><div class="img-placeholder ps-box"><svg class="ps ps-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="10" width="52" height="34" rx="4"/><path d="M2 50h60"/><path class="acf pl" stroke="none" d="M28 20v14l12-7z"/><rect x="12" y="38" width="40" height="2.4" rx="1.2" fill="currentColor" stroke="none" opacity=".15"/><rect class="acf bar" stroke="none" x="12" y="38" width="40" height="2.4" rx="1.2"/></svg></div><p class="n">04</p><h4>온라인 강의 (6개월)</h4><p>이론과 데모를 먼저 보고 준비해요</p></div>
-      <div><div class="img-placeholder ps-box"><svg class="ps ps-grad" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cap"><path d="M4 24L32 12l28 12-28 12z"/><path d="M15 29v12q17 9 34 0V29"/><g class="tsl"><path d="M56 26v13"/><circle class="acf" stroke="none" cx="56" cy="42" r="2.8"/></g></g><path class="acs spk" stroke-width="2.4" d="M10 6v6M7 9h6"/></svg></div><p class="n">05</p><h4>오프라인 실습 · 수료</h4><p>신논현 스튜디오 실습 → 디플로마 → 카톡 피드백</p></div>
-    </div>
-    <p class="micro text-center">TIP — 상담 단계에서는 ‘이런 것까지 물어봐도 되나’ 싶은 것도 편하게 물어봐 주세요.</p>
-  </div>
-</section>
-
-<!-- ================= LP : 숫자·이력 ================= -->
-<section class="section bg-light lp-proof">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">Proof</p>
-      <h2 class="section-title">숫자와 이력으로,<br>먼저 보여드려요</h2>
-    </div>
-    <div class="lp-proof-grid c3"><div><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">교과서에 없는 케이스까지 판단 기준으로</p></div><div><p class="v">500+</p><p class="k">교육으로 만난 원장님</p><p class="s">샵에서 바로 쓰는 기준을 함께 만들었어요</p></div><div><p class="v">1,000+</p><p class="k">네이버 리뷰</p><p class="s">고객이 먼저 남긴 결과</p></div></div>
-  </div>
-</section>
-
-<!-- ================= LP : 신뢰 밴드 ================= -->
-<section class="lp-band">
-  <div class="container"><div class="lp-band-in">
-    <svg class="lp-band-ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="19" r="12"/><path d="M18.5 19l3.8 3.8 7.2-7.6"/><path d="M16.5 28.5 13 43l11-5 11 5-3.5-14.5"/></svg>
-    <p class="lp-band-t">래쉬애딕트 최고 교육지사상 수상</p>
-    <p class="lp-band-s">눈매와 모발을 살피는 기준부터, 직접 적용하는 수업까지.</p>
+  <div class="z01-flow"><div class="zc zn">
+    <div class="z-hd"><p class="z-eb">Key Point</p><h2 class="z-t">배운 기술은 그대로,<br><em>판단 기준만 더하세요</em></h2><p class="z-sub">온라인 이론으로 기준을 먼저 세우고, 오프라인에서 내 손으로 반복해요. 두 단계가 이어질 때 결과가 일정해집니다.</p></div>
+    <div class="zflow"><figure class="z-c"><img src="assets/why/why-2.jpg" alt="" loading="lazy"><figcaption><b>STEP 1</b> 온라인 강의<br><small>이론 · 데모 먼저 (6개월)</small></figcaption></figure><i class="zflow-x" aria-hidden="true">+</i><figure class="z-c on"><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"><figcaption><b>STEP 2</b> 오프라인 실습<br><small>모델 · 재료가 준비된 현장에서 100% 내 손으로</small></figcaption></figure></div>
+    <p class="z-note">※ 패키지 기준 구성이에요. 롯드 기초반 · 이론 클래스는 결제 즉시 온라인으로 수강해요.</p>
   </div></div>
 </section>
 
-<!-- ================= LP : 현장 갤러리 ================= -->
-<section class="section bg-light lp-gallery">
-  <div class="container">
-    <div class="text-center lp-hd">
-      <p class="section-label">In Class</p>
-      <h2 class="section-title">실제 수업 현장</h2>
-      <p class="section-desc">모델과 재료가 준비된 신논현 스튜디오에서, 처음부터 끝까지 내 손으로.</p>
-    </div>
-  </div>
-  <div class="lp-gal" aria-label="실제 수업 현장 사진"><div class="lp-gal-track"><figure><img src="assets/cls/lash-1.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/edu-main.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-3.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-4.jpg" alt="" loading="lazy"></figure><figure><img src="assets/hero2.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-5.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-1.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/edu-main.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-3.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-4.jpg" alt="" loading="lazy"></figure><figure><img src="assets/hero2.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-5.jpg" alt="" loading="lazy"></figure><figure><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></figure></div></div>
+<!-- ================= 02 · 변화 증거 ================= -->
+<section class="z z02"><div class="zc zm">
+  <div class="z-hd"><h2 class="z-t">수강 후, 보이는 변화</h2><p class="z-sub">수업을 마친 원장님이 직접 보내주신 메시지에서 옮겼어요</p></div>
+  <div class="z02-rows"><div class="z02-row z-c"><div class="z02-ims"><div class="z02-ph"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"><span>수업 중</span></div><div class="z02-ph"><img src="assets/rv/lash-6.jpg" alt="" loading="lazy"><span>수강 후 메시지</span></div></div>
+      <div class="z02-dt"><p class="z02-nm">롯드 선택</p><p class="z02-big">눈매<small>로 판단</small></p>
+        <div class="z02-cmp"><div class="b"><em>Before</em>롯드를 정해두고 맞췄어요</div><i aria-hidden="true"></i><div class="a"><em>After</em>눈매를 직접 보고 판단해요</div></div></div></div><div class="z02-row z-c"><div class="z02-ims"><div class="z02-ph"><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"><span>수업 중</span></div><div class="z02-ph"><img src="assets/rv/lash-13.jpg" alt="" loading="lazy"><span>수강 후 메시지</span></div></div>
+      <div class="z02-dt"><p class="z02-nm">시술 앞의 마음</p><p class="z02-big">확신<small>이 생겼어요</small></p>
+        <div class="z02-cmp"><div class="b"><em>Before</em>시술할 때마다 확신이 없었어요</div><i aria-hidden="true"></i><div class="a"><em>After</em>작게나마 확신과 자신감이 생겼어요</div></div></div></div><div class="z02-row z-c"><div class="z02-ims"><div class="z02-ph"><img src="assets/cls/lash-3.jpg" alt="" loading="lazy"><span>수업 중</span></div><div class="z02-ph"><img src="assets/rv/lash-11.jpg" alt="" loading="lazy"><span>수강 후 메시지</span></div></div>
+      <div class="z02-dt"><p class="z02-nm">이론 이해</p><p class="z02-big">정리<small>되는 느낌</small></p>
+        <div class="z02-cmp"><div class="b"><em>Before</em>배워도 머릿속에 정리가 안 됐어요</div><i aria-hidden="true"></i><div class="a"><em>After</em>핵심을 짚어주셔서 딱 정리돼요</div></div></div></div><div class="z02-row z-c"><div class="z02-ims"><div class="z02-ph"><img src="assets/cls/lash-4.jpg" alt="" loading="lazy"><span>수업 중</span></div><div class="z02-ph"><img src="assets/rv/lash-9.jpg" alt="" loading="lazy"><span>수강 후 메시지</span></div></div>
+      <div class="z02-dt"><p class="z02-nm">이론과 실습</p><p class="z02-big">연결<small>돼요</small></p>
+        <div class="z02-cmp"><div class="b"><em>Before</em>이론 따로, 실습 따로였어요</div><i aria-hidden="true"></i><div class="a"><em>After</em>이론이랑 실습이 찰떡같이 연결돼요</div></div></div></div></div>
+  <p class="z-note">※ 수강 원장님 카카오톡 후기 원문에서 옮긴 내용이며, 개인차가 있을 수 있어요.</p>
+</div></section>
+
+<!-- ================= 03 · 대표 이야기 ================= -->
+<section class="z z03"><div class="z03-bg"><img src="assets/lp/founder.jpg" alt="" aria-hidden="true"></div>
+  <div class="zc zm"><div class="z03-tx"><h2 class="z-t">“원래 이렇게 하는 거예요”<br>라고 말하지 않아요</h2><div class="z03-body"><p>왜 그렇게 하는지, 다른 경우엔 어떻게 달라지는지까지 알려드려요. 남의 기준만 따라 하면, 심화 케이스에서 결국 막힙니다.</p><p>처진 눈, 들린 눈, 컬이 높게 나오는 눈, 컬이 잘 나오지 않는 눈. 원장님이 샵에 돌아가 혼자서도 판단하고 확신할 수 있는 기준을 세워드려요.</p></div><p class="z03-sign">니잉 대표</p></div></div>
 </section>
 
-<!-- ================= LP : 마무리 한 줄 ================= -->
-<section class="section lp-tagline">
-  <div class="container text-center"><p class="lp-tag-t">결과가 매번 달랐던 이유는,<br>손이 아니라 <em>기준</em>이었습니다.</p></div>
+<!-- ================= 04 · 후기 ================= -->
+<section class="z z04">
+  <div class="z04-top"><img src="assets/cls/edu-main.jpg" alt="" aria-hidden="true"><div class="z04-top-tx"><p class="z-eb">NEEINK STORIES</p><h2 class="z-t">진작 올걸 그랬다고,<br>그렇게들 말씀하십니다</h2></div></div>
+  <div class="zc zw"><div class="z-rvs"><article class="rv-card z-rv z-c" data-rv="0"><div class="z-rv-img"><img src="assets/rv/lash-2.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>첫 시작을 원장님이랑 같이해서 정말 잘했다</h4><p class="z-rv-ex">처음에 속눈썹펌을 배워야지 라는 생각을 하면서 과연 혼자 할 수 있을까? 했었는데 막상 하나 하나 따라가보니까 더 어렵더라구요 ㅠㅠ 롯드 붙이는 것도 맘 처럼 안되고 결정리도 자꾸 삐뚤빼뚤 해져서 계속 다시 하고 다시하고 귀에서 원장님 다시 다시 맴돌아요..ㅋㅋ 근데 어려운 만큼 원장님 설명 듣고 직접 해볼 수 있어서 좋았어요 처음에는 많이 느리고 중간에 막히는 부분도 많았지만 혼자 해봐야 한다는 원장님 말씀 오히려 너무 좋았어요! 녹화한거 보면서 다시 복습하는데 여기서 내가 이런 걸 못하는 구나 알게되더라구요 아직 완전 잘하는건 절대 아니지만 첫 시작을 원장님이랑 같이해서 정말 잘했다는 생각이 들어요 저 어려워도 절대 포기 안하고 열심히 해볼게용 오늘 수업 감사합니다</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="1"><div class="z-rv-img"><img src="assets/rv/lash-3.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>모델 혼자 해보길 잘했다 싶어요</h4><p class="z-rv-ex">원장님께서 혼자 다해야한다고 하셔서 사실 등록 고민했잖아요....ㅠㅠ 완전 초보라 혼자 다 할 수 있을까 수업 전날 잠도 못잤어요... 롯드 붙이는 것도 손이 안 따라주고 결 정리도 계속 풀리고 혼자 하면 내가 어디서 잘못한건지 몰라서 더 눈물나고ㅠㅠ 그래도 수업 들으면서 한 단계씩 해보니까 아 여기서 다시 봐야하는구나 하는 순간이 생기더라구요 아직 느리고 부족하지만 그냥 겁먹고 안 하는 것보단 모델 혼자 해보길 잘했다 싶어요 내일 또 모델 잡아놨는데 쪼금 덜 떨릴거 같아요 감사합니다 원장님!</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="2"><div class="z-rv-img"><img src="assets/rv/lash-4.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요</h4><p class="z-rv-ex">원장님 잘 들어가셨어요? 저는 집에와서 남편이랑 저녁 먹고 수업 때 찍은 영상 돌려보고 있어요 내일부터 하루에 한번씩 복습해볼게요 수업 때 말씀드렸던 거 처럼 네일샵 운영 중인데 속눈썹을 계속 잘하고 싶었거든요 괜히 욕심냈다가 오히려 분산되는 거 아닌가 걱정많이 했는데 고객님들이 좋아해주시는 모습 보니까 스킬업을 안 할수 없었어요 제 욕심에 배우기로 결심한건데 원장님께 가길 정말 잘한 거 같아요 오늘 처음 뵙는건데 제 손의 습관이나 브러쉬 잡는거 한번에 파악하셔서 교정해주시는거 보고 사실 놀랐어요 원장님이 잘 가르쳐주신 만큼 저도 열심히 계속 정진하겠습니다 오늘 정말 감사했어요 피드백 신청 많이 하라고 하셨으니까 제가 종종 연락드릴게요 저 귀찮아 하시면 안돼요~ 좋은 밤 되세요</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="3"><div class="z-rv-img"><img src="assets/rv/lash-5.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>보람 미쳤어요진짜</h4><p class="z-rv-ex">허,,,,, 원장님 저 지금 집 도착이요 갈떼마다 느끼는데 서울 너무 멀어요ㅡㅠ 힝// 그래도 오늘 진짜 유익했습니다 좋은 클래스 들은 덕분인지 저 하나도 안피곤해여 오늘 저의 감동뽀인트 연화방법이 진짜 좋았어요 다른 데서는 그냥 시간을 정해줬었거든요 근데 원장님은 원리 설명하면서 엄청 자세하게 알려주시니까 응용이 되겠단 생각이 들었어요 그리고 두번쨰는 원장님 인스타에서 보던 느낌을 제가 실제로 해볼 수 있었다는게 찐이라고 느꼈어요 잘하는거랑 잘 가르치는 거랑 다르다잖아요 하루매출 포기하고 차비들여서 아침부터 부산에서 서울까지간 보람 미쳤어요진짜 다들 니잉했으면!!!! AI 수업도 곧 들으러 갈게요!!!!!!</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article></div><p class="z-note">※ 수업을 마친 원장님들이 직접 보내주신 메시지예요. 카드를 누르면 원문을 볼 수 있어요.</p></div>
 </section>
 
-<!-- ================= LP : 첫걸음 상담 ================= -->
-<section class="section bg-light lp-offer">
-  <div class="container">
-    <div class="lp-offer-box">
-      <ul class="circle-ani" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li></ul>
-      <p class="section-label">First Step</p>
-      <h2 class="section-title">처음이라 망설여진다면,<br>상담부터 시작하세요</h2>
-      <p class="section-desc">지금 어느 단계에서 막혀 있는지 남겨주시면, 맞는 클래스부터 안내해 드려요.</p>
-      <div class="lp-offer-btns"><a href="page_09.html" class="btn btn-primary btn-arrow">1:1 상담 남기기</a><a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" rel="noopener" class="btn btn-secondary">카카오톡 상담</a></div>
-      <p class="micro">카카오톡 상담 평일 10:30 ~ 19:00</p>
-    </div>
-  </div>
+<!-- ================= 05 · 고민 ================= -->
+<section class="z z05"><div class="zc zn">
+  <div class="z-hd"><h2 class="z-t">이런 고민,<br><em>하나라도 해당되시나요</em></h2><p class="z-sub">수강 원장님 후기 원문에서 옮긴 고민이에요</p></div>
+  <div class="z05-circle"><img src="assets/why/why-3.jpg" alt="" loading="lazy"></div>
+  <div class="z05-chat"><div class="z05-b z-c"><b>“매번 결과가 달라요.”</b> 잘 될 때도 있고 안 될 때도 있는데, 그게 왜 그런지를 모르겠어요.</div><div class="z05-b me z-c"><b>“고객 카톡이 올 때마다 겁나요.”</b> 컴플레인일까 봐, 일 자체를 그만두고 싶을 때가 있어요.</div><div class="z05-b z-c"><b>“롯드를 감으로 골라요.”</b> 눈 모양마다 무엇을 보고 골라야 하는지 기준이 없어요.</div><div class="z05-b me z-c"><b>“영상은 몇백 개 저장했어요.”</b> 영상마다 방식이 다 달라서 뭐가 맞는 건지 더 헷갈려요.</div><div class="z05-b z-c"><b>“잘 안 올라가는 눈이 제일 무서워요.”</b> 그런 고객님이 오시면 ‘이번엔 어떡하지?’ 걱정이 먼저 들어요.</div><div class="z05-b me z-c"><b>“물어볼 사람이 없어요.”</b> 뭘 고쳐야 할지도 모르겠고, 피드백 받을 곳이 없어요.</div></div>
+</div><p class="z05-band">영상을 몇백 개 봐도, <b>결과가 그대로인 이유!</b></p></section>
+
+<!-- ================= 06 · 원인 ================= -->
+<section class="z z06"><div class="zc zw">
+  <div class="z-hd"><p class="z-eb">Cause</p><h2 class="z-t">문제는 손이 아니라,<br><em>반복할 기회</em>가 없었다는 것입니다</h2><p class="z-sub">같은 영상을 보고도 결과가 갈리는 이유, 세 가지로 좁혀집니다.</p></div>
+  <div class="z06-grid"><article class="z06-card z-c"><span class="z06-no">1</span><h3>눈으로만 배웠다</h3><div class="z06-img"><img src="assets/why/why-2.jpg" alt="" loading="lazy"></div><p>유튜브·인스타그램에서 실습 없이 보기만 했어요. 숙달은 정해진 방법을 반복할 때 오는데, 그 반복의 기회 자체가 없었던 거예요.</p></article><article class="z06-card z-c"><span class="z06-no">2</span><h3>남의 기준을 따라 했다</h3><div class="z06-img"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></div><p>영상마다 방식이 다르니, 확신 없이 남의 기준만 따라 하게 돼요. 눈매가 바뀌면 그 기준은 더 이상 맞지 않습니다.</p></article><article class="z06-card z-c"><span class="z06-no">3</span><h3>막혔을 때 물어볼 곳이 없었다</h3><div class="z06-img"><img src="assets/lp/lash-9.jpg" alt="" loading="lazy"></div><p>심화 케이스에서 막혀도 확인해 줄 사람이 없으니, 늘 같은 자리에서 다시 걸리게 됩니다.</p></article></div>
+  <p class="z-note">※ 숙련도는 목표를 정한 반복 연습과 피드백에 따라 달라진다는 연구가 있어요. (Ericsson 외, Psychological Review, 1993)</p>
+</div></section>
+
+<!-- ================= 07 · 결론 브릿지 ================= -->
+<section class="z z07"><div class="zc zn">
+  <p class="z07-lead">영상으로 쌓은 지식은 <b>손에 남지 않고</b>,<br>남의 기준은 <b>심화 케이스에서 무너집니다.</b></p>
+  <div class="z07-img z-c"><img src="assets/hero2.jpg" alt="" loading="lazy"></div>
+  <p class="z07-next">그렇기 때문에 니잉은 <b>처음부터 끝까지 내 손으로 반복</b>하고,<br><b>눈매별 판단 기준</b>을 세우고, 수료 후에도 <b>질문 창구</b>를 열어둡니다.</p>
+</div></section>
+
+<!-- ================= 08 · 핵심 해결책 · 작동 4단계 ================= -->
+<section class="z z08">
+  <div class="z08-top"><div class="zc zm">
+    <p class="z08-kick">어떤 눈매가 와도 흔들리지 않는 한 가지,<br>모발 상태로 판단하는 연화</p><p class="z08-big">물광 레이어링</p>
+    <div class="z08-vis"><img class="z08-main" src="assets/cls/edu-main.jpg" alt="" loading="lazy"><span class="z08-zoom"><img src="assets/lp/lash-10.jpg" alt="" loading="lazy"></span></div>
+    <div class="z08-box z-c"><p class="z08-lb">니잉 연화 기술</p><p class="z08-nm">물광 레이어링 연화법</p><p class="z08-desc">정해진 시간을 기다리는 연화가 아니에요. <b>모발 상태를 보고 판단하는</b> 니잉의 연화법을, 6,000건의 시술에서 정리한 <b>눈매 판단 기준</b>과 함께 배웁니다.</p><p class="z08-note">※ 연화 기술의 특허 출원·등록 상태는 확인 후 표기해요 [클라이언트 확인 필요]</p><div class="z08-cells"><div><i data-lucide="monitor-play" aria-hidden="true"></i><b>온라인 시작</b><span>이론 · 데모 먼저</span></div><div><i data-lucide="layers" aria-hidden="true"></i><b>롯드 → 이론 → 실습</b><span>단계별로</span></div><div><i data-lucide="hand" aria-hidden="true"></i><b>100% 직접 실습</b><span>모델 · 재료 제공</span></div><div><i data-lucide="message-circle" aria-hidden="true"></i><b>카톡 피드백</b><span>수료 후에도</span></div></div></div>
+  </div></div>
+  <div class="z08-steps"><div class="zc zw"><div class="z-hd"><h2 class="z-t">급속교정이 작동하는 <em>4단계</em></h2><p class="z-sub">모든 급속교정 클래스에 공통으로 적용되는, 니잉의 운영 방식이에요.</p></div><div class="z08-grid"><article class="z08-st z-c"><span class="z06-no">1</span><div class="z08-st-img"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></div><h3>눈매를 먼저 읽어요</h3><p>4초 눈매 분석법으로, 어떤 눈매가 와도 무엇을 보고 판단해야 하는지부터 세워요.</p></article><article class="z08-st z-c"><span class="z06-no">2</span><div class="z08-st-img"><img src="assets/cls/lash-1.jpg" alt="" loading="lazy"></div><h3>모질을 확인해요</h3><p>클렌징과 전처리 단계에서 모질을 먼저 파악하고, 그에 맞춰 진행해요.</p></article><article class="z08-st z-c"><span class="z06-no">3</span><div class="z08-st-img"><img src="assets/lp/lash-10.jpg" alt="" loading="lazy"></div><h3>모발 상태로 연화를 판단해요</h3><p>시간이 아니라 모발 상태를 보고 연화를 판단하는 물광 레이어링 연화법을 익혀요.</p></article><article class="z08-st z-c"><span class="z06-no">4</span><div class="z08-st-img"><img src="assets/cls/lash-4.jpg" alt="" loading="lazy"></div><h3>직접 해보고 바로 교정받아요</h3><p>오프라인 시간은 전부 실습에 써요. 매 단계 1:1 밀착 코칭으로 그 자리에서 바로 잡습니다.</p></article></div><p class="z-note">※ 3·4단계의 현장 실습과 1:1 코칭은 실습이 포함된 패키지에서 진행해요.</p></div></div>
+  <div class="z-mq" aria-hidden="true"><div class="z-mq-tr"><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b><span>NEEINK LASH LIFT CORRECTION</span><b>◆</b></div></div>
 </section>
 
-<!-- ================= 섹션 11 : CLASS (세부 클래스 3) ================= -->
-<section class="section v2-cls" id="class">
-  <div class="container">
-    <p class="section-label">Class</p>
-    <h2 class="section-title">나에게 필요한 클래스,<br>더 자세히 알아보세요</h2>
-    <p class="section-desc">급속교정 클래스는 롯드 기초반, 온라인 이론 클래스, 연화 특허기술 패키지, 세 가지로 나뉘어요.</p>
-    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">온라인 + 오프라인</span><h3>속눈썹펌 연화 특허기술 패키지</h3><p>온라인 강의 6개월에 100% 실습을 더한 기존 급속교정 클래스</p><div class="hash"><span>온라인 6개월 + 실습</span><span>79만원부터</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="0">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">VOD + 자료</span><h3>롯드 왕초보 온라인 기초반</h3><p>새 롯드가 나올 때마다 헷갈렸다면, 롯드의 방향·구간·사이즈부터 시작하세요</p><div class="hash"><span>온라인 1개월</span><span>5만 9천원부터</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="1">자세히 보기</button></article><article class="cls-card"><div class="img-placeholder"><i data-lucide="image"></i></div><span class="who-tag">VOD</span><h3>속눈썹펌 온라인 이론 클래스</h3><p>같은 방법인데 결과가 달라졌다면, 속눈썹펌의 메커니즘부터 이해하세요</p><div class="hash"><span>온라인 100일</span><span>29만 9천원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="2">자세히 보기</button></article></div>
-    <p class="micro text-center">롯드 기초반 수강 시 패키지 할인쿠폰 제공 · 패스트캠퍼스 수강자는 패키지의 오프라인 실습만 진행 가능</p>
+<!-- ================= 09 · 비교 ================= -->
+<section class="z z09"><div class="zc zm">
+  <div class="z-hd"><h2 class="z-t">왜 영상 독학이 아닌<br><em>니잉 급속교정</em>이어야 하나?</h2><p class="z-sub">같은 시간을 써도, 남는 것이 다릅니다</p></div>
+  <div class="z09-wrap">
+    <div class="z09-col base z-c"><span class="z09-circle"><img src="assets/why/why-3.jpg" alt="" loading="lazy"></span><p class="z09-head">영상으로 독학</p><div class="z09-cell">눈으로만 보고 따라 함</div><div class="z09-cell">영상마다 방식이 다름</div><div class="z09-cell">모델·재료를<br>직접 구하고 직접 삼</div><div class="z09-cell">막힐 때 물어볼 곳이 없음</div></div>
+    <div class="z09-col dia z-c"><span class="z09-circle"><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"></span><p class="z09-head">니잉 급속교정 패키지</p><div class="z09-cell">처음부터 끝까지<br>내 손으로 실습</div><div class="z09-cell">눈매별 판단 기준<br>11단계 상세 교정</div><div class="z09-cell">니잉이 전부 준비</div><div class="z09-cell">현장 1:1 코칭<br>+ 수료 후 카톡 피드백</div></div>
   </div>
+  <p class="z-note">※ 온라인 + 오프라인 실습 패키지 기준 비교예요.</p>
+</div></section>
+
+<!-- ================= 10 · 구조 상세 ================= -->
+<section class="z z10"><div class="zc zm">
+  <div class="z-hd"><h2 class="z-t">판단 기준을 만드는<br><em>패키지의 5가지 구조</em></h2><p class="z-sub">온라인으로 기준을 세우고, 현장에서 손에 익히고, 샵에 돌아가서도 이어집니다.</p></div>
+  <div class="z10-spine"><span class="z10-line" aria-hidden="true"></span><div class="z10-it r"><div class="z10-in z-c"><span class="z10-th"><img src="assets/why/why-2.jpg" alt="" loading="lazy"></span><p class="z10-lb">1st · Online</p><p class="z10-nm">온라인 강의 6개월</p><p class="z10-bd">이론과 데모를 먼저 보고 와요. 현장 시간은 전부 실습에 쓰기 위해서예요.</p></div></div><div class="z10-it l"><div class="z10-in z-c"><span class="z10-th"><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"></span><p class="z10-lb">2nd · Practice</p><p class="z10-nm">100% 직접 실습</p><p class="z10-bd">모델과 재료가 준비된 신논현 스튜디오에서, 처음부터 끝까지 원장님 손으로 완성해요.</p></div></div><div class="z10-it r"><div class="z10-in z-c"><span class="z10-th"><img src="assets/cls/lash-4.jpg" alt="" loading="lazy"></span><p class="z10-lb">3rd · Coaching</p><p class="z10-nm">1:1 밀착 코칭</p><p class="z10-bd">손의 습관, 브러쉬 잡는 법까지. 막히는 단계에서 그 자리에서 바로 교정해요.</p></div></div><div class="z10-it l"><div class="z10-in z-c"><span class="z10-th"><i data-lucide="graduation-cap" aria-hidden="true"></i></span><p class="z10-lb">Finish · Diploma</p><p class="z10-nm">수료 디플로마</p><p class="z10-bd">오프라인 실습을 마치면 디플로마를 받고 수료해요.</p></div></div><div class="z10-it r"><div class="z10-in z-c"><span class="z10-th"><i data-lucide="message-circle" aria-hidden="true"></i></span><p class="z10-lb">After · Feedback</p><p class="z10-nm">수료 후 카톡 피드백</p><p class="z10-bd">샵에서 막히는 순간에는 카카오톡으로 물어보시면 돼요.</p></div></div></div>
+  <div class="z10-tech z-c"><span class="z10-th big"><i data-lucide="sparkles" aria-hidden="true"></i></span><p class="z10-lb">NEEINK · Technology</p><p class="z10-nm">니잉 연화 기술</p><p class="z10-bd">시간이 아니라 모발 상태로 판단하는 물광 레이어링 연화법을 직접 배워요.</p></div>
+  <p class="z-note">※ 패키지(온라인 + 100% 실습) 기준 구조예요. 연화 기술의 특허 출원 여부는 확인 후 표기해요 [클라이언트 확인 필요]</p>
+  <div class="z10-five"><div class="z-hd"><p class="z-eb">ONE PACKAGE · FIVE STANDARDS</p><h2 class="z-t">하나의 패키지, <em>5가지 기준</em></h2></div><ul><li><b>눈매</b><span>상담에서 눈매를 읽는 기준</span></li><li><b>모질</b><span>전처리 전에 확인하는 기준</span></li><li><b>연화</b><span>모발 상태로 판단하는 기준</span></li><li><b>롯드</b><span>부착 위치 · 교체 기준</span></li><li><b>마무리</b><span>손님보다 먼저 확인하는 기준</span></li></ul></div>
+</div><div class="z-mq" aria-hidden="true"><div class="z-mq-tr"><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b><span>상담 · 전처리 · 테이핑 · 연화 · 롯드 교체 · 산화 · 중화 · 마무리 · 세럼 · 촬영 · 안내</span><b>◆</b></div></div></section>
+
+<!-- ================= 11 · 구성 전체 ================= -->
+<section class="z z11"><div class="zc zm">
+  <div class="z-hd"><h2 class="z-t"><em>11단계</em> 시술 흐름을 한 번에</h2><p class="z-sub">상담부터 마무리 멘트까지, 흐름의 어느 지점에서 막히든 거기서부터 잡아드려요.</p></div>
+  <div class="z11-stage"><span class="z11-wave" aria-hidden="true"></span><span class="z11-core"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></span><span class="z11-node" style="--a:-90.0deg"><span class="z11-dot"><i data-lucide="message-square" aria-hidden="true"></i></span><b>상담</b></span><span class="z11-node" style="--a:-18.0deg"><span class="z11-dot"><i data-lucide="droplet" aria-hidden="true"></i></span><b>전처리</b></span><span class="z11-node" style="--a:54.0deg"><span class="z11-dot"><i data-lucide="waves" aria-hidden="true"></i></span><b>연화</b></span><span class="z11-node" style="--a:126.0deg"><span class="z11-dot"><i data-lucide="pen-tool" aria-hidden="true"></i></span><b>디자인</b></span><span class="z11-node" style="--a:198.0deg"><span class="z11-dot"><i data-lucide="camera" aria-hidden="true"></i></span><b>마무리</b></span></div>
+  <div class="z11-cards"><article class="z11-card z-c"><div class="z11-head"><span class="z11-img"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></span><div><p class="z11-eb">CONSULT</p><h3>상담 및 사진 촬영</h3><p>눈매를 빠르게 읽고, 고객의 기대치까지 맞추는 설계 상담법</p></div></div><ul class="z11-list"><li>STEP 01 상담 및 사진 촬영</li></ul></article><article class="z11-card z-c"><div class="z11-head"><span class="z11-img"><img src="assets/cls/lash-1.jpg" alt="" loading="lazy"></span><div><p class="z11-eb">PREP</p><h3>전처리와 테이핑</h3><p>모질을 먼저 파악하고, 어떤 눈매가 와도 흔들리지 않게 준비해요</p></div></div><ul class="z11-list"><li>STEP 02 클렌징 및 전처리 — 모질을 먼저 파악하고, 그에 맞춰 하는 전처리</li><li>STEP 03 테이핑 및 연화롯드 — 어떤 눈매가 와도 흔들리지 않는 테이핑</li></ul></article><article class="z11-card z-c"><div class="z11-head"><span class="z11-img"><img src="assets/lp/lash-10.jpg" alt="" loading="lazy"></span><div><p class="z11-eb">SOFTEN</p><h3>물광 레이어링 연화법</h3><p>시간이 아니라, 모발 상태로 판단하는 연화</p></div></div><ul class="z11-list"><li>STEP 04 물광 레이어링 연화법</li></ul></article><article class="z11-card z-c"><div class="z11-head"><span class="z11-img"><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"></span><div><p class="z11-eb">DESIGN</p><h3>디자인 롯드 · 산화 · 중화</h3><p>정확한 부착 위치부터 컬이 꺾이지 않는 원리까지</p></div></div><ul class="z11-list"><li>STEP 05 디자인 롯드 교체 — 결 정리 실수까지 막는 법</li><li>STEP 06 산화 — 컬이 꺾이지 않게 만드는 산화 원리</li><li>STEP 07 중화 — 컬 꺾임·모발 손상은 왜 생기는지, 중화는 왜 필요한지</li></ul></article><article class="z11-card z-c"><div class="z11-head"><span class="z11-img"><img src="assets/cls/lash-4.jpg" alt="" loading="lazy"></span><div><p class="z11-eb">FINISH</p><h3>마무리부터 다음 방문까지</h3><p>손님이 거울을 보기 전, 내가 먼저 확인하는 마무리</p></div></div><ul class="z11-list"><li>STEP 08 클렌징 및 마무리</li><li>STEP 09 세럼 도포 및 결 정리</li><li>STEP 10 사진 촬영 — 결과물을 마케팅 자산으로 바꾸는 촬영과 보정</li><li>STEP 11 안내 및 마무리 — 다음 방문으로 이어지는 마무리 멘트</li></ul></article></div>
+  
+  <div class="z11-p2"><div class="z-hd"><h2 class="z-t">온라인 이론에,<br><em>실습을 더하면</em></h2><p class="z-sub">이론과 데모를 온라인으로 먼저 보고, 현장에서는 처음부터 끝까지 내 손으로 반복해요.</p></div><div class="zflow"><figure class="z-c"><img src="assets/why/why-2.jpg" alt="" loading="lazy"><figcaption><b>온라인 강의</b><br><small>6개월 · 180일</small></figcaption></figure><i class="zflow-x" aria-hidden="true">+</i><figure class="z-c on"><img src="assets/cls/lash-4.jpg" alt="" loading="lazy"><figcaption><b>오프라인 100% 실습</b><br><small>모델 · 재료 제공</small></figcaption></figure></div><p class="zflow-res">= 눈매가 달라져도 흔들리지 않는 기준</p><div class="z17-tw z-c"><table class="z17-tbl z11-tbl"><thead><tr><th>구성</th><th>온라인만 수강</th><th>온라인 + 100% 실습</th></tr></thead><tbody><tr><td>온라인 강의 6개월</td><td>✓</td><td>✓</td></tr><tr><td>오프라인 실습 (모델 · 재료 제공)</td><td>–</td><td>✓</td></tr><tr><td>현장 1:1 밀착 코칭</td><td>–</td><td>✓</td></tr><tr><td>디플로마 · 카톡 피드백</td><td>상담 시 안내</td><td>✓</td></tr><tr><td>수강료 (VAT 별도)</td><td>79만원</td><td>99만원 (실습 1명)</td></tr></tbody></table></div></div>
+</div></section>
+
+<!-- ================= 12 · 진행 방법 ================= -->
+<section class="z z12"><div class="zc zn">
+  <div class="z-hd"><h2 class="z-t">신청부터 수료까지,<br><em>이렇게 진행돼요</em></h2><p class="z-sub">롯드 기초반과 이론 클래스는 결제 즉시 온라인으로 바로 수강할 수 있어요. 실습이 포함된 패키지는 아래 순서로 진행합니다.</p></div>
+  <div class="z12-list"><div class="z12-card z-c"><span class="z12-img"><img src="assets/why/why-3.jpg" alt="" loading="lazy"></span><div><span class="z12-badge">STEP 1</span><h3>상담 신청</h3><p>지금 어느 단계에서 막혀 있는지 남겨주세요.</p></div></div><div class="z12-card z-c"><span class="z12-img"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></span><div><span class="z12-badge">STEP 2</span><h3>사전 문제점 체크</h3><p>상담을 통해 막힌 지점과 맞는 클래스를 정해요.</p></div></div><div class="z12-card z-c"><span class="z12-img"><img src="assets/lp/lash-7.jpg" alt="" loading="lazy"></span><div><span class="z12-badge">STEP 3</span><h3>일정 협의 · 등록</h3><p>실습 인원에 맞춰 개별 일정을 확정해요.</p></div></div><div class="z12-card z-c"><span class="z12-img"><img src="assets/why/why-2.jpg" alt="" loading="lazy"></span><div><span class="z12-badge">STEP 4</span><h3>온라인 강의 (6개월)</h3><p>이론과 데모를 먼저 보고 준비해요.</p></div></div><div class="z12-card z-c"><span class="z12-img"><img src="assets/cls/lash-1.jpg" alt="" loading="lazy"></span><div><span class="z12-badge">STEP 5</span><h3>오프라인 실습 · 수료</h3><p>신논현 스튜디오 실습 → 디플로마 → 카톡 피드백</p></div></div></div>
+  <div class="z12-alert z-c"><p class="z12-at"><i data-lucide="triangle-alert" aria-hidden="true"></i>신청 전에 확인해 주세요</p><div><b>패스트캠퍼스 수강자</b>는 패키지의 오프라인 실습만 진행할 수 있어요. 롯드 기초반을 수강하시면 <b>패키지 할인쿠폰</b>을 드려요. 오프라인 일정은 실습 인원에 맞춰 개별 협의로 정해요.</div></div>
+  <p class="z-note">TIP — 상담 단계에서는 ‘이런 것까지 물어봐도 되나’ 싶은 것도 편하게 물어봐 주세요.</p>
+</div></section>
+
+<!-- ================= 13 · 근거 자료 ================= -->
+<section class="z z13"><div class="zc zw">
+  <div class="z-hd"><h2 class="z-t">연구로 확인된,<br><em>직접 해보는 학습의 힘</em></h2></div>
+  <div class="z13-slider"><div class="z13-track"><div class="z13-slide"><div class="z13-doc"><p class="z13-meta">Academic Medicine · 2011 · 86(6):706–711</p><p class="z13-title">Does Simulation-Based Medical Education With Deliberate Practice Yield Better Results Than Traditional Clinical Education?</p><p class="z13-auth">McGaghie WC, Issenberg SB, Cohen ER, Barsuk JH, Wayne DB</p><p class="z13-tldr"><b>요약</b>반복 실습을 포함한 교육과 전통적 임상 교육을 비교한 14개 연구의 메타분석</p></div><p class="z13-ct">반복 실습이 만든 기술 습득의 차이</p><p class="z13-cb">14개 연구를 종합한 결과, 의도적 반복 연습을 포함한 실습 교육이 기술 습득에서 더 큰 효과<b>(효과크기 0.71)</b>를 보였어요.</p></div><div class="z13-slide"><div class="z13-doc"><p class="z13-meta">Psychological Review · 1993 · 100(3):363–406</p><p class="z13-title">The Role of Deliberate Practice in the Acquisition of Expert Performance</p><p class="z13-auth">Ericsson KA, Krampe RT, Tesch-Römer C</p><p class="z13-tldr"><b>요약</b>개선을 목표로 설계된 연습의 양과 숙련도의 관계</p></div><p class="z13-ct">숙련도는 ‘의도적 연습’에서</p><p class="z13-cb">개선을 목표로 설계된 반복 연습의 양이 숙련도 차이와 <b>밀접하게 관련</b>된다고 보고했어요. (후속 재현 연구에서는 효과가 더 작게 나타났어요.)</p></div><div class="z13-slide"><div class="z13-doc"><p class="z13-meta">Journal of Cosmetic Dermatology · 2021 · 20(6):1846–1848</p><p class="z13-title">Preseptal Cellulitis Associated With Cosmetic Eyelash Lifting Procedure</p><p class="z13-auth">Mangan MS, Imamoglu S</p><p class="z13-tldr"><b>요약</b>속눈썹펌 이후 눈꺼풀 염증이 생긴 사례 보고</p></div><p class="z13-ct">시술 전, 눈 상태부터 확인하는 이유</p><p class="z13-cb">속눈썹펌 이틀 뒤 눈꺼풀 염증이 생긴 사례를 보고하며, <b>시술 전 눈꺼풀 상태 확인</b>과 위생·소독을 권고했어요.</p></div></div><div class="z13-dots"><i class=on></i><i></i><i></i></div></div>
+  <p class="z-note">※ 의학 교육·학습 연구와 사례 보고이며, 본 클래스의 효과를 측정한 결과가 아닙니다.</p>
+  <div class="z13-single"><div class="z-hd"><h2 class="z-t">오프라인 실습 <em>수료 디플로마</em></h2></div><div class="z13-cert z-c"><div class="z13-dip"><p class="en">DIPLOMA</p><p class="ko">속눈썹펌 연화 특허기술 패키지</p><p class="sm">오프라인 실습 수료</p><p class="sg">NEEINK</p></div></div><p class="z13-ct">수료 디플로마</p><p class="z13-cb">오프라인 실습을 마친 원장님께 발급해요</p><p class="z-note">※ 실제 디플로마 이미지로 교체 예정이에요 [클라이언트 확인 필요]</p></div>
+</div></section>
+
+<!-- ================= 14 · 신뢰 밴드 ================= -->
+<section class="z z14"><div class="zc zn">
+  <h2 class="z14-t">래쉬애딕트<br>최고 교육지사상 수상</h2><p class="z14-s">교육으로 인정받은 기준을, 니잉이 직접 가르칩니다</p>
+  <div class="z14-card z-c"><img src="assets/cls/edu-main.jpg" alt="" loading="lazy"></div>
+  <p class="z-note">* 수상 연도와 상장 이미지는 확인 후 표기해요 [클라이언트 확인 필요]</p>
+</div></section>
+
+<!-- ================= 15 · 달라진 이야기 ================= -->
+<section class="z z15">
+  <div class="z15-top"><img src="assets/cls/lash-1.jpg" alt="" aria-hidden="true"></div>
+  <div class="zc zw"><div class="z-hd"><h2 class="z-t">달라진 <em>시술</em></h2><p class="z-sub">수업 뒤, 혼자 판단하기 시작한 원장님들</p></div><div class="z-rvs"><article class="rv-card z-rv z-c" data-rv="4"><div class="z-rv-img"><img src="assets/rv/lash-6.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>이제는 눈매를 직접 보고 판단 할 수 있단거예요</h4><p class="z-rv-ex">펌을 오래한 편은 아닌데 유독 무쌍만 오면 손이 덜덜 떨려서 부담스러웠거든요 정보도 예전에 머물러 있다 보니까 자연스럽게 로만사 씨나 엘만 골랐어요 익숙한 것도 좋지만 제가 만족할 수 있는 시술을 하고 싶은데 방법을 몰라서 한 참 방황했어요 원데이 듣고 가장 크게 바뀌었다고 생각한 건 예전엔 무쌍이다 하면 롯드를 정해두고 맞췄는데 이제는 눈매를 직접 보고 판단 할 수 있단거예요 물론 연습이 더 필요하지만 겁나지 않아요 쫄지말라는 말씀 꼭 기억하면서 시술하겠습니다 좋은 수업을 들어서 정말 다행이고 진짜 좋았던 건 돈이 아깝지 않았어요 원장님 좋은 수업 감사합니다</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="5"><div class="z-rv-img"><img src="assets/rv/lash-7.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>팩폭이랑 응원 완전 채찍과 당근 그 자체였어요</h4><p class="z-rv-ex">그동안 재료 탓만 했던 과거의 나 반성합니다...ㅋㅋㅋㅋ 저 좀 자아비대였나 봐요 ㅠㅠ 내가 잘못했다는 생각은 1도 안 하고 걍 재료가 문제겠지~ 했던 듯요 알고 보니 터치 너무 많이 하고 있었고, 원장님이 말씀하신 보호제품도 언제 써야 하는지 몰랐더라구요 클리닉이면 무조건 다 좋은 줄 알았는데 오늘 제품에 대한 생각까지 싹 다 갈아엎어 주셔서 진짜 감사해요 오늘 팩폭이랑 응원 완전 채찍과 당근 그 자체였어요 ㅋㅋㅋ 꿈에도 나올 각인데 진짜 너무 잘 가르쳐주셔서 감사합니당 오늘 배운 거 절대 안 까먹고 열심히 할게요 헤헤 데모 일정 텀 너무 길다고 하셔서 바로 조정 완료했어요 니잉 말이 곧 진리... 시키는 대로 잘 해볼게요 지켜봐주세요!!</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="6"><div class="z-rv-img"><img src="assets/rv/lash-9.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>이론이랑 실습이 진짜 찰떡같이 연결돼 있어요</h4><p class="z-rv-ex">초보 때는 이론 몰라도 고객만 만족하면 되는 줄 알았거든요? 오늘 수업 듣고 그런 생각 싹 다 쓰레기통에 버리기로 했어요!!! 제가 속눈썹펌이 그 동안 오ㅐ그렇게 힘들었나 곰곰히 생각해보니까 납득이 안 돼서 힘들었던 거더라구욬ㅋ (ISTJ......) 원장님 이론은 딱 필요한 것만 친절하고 쉽게 알려주시는 거 같아요 들으면서 내 문제점이 뭔지도 생각해보고 아 이렇게 해볼 수도 있겠구나~ 이런 생각까지 들더라구요! 뭐랄까.... 이론이랑 실습이 진짜 찰떡같이 연결돼 있어요 재료를 고르는 것부터 다 이유가 있었어요.... 신기해.... 이해가 쏙쏙 됐던 것도 놀랍고 이제는 뭘 확인하면서 연화를 봐야 하는지 시술을 해야 하는지 아니까 힘들지 않을 거 같아요 앞으로 제 펌 인생이! 그리고 원장님이 느끼하지 않아서 개인적으로 더 좋았습니다 ㅋㅋㅋㅋㅋㅋㅋ 다른 데는 좋은 말만 해주고 잘한다 잘한다만 해주는데 여기는 그냥 다시 무새원장님...ㅋㅋㅋㅋㅋ 그 만큼 연습을 더 단단히 했다고 생각해요 더 빨리 들었으면 제 펌인생이 좀 더 빨리 쉬워졌었겠죠? 이제라도 들은게 어디나며~</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="7"><div class="z-rv-img"><img src="assets/rv/lash-11.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>이제는 내가 왜 이렇게 하는지 알고 하는 느낌</h4><p class="z-rv-ex">원장님!! 후기가 너무 늦었죠!!!!! 수강 듣고 연습해보느라 정신없었어요 진짜 수업 너무 좋았어요 연습하면서도 후기를 얼마나 보내드리고 싶었는지ㅋㅋㅋ 속눈썹펌 시작한 지 얼마 안됐는데, 배우면서도 뭔가 머릿속에 정리가 안되는 느낌이 계속 있었거든요 어디 물어볼데도 없고ㅠㅠㅠㅠㅠ 그게 너무 답답해서 신청했는데, 수업 들으면서 딱 정리되는 느낌이었어요 원장님 설명하시는 방식이 저한테 너무 잘 맞아요 어렵게 돌려 말씀하시는게 아니라 바로바로 핵심 짚어주셔서 머릿속에 쏙쏙 들어오고 기억에도 잘 남아요 수업 중간에 이해 안갔던것도 다시 질문하면 아 이게 이런거였구나!! 하는 순간이 진짜 많았어요 연습 꼭 바로 해보라고 하셔서 모델 구했는데 손이 달라진게 느껴졌어요 이 전에는 그냥 인스타보고 따라하고 제 기준없이 하는 느낌이었다면 이제는 내가 왜 이렇게 하는지 알고 하는 느낌 그 차이가 제가 느껴질 정도로 크더라구요 원장님이 하시는 모든 수업 진짜 다들을거예요!!! 아프지마시고 잠 좀 주무시고 항상 건강하게 교육해주세요 정말 감사합니다</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="8"><div class="z-rv-img"><img src="assets/rv/lash-12.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>넘치게 배운거같아 후회없는 시간이였다고</h4><p class="z-rv-ex">장장 9시간의 원데이(라 쓰고 정규반이라 읽습니다) 이론부터 실습까지 부족함없이 아니 오히려 넘치게 배운거같아 후회없는 시간이였다고 단호하게 말할 수 있을꺼 같아요 펌린이시절 뭔가 문제인지도 몰라 허덕이며 아예 포기해야 하나 할때 알고리즘의 선택으로 원장님계정을 보게된 뒤로 다시 속펌을 시작하게 되고 점점 하면 할수록 이론+클리닉 세부적으로 부족하다고 느끼게 되었던 찰나에 원데이 오픈해주신 원장님께 닝렐루야 외치며 신청하게 되었는데 오늘 드디어 수업듣고 ‘역시는 역시다’ 되뇌이며 귀가중입니다...! 교재분량부터 장난이 아니라 감동먹었고여, 제가 있는 재료, 롯드들을 기준으로 저한테 맞는 방법 만들어주시는거에서 완전 끝-! 이제 그냥 저는 원장님이 북한 땅을 사라해도 살려구요 오늘 다시한번 저의 정체성에 대해 진지하게 생각하게 되는 하루이기도 했습니다 오늘 하루 너무 수고많으셨습니다 감사합니다</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article><article class="rv-card z-rv z-c" data-rv="9"><div class="z-rv-img"><img src="assets/rv/lash-13.jpg" alt="급속교정 클래스 수강 후기" loading="lazy"></div><div class="z-rv-tx"><p class="z-rv-q"><i data-lucide="quote" aria-hidden="true"></i></p><p class="z-rv-who">수강 원장님 · 카카오톡 원문</p><h4>작게나마 확신과 자신감이 생긴 것 같아요</h4><p class="z-rv-ex">원장님 안녕하세요 !! 버스타구 이제야 카톡 남겨요 .. 그동안 제대로 된 수업을 못 들어서 항상 시술할 때마다 제 실력에 확신도 없고 걱정이 많았었는데 항상 원장님 라방 보면서 새로 알게 된 내용들이 너무 많고 도움이 많이 되어서 &#x27;꼭 제대로 배워야겠다&#x27; 마음먹고 요번에 찾아뵙게 되었어요 ..! 조금 늦게 원장님을 찾아온 게 너무 너무 아쉽지만 이제라도 제대로 배울 수 있어서 너무 다행이고 감사한 시간이었습니다 늘 자신감이 부족했는데 오늘 수업 덕분에 작게나마 확신과 자신감이 생긴 것 같아요 !! 앞으로 알려주신 대로 차근차근 잘해나갈 수 있을 것 같아요 오늘 귀한 배움 주셔서 정말 너무 너무 감사드립니다 오늘도 편안한 밤 되세요</p><span class="z-rv-more">원문 보기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></span></div></article></div><p class="z15-tag">결과가 매번 달랐던 이유는, 손이 아니라 <b>기준</b>이었습니다.</p><p class="z-note">※ 수강 원장님의 개인 경험이며, 결과는 개인차가 있을 수 있어요.</p></div>
 </section>
 
-<!-- ================= LP : 자주 묻는 질문 ================= -->
-<section class="section bg-light lp-qna">
-  <div class="container" style="max-width:960px">
-    <div class="text-center lp-hd">
-      <p class="section-label">Q&amp;A</p>
-      <h2 class="section-title">지금 내 단계에 맞는 수업인지<br>확인해 보세요</h2>
-      <p class="section-desc">시작 단계부터 실습, 수업 뒤 질문까지. 신청 전에 궁금한 내용을 모았어요.</p>
-    </div>
-    <div class="acc">
-      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>속눈썹펌이 처음인데, 어떤 과정부터 들으면 될까요?</span> <span class="mk">+</span></button><div class="acc-a">롯드의 방향·구간·사이즈부터 배우는 롯드 왕초보 온라인 기초반이 있어요. 이론이나 직접 실습까지 필요하시다면, 현재 경험과 배우고 싶은 내용을 알려주세요. 맞는 과정을 상담에서 안내해 드려요.</div></div>
-      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>이미 시술하고 있는데, 결과가 들쭉날쭉해요. 이런 부분도 배우나요?</span> <span class="mk">+</span></button><div class="acc-a">눈매를 보고 판단하는 기준과 모발 상태에 따른 연화를 다뤄요. 상담부터 마무리까지 11단계로 시술 흐름을 살펴보며, 실습 포함 과정에서는 직접 시술하는 중에 막히는 부분을 코칭받을 수 있어요.</div></div>
-      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>온라인으로만 들을 수 있나요? 직접 실습도 포함돼 있나요?</span> <span class="mk">+</span></button><div class="acc-a">온라인으로만 듣는 과정과 오프라인 실습이 포함된 옵션이 나뉘어 있어요. 실습 포함 옵션은 이론과 데모를 온라인으로 먼저 보고, 현장에서 모델에게 직접 시술하는 방식이에요. 신청하실 때 실습 포함 여부를 확인해 주세요.</div></div>
-      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>실습 모델과 재료는 제가 준비해야 하나요?</span> <span class="mk">+</span></button><div class="acc-a">실습이 포함된 패키지는 현장에서 모델과 실습 재료를 제공해요. 개인적으로 챙길 준비물이 있는지는 등록 전 상담에서 안내해 드려요.</div></div>
-      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>샵을 운영 중인데, 실습 일정은 어떻게 정하나요?</span> <span class="mk">+</span></button><div class="acc-a">오프라인 실습 일정은 개별 협의로 정해요. 상담에서 가능한 일정과 실습 인원을 확인한 뒤 확정하고, 실습 전에는 온라인으로 이론과 데모를 먼저 학습해요.</div></div>
-      <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>수업이 끝난 뒤 샵에서 막히면 질문할 수 있나요?</span> <span class="mk">+</span></button><div class="acc-a">실습 포함 패키지는 수료 후 카카오톡 피드백을 안내하고 있어요. 신청하실 과정의 질문 가능 범위와 지원 기간은 상담에서 자세히 안내해 드려요.</div></div>
-    </div>
-  </div>
-</section>
+<!-- ================= 16 · 부담 완화 ================= -->
+<section class="z z16"><div class="z16-bg"><img src="assets/hero2.jpg" alt="" aria-hidden="true"></div><div class="zc zn">
+  <p class="z-eb">AFTER CLASS SUPPORT</p><h2 class="z-t">수료 후에도,<br>카카오톡 피드백으로 이어집니다</h2>
+  <span class="z16-badge"><i data-lucide="message-circle-heart" aria-hidden="true"></i></span>
+  <p class="z16-body">현장 실습이 끝나도 샵에서 막히는 순간은 생겨요. 실습 포함 패키지는 수료 후 <b>카카오톡 피드백</b>으로 이어집니다.<br>처음이라 망설여진다면, 지금 막혀 있는 지점부터 상담으로 먼저 확인하세요.</p>
+  <div class="z16-btns"><a href="page_09.html" class="z-btn"><i data-lucide="pencil-line" aria-hidden="true"></i>1:1 상담 남기기</a><button type="button" class="z-btn ghost" onclick="document.getElementById('qKakao').click()"><i data-lucide="message-circle" aria-hidden="true"></i>카카오톡 상담</button></div>
+  <p class="z16-note">* 실습 포함 패키지 기준 · 피드백 기간과 범위는 상담에서 안내해 드려요 · 카카오톡 상담 평일 10:30 ~ 19:00</p>
+</div></section>
 
-<!-- ================= 섹션 12 : Notice — 수강 안내 및 환불 규정 (법정 필수) ================= -->
-<section class="section v2-faq">
-  <div class="container" style="max-width:960px">
-    <div class="text-center"><p class="section-label">Notice</p><h2 class="section-title">수강 안내 및 환불 규정</h2></div>
-    <div class="acc">
-      <div class="acc-item"><button class="acc-q">강의 정보 <span class="mk">+</span></button><div class="acc-a">롯드 왕초보 온라인 기초반 — VOD + 자료, 30일 · 속눈썹펌 온라인 이론 클래스 — VOD, 100일 · 연화 특허기술 패키지 — 온라인 6개월 + 오프라인 실습(교육 장소 서울 강남구 강남대로106길 18, 2층 (역삼동 812-1), 실습 재료·모델 제공)</div></div>
-      <div class="acc-item"><button class="acc-q">수강 대상 <span class="mk">+</span></button><div class="acc-a">클래스별 “이런 원장님께 추천해요” 항목을 참고해주세요 (자세히 보기)</div></div>
-      <div class="acc-item"><button class="acc-q">결제 및 수강 기간 <span class="mk">+</span></button><div class="acc-a">계좌이체 및 카드결제 가능 · 현금 결제 시 현금영수증 및 지출증빙 발급 · 패키지 오프라인 일정은 개별 협의 · 수강 기간: 기초반 30일 / 이론 100일 / 패키지 온라인 180일</div></div>
-      <div class="acc-item"><button class="acc-q">환불 및 취소 규정 <span class="mk">+</span></button><div class="acc-a">VOD 열람 후 환불 기준 · 오프라인 실습 전 취소 · 일정 변경 기한 · 환불 신청 방법 및 처리 기간 <span class="tbd">[클라이언트 확인 필요]</span></div></div>
-      <div class="acc-item"><button class="acc-q">판매자 정보 <span class="mk">+</span></button><div class="acc-a">상호 니잉우디 속눈썹펌&amp;눈썹왁싱 신사압구정점 · 대표 함수민 · 사업자등록번호 662-13-01355 · 통신판매업신고번호 <span class="tbd">[클라이언트 확인 필요]</span> · 주소 서울특별시 강남구 논현로175길 68, 206호(신사동) · 연락처 <span class="tbd">[클라이언트 확인 필요]</span></div></div>
-    </div>
-  </div>
-</section>
+<!-- ================= 17 · 선택 · 가격 ================= -->
+<section class="z z17" id="class"><div class="zc zw">
+  <div class="z-hd"><h2 class="z-t">지금 내 단계에서<br><em>시작하세요</em></h2><p class="z-sub">급속교정 클래스는 롯드 기초반, 온라인 이론 클래스, 연화 특허기술 패키지, 세 가지로 나뉘어요.</p></div>
+  <div class="z17-grid"><article class="z17-card z-c"><span class="z17-tag">BASIC</span><h3>롯드 왕초보 온라인 기초반</h3><div class="z17-img"><img src="assets/why/why-2.jpg" alt="" loading="lazy"></div><p class="z17-meta"><b>VOD + 자료</b> / 온라인 30일</p><p class="z17-desc">새 롯드가 나올 때마다 헷갈렸다면, 롯드의 방향·구간·사이즈부터 시작하세요</p><div class="z17-prs"><p class="z17-pr">롯드 별 치수 자료 포함 10만 9천원</p><p class="z17-pr big">5만 9천원부터</p></div><button class="z17-btn" data-open-pay="1">자세히 보기</button></article><article class="z17-card z-c best"><span class="z17-tag">PACKAGE</span><h3>속눈썹펌 연화 특허기술 패키지</h3><div class="z17-img"><img src="assets/cls/lash-2.jpg" alt="" loading="lazy"></div><p class="z17-meta"><b>온라인 6개월</b> + 오프라인 실습</p><p class="z17-desc">온라인 강의 6개월에 100% 실습을 더한 기존 급속교정 클래스</p><div class="z17-prs"><p class="z17-pr">온라인만 수강 79만원</p><p class="z17-pr">실습 인원 추가 1명당 20만원</p><p class="z17-pr big">온라인 + 실습 1명 99만원</p></div><span class="z17-bd">VAT 별도</span><button class="z17-btn" data-open-pay="0">자세히 보기</button></article><article class="z17-card z-c"><span class="z17-tag">THEORY</span><h3>속눈썹펌 온라인 이론 클래스</h3><div class="z17-img"><img src="assets/cls/lash-6.jpg" alt="" loading="lazy"></div><p class="z17-meta"><b>VOD</b> / 온라인 100일</p><p class="z17-desc">같은 방법인데 결과가 달라졌다면, 속눈썹펌의 메커니즘부터 이해하세요</p><div class="z17-prs"><p class="z17-pr">정가 <s>45만원</s></p><p class="z17-pr big">29만 9천원</p></div><button class="z17-btn" data-open-pay="2">자세히 보기</button></article></div>
+  <p class="z17-bt">한눈에 비교</p>
+  <div class="z17-tw"><table class="z17-tbl"><thead><tr><th>과정</th><th>형태</th><th>기간</th><th>수강료</th><th>실습</th></tr></thead><tbody><tr><td>롯드 왕초보 기초반</td><td>VOD + 자료</td><td>30일</td><td>5만 9천원~</td><td>–</td></tr><tr class="best"><td>연화 특허기술 패키지</td><td>온라인 + 오프라인</td><td>6개월 + 실습</td><td>79만원 / 99만원</td><td>선택</td></tr><tr><td>온라인 이론 클래스</td><td>VOD</td><td>100일</td><td>29만 9천원</td><td>–</td></tr></tbody></table></div>
+  <p class="z-note">롯드 기초반 수강 시 패키지 할인쿠폰 제공 · 패스트캠퍼스 수강자는 패키지의 오프라인 실습만 진행 가능 · 패키지 수강료 VAT 별도</p>
+</div></section>
 
-<!-- ================= 최하단 : AI 마케팅 클래스 안내 ================= -->
-<section class="letter v2-letter">
-  <div class="hero-ph"><i data-lucide="image"></i></div>
-  <div class="container" style="position:relative;z-index:2">
-    <p class="label">Next Class</p>
-    <h2>얼굴 노출 없이도,<br>매출까지 올리고 싶다면</h2>
-    <p>고객 얼굴은 AI로 바꾸고, 원장님의 작업 결과는 그대로. 바로 게시할 수 있는 콘텐츠 5개 이상을 만들어 가세요.</p>
-    <a href="page_03.html" class="btn">AI 마케팅 클래스 더 알아보기 →</a>
-  </div>
-</section>
+<!-- ================= 18 · Q&A ================= -->
+<section class="z z18"><div class="zc zn">
+  <div class="z-hd"><h2 class="z-t">궁금한 점,<br><em>미리 풀어드려요</em></h2></div>
+  <div class="z18-list"><div class="z18-card z-c"><p class="z18-q">Q1. 속눈썹펌이 처음인데, 어떤 과정부터 들으면 될까요?</p><p class="z18-a">롯드의 방향·구간·사이즈부터 배우는 롯드 왕초보 온라인 기초반이 있어요. 이론이나 직접 실습까지 필요하시다면, 현재 경험과 배우고 싶은 내용을 알려주세요. 맞는 과정을 상담에서 안내해 드려요.</p></div><div class="z18-card z-c"><p class="z18-q">Q2. 이미 시술하고 있는데, 결과가 들쭉날쭉해요. 이런 부분도 배우나요?</p><p class="z18-a">눈매를 보고 판단하는 기준과 모발 상태에 따른 연화를 다뤄요. 상담부터 마무리까지 11단계로 시술 흐름을 살펴보며, 실습 포함 과정에서는 직접 시술하는 중에 막히는 부분을 코칭받을 수 있어요.</p></div><div class="z18-card z-c"><p class="z18-q">Q3. 온라인으로만 들을 수 있나요? 직접 실습도 포함돼 있나요?</p><p class="z18-a">온라인으로만 듣는 과정과 오프라인 실습이 포함된 옵션이 나뉘어 있어요. 실습 포함 옵션은 이론과 데모를 온라인으로 먼저 보고, 현장에서 모델에게 직접 시술하는 방식이에요. 신청하실 때 실습 포함 여부를 확인해 주세요.</p></div><div class="z18-card z-c"><p class="z18-q">Q4. 실습 모델과 재료는 제가 준비해야 하나요?</p><p class="z18-a">실습이 포함된 패키지는 현장에서 모델과 실습 재료를 제공해요. 개인적으로 챙길 준비물이 있는지는 등록 전 상담에서 안내해 드려요.</p></div><div class="z18-card z-c"><p class="z18-q">Q5. 샵을 운영 중인데, 실습 일정은 어떻게 정하나요?</p><p class="z18-a">오프라인 실습 일정은 개별 협의로 정해요. 상담에서 가능한 일정과 실습 인원을 확인한 뒤 확정하고, 실습 전에는 온라인으로 이론과 데모를 먼저 학습해요.</p></div><div class="z18-card z-c"><p class="z18-q">Q6. 수업이 끝난 뒤 샵에서 막히면 질문할 수 있나요?</p><p class="z18-a">실습 포함 패키지는 수료 후 카카오톡 피드백을 안내하고 있어요. 신청하실 과정의 질문 가능 범위와 지원 기간은 상담에서 자세히 안내해 드려요.</p></div></div>
+</div></section>
+
+<!-- ================= 19 · 안내 고시 ================= -->
+<section class="z z19"><div class="zc zn">
+  <div class="z-hd"><h2 class="z-t">수강 안내</h2><p class="z-sub">수강 · 결제 · 환불 및 판매자 정보</p></div>
+  <div class="z19-tbl"><div class="z19-row"><p class="z19-k">강의 정보</p><div class="z19-v">롯드 왕초보 온라인 기초반 — VOD + 자료, 30일 · 속눈썹펌 온라인 이론 클래스 — VOD, 100일 · 연화 특허기술 패키지 — 온라인 6개월 + 오프라인 실습(교육 장소 서울 강남구 강남대로106길 18, 2층 (역삼동 812-1), 실습 재료·모델 제공)</div></div><div class="z19-row"><p class="z19-k">수강 대상</p><div class="z19-v">클래스별 “이런 원장님께 추천해요” 항목을 참고해주세요 (자세히 보기)</div></div><div class="z19-row"><p class="z19-k">결제 및 수강 기간</p><div class="z19-v">계좌이체 및 카드결제 가능 · 현금 결제 시 현금영수증 및 지출증빙 발급 · 패키지 오프라인 일정은 개별 협의 · 수강 기간: 기초반 30일 / 이론 100일 / 패키지 온라인 180일</div></div><div class="z19-row"><p class="z19-k">환불 및 취소 규정</p><div class="z19-v">VOD 열람 후 환불 기준 · 오프라인 실습 전 취소 · 일정 변경 기한 · 환불 신청 방법 및 처리 기간 <span class="tbd">[클라이언트 확인 필요]</span></div></div><div class="z19-row"><p class="z19-k">판매자 정보</p><div class="z19-v">상호 니잉우디 속눈썹펌&amp;눈썹왁싱 신사압구정점 · 대표 함수민 · 사업자등록번호 662-13-01355 · 통신판매업신고번호 <span class="tbd">[클라이언트 확인 필요]</span> · 주소 서울특별시 강남구 논현로175길 68, 206호(신사동) · 연락처 <span class="tbd">[클라이언트 확인 필요]</span></div></div></div>
+  <p class="z-note">※ 수강 취소·환불 규정은 확정되는 대로 안내해 드려요.</p>
+  <div class="z19-next"><p class="z-eb">Next Class</p><p class="z19-nt">얼굴 노출 없이도, 매출까지 올리고 싶다면</p><a href="page_03.html" class="z-btn">AI 마케팅 클래스 더 알아보기 →</a></div>
+</div></section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
@@ -1905,7 +2127,7 @@ document.querySelectorAll('[data-car]').forEach(function(c){
 
 /* 후기 무한 루프 */
 (function(){
-  var root=document.getElementById('stLoop'),tr=root.querySelector('.loop-track'),orig=[].slice.call(tr.children),n=orig.length,i=0,busy=false,t;
+  var root=document.getElementById('stLoop');if(!root)return;var tr=root.querySelector('.loop-track'),orig=[].slice.call(tr.children),n=orig.length,i=0,busy=false,t;
   orig.forEach(function(c){tr.appendChild(c.cloneNode(true))});
   function step(){return tr.children[1].getBoundingClientRect().left-tr.children[0].getBoundingClientRect().left}
   function set(a){tr.style.transition=a?'transform .6s ease':'none';tr.style.transform='translateX('+(-i*step())+'px)'}
@@ -1938,15 +2160,15 @@ function pick(i){opts.forEach(function(o){o.classList.toggle('is-on',+o.dataset.
 opts.forEach(function(o){o.onclick=function(){pick(+o.dataset.i)}});
 document.querySelectorAll('[data-open-pay]').forEach(function(b){b.onclick=function(){var i=+b.dataset.openPay;openMd('payMd');if(i>=0)pick(i)}});
 /* 고정 배너: 히어로 지나면 노출 */
-var fx=document.getElementById('fixcta'),hero=document.querySelector('.sub-hero');
+var fx=document.getElementById('fixcta'),hero=document.querySelector('.s-hero')||document.querySelector('.sub-hero');
 window.addEventListener('scroll',function(){fx.classList.toggle('is-show',window.scrollY>hero.offsetHeight-80)});
 
 
 /* 전역 등장 애니메이션 — 텍스트: 아래→위 슬라이드 + 블러 인 / 카드·이미지: 제자리 블러 인 (뷰포트에 20% 이상 보일 때) */
 (function(){
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var SKIP='header,footer,.nav,.m-menu,.q-aside,.q-md,.rv-md,.md,.v2-hero,.hero,.loop-track,.arc-track,.ai-stage,.csel,.arc-ring,.page-head';
-  var CARD='.lp-cd,.lp-band-in,.lp-step,.lp-ba-card,.lp-ba-img figure,.lp-proof-grid>div,.lp-offer-box,.card,.prod-card,.cls-card,.v2-rv .loop-vp,#rvArc,.checks li,.stats>div,.hstats>div,.banner,.acc-item,.hiw>*,.ls-row,.core-steps li,.proc>*,.img-placeholder,.ai-stage,.loc-map,.loc-info li,.notice-pin,.tbl-scroll,.emp,.cmp,.split>video,.form-box,.ct-form,.store-list>*,.map-ph,.pc-img,.tabs,.search-box,.store-filter,.pager,.sub-form,.qline>*,.v2-cta .banner';
+  var SKIP='.z13-track,header,footer,.nav,.m-menu,.q-aside,.q-md,.rv-md,.md,.v2-hero,.hero,.loop-track,.arc-track,.ai-stage,.csel,.arc-ring,.page-head';
+  var CARD='.z-c,.lp-cd,.lp-band-in,.lp-step,.lp-ba-card,.lp-ba-img figure,.lp-proof-grid>div,.lp-offer-box,.card,.prod-card,.cls-card,.v2-rv .loop-vp,#rvArc,.checks li,.stats>div,.hstats>div,.banner,.acc-item,.hiw>*,.ls-row,.core-steps li,.proc>*,.img-placeholder,.ai-stage,.loc-map,.loc-info li,.notice-pin,.tbl-scroll,.emp,.cmp,.split>video,.form-box,.ct-form,.store-list>*,.map-ph,.pc-img,.tabs,.search-box,.store-filter,.pager,.sub-form,.qline>*,.v2-cta .banner';
   var TEXT='h1,h2,h3,h4,h5,p,blockquote,figcaption,dt,dd,.btn,.section-label,.circle-ani,label';
   function ok(e){return !e.closest(SKIP)||e.matches('.ai-stage')}
   var main=[].slice.call(document.querySelectorAll('body>section,body>div.v2-stack>section.v2-info'));
@@ -1985,6 +2207,11 @@ window.addEventListener('scroll',function(){fx.classList.toggle('is-show',window
   var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var it=items.filter(function(i){return i.e===x.target})[0];if(it)setTimeout(function(){run(it)},250);io.unobserve(x.target)}})},{threshold:.4});
   items.forEach(function(it){io.observe(it.e)});
 })();
+</script>
+<script>
+/* 근거 슬라이더 점 표시 (모바일 가로 스크롤) */
+document.querySelectorAll('.z13-slider').forEach(function(s){var t=s.querySelector('.z13-track'),d=s.querySelectorAll('.z13-dots i');
+  t.addEventListener('scroll',function(){var w=t.firstElementChild.getBoundingClientRect().width+14,k=Math.round(t.scrollLeft/w);d.forEach(function(x,i){x.classList.toggle('on',i===k)})},{passive:true})});
 </script>
 </body>
 </html>
