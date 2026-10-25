@@ -1567,8 +1567,19 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 
 /* ===== 결제 모달 모바일: 전체화면 · 상세 위(스크롤) · 하단 고정 드롭박스+결제 ===== */
 .pay-sel{display:none;position:relative;margin-bottom:12px}
-.pay-sel select{width:100%;-webkit-appearance:none;appearance:none;font:inherit;font-size:16px;font-weight:700;color:var(--text-black);padding:14px 44px 14px 16px;border:1px solid var(--pp);border-radius:12px;background:var(--pp-xl)}
-.pay-sel::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;border-right:2px solid var(--pp);border-bottom:2px solid var(--pp);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.ps-btn{position:relative;display:block;width:100%;text-align:left;font:inherit;font-size:16px;font-weight:700;color:var(--text-black);padding:15px 48px 15px 16px;border:1px solid var(--pp);border-radius:12px;background:var(--pp-xl);cursor:pointer}
+.ps-btn::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;border-right:2px solid var(--pp);border-bottom:2px solid var(--pp);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.pay-sel.is-open .ps-btn::after{transform:translateY(-25%) rotate(-135deg)}
+.ps-btn.is-empty{font-weight:500;color:var(--text-light)}
+.ps-list{position:absolute;left:0;right:0;bottom:calc(100% + 8px);z-index:5;max-height:min(60dvh,420px);overflow-y:auto;margin:0;padding:8px;list-style:none;background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:16px;box-shadow:0 -16px 40px -12px rgba(0,0,0,.25);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.pay-sel.is-open .ps-list{opacity:1;visibility:visible;transform:none}
+.ps-list li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px;border:1px solid transparent;border-radius:12px;cursor:pointer}
+.ps-list li+li{margin-top:4px}
+.ps-list li:hover{background:var(--iv-2)}
+.ps-list li.is-on{background:var(--pp-xl);border-color:var(--pp)}
+.ps-list .nm{display:block;font-size:15px;font-weight:700;color:var(--text-black)}
+.ps-list .sub{display:block;font-size:12px;color:var(--text-light);margin-top:2px}
+.ps-list .pr{font-size:15px;font-weight:700;color:var(--pp);white-space:nowrap}
 .pe-m{display:none}
 @media (max-width:900px){
   #payMd .md-box{max-width:none;width:100%;height:100vh;height:100dvh;margin:0;border-radius:0;display:flex;flex-direction:column}
@@ -1592,6 +1603,12 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
   .v2-core .split>.img-placeholder{display:none!important}
   .v2-core .core-img-m{display:block;position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;margin:0 0 24px}
 }
+
+/* 결제 모달: VAT는 금액 오른쪽, 선택지가 하나뿐인 과정은 '옵션 선택' 숨김 */
+.pay-total{align-items:center}
+.pay-amt{display:inline-flex;align-items:baseline;gap:6px}
+.pay-amt #payVat{font-size:12px;font-weight:400;color:rgba(0,0,0,.5);white-space:nowrap}
+.pay-amt #payVat:empty{display:none}
 </style>
 </head>
 <body><script>
@@ -1970,9 +1987,8 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <p class="lead">과정을 선택하시면 상세 내용과 결제 금액이 표시됩니다.</p>
     <button class="pay-opt" data-i="0"><span><span class="nm">속눈썹펌 연화 특허기술 패키지</span><span class="sub" style="display:block">온라인 6개월 + 실습 · 온라인 + 오프라인</span></span><span class="pr">79만원부터</span></button><button class="pay-opt" data-i="1"><span><span class="nm">롯드 왕초보 온라인 기초반</span><span class="sub" style="display:block">온라인 1개월 · VOD + 자료</span></span><span class="pr">5만 9천원부터</span></button><button class="pay-opt" data-i="2"><span><span class="nm">속눈썹펌 온라인 이론 클래스</span><span class="sub" style="display:block">온라인 100일 · VOD</span></span><span class="pr">29만 9천원</span></button>
     <div class="pay-foot">
-      <div class="pay-total"><span>결제 금액</span><b id="payTotal">과정을 선택해주세요</b></div><p class="micro" id="payVat" style="margin:-8px 0 12px;text-align:right"></p><div style="display:none"></div>
+      <div class="pay-total"><span>결제 금액</span><span class="pay-amt"><b id="payTotal">과정을 선택해주세요</b><small id="payVat"></small></span></div><div style="display:none"></div>
       <a href="#" class="btn btn-primary btn-block pay-btn is-disabled" id="payBtn">결제하기</a>
-      <a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" class="link-inline" style="display:block;text-align:center">결제 전에 카카오톡으로 먼저 상담하기</a>
     </div>
   </div>
   <div class="pay-detail" id="payDetail"><div class="pay-empty"><span class="pe-pc">왼쪽에서</span><span class="pe-m">아래에서</span>&nbsp;과정을 선택하시면 상세 내용이 표시됩니다.</div></div>
@@ -2065,20 +2081,34 @@ function calc(d){var box=d.querySelector('.opts');if(!box)return;var r=box.query
     var on=r&&r.parentElement.textContent.indexOf('실습')>-1;ex.style.opacity=on?1:.35;ex.style.pointerEvents=on?'auto':'none';if(!on){em.textContent=0;q=0}t+=q*(+em.dataset.unit)}
   document.getElementById('payTotal').textContent=t.toLocaleString('ko-KR')+'원'}
 function pick(i){opts.forEach(function(o){o.classList.toggle('is-on',+o.dataset.i===i)});
-  var ps=document.getElementById('paySel');if(ps)ps.value=i;
+  if(window.paySync)paySync(i);
   document.getElementById('payBtn').classList.remove('is-disabled');
   var d=document.getElementById('payDetail');d.innerHTML=document.getElementById('cls'+i).innerHTML;lucide.createIcons();
   document.getElementById('payVat').textContent=VAT[i];
   d.querySelectorAll('.acc-q').forEach(function(q){q.onclick=function(){q.parentElement.classList.toggle('is-open')}});
   d.querySelectorAll('.opts input').forEach(function(x){x.onchange=function(){calc(d)}});
   d.querySelectorAll('.stepper button').forEach(function(b){b.onclick=function(){var em=b.parentElement.querySelector('em');em.textContent=Math.max(0,+em.textContent+(+b.dataset.d));calc(d)}});
+  var ob=d.querySelector('.opts');if(ob&&ob.querySelectorAll('.opt-row').length<2){ob.style.display='none';
+    var h=ob.previousElementSibling,m=ob.nextElementSibling;if(h&&h.matches('h4.dt'))h.style.display='none';if(m&&m.matches('p.micro'))m.style.display='none'}
   calc(d)}
 opts.forEach(function(o){o.onclick=function(){pick(+o.dataset.i)}});
-/* 모바일 드롭박스: 과정 버튼과 같은 목록 */
-(function(){var f=document.querySelector('#payMd .pay-foot');if(!f)return;var w=document.createElement('label');w.className='pay-sel';
-  var s=document.createElement('select');s.id='paySel';s.setAttribute('aria-label','과정 선택');s.innerHTML='<option value="" disabled selected>과정을 선택해주세요</option>';
-  opts.forEach(function(o){var op=document.createElement('option');op.value=o.dataset.i;op.textContent=o.querySelector('.nm').textContent+' · '+o.querySelector('.pr').textContent;s.appendChild(op)});
-  s.onchange=function(){pick(+s.value);document.getElementById('payDetail').scrollTop=0};w.appendChild(s);f.insertBefore(w,f.firstChild)})();
+/* 모바일 드롭박스: 과정 버튼과 같은 목록 · 같은 카드 디자인으로 위로 펼침 */
+(function(){var f=document.querySelector('#payMd .pay-foot');if(!f)return;var w=document.createElement('div');w.className='pay-sel';
+  w.innerHTML='<button type="button" class="ps-btn is-empty" aria-haspopup="listbox" aria-expanded="false">과정을 선택해주세요</button><ul class="ps-list" role="listbox" aria-label="과정 선택"></ul>';
+  var btn=w.firstChild,ul=w.lastChild;
+  opts.forEach(function(o){var li=document.createElement('li');li.setAttribute('role','option');li.tabIndex=0;li.dataset.i=o.dataset.i;
+    li.innerHTML='<span><span class="nm"></span><span class="sub"></span></span><span class="pr"></span>';
+    li.querySelector('.nm').textContent=o.querySelector('.nm').textContent;var sb=o.querySelector('.sub');li.querySelector('.sub').textContent=sb?sb.textContent:'';
+    li.querySelector('.pr').textContent=o.querySelector('.pr').textContent;ul.appendChild(li)});
+  function tog(on){w.classList.toggle('is-open',on);btn.setAttribute('aria-expanded',on)}
+  btn.onclick=function(e){e.stopPropagation();tog(!w.classList.contains('is-open'))};
+  ul.onclick=function(e){var li=e.target.closest('li');if(!li)return;pick(+li.dataset.i);document.getElementById('payDetail').scrollTop=0;tog(false);btn.focus()};
+  ul.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();e.target.click()}};
+  document.addEventListener('click',function(e){if(!w.contains(e.target))tog(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')tog(false)});
+  window.paySync=function(i){var li=ul.querySelector('li[data-i="'+i+'"]');ul.querySelectorAll('li').forEach(function(x){x.classList.toggle('is-on',x===li);x.setAttribute('aria-selected',x===li)});
+    if(li){btn.textContent=li.querySelector('.nm').textContent+' · '+li.querySelector('.pr').textContent;btn.classList.remove('is-empty')}};
+  f.insertBefore(w,f.firstChild)})();
 document.querySelectorAll('[data-open-pay]').forEach(function(b){b.onclick=function(){var i=+b.dataset.openPay;openMd('payMd');if(i>=0)pick(i)}});
 /* 고정 배너: 히어로 지나면 노출 */
 var fx=document.getElementById('fixcta'),hero=document.querySelector('.sub-hero');
