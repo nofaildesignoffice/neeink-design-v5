@@ -1565,6 +1565,9 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 }
 @media (hover:none){.lp-gal:hover .lp-gal-track{animation-play-state:running}}
 @media (max-width:1023px){.v2-emp .split{grid-template-columns:minmax(0,1fr)!important}.v2-emp .split>.emp{order:1!important}.v2-emp .split>.img-placeholder{order:2!important;aspect-ratio:4/5!important;min-height:0!important}}
+/* iOS 사파리: aspect-ratio 상자가 0px로 접히는 문제 → 패딩 비율로 높이 확보 */
+@media (max-width:1023px){.v2-emp .split>.img-placeholder.emp-photo{aspect-ratio:auto!important;width:100%!important;height:0!important;min-height:0!important;padding:0 0 125% 0!important}}
+.lp-eq .lp-hl{background:linear-gradient(180deg,transparent 58%,rgba(0,87,255,.22) 58%,rgba(0,87,255,.22) 92%,transparent 92%);color:inherit;padding:0 4px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 /* ===== v5 랜딩 사진 ===== */
 .v2-letter .hero-ph.has-media>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .v2-letter .hero-ph.has-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.35) 100%)}
@@ -1723,7 +1726,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <i class="lp-plus" aria-hidden="true">+</i>
       <div class="lp-step"><div class="ai-stage" style="--fl:27%;--ft:27%;--fw:48%;--fh:56%;--el:30%;--et:38%;--ew:40%;--eh:9%" aria-label="눈썹 문신 케이스: 마스크 사진에서 시술 결과는 그대로 두고 얼굴만 변환"><img class="ai-before" src="assets/ai2/brow-before.jpg" alt="Before · 가린 사진" loading="lazy"><img class="ai-after" src="assets/ai2/brow-after.jpg" alt="After · AI 얼굴 변환" loading="lazy"><div class="ai-grid" aria-hidden="true"></div><div class="ai-box ai-face" aria-hidden="true"><em>FACE · 98.6%</em></div><div class="ai-box ai-eyes" aria-hidden="true"><em>눈썹 · 시술 결과 원본 유지</em></div><div class="ai-scan" aria-hidden="true"></div><span class="ba-tag ai-tag"><b class="t-before">Before · 가린 사진</b><b class="t-after">After · AI 얼굴 변환</b></span><div class="ai-hud" aria-hidden="true"><span class="ai-dot"></span><span class="ai-st">대기 중</span><span class="ai-bar"><i></i></span><b class="ai-pct">0%</b></div></div><b>눈썹 문신 케이스</b><span>마스크 사진 → 얼굴만 AI 변환</span></div>
     </div>
-    <p class="lp-eq"><span>=</span> 바로 게시할 수 있는 포트폴리오</p>
+    <p class="lp-eq"><mark class="lp-hl">바로 게시할 수 있는 포트폴리오</mark></p>
     <p class="micro text-center lp-note">※ 원본은 고객이 동의한 범위 안에서만 다뤄요.</p>
   </div>
 </section>
