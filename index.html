@@ -1303,6 +1303,9 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 /* ===== /v5 공통 보정 ===== */
 /* 모바일: 히어로(88dvh) 아래 빈 영역이 둥근 모서리 사이로 보이지 않게, 다음 섹션을 모서리만큼 겹쳐 올림 */
 @media (max-width:768px){.v2-stack>.v2-info{margin-top:-20px}}
+/* 모바일 히어로: 스크롤 중 주소창 변화로 높이가 흔들리지 않게 px 고정 (대부분의 폰 화면을 꽉 채우는 높이) */
+@media (max-width:768px){.v2-hero{height:780px;min-height:0}}
+@media (max-width:768px) and (max-height:700px){.v2-hero{height:680px}}
 </style>
 </head>
 <body>
