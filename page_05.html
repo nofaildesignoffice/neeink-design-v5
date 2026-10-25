@@ -1572,6 +1572,11 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 
 /* 접기 버튼: 열린 상태에서 원 자체가 45도 돌아가 − 가 비뚤어지던 문제 */
 .acc-item.is-open .acc-q .mk{transform:none!important}
+
+/* 히어로: 라벨·타이틀·서브카피·배지 사이 간격 3배, 타이틀 굵게 */
+.v2-sub .inner>.label{margin-bottom:clamp(48px,4.5vw,84px)!important}
+.v2-sub .inner>h1{margin-bottom:clamp(78px,6.6vw,120px)!important;font-weight:700!important}
+.v2-sub .inner>.lp-badges{margin-top:clamp(96px,8.4vw,156px)!important}
 </style>
 </head>
 <body><script>
@@ -1679,14 +1684,13 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <div class="emp">
         <p class="emp-big">Not Alone</p>
         <h2 class="section-title">저도 처음엔 <br>혼자 공부했습니다</h2>
-        <blockquote style="margin-top:8px">영양제를 팔아보고 싶어도 제대로 배울 곳이 없었고,<br class="keep-br">궁금한 게 생겨도 물어볼 곳이 없었어요.</blockquote>
+        <blockquote style="margin-top:8px">제품을 팔아보고 싶어도 제대로 배울 곳이 없었고,<br class="keep-br">궁금한 게 생겨도 물어볼 곳이 없었어요.</blockquote>
         <p class="section-desc" style="margin-top:20px;margin-bottom:8px">그래서 니잉 마스터크루를 만들었습니다.<br class="keep-br">제가 혼자 헤맸던 시간을, 원장님들은 겪지 않으시도록요.</p>
         <ul>
           <li>“막상 등록하고 나면 관리 안 해주는 거 아니야?”</li>
           <li>“혼자서도 잘 할 수 있을까?”</li>
           <li>“제품, 진짜 다 판매할 수 있을까?”</li>
         </ul>
-        <p class="emp-sign">니잉 대표</p>
       </div>
       <div class="img-placeholder has-img emp-photo" style="aspect-ratio:4/5"><img src="assets/lp/founder.jpg" alt="니잉 대표" loading="lazy"></div>
     </div>
