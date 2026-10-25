@@ -868,6 +868,9 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 }
 /* 섹션 타이틀 굵게 */
 .section-title{font-weight:700!important}
+/* 모바일 전용 줄바꿈(br.m-br), 항상 유지 줄바꿈(br.keep-br) */
+br.m-br{display:none}
+@media (max-width:768px){br.m-br,br.keep-br{display:inline!important}}
 /* ===== /v5 공통 보정 ===== */
 </style>
 <!--nk:lochd--><style>
@@ -875,7 +878,28 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 .store-hd .loc-text{margin:28px 0 0}
 .store-hd .loc-text li{justify-content:flex-start;flex-wrap:nowrap}
 .store-hd .loc-text b{flex:none}
-</style><!--/nk:lochd--></head>
+</style><!--/nk:lochd--><!--nk:qfold--><style>.q-fab,.q-close{display:none}
+@media (max-width:768px){
+.fixcta .copy{display:block!important;text-align:center}
+.fixcta .copy b{font-size:15px!important;line-height:1.35}
+.fixcta .copy span{display:block;font-size:12px;margin-top:2px}
+.fixcta-inner{padding:12px 16px 14px!important;gap:10px!important}
+.q-aside.is-fold .q-panel,.q-aside.is-fold .q-call,.q-aside.is-fold .q-top,.q-aside.is-fold .q-close{display:none!important}
+.q-aside.is-fold .q-fab{display:flex}
+.q-aside:not(.is-fold) .q-close{display:flex}
+.q-fab{position:relative;width:74px;height:74px;border-radius:50%;border:0;padding:0;background:#fff;box-shadow:0 6px 20px -6px rgba(0,0,0,.28),1.5px 1.5px 5.625px rgba(0,0,0,.1);cursor:pointer;overflow:hidden;align-items:center;justify-content:center}
+.q-fab-vp{position:absolute;inset:0}
+.q-fab-item{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#555;transform:translateX(100%);opacity:0;transition:transform .55s cubic-bezier(.65,0,.35,1),opacity .55s}
+.q-fab-item.is-on{transform:none;opacity:1}
+body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
+.q-fab-item.is-out{transform:translateX(-100%);opacity:0}
+.q-fab-item svg{width:22px;height:22px;stroke-width:1.6}
+.q-fab-item em{font-style:normal;font-size:12px;font-weight:600;letter-spacing:-.04em;white-space:nowrap}
+.q-close{width:74px;height:74px;border-radius:50%;border:0;background:#111;color:#fff;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
+.q-close svg{width:22px;height:22px}
+.q-close span{font-size:12px;font-weight:600}
+}
+</style><!--/nk:qfold--></head>
 <body>
 
 <!-- ================= HEADER ================= -->
@@ -1045,5 +1069,24 @@ document.querySelectorAll('[data-car]').forEach(function(c){
   items.forEach(function(it){io.observe(it.e)});
 })();
 </script>
-</body>
+<!--nk:qfold-js--><script>
+/* 랜딩 모바일 퀵메뉴: 원형 버튼 하나로 접어 두고, 안에서 메뉴를 차례로 보여준다. 누르면 펼치고 닫기로 다시 접는다. */
+(function(){var as=document.querySelector('.q-aside');if(!as)return;
+  var items=[].slice.call(as.querySelectorAll('.q-panel .q-link,.q-call'));
+  var fab=document.createElement('button');fab.type='button';fab.className='q-fab';fab.setAttribute('aria-label','바로가기 메뉴 열기');fab.setAttribute('aria-expanded','false');
+  var vp=document.createElement('span');vp.className='q-fab-vp';
+  items.forEach(function(a){var it=document.createElement('span');it.className='q-fab-item';var s=a.querySelector('svg');if(s)it.appendChild(s.cloneNode(true));
+    var t=document.createElement('em');t.innerHTML=a.querySelector('span').innerHTML;it.appendChild(t);vp.appendChild(it)});
+  fab.appendChild(vp);
+  var cl=document.createElement('button');cl.type='button';cl.className='q-close';cl.setAttribute('aria-label','바로가기 메뉴 닫기');
+  cl.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>닫기</span>';
+  as.appendChild(fab);as.insertBefore(cl,as.querySelector('.q-top'));as.classList.add('is-fold');
+  var el=[].slice.call(vp.children),k=0,t;el[0].classList.add('is-on');
+  function next(){var a=el[k];k=(k+1)%el.length;var b=el[k];a.classList.remove('is-on');a.classList.add('is-out');b.classList.remove('is-out');b.classList.add('is-on');setTimeout(function(){a.classList.remove('is-out')},600)}
+  function play(){clearInterval(t);t=setInterval(next,2200)}
+  fab.onclick=function(){as.classList.remove('is-fold');fab.setAttribute('aria-expanded','true');clearInterval(t)};
+  cl.onclick=function(){as.classList.add('is-fold');fab.setAttribute('aria-expanded','false');play()};
+  play()})();
+</script>
+<!--/nk:qfold-js--></body>
 </html>

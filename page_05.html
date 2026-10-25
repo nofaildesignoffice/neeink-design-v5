@@ -1416,6 +1416,9 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 }
 /* 섹션 타이틀 굵게 */
 .section-title{font-weight:700!important}
+/* 모바일 전용 줄바꿈(br.m-br), 항상 유지 줄바꿈(br.keep-br) */
+br.m-br{display:none}
+@media (max-width:768px){br.m-br,br.keep-br{display:inline!important}}
 /* ===== /v5 공통 보정 ===== */
 
 /* ===== v5 근거 지표: 메인 지표와 같은 박스 + 아이콘 모션 ===== */
