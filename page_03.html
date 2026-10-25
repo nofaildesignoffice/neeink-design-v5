@@ -1461,6 +1461,55 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .fixcta .copy span{color:rgba(0,0,0,.55)}
 /* ===== /v5 공통 보정 ===== */
 
+/* ===== v5 근거 지표: 메인 지표와 같은 박스 + 아이콘 모션 ===== */
+.lp-proof .lp-proof-grid{border-top:1px solid rgba(0,0,0,.12);border-left:1px solid rgba(0,0,0,.12)}
+.lp-proof .lp-proof-grid>div,.lp-proof .lp-proof-grid>div+div,.lp-proof .lp-proof-grid>div:nth-child(3){position:relative;display:flex;flex-direction:column;text-align:left;border:0;border-right:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12);padding:clamp(36px,4vw,72px) clamp(24px,2.2vw,42px);min-height:clamp(150px,13.9vw,200px);transition:background .4s}
+.lp-proof .lp-proof-grid>div:hover{background:rgba(0,0,0,.025)}
+.lp-proof .st-ic{display:block;flex:none;width:clamp(40px,3.1vw,54px);height:clamp(40px,3.1vw,54px);margin-bottom:clamp(18px,1.6vw,28px);color:#000}
+.lp-proof .st-ic svg{width:100%;height:100%;overflow:visible}
+.lp-proof .lp-proof-grid .v{font-weight:400;font-size:clamp(36px,3vw,58px);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.lp-proof .lp-proof-grid .k{font-family:var(--serif-ko);font-weight:400;font-size:clamp(14px,1vw,18px);letter-spacing:-.05em;margin-top:12px;color:#000}
+.lp-proof .lp-proof-grid .s{margin-top:6px}
+.st-ic svg *{transform-box:view-box}
+.st-ic .ac{fill:#0057ff;stroke:none}
+.ic-clock .mn{transform-origin:24px 24px;animation:icSpin 4s linear infinite}
+.ic-clock .hr{transform-origin:24px 24px;animation:icSpin 48s linear infinite}
+.ic-eye .lid{transform-origin:24px 24px;animation:icBlink 3.6s ease-in-out infinite}
+.ic-eye .iris{animation:icLook 3.6s ease-in-out infinite}
+.ic-cap .cap{transform-origin:24px 30px;animation:icToss 2.8s cubic-bezier(.45,0,.55,1) infinite}
+.ic-cap .tassel{transform-origin:40px 19.8px;animation:icSwing 2.8s ease-in-out infinite}
+.ic-crew .p{animation:icHop 2.4s cubic-bezier(.45,0,.55,1) infinite}
+.ic-crew .p2{animation-delay:.2s}.ic-crew .p3{animation-delay:.4s}
+.ic-chat .d{animation:icType 1.4s ease-in-out infinite}
+.ic-chat .d2{animation-delay:.18s}.ic-chat .d3{animation-delay:.36s}
+.ic-cup .cup{transform-origin:24px 40px;animation:icWobble 3.2s ease-in-out infinite}
+.ic-cup .spk{transform-origin:40px 8px;animation:icTwinkle 2s ease-in-out infinite}
+.ic-cup .spk2{transform-origin:8px 33px;animation:icTwinkle 2s ease-in-out 1s infinite}
+@keyframes icSpin{to{transform:rotate(360deg)}}
+@keyframes icBlink{0%,86%,100%{transform:scaleY(1)}91%{transform:scaleY(.08)}}
+@keyframes icLook{0%,20%{transform:translateX(0)}30%,45%{transform:translateX(-4px)}55%,70%{transform:translateX(4px)}80%,100%{transform:translateX(0)}}
+@keyframes icToss{0%,60%,100%{transform:none}25%{transform:translateY(-5px) rotate(-8deg)}}
+@keyframes icSwing{0%,100%{transform:rotate(0)}30%{transform:rotate(18deg)}55%{transform:rotate(-12deg)}75%{transform:rotate(5deg)}}
+@keyframes icHop{0%,50%,100%{transform:none}20%{transform:translateY(-3.5px)}}
+@keyframes icType{0%,60%,100%{transform:none;opacity:.45}30%{transform:translateY(-3px);opacity:1}}
+@keyframes icWobble{0%,100%{transform:rotate(0)}20%{transform:rotate(-5deg)}40%{transform:rotate(4deg)}55%{transform:rotate(0)}}
+@keyframes icTwinkle{0%,100%{transform:scale(.4) rotate(0);opacity:.2}50%{transform:scale(1.15) rotate(90deg);opacity:1}}
+.ic-photo .sun{transform-origin:33px 19px;animation:icTwinkle 2.4s ease-in-out infinite}
+.ic-photo .mt{animation:icHop 2.4s cubic-bezier(.45,0,.55,1) infinite}
+.ic-layers .l{animation:icHop 2.4s cubic-bezier(.45,0,.55,1) infinite}
+.ic-layers .l2{animation-delay:.15s}.ic-layers .l3{animation-delay:.3s}
+.ic-bottle .bt{transform-origin:24px 43px;animation:icWobble 3.2s ease-in-out infinite}
+.ic-bottle .drop{animation:icType 1.8s ease-in-out infinite}
+@media (max-width:768px){.lp-proof .lp-proof-grid>div,.lp-proof .lp-proof-grid>div+div,.lp-proof .lp-proof-grid>div:nth-child(3){padding:26px 18px;min-height:0}.lp-proof .st-ic{width:34px;height:34px;margin-bottom:14px}}
+@media (prefers-reduced-motion:reduce){.st-ic svg *{animation:none!important}}
+/* ===== v5 2단계: 이미지 + 하단 카드명 · 설명 ===== */
+.lp-key .lp-combo{align-items:flex-start;max-width:960px}
+.lp-key .lp-step{padding:0;border:0;border-radius:0;background:none;gap:6px}
+.lp-key .lp-step .img-placeholder{width:100%;aspect-ratio:4/3;border-radius:20px;margin-bottom:14px}
+.lp-key .lp-step b{color:#000}
+.lp-key .lp-step span{color:var(--tx)}
+.lp-key .lp-plus{align-self:auto;margin-top:calc((min(960px,100%) - 68px) / 2 * .375 - 22px)}
+@media (max-width:768px){.lp-key .lp-plus{margin:-4px auto}}
 /* ===== v5 랜딩 히어로 간격 ===== */
 .v2-sub .label{margin-bottom:clamp(16px,1.5vw,28px)}
 .v2-sub h1{margin-bottom:clamp(26px,2.2vw,40px)}
@@ -1523,7 +1572,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
       <p class="section-label">Proof</p>
       <h2 class="section-title">숫자로 보는,<br>보여줘야 하는 이유</h2>
     </div>
-    <div class="lp-proof-grid"><div><p class="v">87%</p><p class="k">전후 사진을 중요하게 보는 소비자</p><p class="s">Aesthetic Surgery Journal, 2023</p></div><div><p class="v">5개+</p><p class="k">수업 시간 안에 완성하는 콘텐츠</p><p class="s">내 고객 사진으로 직접</p></div><div><p class="v">3 PART</p><p class="k">보여주는 법부터 동영상까지</p><p class="s">단계별 커리큘럼</p></div><div><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">시술하는 사람이 만든 기준</p></div></div>
+    <div class="lp-proof-grid"><div><span class="st-ic"><svg class="ic-eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="lid"><path d="M6 24Q24 8 42 24Q24 40 6 24Z"/><path d="M13.2 18.9l-2.7-4.4M18.6 16.7l-1.4-5.1M24 16v-5.2M29.4 16.7l1.4-5.1M34.8 18.9l2.7-4.4"/><circle class="ac iris" cx="24" cy="24" r="5"/></g></svg></span><p class="v">87%</p><p class="k">전후 사진을 중요하게 보는 소비자</p><p class="s">Aesthetic Surgery Journal, 2023</p></div><div><span class="st-ic"><svg class="ic-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="10" width="36" height="28" rx="4"/><path class="mt" d="M6 33l10-10 8 8 5-5 13 11"/><circle class="ac sun" cx="33" cy="19" r="3"/></svg></span><p class="v">5개+</p><p class="k">수업 시간 안에 완성하는 콘텐츠</p><p class="s">내 고객 사진으로 직접</p></div><div><span class="st-ic"><svg class="ic-layers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="l l3" d="M6 31l18 9 18-9"/><path class="l l2" d="M6 24l18 9 18-9"/><path class="l l1" d="M24 8L6 17l18 9 18-9z"/><circle class="ac" cx="24" cy="17" r="2.4"/></svg></span><p class="v">3 PART</p><p class="k">보여주는 법부터 동영상까지</p><p class="s">단계별 커리큘럼</p></div><div><span class="st-ic"><svg class="ic-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M24 7.5v2.5M24 38v2.5M7.5 24H10M38 24h2.5"/><line class="hr" x1="24" y1="24" x2="31" y2="24"/><line class="mn" x1="24" y1="24" x2="24" y2="13"/><circle class="ac" cx="24" cy="24" r="2.4"/></svg></span><p class="v">6,000+</p><p class="k">누적 시술</p><p class="s">시술하는 사람이 만든 기준</p></div></div>
   </div>
 </section>
 
@@ -1537,9 +1586,9 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
       <p class="section-desc">AI 초상권 보호법으로 고객 얼굴만 바꾸고, 속눈썹 시술 결과는 원본 그대로 남겨요.</p>
     </div>
     <div class="lp-combo">
-      <div class="lp-step"><em>STEP 1</em><b>내 시술 사진</b><span>서랍 속에 쌓아둔 원본</span></div>
+      <div class="lp-step"><div class="img-placeholder"><i data-lucide="image"></i></div><b>내 시술 사진</b><span>서랍 속에 쌓아둔 원본</span></div>
       <i class="lp-plus" aria-hidden="true">+</i>
-      <div class="lp-step on"><em>STEP 2</em><b>AI 얼굴 체인지</b><span>얼굴만 변환 · 결과는 보존</span></div>
+      <div class="lp-step"><div class="img-placeholder"><i data-lucide="image"></i></div><b>AI 얼굴 체인지</b><span>얼굴만 변환 · 결과는 보존</span></div>
     </div>
     <p class="lp-eq"><span>=</span> 바로 게시할 수 있는 포트폴리오</p>
     <p class="micro text-center lp-note">※ 원본은 고객이 동의한 범위 안에서만 다뤄요.</p>
