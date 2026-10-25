@@ -1468,6 +1468,8 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .ic-bottle .drop{animation:icType 1.8s ease-in-out infinite}
 @media (max-width:768px){.lp-proof .lp-proof-grid>div,.lp-proof .lp-proof-grid>div+div,.lp-proof .lp-proof-grid>div:nth-child(3){padding:26px 18px;min-height:0}.lp-proof .st-ic{width:34px;height:34px;margin-bottom:14px}}
 @media (prefers-reduced-motion:reduce){.st-ic svg *{animation:none!important}}
+/* ===== v5 AI 히어로: 카드 위 오버레이 + 하단 흰색 그라디언트 ===== */
+.v2-sub .hero-ph.float-cards::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.12) 55%,rgba(255,255,255,.7) 80%,#fff 100%)}
 /* ===== v5 랜딩 사진 ===== */
 .v2-letter .hero-ph.has-media>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .v2-letter .hero-ph.has-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.35) 100%)}
@@ -1795,7 +1797,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 
 <!-- ================= 17 · 다음 클래스 ================= -->
 <section class="letter v2-letter">
-  <div class="hero-ph has-media"><img src="assets/lp2/next-ai.jpg" alt="AI 얼굴 체인지 결과" loading="lazy"></div>
+  <div class="hero-ph"><i data-lucide="image"></i></div>
   <div class="container" style="position:relative;z-index:2">
     <p class="label">Next Class</p>
     <h2>얼굴 노출 없이도,<br>매출까지 올리고 싶다면</h2>
