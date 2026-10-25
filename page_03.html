@@ -1684,18 +1684,23 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .pay-amt #payVat:empty{display:none}
 
 /* ===== page_03 피드백 반영 ===== */
-/* 히어로 설명 검은색 · 모바일은 카드를 헤더 아래·하단 띠로 모으고 가운데 텍스트 영역을 비워 둠 */
+/* 히어로 설명 검은색 · 모바일 배경 카드: 원래의 흩어진 배치(크기·기울기·화면 밖 걸침)는 살리고, 카피와 겹치는 카드만 위·아래 빈 공간으로 옮김 */
 .v2-sub .lead{color:#000}
 @media (max-width:768px){
-  .v2-sub.sub-hero{padding:180px 0 150px!important}
-  .v2-sub .float-cards .fc{display:none;width:min(28vw,124px)}
-  .v2-sub .float-cards .fc:nth-child(1){display:block;--x:15%!important;--y:122px!important}
-  .v2-sub .float-cards .fc:nth-child(11){display:block;--x:50%!important;--y:112px!important}
-  .v2-sub .float-cards .fc:nth-child(6){display:block;--x:85%!important;--y:124px!important}
-  .v2-sub .float-cards .fc:nth-child(5){display:block;--x:15%!important;--y:calc(100% - 76px)!important}
-  .v2-sub .float-cards .fc:nth-child(12){display:block;--x:50%!important;--y:calc(100% - 66px)!important}
-  .v2-sub .float-cards .fc:nth-child(10){display:block;--x:85%!important;--y:calc(100% - 78px)!important}
-  .v2-sub .hero-ph.float-cards::before,.v2-sub .hero-ph.float-cards::after{background:none!important}
+  .v2-sub.sub-hero{padding:195px 0 160px!important}
+  .v2-sub .float-cards .fc{width:calc(min(36vw,170px) * var(--z))}
+  .v2-sub .float-cards .fc:nth-child(3),.v2-sub .float-cards .fc:nth-child(8),.v2-sub .float-cards .fc:nth-child(13){display:none}
+  .v2-sub .float-cards .fc:nth-child(11),.v2-sub .float-cards .fc:nth-child(12){display:block}
+  .v2-sub .float-cards .fc:nth-child(1){--x:8%!important;--y:120px!important}
+  .v2-sub .float-cards .fc:nth-child(11){--x:37%!important;--y:92px!important}
+  .v2-sub .float-cards .fc:nth-child(12){--x:66%!important;--y:106px!important}
+  .v2-sub .float-cards .fc:nth-child(6){--x:95%!important;--y:126px!important}
+  .v2-sub .float-cards .fc:nth-child(2){--x:22%!important;--y:calc(100% - 96px)!important}
+  .v2-sub .float-cards .fc:nth-child(5){--x:2%!important;--y:calc(100% - 52px)!important}
+  .v2-sub .float-cards .fc:nth-child(4){--x:50%!important;--y:calc(100% - 60px)!important}
+  .v2-sub .float-cards .fc:nth-child(7){--x:78%!important;--y:calc(100% - 98px)!important}
+  .v2-sub .float-cards .fc:nth-child(9){--x:99%!important;--y:calc(100% - 48px)!important}
+  .v2-sub .float-cards .fc:nth-child(10){display:none}
 }
 /* 솔루션 섹션 마무리 문장 · 비교 섹션 타이틀 아래 가로선 제거 */
 .v2-sol .sol-close{position:relative;z-index:1;margin-top:clamp(48px,5vw,96px);text-align:center;font-size:clamp(20px,1.6vw,30px);font-weight:700;line-height:1.45;letter-spacing:-.04em;color:#fff}
@@ -1706,6 +1711,9 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
   .v2-core .split>.img-placeholder{display:none!important}
   .v2-core .core-img-m{display:block;position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;margin:0 0 24px}
 }
+
+/* 접기 버튼: 열린 상태에서 원 자체가 45도 돌아가 − 가 비뚤어지던 문제 */
+.acc-item.is-open .acc-q .mk{transform:none!important}
 </style></head>
 <body><script>
 /* 카드 슬라이더 좌우 스와이프 — 가로로 끌 때만 잡고(세로 스크롤은 그대로), 터치는 touch 이벤트로 직접 처리 */

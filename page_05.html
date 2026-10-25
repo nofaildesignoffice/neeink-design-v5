@@ -1538,6 +1538,40 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .lp-rv2 .lp-rv-tag{margin-top:clamp(40px,4vw,72px)}
 @media (max-width:1024px){.lp-rv2 .lp-rv-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-rv2 .lp-rv-grid>.rv-card:nth-child(4):last-child{grid-column:auto}}
 @media (max-width:768px){.lp-rv2 .lp-rv-grid{grid-template-columns:1fr}}
+
+/* ===== page_05 피드백 반영 ===== */
+/* 고민 카드 — 카피별 애니메이션 아이콘 (AI 페이지와 같은 방식) */
+.v2-target .qline>div::before{content:none!important}
+.v2-target .qline .qi{position:absolute;left:22px;top:clamp(18px,1.5vw,26px);width:36px;height:36px;color:#111;overflow:visible}
+.qi *{transform-box:view-box}.qi .acf{fill:#0057ff}.qi .acs{stroke:#0057ff}
+.qi-clock .mh{transform-origin:24px 26px;animation:qiSpin 2.4s linear infinite}
+.qi-cal .cal{transform-origin:24px 40px;animation:qiWobble 2.6s ease-in-out infinite}.qi-cal .gap{animation:qiFade 1.3s ease-in-out infinite}
+.qi-tag .dn{animation:qiDrop 1.8s ease-in infinite}
+.qi-hes .btl{animation:qiNudge 2.6s ease-in-out infinite}.qi-hes .d1,.qi-hes .d2,.qi-hes .d3{animation:qiFade 1.2s ease-in-out infinite}.qi-hes .d2{animation-delay:.2s}.qi-hes .d3{animation-delay:.4s}
+.qi-qq .qm{transform-origin:24px 22px;animation:qiTilt 2.2s ease-in-out infinite}
+.qi-ban .ban{transform-origin:37px 34px;animation:qiPop 2s ease-in-out infinite}
+@keyframes qiSpin{to{transform:rotate(360deg)}}
+@keyframes qiWobble{0%,50%,100%{transform:none}10%{transform:rotate(-6deg)}20%{transform:rotate(5deg)}30%{transform:rotate(-3deg)}40%{transform:rotate(1deg)}}
+@keyframes qiFade{0%,100%{opacity:.15}50%{opacity:1}}
+@keyframes qiDrop{0%{transform:translateY(-5px);opacity:0}25%{opacity:1}75%{transform:translateY(5px);opacity:1}100%{transform:translateY(7px);opacity:0}}
+@keyframes qiNudge{0%,100%{transform:none}25%,45%{transform:translateX(5px)}65%{transform:translateX(-1px)}}
+@keyframes qiTilt{0%,100%{transform:rotate(0)}25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+@keyframes qiPop{0%,100%{transform:scale(1)}12%{transform:scale(1.22)}24%{transform:scale(1)}}
+.v2-target .qline>div:hover .qi *{animation-duration:1.2s}
+@media (max-width:768px){.v2-target .qline .qi{left:14px;top:16px;width:30px;height:30px}}
+@media (prefers-reduced-motion:reduce){.qi *{animation:none!important}}
+/* 솔루션 섹션 마무리 문장 · 비교 섹션 타이틀 아래 가로선 제거 */
+.v2-sol .sol-close{position:relative;z-index:1;margin-top:clamp(48px,5vw,96px);text-align:center;font-size:clamp(20px,1.6vw,30px);font-weight:700;line-height:1.45;letter-spacing:-.04em;color:#fff}
+.v2-cmp .text-center>.section-title::after{content:none!important;display:none!important}
+/* Core 이미지: 모바일은 타이틀과 단계 사이, 데스크탑은 오른쪽 그대로 */
+.v2-core .core-img-m{display:none}
+@media (max-width:900px){
+  .v2-core .split>.img-placeholder{display:none!important}
+  .v2-core .core-img-m{display:block;position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden;margin:0 0 24px}
+}
+
+/* 접기 버튼: 열린 상태에서 원 자체가 45도 돌아가 − 가 비뚤어지던 문제 */
+.acc-item.is-open .acc-q .mk{transform:none!important}
 </style>
 </head>
 <body><script>
@@ -1610,7 +1644,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <div class="text-center lp-hd">
       <p class="section-label">Key Point</p>
       <h2 class="section-title">시술 시간은 그대로, <br>매출 경로만 하나 더</h2>
-      <p class="section-desc">같은 고객에게 시술 후 관리 제품을 함께 제안하면, 시술 시간을 늘리지 않고 두 번째 매출이 생겨요.</p>
+      <p class="section-desc">같은 고객에게 시술 후 관리 제품을 함께 제안하면,<br class="keep-br">시술 시간을 늘리지 않고 두 번째 매출이 생겨요.</p>
     </div>
     <div class="lp-combo">
       <div class="lp-step"><div class="img-placeholder has-img"><img src="assets/lp2/crew-treat.jpg" alt="속눈썹 시술 중인 샵" loading="lazy"></div><b>시술 매출</b><span>지금처럼 시술</span></div>
@@ -1628,8 +1662,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
   <div class="container">
     <div class="text-center">
       <p class="section-label">Crew Stories</p>
-      <h2 class="section-title">매주 단톡방에 쌓이는, <br>원장님들의 이야기</h2>
-      <p class="section-desc">고객 보호를 위해, 임상 사진은 가린 상태로 공유돼요.</p>
+      <h2 class="section-title">마스터크루의 원장님들 이야기</h2>
     </div>
     <div class="loop" id="stLoop">
       <div class="loop-vp"><div class="loop-track"><article class="rv-card" data-rv="0"><div class="img-placeholder has-img"><img src="assets/lp2/crew-rv1.jpg" alt="마스터크루 임상 공유" loading="lazy"></div><h4>첫 임상 공유해둘게요</h4><p class="ex">바빠서 시술한 사진은 못 찍었지만 고객님 에딕트 쓰시고 너무 만족하시는 중이에요.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="1"><div class="img-placeholder has-img"><img src="assets/lp2/crew-rv2.jpg" alt="마스터크루 첫 임상사진" loading="lazy"></div><h4>드디어 첫 번째 임상사진</h4><p class="ex">안녕하세요 ^_^ 드디어 첫번째 임상사진 올려봅니다.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="2"><div class="img-placeholder has-img"><img src="assets/lp2/crew-rv3.jpg" alt="래쉬애딕트 그로우 세미나" loading="lazy"></div><h4>래쉬애딕트 그로우 세미나</h4><p class="ex">제품 지식부터 상담 화법까지, 눈높이에 맞춘 특강으로 배워요.</p><span class="more">자세히 보기</span></article></div></div>
@@ -1646,16 +1679,14 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <div class="emp">
         <p class="emp-big">Not Alone</p>
         <h2 class="section-title">저도 처음엔 <br>혼자 공부했습니다</h2>
-        <blockquote style="margin-top:8px">영양제를 팔아보고 싶어도 제대로 배울 곳이 없었고, 궁금한 게 생겨도 물어볼 곳이 없었어요.</blockquote>
-        <p class="section-desc" style="margin-top:20px;margin-bottom:8px">그래서 니잉 마스터크루를 만들었습니다. 제가 혼자 헤맸던 시간을, 원장님들은 겪지 않으시도록요.</p>
-        <p style="font-size:14px;font-weight:700;color:var(--text-black);margin-top:20px">등록이 망설여지는 마음도 알아요 — 상담에서 실제로 듣는 걱정들</p>
+        <blockquote style="margin-top:8px">영양제를 팔아보고 싶어도 제대로 배울 곳이 없었고,<br class="keep-br">궁금한 게 생겨도 물어볼 곳이 없었어요.</blockquote>
+        <p class="section-desc" style="margin-top:20px;margin-bottom:8px">그래서 니잉 마스터크루를 만들었습니다.<br class="keep-br">제가 혼자 헤맸던 시간을, 원장님들은 겪지 않으시도록요.</p>
         <ul>
           <li>“막상 등록하고 나면 관리 안 해주는 거 아니야?”</li>
           <li>“혼자서도 잘 할 수 있을까?”</li>
           <li>“제품, 진짜 다 판매할 수 있을까?”</li>
         </ul>
         <p class="emp-sign">니잉 대표</p>
-        <a href="#product" class="link-inline">제품 살펴보기 →</a>
       </div>
       <div class="img-placeholder has-img emp-photo" style="aspect-ratio:4/5"><img src="assets/lp/founder.jpg" alt="니잉 대표" loading="lazy"></div>
     </div>
@@ -1672,12 +1703,12 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <p class="section-desc">시술 실력의 문제가 아닙니다. 매출이 만들어지는 구조의 문제예요.</p>
     </div>
     <div class="qline">
-      <div><b>“한 명 시술이 길어서, 더 벌려면 제가 더 일해야 해요.”</b><p>손은 하나라, 하루에 받을 수 있는 고객 수엔 한계가 있어요.</p></div>
-      <div><b>“다음 예약이 끊기면 다음 달이 흔들려요.”</b><p>매출이 리터치와 재방문에만 기대고 있어요.</p></div>
-      <div><b>“가격을 내리면 결국 몸으로 메워요.”</b><p>주변 이벤트 가격에 맞추다 보면, 남는 게 점점 줄어요.</p></div>
-      <div><b>“영양제를 권하고 싶은데, 강매처럼 보일까 봐요.”</b><p>단골과 어색해질까 봐 제품 얘기를 못 꺼내겠어요.</p></div>
-      <div><b>“‘눈 시리진 않아요? 진짜 효과 있어요?’에서 막혀요.”</b><p>고객이 물어보면 자신 있게 설명을 못 하겠어요.</p></div>
-      <div><b>“‘자란다’고 하면 안 된다는데, 뭐라고 하죠?”</b><p>어디까지 말해도 되는 표현인지 잘 모르겠어요.</p></div>
+      <div><svg class="qi qi-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5h10M24 5v4"/><circle cx="24" cy="26" r="16"/><path d="M24 13.5v2M24 36.5v2M11.5 26h2M34.5 26h2"/><path d="M24 26l6 4"/><g class="mh"><path class="acs" stroke-width="2.2" d="M24 26V14.5"/></g><circle class="acf" stroke="none" cx="24" cy="26" r="2"/></svg><b>“한 명 시술이 길어서, 더 벌려면 제가 더 일해야 해요.”</b><p>손은 하나라, 하루에 받을 수 있는 고객 수엔 한계가 있어요.</p></div>
+      <div><svg class="qi qi-cal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="cal"><rect x="7" y="10" width="34" height="30" rx="4"/><path d="M7 18h34M15 6v7M33 6v7"/><g fill="currentColor" stroke="none"><circle cx="15" cy="25" r="1.8"/><circle cx="24" cy="25" r="1.8"/><circle cx="33" cy="25" r="1.8"/><circle cx="15" cy="33" r="1.8"/><circle cx="24" cy="33" r="1.8"/></g><rect class="gap acs" x="29.5" y="29.5" width="7" height="7" rx="1.5" stroke-dasharray="2 2"/></g></svg><b>“다음 예약이 끊기면 다음 달이 흔들려요.”</b><p>매출이 리터치와 재방문에만 기대고 있어요.</p></div>
+      <div><svg class="qi qi-tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 6H9a3 3 0 0 0-3 3v13l18 18 16-16z"/><circle cx="13" cy="13" r="2.5"/><path d="M19 27l6-6M21 33l8-8"/><g class="dn"><path class="acs" stroke-width="2.2" d="M40 3v12M35.5 10.5L40 15l4.5-4.5"/></g></svg><b>“가격을 내리면 결국 몸으로 메워요.”</b><p>주변 이벤트 가격에 맞추다 보면, 남는 게 점점 줄어요.</p></div>
+      <div><svg class="qi qi-hes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="btl"><rect x="8" y="21" width="14" height="22" rx="3"/><path d="M11 21v-5h8v5M13 16v-5h4v5"/><path class="acs" d="M11 31h8"/></g><path d="M29 8h13a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7l-5 4v-4h-1a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3z"/><circle class="acf d1" stroke="none" cx="31" cy="15" r="1.5"/><circle class="acf d2" stroke="none" cx="35.5" cy="15" r="1.5"/><circle class="acf d3" stroke="none" cx="40" cy="15" r="1.5"/></svg><b>“영양제를 권하고 싶은데, 강매처럼 보일까 봐요.”</b><p>단골과 어색해질까 봐 제품 얘기를 못 꺼내겠어요.</p></div>
+      <div><svg class="qi qi-qq" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 8h28a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H22l-8 7v-7h-4a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z"/><g class="qm"><path class="acs" stroke-width="2.4" d="M20 16.5a4 4 0 1 1 5.5 3.7c-1 .5-1.5 1.2-1.5 2.3v1"/><circle class="acf" stroke="none" cx="24" cy="27.5" r="1.5"/></g></svg><b>“‘눈 시리진 않아요? 진짜 효과 있어요?’에서 막혀요.”</b><p>고객이 물어보면 자신 있게 설명을 못 하겠어요.</p></div>
+      <div><svg class="qi qi-ban" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 10h22a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H18l-7 6v-6H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/><path d="M11 17h16M11 23h10"/><g class="ban"><circle class="acs" stroke-width="2.2" fill="#fff" cx="37" cy="34" r="7.5"/><path class="acs" stroke-width="2.2" d="M31.7 28.7l10.6 10.6"/></g></svg><b>“‘자란다’고 하면 안 된다는데, 뭐라고 하죠?”</b><p>어디까지 말해도 되는 표현인지 잘 모르겠어요.</p></div>
     </div>
     
   </div>
@@ -1690,7 +1721,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <div class="text-center">
       <p class="section-label">Cause</p>
       <h2 class="section-title">열심히 하는데도, <br>남는 게 적은 이유!</h2>
-      <p class="section-desc">원장님의 노력이 부족해서가 아닙니다. 이유는 세 가지 구조에 있어요.</p>
+      <p class="section-desc">원장님의 노력이 부족해서가 아닙니다.<br class="keep-br">이유는 세 가지 구조에 있어요.</p>
     </div>
   </div>
   <div class="ls">
@@ -1698,7 +1729,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <div class="ls-row rev"><div class="img-placeholder has-img"><img src="assets/lp2/crew-hesitate.jpg" alt="휴대폰을 보는 모습" loading="lazy"></div><div class="txt"><p class="n">원인 02</p><h3>권하는 방법을 몰라서, 추천 자체를 피하게 돼요</h3><p>가격이 아닌 기록과 상담으로 경쟁해야 하는데, 홈케어 상담은 배운 적이 없어요. 고객이 샵 제품을 산 이유는 “직접 써 보게 해줘서”(66%), “특징을 설명해줘서”(63%)였습니다. 순서가 없으니 강요처럼 느껴질까 봐 말을 꺼내지 못하는 거예요.</p></div></div>
     <div class="ls-row"><div class="img-placeholder has-img"><img src="assets/lp2/crew-claim.jpg" alt="래쉬애딕트 세럼" loading="lazy"></div><div class="txt"><p class="n">원인 03</p><h3>고객이 듣고 싶은 설명과, 말할 수 있는 표현 사이엔 간격이 있어요</h3><p>고객은 눈 시림은 없는지, 정말 효과가 있는지 물어요. 하지만 화장품은 “자란다 · 발모 · 손상 복구”라고 광고할 수 없습니다. 제품 지식과 함께 “어디까지 말할 수 있는지”를 알아야, 자신 있게 설명할 수 있어요.</p></div></div>
   </div>
-  <div class="container"><p class="answer">제품이 좋아도 <b>권할 말이 없으면</b> 팔리지 않고, 혼자서는 <b>막히는 순간마다 멈춥니다.</b> <br>그렇기 때문에 마스터크루는 <b>시술 시간을 늘리지 않는 두 번째 매출 경로</b>와, <b>강요하지 않고 정확하게 설명하는 방법</b>을 함께 드립니다.</p></div>
+  <div class="container"><p class="answer">시술만으로 <b>수익에 한계가</b> 있기 때문에<br class="keep-br">추가 수익을 만들고 싶어도<br class="keep-br">막상 <b>고객에게 제안하기는 어렵습니다.</b><br class="keep-br"><br class="keep-br"><b>고객에게 강요하지 않아도</b><br class="keep-br"><b>고객이 제품을 사가는 방법</b>을 알려드립니다.</p></div>
 </section>
 
 
@@ -1708,7 +1739,6 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <div class="text-center">
       <p class="section-label">Solution</p>
       <h2 class="section-title">원장님들의 고민을 해결하는 <br>마스터크루의 노하우</h2>
-      <p class="section-desc">샵에서 제품을 산 고객이 꼽은 이유 1위는 “전문가의 조언”(73.6%)이었어요. 원장님의 설명이 곧 신뢰입니다.</p>
     </div>
   </div>
   <div class="ls">
@@ -1716,6 +1746,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <div class="ls-row"><div class="img-placeholder has-img"><img src="assets/lp2/crew-consult.jpg" alt="고객이 사용하는 래쉬애딕트" loading="lazy"></div><div class="txt"><p class="n">솔루션 02</p><h3>강요하지 않는 상담 순서, 그대로 따라 쓰세요</h3><p>시술 중 상태 확인 → 직접 써 보기 → 특징·사용법 설명 → 선택은 고객에게. 외울 필요 없는 상담 가이드와 세일즈 특강으로 자연스럽게 익혀요.</p></div></div>
     <div class="ls-row rev"><div class="img-placeholder has-img"><img src="assets/lp2/crew-study.jpg" alt="세미나 · 케이스 스터디" loading="lazy"></div><div class="txt"><p class="n">솔루션 03</p><h3>고객 질문에 답할 지식부터, 말해도 되는 표현까지</h3><p>영양제 세미나와 케이스 스터디로 성분, 사용법, 자주 받는 질문, 쓰면 안 되는 표현까지 정리해요. 막히는 순간엔 200여 명 원장님 단톡방에 바로 물어보세요.</p></div></div>
   </div>
+  <div class="container"><p class="sol-close">시술 매출은 그대로,<br class="keep-br">같은 고객에게서 생기는 두 번째 매출 경로를<br class="keep-br">함께 설계합니다</p></div>
 </section>
 
 
@@ -1724,7 +1755,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
   <div class="container">
     <div class="text-center">
       <p class="section-label">Difference</p>
-      <h2 class="section-title">시술 매출은 그대로, <br>같은 고객에게서 생기는 두 번째 매출 경로를 <br>함께 설계합니다</h2>
+      <h2 class="section-title">왜 꼭 마스터크루에 들어가야 할까요?</h2>
     </div>
     <table class="cmp">
       <thead><tr><th></th><th>혼자 제품 판매</th><th class="on">니잉 마스터크루</th></tr></thead>
@@ -1747,7 +1778,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <p class="section-label">Product</p>
     <h2 class="section-title">함께 판매할 <br>래쉬애딕트마스터 3종</h2>
     <p class="section-desc">마스터크루가 되면 사업자 공급가로 들여와 판매하는 제품이에요. 공급가와 가입 조건은 상담에서 알려드려요.</p>
-    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/LashAddict.jpg" alt="래쉬애딕트마스터 LashAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>LashAddict</h3><p>속눈썹 세럼. 시술 후 고객 관리 루틴으로 자연스럽게 이어 권하기 좋아요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/BrowAddict.jpg" alt="래쉬애딕트마스터 BrowAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>BrowAddict</h3><p>눈썹 세럼. 속눈썹 시술 고객에게 함께 제안하기 좋은 제품이에요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/HairAddict.jpg" alt="래쉬애딕트마스터 HairAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>HairAddict</h3><p>모발 밀도 세럼. 판매 라인을 새롭게 넓히고 싶은 원장님께 권해요.</p><div class="hash"><span>사업자 공급가</span><span>상담 시 안내</span></div></article></div>
+    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/LashAddict.jpg" alt="래쉬애딕트마스터 LashAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>LashAddict</h3><p>속눈썹 세럼. 시술 후 고객 관리 루틴으로 자연스럽게 이어 권하기 좋아요.</p></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/BrowAddict.jpg" alt="래쉬애딕트마스터 BrowAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>BrowAddict</h3><p>눈썹 세럼. 속눈썹 시술 고객에게 함께 제안하기 좋은 제품이에요.</p></article><article class="cls-card"><div class="img-placeholder has-img"><img src="assets/prod/HairAddict.jpg" alt="래쉬애딕트마스터 HairAddict" loading="lazy"></div><p class="brand">래쉬애딕트마스터</p><h3>HairAddict</h3><p>모발 밀도 세럼. 판매 라인을 새롭게 넓히고 싶은 원장님께 권해요.</p></article></div>
   </div>
 </section>
 
@@ -1758,7 +1789,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <div class="text-center">
       <p class="section-label">How It Works</p>
       <h2 class="section-title">이렇게 함께합니다</h2>
-      <p class="section-desc">제품만 들여오고 끝나지 않아요. 상담 가이드부터 질문 창구까지, 네 가지 지원이 계속 이어집니다.</p>
+      <p class="section-desc">제품만 들여오고 끝나지 않아요. 상담 가이드부터<br class="keep-br">질문 창구까지, 네 가지 지원이 계속 이어집니다.</p>
     </div>
     <div class="hiw">
       <div><h3>단톡방 즉시 Q&amp;A</h3><p>궁금한 순간 바로 물어보세요</p><div class="img-placeholder has-img"><img src="assets/lp2/crew-qa.jpg" alt="단톡방 질문 창구" loading="lazy"></div></div>
@@ -1777,7 +1808,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <div>
         <p class="section-label">Core</p>
         <h2 class="section-title">가입은 끝이 아니라, <br>시작입니다</h2>
-        <p class="section-desc" style="margin-bottom:16px">등록 이후에도 단톡방, 특강, 케이스 스터디로 계속 이어지는 파트너십이에요.</p>
+        <div class="img-placeholder has-img core-img-m"><img src="assets/lp2/crew-core.jpg" alt="래쉬애딕트 제품 화보" loading="lazy"></div>
         <ul class="core-steps"><li><span class="s">01</span><span><b>단톡방 즉시 Q&amp;A</b>궁금한 순간 바로 물어보세요</span></li><li><span class="s">02</span><span><b>영양제 세미나 · 세일즈 특강</b>제품 지식부터 상담 화법까지, 눈높이에 맞춘 특강으로 배워요</span></li><li><span class="s">03</span><span><b>직접 제작한 상담 가이드</b>외울 필요 없이, 그대로 따라 하면 되는 상담 가이드</span></li><li><span class="s">04</span><span><b>케이스 스터디</b>다른 원장님들의 성공 사례와 시행착오까지 함께 나눠요</span></li></ul>
       </div>
       <div class="img-placeholder has-img" style="aspect-ratio:3/4;position:sticky;top:100px"><img src="assets/lp2/crew-core.jpg" alt="래쉬애딕트 제품 화보" loading="lazy"></div>
@@ -1823,8 +1854,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
   <div class="container" style="max-width:960px">
     <div class="text-center lp-hd">
       <p class="section-label">Q&amp;A</p>
-      <h2 class="section-title">제품 판매를 시작하기 전, <br>궁금한 점부터 확인하세요</h2>
-      <p class="section-desc">판매할 제품과 가입 조건, 발주와 상담 지원까지 안내해 드려요.</p>
+      <h2 class="section-title">제품 판매를 시작하기 전,<br class="keep-br">궁금한 점부터 확인하세요</h2>
     </div>
     <div class="acc">
       <div class="acc-item"><button class="acc-q"><span><em class="lp-q">Q.</em>마스터크루에서는 어떤 제품을 판매하나요?</span> <span class="mk">+</span></button><div class="acc-a">속눈썹 세럼 LashAddict, 눈썹 세럼 BrowAddict, 모발 세럼 HairAddict 3종을 사업자 공급가로 들여와 판매해요. 샵 고객층과 판매 계획은 가입 상담에서 함께 살펴봐요.</div></div>
@@ -1950,10 +1980,8 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <div class="chk-row"><label><input type="checkbox"> LashAddict 속눈썹 세럼</label><label><input type="checkbox"> BrowAddict 눈썹 세럼</label><label><input type="checkbox"> HairAddict 모발 밀도 세럼</label></div>
       <div class="field"><textarea rows="3" placeholder="궁금한 점을 남겨주세요 (선택)"></textarea></div>
       <div class="agree"><label><input type="checkbox"> [필수] 개인정보 수집·이용 동의 (이름, 연락처, 샵 정보 / 마스터크루 가입 상담 안내)</label></div>
-      <button class="btn btn-primary btn-block" style="margin-top:16px">마스터크루 가입 신청하기</button>
-      <p class="micro" style="text-align:center">상담 가능 평일 10:30 ~ 19:00 · 사업자등록증 확인 후 공급가를 안내합니다</p>
+      <button class="btn btn-primary btn-block" style="margin-top:16px">마스터크루 가입 상담 신청하기</button>
     </form>
-    <a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" class="btn btn-secondary btn-block">카카오톡으로 문의하기</a>
   </div>
 </div></div>
 
