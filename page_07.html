@@ -891,6 +891,20 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .q-close svg{width:22px;height:22px}
 .q-close span{font-size:12px;font-weight:600}
 }
+
+/* 공지 표: 모바일은 행을 목록형 카드로 (분류 → 제목 → 작성일 · 조회수) */
+@media (max-width:768px){
+  .board thead{display:none}
+  .board,.board tbody{display:block;width:100%}
+  .board tr{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:18px 2px;border-bottom:1px solid var(--line-2)}
+  .board td{display:block;border:0!important;padding:0!important;text-align:left;font-size:12px;color:var(--text-light);background:none}
+  .board td:nth-child(1){display:none}
+  .board td.subj{order:1;flex:1 1 100%;font-size:15px;line-height:1.5;color:#000}
+  .board td:nth-child(2){order:0;flex:1 1 100%}
+  .board td:nth-child(4){order:2}
+  .board td:nth-child(5){order:3}
+  .board td:nth-child(5)::before{content:"·";margin-right:10px}
+}
 </style><!--/nk:qfold--></head>
 <body>
 
@@ -921,7 +935,7 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
   <div class="container">
     <div class="text-center store-hd">
       <h1 class="section-title">공지사항</h1>
-      <p class="section-desc">교육 일정부터 신제품 출시, 이벤트까지 <br>니잉의 새 소식을 가장 먼저 전해드려요.</p>
+      <p class="section-desc">교육 일정부터 신제품 출시,<br class="keep-br">이벤트까지 니잉의 새 소식을 가장 먼저 전해드려요.</p>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px">
       <div class="tabs" style="margin:0"><button class="is-active">전체</button><button>교육 일정</button><button>신제품</button><button>이벤트</button><button>공지</button></div>
