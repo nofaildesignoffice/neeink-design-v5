@@ -2091,10 +2091,10 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
   <div class="pay-side">
     <h3>어떤 과정을 신청하실까요</h3>
     <p class="lead">과정을 선택하시면 상세 내용과 결제 금액이 표시됩니다.</p>
-    <button class="pay-opt" data-i="0"><span><span class="nm">AI 포트폴리오 제작법 (VOD)</span><span class="sub" style="display:block">수강 1달 + 피드백 1달 · 온라인 VOD</span></span><span class="pr">24만 9천원</span></button><button class="pay-opt" data-i="1"><span><span class="nm">AI 마케팅 그룹 클래스 (3:1)</span><span class="sub" style="display:block">3시간 · 1회 · 오프라인 그룹</span></span><span class="pr">50만원</span></button><button class="pay-opt" data-i="2"><span><span class="nm">AI 마케팅 프라이빗 클래스 (1:1)</span><span class="sub" style="display:block">5시간 · 1회 · 오프라인 1:1</span></span><span class="pr">100만원</span></button>
+    <button class="pay-opt" data-i="0" data-url="https://creatus.kr/classes/318847"><span><span class="nm">AI 포트폴리오 제작법 (VOD)</span><span class="sub" style="display:block">수강 1달 + 피드백 1달 · 온라인 VOD</span></span><span class="pr">24만 9천원</span></button><button class="pay-opt" data-i="1"><span><span class="nm">AI 마케팅 그룹 클래스 (3:1)</span><span class="sub" style="display:block">3시간 · 1회 · 오프라인 그룹</span></span><span class="pr">50만원</span></button><button class="pay-opt" data-i="2"><span><span class="nm">AI 마케팅 프라이빗 클래스 (1:1)</span><span class="sub" style="display:block">5시간 · 1회 · 오프라인 1:1</span></span><span class="pr">100만원</span></button>
     <div class="pay-foot">
       <div class="pay-total"><span>결제 금액</span><span class="pay-amt"><b id="payTotal">과정을 선택해주세요</b><small id="payVat"></small></span></div>
-      <a href="#" class="btn btn-primary btn-block pay-btn is-disabled" id="payBtn">결제하기</a>
+      <a href="#" class="btn btn-primary btn-block pay-btn is-disabled" id="payBtn">바로 결제하기</a>
     </div>
   </div>
   <div class="pay-detail" id="payDetail"><div class="pay-empty"><span class="pe-pc">왼쪽에서</span><span class="pe-m">아래에서</span>&nbsp;과정을 선택하시면 상세 내용이 표시됩니다.</div></div>
@@ -2189,6 +2189,9 @@ function calc(d){var box=d.querySelector('.opts');if(!box)return;var r=box.query
 function pick(i){opts.forEach(function(o){o.classList.toggle('is-on',+o.dataset.i===i)});
   if(window.paySync)paySync(i);
   document.getElementById('payBtn').classList.remove('is-disabled');
+  /* VOD 과정(data-url 있음)만 외부 수강 신청 페이지로 이동, 나머지는 기존 결제 */
+  var pb=document.getElementById('payBtn'),po=document.querySelector('.pay-opt[data-i="'+i+'"]'),u=po&&po.dataset.url;
+  if(u){pb.href=u;pb.target='_blank';pb.rel='noopener';pb.textContent='수강 신청 페이지 이동하기'}else{pb.href='#';pb.removeAttribute('target');pb.removeAttribute('rel');pb.textContent='바로 결제하기'}
   var d=document.getElementById('payDetail');d.innerHTML=document.getElementById('cls'+i).innerHTML;lucide.createIcons();
   document.getElementById('payVat').textContent=VAT[i];
   d.querySelectorAll('.acc-q').forEach(function(q){q.onclick=function(){q.parentElement.classList.toggle('is-open')}});
