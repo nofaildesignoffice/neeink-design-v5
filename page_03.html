@@ -1502,6 +1502,10 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .ic-bottle .drop{animation:icType 1.8s ease-in-out infinite}
 @media (max-width:768px){.lp-proof .lp-proof-grid>div,.lp-proof .lp-proof-grid>div+div,.lp-proof .lp-proof-grid>div:nth-child(3){padding:26px 18px;min-height:0}.lp-proof .st-ic{width:34px;height:34px;margin-bottom:14px}}
 @media (prefers-reduced-motion:reduce){.st-ic svg *{animation:none!important}}
+/* ===== v5 랜딩 사진 ===== */
+.v2-letter .hero-ph.has-media>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.v2-letter .hero-ph.has-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.35) 100%)}
+.img-placeholder.has-img img{object-position:center}
 /* ===== v5 2단계: 이미지 + 하단 카드명 · 설명 ===== */
 .lp-key .lp-combo{align-items:flex-start;max-width:960px}
 .lp-key .lp-step{padding:0;border:0;border-radius:0;background:none;gap:6px}
@@ -1586,9 +1590,9 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
       <p class="section-desc">AI 초상권 보호법으로 고객 얼굴만 바꾸고, 속눈썹 시술 결과는 원본 그대로 남겨요.</p>
     </div>
     <div class="lp-combo">
-      <div class="lp-step"><div class="img-placeholder"><i data-lucide="image"></i></div><b>내 시술 사진</b><span>서랍 속에 쌓아둔 원본</span></div>
+      <div class="lp-step"><div class="img-placeholder has-img"><img src="assets/lp2/ai-original.jpg" alt="얼굴을 가린 원본 시술 사진" loading="lazy"></div><b>내 시술 사진</b><span>서랍 속에 쌓아둔 원본</span></div>
       <i class="lp-plus" aria-hidden="true">+</i>
-      <div class="lp-step"><div class="img-placeholder"><i data-lucide="image"></i></div><b>AI 얼굴 체인지</b><span>얼굴만 변환 · 결과는 보존</span></div>
+      <div class="lp-step"><div class="img-placeholder has-img"><img src="assets/lp2/ai-changed.jpg" alt="AI 얼굴 체인지 결과" loading="lazy"></div><b>AI 얼굴 체인지</b><span>얼굴만 변환 · 결과는 보존</span></div>
     </div>
     <p class="lp-eq"><span>=</span> 바로 게시할 수 있는 포트폴리오</p>
     <p class="micro text-center lp-note">※ 원본은 고객이 동의한 범위 안에서만 다뤄요.</p>
@@ -1666,9 +1670,9 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
     </div>
   </div>
   <div class="ls">
-    <div class="ls-row"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">원인 01</p><h3>찍는 동의와 올리는 동의는 달라요</h3><p>대법원은 촬영 동의와 공표 동의를 따로 봐요. 게시가 동의 범위 안이었다는 증명도 올린 쪽의 몫입니다. “사진 찍어도 되죠?” 한마디만으로는 인스타그램·블로그·플레이스 게시까지 허락받았다고 보기 어려워요.</p><p class="src" style="text-align:inherit">대법원 2021다219116 판결</p></div></div>
-    <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">원인 02</p><h3>보고 싶은 사람은 87%, 보여줄 수 있는 사람은 35.1%</h3><p>미용 시술 소비자 87%가 전후 사진을 중요하게 본다고 답했어요. 하지만 내 사진을 인스타그램에 올려도 된다는 응답은 35.1%에 그쳤습니다. 포트폴리오 수요는 큰데, 공개할 수 있는 원본은 늘 부족해요.</p><p class="src" style="text-align:inherit">Aesthetic Surgery Journal(2023) · PubMed 33848328 — 미국 미용시술 조사로, 국내 수치와 같다고 볼 수는 없습니다</p></div></div>
-    <div class="ls-row"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">원인 03</p><h3>범용 AI는 ‘얼굴만’ 고치는 편집기가 아니에요</h3><p>프롬프트 한 단어만 바꿔도 다른 요소까지 함께 바뀌고, 다시 써도 절반 넘게는 나아지지 않는다는 연구가 있어요. 얼굴을 바꾸다 속눈썹·눈썹까지 달라지면, 그 사진은 고객에게 다른 결과를 약속하게 됩니다.</p><p class="src" style="text-align:inherit">Prompting AI Art, International Journal of Human–Computer Interaction(2024)</p></div></div>
+    <div class="ls-row"><div class="img-placeholder has-img"><img src="assets/lp2/ai-consent.jpg" alt="촬영 중인 고객" loading="lazy"></div><div class="txt"><p class="n">원인 01</p><h3>찍는 동의와 올리는 동의는 달라요</h3><p>대법원은 촬영 동의와 공표 동의를 따로 봐요. 게시가 동의 범위 안이었다는 증명도 올린 쪽의 몫입니다. “사진 찍어도 되죠?” 한마디만으로는 인스타그램·블로그·플레이스 게시까지 허락받았다고 보기 어려워요.</p><p class="src" style="text-align:inherit">대법원 2021다219116 판결</p></div></div>
+    <div class="ls-row rev"><div class="img-placeholder has-img"><img src="assets/lp2/ai-hidden.jpg" alt="얼굴을 가린 전후 사진" loading="lazy"></div><div class="txt"><p class="n">원인 02</p><h3>보고 싶은 사람은 87%, 보여줄 수 있는 사람은 35.1%</h3><p>미용 시술 소비자 87%가 전후 사진을 중요하게 본다고 답했어요. 하지만 내 사진을 인스타그램에 올려도 된다는 응답은 35.1%에 그쳤습니다. 포트폴리오 수요는 큰데, 공개할 수 있는 원본은 늘 부족해요.</p><p class="src" style="text-align:inherit">Aesthetic Surgery Journal(2023) · PubMed 33848328 — 미국 미용시술 조사로, 국내 수치와 같다고 볼 수는 없습니다</p></div></div>
+    <div class="ls-row"><div class="img-placeholder has-img"><img src="assets/lp2/ai-generic.jpg" alt="다른 요소까지 바뀐 범용 AI 결과" loading="lazy"></div><div class="txt"><p class="n">원인 03</p><h3>범용 AI는 ‘얼굴만’ 고치는 편집기가 아니에요</h3><p>프롬프트 한 단어만 바꿔도 다른 요소까지 함께 바뀌고, 다시 써도 절반 넘게는 나아지지 않는다는 연구가 있어요. 얼굴을 바꾸다 속눈썹·눈썹까지 달라지면, 그 사진은 고객에게 다른 결과를 약속하게 됩니다.</p><p class="src" style="text-align:inherit">Prompting AI Art, International Journal of Human–Computer Interaction(2024)</p></div></div>
   </div>
   <div class="container"><p class="answer">가리면 <b>실력이 보이지 않고</b>, 그대로 올리면 <b>고객이 불편해집니다.</b><br>그렇기 때문에 니잉은 <b>동의 범위부터 정리</b>하고, <b>얼굴만 바꾸는 절차</b>와 <b>시술 결과가 바뀌지 않았는지 확인하는 검수 기준</b>을 함께 가르칩니다.</p></div>
 </section>
@@ -1684,9 +1688,9 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
     </div>
   </div>
   <div class="ls">
-    <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 01</p><h3>얼굴 공개가 부담스러운 고객 사진도, 포트폴리오로</h3><p>AI 초상권 보호법(얼굴 체인지)으로 고객을 알아볼 수 없게 바꾸고, 서랍 속 작업 사진을 다시 꺼내요. 원본은 고객이 동의한 범위 안에서만 다룹니다.</p></div></div>
-    <div class="ls-row"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 02</p><h3>가리지 않고, 얼굴 전체를 보여줘요</h3><p>얼굴 전체가 보이니 고객이 시술 후 모습을 바로 상상할 수 있어요. 사진 한 장으로 여러 포트폴리오는 물론 동영상까지 만듭니다.</p></div></div>
-    <div class="ls-row rev"><div class="img-placeholder"><i data-lucide="image"></i></div><div class="txt"><p class="n">솔루션 03</p><h3>올리기 전, 검수 기준으로 한 번 더</h3><p>AI를 진정성 있게 쓰는 원칙과 검수 기준으로 속눈썹·눈썹이 원본과 달라지지 않았는지 확인해요. 그리고 얼굴을 바꿨다는 사실을 밝혀 게시합니다.</p></div></div>
+    <div class="ls-row rev"><div class="img-placeholder has-img"><img src="assets/lp2/ai-sol1.jpg" alt="얼굴을 바꾼 포트폴리오 사진" loading="lazy"></div><div class="txt"><p class="n">솔루션 01</p><h3>얼굴 공개가 부담스러운 고객 사진도, 포트폴리오로</h3><p>AI 초상권 보호법(얼굴 체인지)으로 고객을 알아볼 수 없게 바꾸고, 서랍 속 작업 사진을 다시 꺼내요. 원본은 고객이 동의한 범위 안에서만 다룹니다.</p></div></div>
+    <div class="ls-row"><div class="img-placeholder has-img"><img src="assets/lp2/ai-sol2.jpg" alt="얼굴 전체가 보이는 결과" loading="lazy"></div><div class="txt"><p class="n">솔루션 02</p><h3>가리지 않고, 얼굴 전체를 보여줘요</h3><p>얼굴 전체가 보이니 고객이 시술 후 모습을 바로 상상할 수 있어요. 사진 한 장으로 여러 포트폴리오는 물론 동영상까지 만듭니다.</p></div></div>
+    <div class="ls-row rev"><div class="img-placeholder has-img"><img src="assets/lp2/ai-sol3.jpg" alt="원본과 비교 검수" loading="lazy"></div><div class="txt"><p class="n">솔루션 03</p><h3>올리기 전, 검수 기준으로 한 번 더</h3><p>AI를 진정성 있게 쓰는 원칙과 검수 기준으로 속눈썹·눈썹이 원본과 달라지지 않았는지 확인해요. 그리고 얼굴을 바꿨다는 사실을 밝혀 게시합니다.</p></div></div>
   </div>
 </section>
 
@@ -1732,10 +1736,10 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
       <p class="section-desc">예쁘게 꾸미는 법이 아니에요. 고객과 원장님을 모두 지키면서 보여주는 법을 배웁니다.</p>
     </div>
     <div class="hiw">
-      <div><h3>시술 결과는 손대지 않기</h3><p>바꾸는 건 얼굴뿐, 속눈썹 결과는 원본 그대로 둬요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>진정성 원칙 · 검수 기준</h3><p>올리기 전, 무엇을 확인할지 기준부터 세워요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>내 사진으로 바로 실습</h3><p>쌓아둔 내 고객 사진으로 직접 만들어 봐요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
-      <div><h3>프롬프트 제공 · 피드백</h3><p>필요한 프롬프트는 드리고, 막히면 바로 물어보세요</p><div class="img-placeholder"><i data-lucide="image"></i></div></div>
+      <div><h3>시술 결과는 손대지 않기</h3><p>바꾸는 건 얼굴뿐, 속눈썹 결과는 원본 그대로 둬요</p><div class="img-placeholder has-img"><img src="assets/lp2/ai-hiw1.jpg" alt="고객 원본 사진" loading="lazy"></div></div>
+      <div><h3>진정성 원칙 · 검수 기준</h3><p>올리기 전, 무엇을 확인할지 기준부터 세워요</p><div class="img-placeholder has-img"><img src="assets/lp2/ai-hiw2.jpg" alt="검수 기준 수업" loading="lazy"></div></div>
+      <div><h3>내 사진으로 바로 실습</h3><p>쌓아둔 내 고객 사진으로 직접 만들어 봐요</p><div class="img-placeholder has-img"><img src="assets/lp2/ai-hiw3.jpg" alt="내 사진으로 실습" loading="lazy"></div></div>
+      <div><h3>프롬프트 제공 · 피드백</h3><p>필요한 프롬프트는 드리고, 막히면 바로 물어보세요</p><div class="img-placeholder has-img"><img src="assets/lp2/ai-hiw4.jpg" alt="온라인 피드백" loading="lazy"></div></div>
     </div>
   </div>
 </section>
@@ -1751,7 +1755,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
         <p class="section-desc" style="margin-bottom:16px">시작 전에 “나는 얼마나 잘 보여주고 있는가”부터 점검해요. 이어서 얼굴 체인지·화질·가상 인플루언서·동영상까지 차근차근 배웁니다.</p>
         <ul class="core-steps"><li><span class="s">PART 1</span><span><b>AI 초상권 보호를 시작하기 전</b>나는 얼마나 잘 보여주고 있는가? · AI를 진정성 있게 사용하는 원칙과 검수기준</span></li><li><span class="s">PART 2</span><span><b>내 작업 결과물로 포트폴리오를 만드는 법</b>비밀 AI 소개 — 구독과 요금제 설명 · 퀄리티 높은 작업을 위한 기초세팅법 · AI 초상권 보호법 (얼굴 체인지) · 작업물의 화질을 높이는 꿀팁 · GPT를 활용하는 법</span></li><li><span class="s">PART 3</span><span><b>AI 활용법</b>가상 인플루언서 만드는 법 · 가상 인플루언서와 내 작업물 합치는 법 · 우리샵 배경을 배경으로 만드는 법 · 한 장의 사진으로 여러 포트폴리오 만드는 법 · 이미지를 동영상으로 만드는 법</span></li></ul>
       </div>
-      <div class="img-placeholder" style="aspect-ratio:3/4;position:sticky;top:100px"><i data-lucide="play-circle"></i></div>
+      <div class="img-placeholder has-img" style="aspect-ratio:3/4;position:sticky;top:100px"><img src="assets/lp2/ai-core.jpg" alt="AI로 만든 포트폴리오" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -1827,7 +1831,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 
 <!-- ================= 17 · 다음 클래스 ================= -->
 <section class="letter v2-letter">
-  <div class="hero-ph"><i data-lucide="image"></i></div>
+  <div class="hero-ph has-media"><img src="assets/lp2/next-lash.jpg" alt="속눈썹펌 시술" loading="lazy"></div>
   <div class="container" style="position:relative;z-index:2">
     <p class="label">Next Class</p>
     <h2>보여줄 결과부터<br>단단하게 만들고 싶다면</h2>
