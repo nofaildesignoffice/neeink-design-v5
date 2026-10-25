@@ -1301,6 +1301,8 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .fixcta .copy b{color:#000}
 .fixcta .copy span{color:rgba(0,0,0,.55)}
 /* ===== /v5 공통 보정 ===== */
+/* 모바일: 히어로(88dvh) 아래 빈 영역이 둥근 모서리 사이로 보이지 않게, 다음 섹션을 모서리만큼 겹쳐 올림 */
+@media (max-width:768px){.v2-stack>.v2-info{margin-top:-20px}}
 </style>
 </head>
 <body>
