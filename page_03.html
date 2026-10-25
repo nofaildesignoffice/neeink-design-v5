@@ -1504,6 +1504,15 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 @media (prefers-reduced-motion:reduce){.st-ic svg *{animation:none!important}}
 /* ===== v5 AI 히어로: 카드 위 오버레이 + 하단 흰색 그라디언트 ===== */
 .v2-sub .hero-ph.float-cards::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.12) 55%,rgba(255,255,255,.7) 80%,#fff 100%)}
+/* ===== v5 진행 단계: 큰 박스 없이 스텝 카드 안에 아이콘 ===== */
+.v2-step .proc>div{border:1px solid var(--pp-l);border-radius:12px;background:#fff;padding:24px 16px 26px}
+.v2-step .proc .n{order:0;margin:0;padding:0;border:0;border-radius:0;background:none}
+.v2-step .proc .n::after{content:none}
+.v2-step .proc .img-placeholder.ps-box{order:1;width:clamp(56px,4.4vw,72px);aspect-ratio:1/1;margin:16px auto 12px;background:none;border-radius:0!important}
+.v2-step .proc .img-placeholder.ps-box::before,.v2-step .proc .img-placeholder.ps-box::after{content:none}
+.v2-step .proc .ps{width:100%;height:100%}
+.v2-step .proc h4{order:2;border:0;background:none;padding:0 0 8px}
+.v2-step .proc>div>p:last-child{order:3;border:0;border-radius:0;background:none;padding:0}
 /* ===== v5 랜딩 사진 ===== */
 .v2-letter .hero-ph.has-media>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .v2-letter .hero-ph.has-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.35) 100%)}
