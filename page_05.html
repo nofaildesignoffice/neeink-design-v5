@@ -1577,6 +1577,14 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .v2-sub .inner>.label{margin-bottom:clamp(48px,4.5vw,84px)!important}
 .v2-sub .inner>h1{margin-bottom:clamp(78px,6.6vw,120px)!important;font-weight:700!important}
 .v2-sub .inner>.lp-badges{margin-top:clamp(96px,8.4vw,156px)!important}
+
+/* 모바일 퀵메뉴: 조금 더 크게, 접힌 상태에서도 TOP 버튼 노출 */
+@media (max-width:768px){
+  .q-aside{transform:scale(.85)}
+  .q-aside>.q-top{order:9}
+  .q-aside.is-fold .q-top.is-show{display:flex!important}
+  .q-aside .q-top:not(.is-show){display:none!important}
+}
 </style>
 </head>
 <body><script>
@@ -1750,7 +1758,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <div class="ls-row"><div class="img-placeholder has-img"><img src="assets/lp2/crew-consult.jpg" alt="고객이 사용하는 래쉬애딕트" loading="lazy"></div><div class="txt"><p class="n">솔루션 02</p><h3>강요하지 않는 상담 순서, 그대로 따라 쓰세요</h3><p>시술 중 상태 확인 → 직접 써 보기 → 특징·사용법 설명 → 선택은 고객에게. 외울 필요 없는 상담 가이드와 세일즈 특강으로 자연스럽게 익혀요.</p></div></div>
     <div class="ls-row rev"><div class="img-placeholder has-img"><img src="assets/lp2/crew-study.jpg" alt="세미나 · 케이스 스터디" loading="lazy"></div><div class="txt"><p class="n">솔루션 03</p><h3>고객 질문에 답할 지식부터, 말해도 되는 표현까지</h3><p>영양제 세미나와 케이스 스터디로 성분, 사용법, 자주 받는 질문, 쓰면 안 되는 표현까지 정리해요. 막히는 순간엔 200여 명 원장님 단톡방에 바로 물어보세요.</p></div></div>
   </div>
-  <div class="container"><p class="sol-close">시술 매출은 그대로,<br class="keep-br">같은 고객에게서 생기는 두 번째 매출 경로를<br class="keep-br">함께 설계합니다</p></div>
+  <div class="container"><p class="sol-close">시술 매출을 유지하며<br class="keep-br">관리중인 고객들에게 추가 수익을<br class="keep-br">함께 만들어갑니다</p></div>
 </section>
 
 

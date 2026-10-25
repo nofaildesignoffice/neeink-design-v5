@@ -902,6 +902,14 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 
 /* 네이버 예약 버튼: 세로 높이만 축소 */
 .store-hd .btn{padding-top:10px;padding-bottom:10px}
+
+/* 모바일 퀵메뉴: 조금 더 크게, 접힌 상태에서도 TOP 버튼 노출 */
+@media (max-width:768px){
+  .q-aside{transform:scale(.85)}
+  .q-aside>.q-top{order:9}
+  .q-aside.is-fold .q-top.is-show{display:flex!important}
+  .q-aside .q-top:not(.is-show){display:none!important}
+}
 </style><!--/nk:qfold--></head>
 <body>
 
