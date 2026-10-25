@@ -1306,6 +1306,12 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 /* 모바일 히어로: 스크롤 중 주소창 변화로 높이가 흔들리지 않게 px 고정 (대부분의 폰 화면을 꽉 채우는 높이) */
 @media (max-width:768px){.v2-hero{height:780px;min-height:0}}
 @media (max-width:768px) and (max-height:700px){.v2-hero{height:680px}}
+/* 모바일 클래스 소개: 글 먼저, 이미지·영상은 아래 (항상 보이도록 높이 확보) */
+@media (max-width:768px){
+#edu .split>div:not(.img-placeholder),.v2-svc .split>div:not(.img-placeholder):not(.ai-stage):not(.ba-pair),.v2-value .split>div:not(.img-placeholder){order:1}
+.v2-svc .split>.ai-stage{order:2}
+#edu .split>.img-placeholder,.v2-svc .split>.img-placeholder,.v2-value .split>.img-placeholder{order:2;display:block!important;position:relative;width:100%;aspect-ratio:4/5;min-height:0;height:auto;opacity:1;visibility:visible}
+}
 </style>
 </head>
 <body>
