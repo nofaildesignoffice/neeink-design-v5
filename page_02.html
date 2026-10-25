@@ -1564,6 +1564,23 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .lp-rv2 .lp-rv-tag{margin-top:clamp(40px,4vw,72px)}
 @media (max-width:1024px){.lp-rv2 .lp-rv-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lp-rv2 .lp-rv-grid>.rv-card:nth-child(4):last-child{grid-column:auto}}
 @media (max-width:768px){.lp-rv2 .lp-rv-grid{grid-template-columns:1fr}}
+
+/* ===== 결제 모달 모바일: 전체화면 · 상세 위(스크롤) · 하단 고정 드롭박스+결제 ===== */
+.pay-sel{display:none;position:relative;margin-bottom:12px}
+.pay-sel select{width:100%;-webkit-appearance:none;appearance:none;font:inherit;font-size:16px;font-weight:700;color:var(--text-black);padding:14px 44px 14px 16px;border:1px solid var(--pp);border-radius:12px;background:var(--pp-xl)}
+.pay-sel::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;border-right:2px solid var(--pp);border-bottom:2px solid var(--pp);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.pe-m{display:none}
+@media (max-width:900px){
+  #payMd .md-box{max-width:none;width:100%;height:100vh;height:100dvh;margin:0;border-radius:0;display:flex;flex-direction:column}
+  #payMd .pay-side{display:contents}
+  #payMd .pay-side h3{order:0;flex-shrink:0;margin:0;padding:18px 64px 16px 20px;border-bottom:1px solid var(--border-light)}
+  #payMd .pay-side .lead,#payMd .pay-opt{display:none}
+  #payMd .pay-detail{order:1;flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:24px 20px 28px}
+  #payMd .pay-foot{order:2;flex-shrink:0;margin:0;padding:14px 20px calc(14px + env(safe-area-inset-bottom));background:var(--iv);border-top:1px solid var(--border-light);box-shadow:0 -10px 24px -16px rgba(0,0,0,.25)}
+  #payMd .pay-sel{display:block}
+  #payMd .md-close{top:8px;right:8px}
+  .pe-pc{display:none}.pe-m{display:inline}
+}
 </style>
 </head>
 <body><script>
@@ -1946,7 +1963,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <a href="https://pf.kakao.com/_xdxkxkbG/chat" target="_blank" class="link-inline" style="display:block;text-align:center">결제 전에 카카오톡으로 먼저 상담하기</a>
     </div>
   </div>
-  <div class="pay-detail" id="payDetail"><div class="pay-empty">왼쪽에서 과정을 선택하시면 상세 내용이 표시됩니다.</div></div>
+  <div class="pay-detail" id="payDetail"><div class="pay-empty"><span class="pe-pc">왼쪽에서</span><span class="pe-m">아래에서</span>&nbsp;과정을 선택하시면 상세 내용이 표시됩니다.</div></div>
 </div></div>
 <template id="cls0">
   <div class="cls-head"><span class="who-tag">온라인 + 오프라인</span><h2>속눈썹펌 연화 특허기술 패키지</h2><p class="one">온라인 강의 6개월에 100% 실습을 더한 기존 급속교정 클래스</p></div>
@@ -2036,6 +2053,7 @@ function calc(d){var box=d.querySelector('.opts');if(!box)return;var r=box.query
     var on=r&&r.parentElement.textContent.indexOf('실습')>-1;ex.style.opacity=on?1:.35;ex.style.pointerEvents=on?'auto':'none';if(!on){em.textContent=0;q=0}t+=q*(+em.dataset.unit)}
   document.getElementById('payTotal').textContent=t.toLocaleString('ko-KR')+'원'}
 function pick(i){opts.forEach(function(o){o.classList.toggle('is-on',+o.dataset.i===i)});
+  var ps=document.getElementById('paySel');if(ps)ps.value=i;
   document.getElementById('payBtn').classList.remove('is-disabled');
   var d=document.getElementById('payDetail');d.innerHTML=document.getElementById('cls'+i).innerHTML;lucide.createIcons();
   document.getElementById('payVat').textContent=VAT[i];
@@ -2044,6 +2062,11 @@ function pick(i){opts.forEach(function(o){o.classList.toggle('is-on',+o.dataset.
   d.querySelectorAll('.stepper button').forEach(function(b){b.onclick=function(){var em=b.parentElement.querySelector('em');em.textContent=Math.max(0,+em.textContent+(+b.dataset.d));calc(d)}});
   calc(d)}
 opts.forEach(function(o){o.onclick=function(){pick(+o.dataset.i)}});
+/* 모바일 드롭박스: 과정 버튼과 같은 목록 */
+(function(){var f=document.querySelector('#payMd .pay-foot');if(!f)return;var w=document.createElement('label');w.className='pay-sel';
+  var s=document.createElement('select');s.id='paySel';s.setAttribute('aria-label','과정 선택');s.innerHTML='<option value="" disabled selected>과정을 선택해주세요</option>';
+  opts.forEach(function(o){var op=document.createElement('option');op.value=o.dataset.i;op.textContent=o.querySelector('.nm').textContent+' · '+o.querySelector('.pr').textContent;s.appendChild(op)});
+  s.onchange=function(){pick(+s.value);document.getElementById('payDetail').scrollTop=0};w.appendChild(s);f.insertBefore(w,f.firstChild)})();
 document.querySelectorAll('[data-open-pay]').forEach(function(b){b.onclick=function(){var i=+b.dataset.openPay;openMd('payMd');if(i>=0)pick(i)}});
 /* 고정 배너: 히어로 지나면 노출 */
 var fx=document.getElementById('fixcta'),hero=document.querySelector('.sub-hero');
