@@ -1459,6 +1459,7 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 @media (prefers-reduced-motion:reduce){.st-ic svg *{animation:none!important}}
 /* ===== v5 AI 히어로: 카드 위 오버레이 + 하단 흰색 그라디언트 ===== */
 .v2-sub .hero-ph.float-cards::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.12) 55%,rgba(255,255,255,.7) 80%,#fff 100%)}
+@media (max-width:768px){.v2-sub .hero-ph.float-cards::before{background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 86%,rgba(255,255,255,.8) 95%,#fff 100%)}.v2-sub .hero-ph.float-cards::after{background:radial-gradient(72% 18% at 50% 52%,rgba(255,255,255,.8) 35%,rgba(255,255,255,0) 100%)!important}}
 /* ===== v5 진행 단계: 큰 박스 없이 스텝 카드 안에 아이콘 ===== */
 .v2-step .proc>div{border:1px solid var(--pp-l);border-radius:12px;background:#fff;padding:24px 16px 26px}
 .v2-step .proc .n{order:0;margin:0;padding:0;border:0;border-radius:0;background:none}
@@ -1497,6 +1498,7 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .q-close svg{width:22px;height:22px}
 .q-close span{font-size:12px;font-weight:600}
 }
+@media (hover:none){.lp-gal:hover .lp-gal-track{animation-play-state:running}}
 /* ===== v5 랜딩 사진 ===== */
 .v2-letter .hero-ph.has-media>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .v2-letter .hero-ph.has-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.35) 100%)}
@@ -1530,14 +1532,19 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 </style>
 </head>
 <body><script>
-/* 카드 슬라이더 좌우 스와이프 — 가로로 끌 때만 잡고, 세로 스크롤은 그대로 둔다 */
-function nkSwipe(el,o){if(!el)return;el.style.touchAction='pan-y';var sx=null,sy=0,dx=0,lock=null,moved=false;
-  el.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&e.button!==0)return;sx=e.clientX;sy=e.clientY;dx=0;lock=null;moved=false});
-  el.addEventListener('pointermove',function(e){if(sx===null)return;dx=e.clientX-sx;var dy=e.clientY-sy;
-    if(lock===null&&(Math.abs(dx)>8||Math.abs(dy)>8)){lock=Math.abs(dx)>Math.abs(dy);if(lock&&o.start)o.start()}
-    if(lock){moved=true;if(o.move)o.move(dx)}});
-  function end(){if(sx===null)return;sx=null;if(lock)o.end(dx);lock=null}
-  el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end);el.addEventListener('lostpointercapture',end);
+/* 카드 슬라이더 좌우 스와이프 — 가로로 끌 때만 잡고(세로 스크롤은 그대로), 터치는 touch 이벤트로 직접 처리 */
+function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-y';var sx=null,sy=0,dx=0,lock=null,moved=false;
+  function down(x,y){sx=x;sy=y;dx=0;lock=null;moved=false}
+  function mv(x,y,e){if(sx===null)return;dx=x-sx;var dy=y-sy;
+    if(lock===null&&(Math.abs(dx)>6||Math.abs(dy)>6)){lock=Math.abs(dx)>Math.abs(dy);if(lock&&o.start)o.start()}
+    if(lock){moved=true;if(e.cancelable)e.preventDefault();if(o.move)o.move(dx)}}
+  function up(){if(sx===null)return;sx=null;if(lock)o.end(dx);lock=null}
+  el.addEventListener('touchstart',function(e){if(e.touches.length>1){sx=null;return}down(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});
+  el.addEventListener('touchmove',function(e){if(e.touches.length===1)mv(e.touches[0].clientX,e.touches[0].clientY,e)},{passive:false});
+  el.addEventListener('touchend',up);el.addEventListener('touchcancel',up);
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;down(e.clientX,e.clientY)});
+  addEventListener('pointermove',function(e){if(e.pointerType==='mouse')mv(e.clientX,e.clientY,e)});
+  addEventListener('pointerup',function(e){if(e.pointerType==='mouse')up()});
   el.addEventListener('dragstart',function(e){e.preventDefault()});
   el.addEventListener('click',function(e){if(moved){e.stopPropagation();e.preventDefault();moved=false}},true)}
 </script>
@@ -1682,7 +1689,7 @@ function nkSwipe(el,o){if(!el)return;el.style.touchAction='pan-y';var sx=null,sy
     <div class="ls-row rev"><div class="img-placeholder has-img"><img src="assets/lp2/crew-hesitate.jpg" alt="휴대폰을 보는 모습" loading="lazy"></div><div class="txt"><p class="n">원인 02</p><h3>권하는 방법을 몰라서, 추천 자체를 피하게 돼요</h3><p>가격이 아닌 기록과 상담으로 경쟁해야 하는데, 홈케어 상담은 배운 적이 없어요. 고객이 샵 제품을 산 이유는 “직접 써 보게 해줘서”(66%), “특징을 설명해줘서”(63%)였습니다. 순서가 없으니 강요처럼 느껴질까 봐 말을 꺼내지 못하는 거예요.</p></div></div>
     <div class="ls-row"><div class="img-placeholder has-img"><img src="assets/lp2/crew-claim.jpg" alt="래쉬애딕트 세럼" loading="lazy"></div><div class="txt"><p class="n">원인 03</p><h3>고객이 듣고 싶은 설명과, 말할 수 있는 표현 사이엔 간격이 있어요</h3><p>고객은 눈 시림은 없는지, 정말 효과가 있는지 물어요. 하지만 화장품은 “자란다 · 발모 · 손상 복구”라고 광고할 수 없습니다. 제품 지식과 함께 “어디까지 말할 수 있는지”를 알아야, 자신 있게 설명할 수 있어요.</p></div></div>
   </div>
-  <div class="container"><p class="answer">제품이 좋아도 <b>권할 말이 없으면</b> 팔리지 않고, 혼자서는 <b>막히는 순간마다 멈춥니다.</b><br>그렇기 때문에 마스터크루는 <b>시술 시간을 늘리지 않는 두 번째 매출 경로</b>와, <b>강요하지 않고 정확하게 설명하는 방법</b>을 함께 드립니다.</p></div>
+  <div class="container"><p class="answer">제품이 좋아도 <b>권할 말이 없으면</b> 팔리지 않고, 혼자서는 <b>막히는 순간마다 멈춥니다.</b> <br>그렇기 때문에 마스터크루는 <b>시술 시간을 늘리지 않는 두 번째 매출 경로</b>와, <b>강요하지 않고 정확하게 설명하는 방법</b>을 함께 드립니다.</p></div>
 </section>
 
 
@@ -1993,7 +2000,7 @@ document.querySelectorAll('[data-car]').forEach(function(c){
   function play(){clearInterval(t);t=setInterval(function(){move(1)},3500)}function stop(){clearInterval(t)}
   root.querySelectorAll('[data-loop]').forEach(function(b){b.onclick=function(){move(+b.dataset.loop);play()}});
   root.addEventListener('mouseenter',stop);root.addEventListener('mouseleave',play);window.addEventListener('resize',function(){set(false)});play();
-  nkSwipe(root.querySelector('.loop-vp'),{start:stop,move:function(dx){if(!busy){tr.style.transition='none';tr.style.transform='translateX('+(-i*step()+dx)+'px)'}},end:function(dx){if(Math.abs(dx)>40&&!busy)move(dx<0?1:-1);else set(true);play()}});
+  nkSwipe(root.querySelector('.loop-vp'),{start:function(){stop();if(busy){busy=false;if(i>=n)i-=n}set(false)},move:function(dx){if(dx>0&&i===0){i=n}tr.style.transition='none';tr.style.transform='translateX('+(-i*step()+dx)+'px)'},end:function(dx){if(Math.abs(dx)>40)move(dx<0?1:-1);else set(true);play()}});
 })();
 /* 모달 공통 */
 function openMd(id){document.getElementById(id).classList.add('is-open');document.body.style.overflow='hidden'}

@@ -873,7 +873,17 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 .store-filter .btn{padding:9px 22px;font-size:14.5px}
 @media (max-width:768px){.ph-first{padding-top:120px!important}}
 </style>
-</head>
+<!--nk:storeview--><style>
+.store-view{display:none}
+@media (max-width:768px){
+.store-view{display:flex;gap:6px;margin:0 0 16px;padding:4px;border-radius:999px;background:#f2f2f2}
+.store-view button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;height:42px;border:0;border-radius:999px;background:transparent;font:600 14px/1 'Pretendard',sans-serif;color:var(--text-light,#777);cursor:pointer}
+.store-view button svg{width:16px;height:16px}
+.store-view button.is-on{background:#000;color:#fff}
+.store-wrap[data-view=list]>.map-box{display:none!important}
+.store-wrap[data-view=map]>div:not(.map-box){display:none!important}
+.store-wrap[data-view=map]>.map-box{height:calc(100vh - 260px);min-height:420px;max-height:640px}}
+</style><!--/nk:storeview--></head>
 <body>
 
 <!-- ================= HEADER ================= -->
@@ -1127,5 +1137,12 @@ document.querySelectorAll('.store-filter select').forEach(function(sel){
   items.forEach(function(it){io.observe(it.e)});
 })();
 </script>
-</body>
+<!--nk:storeview-js--><script>
+(function(){var w=document.querySelector('.store-wrap');if(!w)return;
+  var v=document.createElement('div');v.className='store-view';v.setAttribute('role','tablist');
+  v.innerHTML='<button type="button" class="is-on" data-v="list"><i data-lucide="list"></i>리스트로 보기</button><button type="button" data-v="map"><i data-lucide="map"></i>지도로 보기</button>';
+  w.parentNode.insertBefore(v,w);w.dataset.view='list';
+  v.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;w.dataset.view=b.dataset.v;[].forEach.call(v.children,function(x){x.classList.toggle('is-on',x===b)})});
+  if(window.lucide)lucide.createIcons();})();
+</script><!--/nk:storeview-js--></body>
 </html>

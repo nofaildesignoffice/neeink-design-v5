@@ -1485,6 +1485,7 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 @media (prefers-reduced-motion:reduce){.st-ic svg *{animation:none!important}}
 /* ===== v5 AI 히어로: 카드 위 오버레이 + 하단 흰색 그라디언트 ===== */
 .v2-sub .hero-ph.float-cards::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.12) 55%,rgba(255,255,255,.7) 80%,#fff 100%)}
+@media (max-width:768px){.v2-sub .hero-ph.float-cards::before{background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 86%,rgba(255,255,255,.8) 95%,#fff 100%)}.v2-sub .hero-ph.float-cards::after{background:radial-gradient(72% 18% at 50% 52%,rgba(255,255,255,.8) 35%,rgba(255,255,255,0) 100%)!important}}
 /* ===== v5 진행 단계: 큰 박스 없이 스텝 카드 안에 아이콘 ===== */
 .v2-step .proc>div{border:1px solid var(--pp-l);border-radius:12px;background:#fff;padding:24px 16px 26px}
 .v2-step .proc .n{order:0;margin:0;padding:0;border:0;border-radius:0;background:none}
@@ -1523,6 +1524,7 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .q-close svg{width:22px;height:22px}
 .q-close span{font-size:12px;font-weight:600}
 }
+@media (hover:none){.lp-gal:hover .lp-gal-track{animation-play-state:running}}
 /* ===== v5 랜딩 사진 ===== */
 .v2-letter .hero-ph.has-media>img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .v2-letter .hero-ph.has-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 50%,rgba(0,0,0,.35) 100%)}
@@ -1556,14 +1558,19 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 </style>
 </head>
 <body><script>
-/* 카드 슬라이더 좌우 스와이프 — 가로로 끌 때만 잡고, 세로 스크롤은 그대로 둔다 */
-function nkSwipe(el,o){if(!el)return;el.style.touchAction='pan-y';var sx=null,sy=0,dx=0,lock=null,moved=false;
-  el.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse'&&e.button!==0)return;sx=e.clientX;sy=e.clientY;dx=0;lock=null;moved=false});
-  el.addEventListener('pointermove',function(e){if(sx===null)return;dx=e.clientX-sx;var dy=e.clientY-sy;
-    if(lock===null&&(Math.abs(dx)>8||Math.abs(dy)>8)){lock=Math.abs(dx)>Math.abs(dy);if(lock&&o.start)o.start()}
-    if(lock){moved=true;if(o.move)o.move(dx)}});
-  function end(){if(sx===null)return;sx=null;if(lock)o.end(dx);lock=null}
-  el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end);el.addEventListener('lostpointercapture',end);
+/* 카드 슬라이더 좌우 스와이프 — 가로로 끌 때만 잡고(세로 스크롤은 그대로), 터치는 touch 이벤트로 직접 처리 */
+function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-y';var sx=null,sy=0,dx=0,lock=null,moved=false;
+  function down(x,y){sx=x;sy=y;dx=0;lock=null;moved=false}
+  function mv(x,y,e){if(sx===null)return;dx=x-sx;var dy=y-sy;
+    if(lock===null&&(Math.abs(dx)>6||Math.abs(dy)>6)){lock=Math.abs(dx)>Math.abs(dy);if(lock&&o.start)o.start()}
+    if(lock){moved=true;if(e.cancelable)e.preventDefault();if(o.move)o.move(dx)}}
+  function up(){if(sx===null)return;sx=null;if(lock)o.end(dx);lock=null}
+  el.addEventListener('touchstart',function(e){if(e.touches.length>1){sx=null;return}down(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});
+  el.addEventListener('touchmove',function(e){if(e.touches.length===1)mv(e.touches[0].clientX,e.touches[0].clientY,e)},{passive:false});
+  el.addEventListener('touchend',up);el.addEventListener('touchcancel',up);
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;down(e.clientX,e.clientY)});
+  addEventListener('pointermove',function(e){if(e.pointerType==='mouse')mv(e.clientX,e.clientY,e)});
+  addEventListener('pointerup',function(e){if(e.pointerType==='mouse')up()});
   el.addEventListener('dragstart',function(e){e.preventDefault()});
   el.addEventListener('click',function(e){if(moved){e.stopPropagation();e.preventDefault();moved=false}},true)}
 </script>
@@ -2010,7 +2017,7 @@ document.querySelectorAll('[data-car]').forEach(function(c){
   function play(){clearInterval(t);t=setInterval(function(){move(1)},3500)}function stop(){clearInterval(t)}
   root.querySelectorAll('[data-loop]').forEach(function(b){b.onclick=function(){move(+b.dataset.loop);play()}});
   root.addEventListener('mouseenter',stop);root.addEventListener('mouseleave',play);window.addEventListener('resize',function(){set(false)});play();
-  nkSwipe(root.querySelector('.loop-vp'),{start:stop,move:function(dx){if(!busy){tr.style.transition='none';tr.style.transform='translateX('+(-i*step()+dx)+'px)'}},end:function(dx){if(Math.abs(dx)>40&&!busy)move(dx<0?1:-1);else set(true);play()}});
+  nkSwipe(root.querySelector('.loop-vp'),{start:function(){stop();if(busy){busy=false;if(i>=n)i-=n}set(false)},move:function(dx){if(dx>0&&i===0){i=n}tr.style.transition='none';tr.style.transform='translateX('+(-i*step()+dx)+'px)'},end:function(dx){if(Math.abs(dx)>40)move(dx<0?1:-1);else set(true);play()}});
 })();
 /* 모달 공통 */
 function openMd(id){document.getElementById(id).classList.add('is-open');document.body.style.overflow='hidden'}

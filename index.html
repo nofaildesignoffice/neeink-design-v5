@@ -1608,7 +1608,24 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 </div>
 
 
-<script>
+<!--nk:swipe--><script>
+/* 카드 슬라이더 좌우 스와이프 — 가로로 끌 때만 잡고(세로 스크롤은 그대로), 터치는 touch 이벤트로 직접 처리 */
+function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-y';var sx=null,sy=0,dx=0,lock=null,moved=false;
+  function down(x,y){sx=x;sy=y;dx=0;lock=null;moved=false}
+  function mv(x,y,e){if(sx===null)return;dx=x-sx;var dy=y-sy;
+    if(lock===null&&(Math.abs(dx)>6||Math.abs(dy)>6)){lock=Math.abs(dx)>Math.abs(dy);if(lock&&o.start)o.start()}
+    if(lock){moved=true;if(e.cancelable)e.preventDefault();if(o.move)o.move(dx)}}
+  function up(){if(sx===null)return;sx=null;if(lock)o.end(dx);lock=null}
+  el.addEventListener('touchstart',function(e){if(e.touches.length>1){sx=null;return}down(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});
+  el.addEventListener('touchmove',function(e){if(e.touches.length===1)mv(e.touches[0].clientX,e.touches[0].clientY,e)},{passive:false});
+  el.addEventListener('touchend',up);el.addEventListener('touchcancel',up);
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||e.button!==0)return;down(e.clientX,e.clientY)});
+  addEventListener('pointermove',function(e){if(e.pointerType==='mouse')mv(e.clientX,e.clientY,e)});
+  addEventListener('pointerup',function(e){if(e.pointerType==='mouse')up()});
+  el.addEventListener('dragstart',function(e){e.preventDefault()});
+  el.addEventListener('click',function(e){if(moved){e.stopPropagation();e.preventDefault();moved=false}},true)}
+</script>
+<!--/nk:swipe--><script>
 
 lucide.createIcons();
 var nav=document.getElementById('nav'), topBtn=document.getElementById('topBtn');
@@ -1664,8 +1681,7 @@ document.getElementById('hPrev').onclick=function(){go(hi-1);reset()};document.g
   var hov=false,drag=false;
   function play(){clearInterval(t);if(!hov)t=setInterval(function(){go(a+1)},3000)}
   cards.forEach(function(c,i){c.onclick=function(){if(drag){drag=false;return}if(i!==a){go(i);play()}else if(window.openRv)openRv(i)}});
-  var sx=null;root.addEventListener('pointerdown',function(e){sx=e.clientX;drag=false});
-  root.addEventListener('pointerup',function(e){if(sx===null)return;var dx=e.clientX-sx;sx=null;if(Math.abs(dx)>40){drag=true;go(a+(dx<0?1:-1));play();setTimeout(function(){drag=false},0)}});
+  var trk=root.querySelector('.arc-track');nkSwipe(root,{start:function(){clearInterval(t);trk.style.transition='none'},move:function(dx){trk.style.translate=dx+'px 0'},end:function(dx){trk.style.transition='translate .35s ease';trk.style.translate='0px 0';if(Math.abs(dx)>40)go(a+(dx<0?1:-1));play()}});
   root.addEventListener('mouseenter',function(){hov=true;clearInterval(t)});root.addEventListener('mouseleave',function(){hov=false;play()});
   addEventListener('resize',lay);lay();play();
   root._stop=function(){hov=true;clearInterval(t)};root._play=function(){hov=false;play()};

@@ -857,7 +857,15 @@ section :is(h1,h2,h3,h4,p,blockquote,li,span,b,em,figcaption) br,.fixcta br{disp
 }
 /* ===== /v5 공통 보정 ===== */
 </style>
-</head>
+<!--nk:newsbar--><style>
+@media (max-width:768px){
+.ph-first .container>div>.tabs{flex:1 1 100%;flex-wrap:nowrap;gap:6px;overflow-x:auto;scrollbar-width:none}
+.ph-first .container>div>.tabs::-webkit-scrollbar{display:none}
+.ph-first .container>div>.tabs button{flex:none;padding:8px 12px;font-size:13px;white-space:nowrap}
+.ph-first .container>div>form.search-box{flex:1 1 100%!important;max-width:none!important}
+.ph-first .container>div>form.search-box input{flex:1;width:auto;padding:8px 14px;font-size:14px}
+.ph-first .container>div>form.search-box .btn{padding:8px 16px;font-size:14px}}
+</style><!--/nk:newsbar--></head>
 <body>
 
 <!-- ================= HEADER ================= -->
