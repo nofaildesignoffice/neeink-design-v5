@@ -1716,7 +1716,7 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .acc-item.is-open .acc-q .mk{transform:none!important}
 
 /* 모달 과정 라벨: 파란 배경 · 흰 글씨 */
-#payMd .cls-head .who-tag{background:var(--pp)!important;color:#fff!important}
+
 
 /* 모바일 퀵메뉴: 조금 더 크게, 접힌 상태에서도 TOP 버튼 노출 */
 @media (max-width:768px){
@@ -1747,6 +1747,29 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
   .v2-cls .cls-card p{min-height:0;font-size:16px}
   .v2-cls .cls-card .btn{width:100%;max-width:320px;align-self:start}
 }
+
+/* AI 클래스: 모달 없이 섹션 안에서 가격·상세·신청 */
+.cls-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin:16px 10px 0}
+.cls-price s{font-size:14px;color:rgba(0,0,0,.4)}
+.cls-price b{font-size:clamp(24px,1.8vw,30px);font-weight:700;color:var(--pp);letter-spacing:-.02em}
+.cls-price small{font-size:12px;color:rgba(0,0,0,.5)}
+.v2-cls .cls-card .hash{margin-top:14px}
+.v2-cls .cls-card>a.btn{display:flex;justify-content:center}
+.cls-info{margin-top:clamp(20px,2vw,32px);background:#fff;border:1px solid rgba(0,0,0,.15);border-radius:20px;padding:clamp(24px,3vw,44px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,3vw,48px)}
+.cls-info .ci-full{grid-column:1 / -1}
+.cls-info h4.dt{font-size:16px;font-weight:700;color:#000;margin-bottom:12px}
+.cls-info .tbl tbody th{width:110px}
+@media (min-width:901px){.v2-cls .cls-card{grid-template-rows:1fr repeat(6,auto) 1fr}.v2-cls .cls-card>.cls-price{grid-row:5}.v2-cls .cls-card>.hash{grid-row:6!important}.v2-cls .cls-card>.btn{grid-row:7!important}}
+@media (max-width:900px){.cls-info{grid-template-columns:minmax(0,1fr);padding:22px 18px}.cls-info .tbl tbody th{width:84px}}
+.v2-cls .cls-grid{grid-template-columns:minmax(0,1fr)!important}
+@media (max-width:768px){body:has(.fixcta.is-show) .q-aside{bottom:176px!important}}@media (min-width:769px) and (max-width:1024px){body:has(.fixcta.is-show) .q-aside{bottom:104px!important}}
+/* 하단 고정바 가격 */
+.fx-price{display:flex;align-items:baseline;gap:8px;margin-left:auto;white-space:nowrap}
+.fx-price s{font-size:13px;color:rgba(0,0,0,.45)}
+.fx-price b{font-size:20px;font-weight:700;color:var(--pp)}
+.fx-price small{font-size:12px;color:rgba(0,0,0,.5)}
+.fixcta a.btn{display:inline-flex;justify-content:center}
+@media (max-width:768px){.fx-price{justify-content:center;margin:0}.fx-price b{font-size:17px}}
 </style></head>
 <body><script>
 /* 카드 슬라이더 좌우 스와이프 — 가로로 끌 때만 잡고(세로 스크롤은 그대로), 터치는 touch 이벤트로 직접 처리 */
@@ -1948,7 +1971,13 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
     <p class="section-label">Class</p>
     <h2 class="section-title">내 속도에 맞춰 듣는<br class="keep-br">AI 포트폴리오 클래스</h2>
     <p class="section-desc">내 속도에 맞춰 VOD로 수강하고,<br class="keep-br">피드백 기간 1달까지 함께해요.</p>
-    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-vod.webp" alt="AI 포트폴리오 제작법 VOD" loading="lazy"></div><span class="who-tag">온라인 VOD</span><h3>AI 포트폴리오 제작법 (VOD)</h3><p>얼굴은 지키고 실력은 보여주는, AI 포트폴리오 제작법</p><div class="hash"><span>수강 1달 + 피드백 1달</span><span>24만 9천원</span></div><button class="btn btn-secondary btn-sm btn-block" data-open-pay="0">자세히 보기</button></article></div>
+    <div class="cls-grid"><article class="cls-card"><div class="img-placeholder has-img cls-img"><img src="assets/ai/cls-vod.webp" alt="AI 포트폴리오 제작법 VOD" loading="lazy"></div><span class="who-tag">온라인 VOD</span><h3>AI 포트폴리오 제작법 (VOD)</h3><p>얼굴은 지키고 실력은 보여주는, AI 포트폴리오 제작법</p><div class="cls-price"><s>정상가 349,000원</s><b>249,000원</b><small>VAT 포함</small></div><div class="hash"><span>수강 1달 + 피드백 1달</span><span>프롬프트 제공</span></div><a class="btn btn-primary btn-block" href="https://creatus.kr/classes/318847" target="_blank" rel="noopener">수강 신청 페이지 이동하기</a></article></div>
+    <!-- 수강 신청 페이지 주소: 위 버튼과 하단 고정바 버튼의 href 를 바꾸면 됩니다 -->
+    <div class="cls-info">
+      <div class="ci-col"><h4 class="dt">이런 원장님께 추천해요</h4><ul class="who-list"><li>실력은 자신있는데, 게시할 사진이 부족한 분들</li><li>시술 사진은 많은데 초상권 때문에 게시할 사진이 없는 분들</li><li>모자이크나 스티커를 사용한 사진 외에 효과적인 포트폴리오를 찾는 분들</li><li>AI로 얼굴을 바꾸는 방법을 찾아봤지만, 어렵고 결과가 맘에 들지 않은 분들</li><li>프롬프트를 따라해봐도 원하는 사진이 나오지 않는 분들</li><li>사진 한 장 만드는데 너무 오래 걸려 꾸준히 업로드가 어려운 분들</li><li>실제 작업 사진 외에도 가상 인플루언서와 내 작업물을 합쳐보고 싶으신 분들</li><li>이미지를 동영상으로 만들어 마케팅에 활용하는 방법이 궁금하신 분들</li></ul></div>
+      <div class="ci-col"><h4 class="dt">수업 정보</h4><div class="tbl-scroll"><table class="tbl"><tbody><tr><th>형태</th><td>VOD 수업</td></tr><tr><th>수강 기간</th><td>수강 1달 + 피드백 1달</td></tr><tr><th>수강료</th><td>정상가 349,000원 → 혜택가 249,000원 (VAT 포함)</td></tr><tr><th>혜택</th><td>진행에 필요한 프롬프트 제공 · 제휴 아카데미 원장님 할인 · AI 오프라인 세미나 참여 시 50% 할인권 (동일 세미나 오프라인에 한함)</td></tr></tbody></table></div></div>
+      <div class="ci-full"><h4 class="dt">커리큘럼</h4><div class="acc"><div class="acc-item is-open"><button class="acc-q"><span>PART 1 — AI 초상권 보호를 시작하기 전</span><span class="mk">+</span></button><div class="acc-a">나는 얼마나 잘 보여주고 있는가? · AI를 진정성 있게 사용하는 원칙과 검수기준</div></div><div class="acc-item"><button class="acc-q"><span>PART 2 — 내 작업 결과물로 포트폴리오를 만드는 법</span><span class="mk">+</span></button><div class="acc-a">비밀 AI 소개 — 구독과 요금제 설명 · 퀄리티 높은 작업을 위한 기초세팅법 · AI 초상권 보호법(얼굴 체인지) · 작업물의 화질을 높이는 꿀팁 · GPT를 활용하는 법</div></div><div class="acc-item"><button class="acc-q"><span>PART 3 — AI 활용법</span><span class="mk">+</span></button><div class="acc-a">가상 인플루언서 만드는 법 · 가상 인플루언서와 내 작업물 합치는 법 · 우리샵 배경을 배경으로 만드는 법 · 한 장의 사진으로 여러 포트폴리오 만드는 법 · 이미지를 동영상으로 만드는 법</div></div></div></div>
+    </div>
     <p class="micro text-center">AI 오프라인 세미나 참여 시 VOD 수강자 50% 할인권 제공 (동일 세미나 오프라인에 한함) · 제휴 아카데미 원장님 할인</p>
   </div>
 </section>
@@ -2114,32 +2143,9 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
 <!-- ================= 하단 고정 CTA 배너 ================= -->
 <div class="fixcta" id="fixcta"><div class="fixcta-inner">
   <div class="copy"><b>더 이상 숨기지 마세요. 보여줘야 팔립니다</b><span>얼굴은 지키고, 실력은 그대로 보여주세요</span></div>
-  <button class="btn btn-primary" data-open-pay="-1">AI 클래스 신청하기</button>
+  <div class="fx-price"><s>정상가 349,000원</s><b>249,000원</b><small>VAT 포함</small></div>
+  <a class="btn btn-primary" href="https://creatus.kr/classes/318847" target="_blank" rel="noopener">AI 클래스 신청하기</a>
 </div></div>
-
-<!-- ================= 클래스 선택 · 상세 · 결제 모달 ================= -->
-<div class="md" id="payMd"><div class="md-back" data-close></div><div class="md-box">
-  <button class="md-close" data-close><i data-lucide="x"></i></button>
-  <div class="pay-side">
-    <h3>AI 클래스 수강 신청</h3>
-    <p class="lead">과정 내용을 확인하고 수강 신청 페이지로 이동하세요.</p>
-    <button class="pay-opt" data-i="0" data-url="https://creatus.kr/classes/318847"><span><span class="nm">AI 포트폴리오 제작법 (VOD)</span><span class="sub" style="display:block">수강 1달 + 피드백 1달 · 온라인 VOD</span></span><span class="pr">24만 9천원</span></button>
-    <div class="pay-foot">
-      <div class="pay-total"><span>결제 금액</span><span class="pay-amt"><b id="payTotal">과정을 선택해주세요</b><small id="payVat"></small></span></div>
-      <a href="#" class="btn btn-primary btn-block pay-btn is-disabled" id="payBtn">수강 신청 페이지 이동하기</a>
-    </div>
-  </div>
-  <div class="pay-detail" id="payDetail"><div class="pay-empty"><span class="pe-pc">왼쪽에서</span><span class="pe-m">아래에서</span>&nbsp;과정을 선택하시면 상세 내용이 표시됩니다.</div></div>
-</div></div>
-<template id="cls0">
-  <div class="cls-head"><span class="who-tag">온라인 VOD</span><h2>AI 포트폴리오 제작법 (VOD)</h2><p class="one">얼굴은 지키고, 실력은 보여주는 AI 포트폴리오 제작법</p></div>
-  <h4 class="dt">옵션 선택</h4>
-  <div class="opts" data-cls="0"><label class="opt-row"><input type="radio" name="o0" value="249000" checked><span>온라인 VOD (정상가 349,000원)</span><b>249,000원</b></label></div><p class="micro">VAT 포함</p>
-  <h4 class="dt">이런 원장님께 추천해요</h4><ul class="who-list"><li>실력은 자신있는데, 게시할 사진이 부족한 분들</li><li>시술 사진은 많은데 초상권 때문에 게시할 사진이 없는 분들</li><li>모자이크나 스티커를 사용한 사진 외에 효과적인 포트폴리오를 찾는 분들</li><li>AI로 얼굴을 바꾸는 방법을 찾아봤지만, 어렵고 결과가 맘에 들지 않은 분들</li><li>프롬프트를 따라해봐도 원하는 사진이 나오지 않는 분들</li><li>사진 한 장 만드는데 너무 오래 걸려 꾸준히 업로드가 어려운 분들</li><li>실제 작업 사진 외에도 가상 인플루언서와 내 작업물을 합쳐보고 싶으신 분들</li><li>이미지를 동영상으로 만들어 마케팅에 활용하는 방법이 궁금하신 분들</li></ul>
-  <h4 class="dt">수업 정보</h4>
-  <div class="tbl-scroll" style="margin-bottom:24px"><table class="tbl"><tbody><tr><th>형태</th><td>VOD 수업</td></tr><tr><th>수강 기간</th><td>수강 1달 + 피드백 1달</td></tr><tr><th>수강료</th><td>정상가 349,000원 → 혜택가 249,000원 (VAT 포함)</td></tr><tr><th>혜택</th><td>진행에 필요한 프롬프트 제공 · 제휴 아카데미 원장님 할인 · AI 오프라인 세미나 참여 시 50% 할인권 (동일 세미나 오프라인에 한함)</td></tr></tbody></table></div>
-  <h4 class="dt">커리큘럼</h4><div class="acc"><div class="acc-item is-open"><button class="acc-q"><span>PART 1 — AI 초상권 보호를 시작하기 전</span><span class="mk">+</span></button><div class="acc-a">나는 얼마나 잘 보여주고 있는가? · AI를 진정성 있게 사용하는 원칙과 검수기준</div></div><div class="acc-item"><button class="acc-q"><span>PART 2 — 내 작업 결과물로 포트폴리오를 만드는 법</span><span class="mk">+</span></button><div class="acc-a">비밀 AI 소개 — 구독과 요금제 설명 · 퀄리티 높은 작업을 위한 기초세팅법 · AI 초상권 보호법(얼굴 체인지) · 작업물의 화질을 높이는 꿀팁 · GPT를 활용하는 법</div></div><div class="acc-item"><button class="acc-q"><span>PART 3 — AI 활용법</span><span class="mk">+</span></button><div class="acc-a">가상 인플루언서 만드는 법 · 가상 인플루언서와 내 작업물 합치는 법 · 우리샵 배경을 배경으로 만드는 법 · 한 장의 사진으로 여러 포트폴리오 만드는 법 · 이미지를 동영상으로 만드는 법</div></div></div>
-</template>
 
 <!-- ================= 후기 모달 ================= -->
 <div class="md rv-md" id="rvMd"><div class="md-back" data-close></div><div class="md-box">
@@ -2197,44 +2203,6 @@ document.querySelectorAll('.md [data-close]').forEach(function(b){b.onclick=func
 document.addEventListener('click',function(e){var c=e.target.closest('.rv-card');if(!c)return;
   document.getElementById('rvTxt').innerHTML=document.getElementById('rv'+c.dataset.rv).innerHTML;var im=c.querySelector('img'),ri=document.getElementById('rvImg');if(im&&ri){ri.src=im.src;ri.alt=im.alt}openMd('rvMd')});
 /* 결제 모달 */
-var opts=document.querySelectorAll('.pay-opt'),VAT=['VAT 포함','VAT 별도','VAT 별도'];
-function calc(d){var box=d.querySelector('.opts');if(!box)return;var r=box.querySelector('input:checked'),t=r?+r.value:0;
-  var em=box.querySelector('.stepper em');if(em){var q=+em.textContent;var ex=box.querySelector('.opt-extra');
-    var on=r&&r.parentElement.textContent.indexOf('실습')>-1;ex.style.opacity=on?1:.35;ex.style.pointerEvents=on?'auto':'none';if(!on){em.textContent=0;q=0}t+=q*(+em.dataset.unit)}
-  document.getElementById('payTotal').textContent=t.toLocaleString('ko-KR')+'원'}
-function pick(i){opts.forEach(function(o){o.classList.toggle('is-on',+o.dataset.i===i)});
-  if(window.paySync)paySync(i);
-  document.getElementById('payBtn').classList.remove('is-disabled');
-  /* VOD 과정(data-url 있음)만 외부 수강 신청 페이지로 이동, 나머지는 기존 결제 */
-  var pb=document.getElementById('payBtn'),po=document.querySelector('.pay-opt[data-i="'+i+'"]'),u=po&&po.dataset.url;
-  if(u){pb.href=u;pb.target='_blank';pb.rel='noopener';pb.textContent='수강 신청 페이지 이동하기'}
-  var d=document.getElementById('payDetail');d.innerHTML=document.getElementById('cls'+i).innerHTML;lucide.createIcons();
-  document.getElementById('payVat').textContent=VAT[i];
-  d.querySelectorAll('.acc-q').forEach(function(q){q.onclick=function(){q.parentElement.classList.toggle('is-open')}});
-  d.querySelectorAll('.opts input').forEach(function(x){x.onchange=function(){calc(d)}});
-  d.querySelectorAll('.stepper button').forEach(function(b){b.onclick=function(){var em=b.parentElement.querySelector('em');em.textContent=Math.max(0,+em.textContent+(+b.dataset.d));calc(d)}});
-  var ob=d.querySelector('.opts');if(ob&&ob.querySelectorAll('.opt-row').length<2){ob.style.display='none';
-    var h=ob.previousElementSibling,m=ob.nextElementSibling;if(h&&h.matches('h4.dt'))h.style.display='none';if(m&&m.matches('p.micro'))m.style.display='none'}
-  calc(d)}
-opts.forEach(function(o){o.onclick=function(){pick(+o.dataset.i)}});
-/* 모바일 드롭박스: 과정 버튼과 같은 목록 · 같은 카드 디자인으로 위로 펼침 */
-(function(){var f=document.querySelector('#payMd .pay-foot');if(!f)return;var w=document.createElement('div');w.className='pay-sel';
-  w.innerHTML='<button type="button" class="ps-btn is-empty" aria-haspopup="listbox" aria-expanded="false">과정을 선택해주세요</button><ul class="ps-list" role="listbox" aria-label="과정 선택"></ul>';
-  var btn=w.firstChild,ul=w.lastChild;
-  opts.forEach(function(o){var li=document.createElement('li');li.setAttribute('role','option');li.tabIndex=0;li.dataset.i=o.dataset.i;
-    li.innerHTML='<span><span class="nm"></span><span class="sub"></span></span><span class="pr"></span>';
-    li.querySelector('.nm').textContent=o.querySelector('.nm').textContent;var sb=o.querySelector('.sub');li.querySelector('.sub').textContent=sb?sb.textContent:'';
-    li.querySelector('.pr').textContent=o.querySelector('.pr').textContent;ul.appendChild(li)});
-  function tog(on){w.classList.toggle('is-open',on);btn.setAttribute('aria-expanded',on)}
-  btn.onclick=function(e){e.stopPropagation();tog(!w.classList.contains('is-open'))};
-  ul.onclick=function(e){var li=e.target.closest('li');if(!li)return;pick(+li.dataset.i);document.getElementById('payDetail').scrollTop=0;tog(false);btn.focus()};
-  ul.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();e.target.click()}};
-  document.addEventListener('click',function(e){if(!w.contains(e.target))tog(false)});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')tog(false)});
-  window.paySync=function(i){var li=ul.querySelector('li[data-i="'+i+'"]');ul.querySelectorAll('li').forEach(function(x){x.classList.toggle('is-on',x===li);x.setAttribute('aria-selected',x===li)});
-    if(li){btn.textContent=li.querySelector('.nm').textContent+' · '+li.querySelector('.pr').textContent;btn.classList.remove('is-empty')}};
-  f.insertBefore(w,f.firstChild)})();
-document.querySelectorAll('[data-open-pay]').forEach(function(b){b.onclick=function(){var i=+b.dataset.openPay;openMd('payMd');pick(i>=0?i:0)}});
 /* 히어로 카드: 마우스 패럴랙스 */
 (function(){
   var wrap=document.querySelector('.float-cards');if(!wrap||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
