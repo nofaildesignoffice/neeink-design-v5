@@ -860,18 +860,18 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .v2-cta .banner .section-label::after{content:none}
 .v2-cta .banner h3{font-family:var(--serif-ko);font-weight:400;font-size:clamp(20px,1.6vw,30px);letter-spacing:-.06em;color:#000;margin-bottom:12px;line-height:1.4}
 .v2-cta .banner p{font-size:16px;color:var(--tx)}
-.v2-cta .banner{background:linear-gradient(rgba(246,246,246,.55),rgba(246,246,246,.55)),url(assets/cta-bg.jpg) center/cover no-repeat;border-color:rgba(0,0,0,.05)}
-@media (max-width:768px){.v2-cta .banner{background:linear-gradient(rgba(246,246,246,.72),rgba(246,246,246,.72)),url(assets/cta-bg.jpg) 62% center/cover no-repeat}}
-.v2-cta .banner{background:linear-gradient(90deg,#f6f6f6 0%,#f6f6f6 30%,rgba(246,246,246,.85) 45%,rgba(246,246,246,.35) 65%,rgba(246,246,246,0) 85%),url(assets/cta-bg.jpg) right center/auto 100% no-repeat,#f6f6f6}
-@media (max-width:768px){.v2-cta .banner{background:linear-gradient(180deg,#f6f6f6 0%,rgba(246,246,246,.92) 55%,rgba(246,246,246,.55) 100%),url(assets/cta-bg.jpg) 70% center/auto 100% no-repeat,#f6f6f6}}
+.v2-cta .banner{background:linear-gradient(rgba(246,246,246,.55),rgba(246,246,246,.55)),url(assets/cta-bg.webp) center/cover no-repeat;border-color:rgba(0,0,0,.05)}
+@media (max-width:768px){.v2-cta .banner{background:linear-gradient(rgba(246,246,246,.72),rgba(246,246,246,.72)),url(assets/cta-bg.webp) 62% center/cover no-repeat}}
+.v2-cta .banner{background:linear-gradient(90deg,#f6f6f6 0%,#f6f6f6 30%,rgba(246,246,246,.85) 45%,rgba(246,246,246,.35) 65%,rgba(246,246,246,0) 85%),url(assets/cta-bg.webp) right center/auto 100% no-repeat,#f6f6f6}
+@media (max-width:768px){.v2-cta .banner{background:linear-gradient(180deg,#f6f6f6 0%,rgba(246,246,246,.92) 55%,rgba(246,246,246,.55) 100%),url(assets/cta-bg.webp) 70% center/auto 100% no-repeat,#f6f6f6}}
 
 /* CTA 배너 — 이미지 왼쪽 끝을 배경색으로 페이드해 잘린 경계가 보이지 않게 */
 .v2-cta .banner{background:#f6f6f6}
-.v2-cta .banner::after{content:"";position:absolute;top:0;right:0;bottom:0;aspect-ratio:1889/678;height:100%;width:auto;background:url(assets/cta-bg.jpg) right center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.02) 8%,rgba(0,0,0,.07) 16%,rgba(0,0,0,.16) 24%,rgba(0,0,0,.3) 32%,rgba(0,0,0,.48) 40%,rgba(0,0,0,.66) 48%,rgba(0,0,0,.82) 56%,rgba(0,0,0,.94) 64%,#000 72%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.02) 8%,rgba(0,0,0,.07) 16%,rgba(0,0,0,.16) 24%,rgba(0,0,0,.3) 32%,rgba(0,0,0,.48) 40%,rgba(0,0,0,.66) 48%,rgba(0,0,0,.82) 56%,rgba(0,0,0,.94) 64%,#000 72%);pointer-events:none;z-index:0}
+.v2-cta .banner::after{content:"";position:absolute;top:0;right:0;bottom:0;aspect-ratio:1889/678;height:100%;width:auto;background:url(assets/cta-bg.webp) right center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.02) 8%,rgba(0,0,0,.07) 16%,rgba(0,0,0,.16) 24%,rgba(0,0,0,.3) 32%,rgba(0,0,0,.48) 40%,rgba(0,0,0,.66) 48%,rgba(0,0,0,.82) 56%,rgba(0,0,0,.94) 64%,#000 72%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.02) 8%,rgba(0,0,0,.07) 16%,rgba(0,0,0,.16) 24%,rgba(0,0,0,.3) 32%,rgba(0,0,0,.48) 40%,rgba(0,0,0,.66) 48%,rgba(0,0,0,.82) 56%,rgba(0,0,0,.94) 64%,#000 72%);pointer-events:none;z-index:0}
 .v2-cta .banner>*{z-index:1}
 .v2-cta .banner{flex-direction:column;align-items:flex-start;justify-content:center;gap:clamp(24px,2.2vw,36px)}
 /* CTA 배너 — 회색 35%까지 불투명, 50%(중앙)에서 완전 투명 */
-@media (min-width:769px){.v2-cta .banner::after{left:0;width:auto;aspect-ratio:auto;background:linear-gradient(90deg,#f6f6f6 0%,#f6f6f6 35%,rgba(246,246,246,0) 50%),url(assets/cta-bg.jpg) right center/cover no-repeat;-webkit-mask-image:none;mask-image:none}}
+@media (min-width:769px){.v2-cta .banner::after{left:0;width:auto;aspect-ratio:auto;background:linear-gradient(90deg,#f6f6f6 0%,#f6f6f6 35%,rgba(246,246,246,0) 50%),url(assets/cta-bg.webp) right center/cover no-repeat;-webkit-mask-image:none;mask-image:none}}
 
 @media (max-width:768px){.v2-cta .banner::after{opacity:.75;-webkit-mask-image:linear-gradient(180deg,transparent 0%,transparent 45%,rgba(0,0,0,.6) 72%,#000 100%);mask-image:linear-gradient(180deg,transparent 0%,transparent 45%,rgba(0,0,0,.6) 72%,#000 100%)}}
 @media (max-width:768px){.v2-cta .banner{flex-direction:column;align-items:flex-start;padding:36px 22px;border-radius:16px}.v2-cta .banner h3{font-size:20px}.v2-cta .banner p{font-size:14px}}
@@ -915,7 +915,7 @@ br.m-br{display:none}
 @media (max-width:768px){
 .v2-cta .banner{aspect-ratio:3/4;justify-content:flex-start;gap:20px}
 .v2-cta .banner>.btn{margin-top:auto;background:#fff;border-color:#fff;box-shadow:0 8px 24px -10px rgba(0,0,0,.35)}
-.v2-cta .banner::after{left:0;width:auto;aspect-ratio:auto;opacity:1;background:linear-gradient(0deg,rgba(246,246,246,0) 0%,rgba(246,246,246,0) 28%,rgba(246,246,246,.75) 52%,rgba(246,246,246,.95) 68%,#f6f6f6 80%),url(assets/cta-bg-m.jpg) center bottom/cover no-repeat;-webkit-mask-image:none;mask-image:none}
+.v2-cta .banner::after{left:0;width:auto;aspect-ratio:auto;opacity:1;background:linear-gradient(0deg,rgba(246,246,246,0) 0%,rgba(246,246,246,0) 28%,rgba(246,246,246,.75) 52%,rgba(246,246,246,.95) 68%,#f6f6f6 80%),url(assets/cta-bg-m.webp) center bottom/cover no-repeat;-webkit-mask-image:none;mask-image:none}
 }
 </style>
 <!--nk:qfold--><style>.q-fab,.q-close{display:none}
@@ -982,7 +982,7 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
     </div>
     <div class="grid-3">
       <article class="prod-card">
-  <div class="img-placeholder has-img"><img src="assets/prod/LashAddict.jpg" alt="래쉬애딕트마스터 LashAddict" loading="lazy"></div>
+  <div class="img-placeholder has-img"><img src="assets/prod/LashAddict.webp" alt="래쉬애딕트마스터 LashAddict" loading="lazy"></div>
   <div class="prod-body">
     
     <p class="brand">래쉬애딕트마스터</p>
@@ -992,7 +992,7 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
   </div>
 </article>
       <article class="prod-card">
-  <div class="img-placeholder has-img"><img src="assets/prod/BrowAddict.jpg" alt="래쉬애딕트마스터 BrowAddict" loading="lazy"></div>
+  <div class="img-placeholder has-img"><img src="assets/prod/BrowAddict.webp" alt="래쉬애딕트마스터 BrowAddict" loading="lazy"></div>
   <div class="prod-body">
     
     <p class="brand">래쉬애딕트마스터</p>
@@ -1002,7 +1002,7 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
   </div>
 </article>
       <article class="prod-card">
-  <div class="img-placeholder has-img"><img src="assets/prod/HairAddict.jpg" alt="래쉬애딕트마스터 HairAddict" loading="lazy"></div>
+  <div class="img-placeholder has-img"><img src="assets/prod/HairAddict.webp" alt="래쉬애딕트마스터 HairAddict" loading="lazy"></div>
   <div class="prod-body">
     
     <p class="brand">래쉬애딕트마스터</p>
