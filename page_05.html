@@ -1605,6 +1605,10 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 .rf-tt{font-size:20px;font-weight:700;color:#000;margin:0 0 20px}
 .rf-close{position:absolute;top:14px;right:16px;width:40px;height:40px;border:0;background:none;font-size:28px;line-height:1;color:#000;cursor:pointer}
 @media (max-width:768px){.rf-box{padding:28px 20px 24px;border-radius:16px}.rf-tt{font-size:18px}}
+
+/* 크루 후기: 판매 인증 사진은 쇼핑백 로고가 보이도록 */
+#stLoop .rv-card .img-placeholder.has-img img{object-position:center 65%}
+#rvMd .rv-split .img-placeholder.has-img img{object-position:center 60%}
 </style>
 </head>
 <body><script>
@@ -1698,7 +1702,7 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
       <h2 class="section-title">마스터크루의 원장님들 이야기</h2>
     </div>
     <div class="loop" id="stLoop">
-      <div class="loop-vp"><div class="loop-track"><article class="rv-card" data-rv="0"><div class="img-placeholder has-img"><img src="assets/lp2/crew-rv1.webp" alt="마스터크루 임상 공유" loading="lazy"></div><h4>첫 임상 공유해둘게요</h4><p class="ex">바빠서 시술한 사진은 못 찍었지만 고객님 에딕트 쓰시고 너무 만족하시는 중이에요.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="1"><div class="img-placeholder has-img"><img src="assets/lp2/crew-rv2.webp" alt="마스터크루 첫 임상사진" loading="lazy"></div><h4>드디어 첫 번째 임상사진</h4><p class="ex">안녕하세요 ^_^ 드디어 첫번째 임상사진 올려봅니다.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="2"><div class="img-placeholder has-img"><img src="assets/lp2/crew-rv3.webp" alt="래쉬애딕트 그로우 세미나" loading="lazy"></div><h4>래쉬애딕트 그로우 세미나</h4><p class="ex">제품 지식부터 상담 화법까지, 눈높이에 맞춘 특강으로 배워요.</p><span class="more">자세히 보기</span></article></div></div>
+      <div class="loop-vp"><div class="loop-track"><article class="rv-card" data-rv="0"><div class="img-placeholder has-img"><img src="assets/lp2/crew-sale1.webp" alt="마스터크루 원장님 샵 래쉬애딕트 판매 인증" loading="lazy"></div><h4>첫 판매 인증합니다</h4><p class="ex">시술 끝나고 홈케어로 래쉬애딕트를 소개했더니, 고객님이 그 자리에서 바로 구매해 가셨어요.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="1"><div class="img-placeholder has-img"><img src="assets/lp2/crew-sale3.webp" alt="마스터크루 원장님 샵 래쉬애딕트 판매 인증" loading="lazy"></div><h4>세럼까지 함께 챙겨 가셨어요</h4><p class="ex">속눈썹 영양제를 물어보신 고객님께 추천드렸더니, 세럼까지 같이 구매하셨어요.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="2"><div class="img-placeholder has-img"><img src="assets/lp2/crew-sale11.webp" alt="마스터크루 원장님 샵 래쉬애딕트 판매 인증" loading="lazy"></div><h4>재방문 고객님이 먼저 찾으세요</h4><p class="ex">지난번에 써보신 고객님이 다 떨어졌다며 먼저 찾아주셨어요.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="3"><div class="img-placeholder has-img"><img src="assets/lp2/crew-sale14.webp" alt="마스터크루 원장님 샵 래쉬애딕트 판매 인증" loading="lazy"></div><h4>시술 직후, 자연스럽게 판매로</h4><p class="ex">결과에 만족하신 순간에 제품을 소개하니 추천이 부담스럽지 않았어요.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="4"><div class="img-placeholder has-img"><img src="assets/lp2/crew-sale21.webp" alt="마스터크루 원장님 샵 래쉬애딕트 판매 인증" loading="lazy"></div><h4>객단가가 확실히 올랐어요</h4><p class="ex">시술만 할 때보다 객단가가 올랐고, 홈케어까지 챙기니 고객님 신뢰도 높아졌어요.</p><span class="more">자세히 보기</span></article><article class="rv-card" data-rv="5"><div class="img-placeholder has-img"><img src="assets/lp2/crew-sale7.webp" alt="마스터크루 원장님 샵 래쉬애딕트 판매 인증" loading="lazy"></div><h4>선물용으로도 사 가세요</h4><p class="ex">패키지가 고급스러워서 선물용으로 구매하시는 고객님도 계세요.</p><span class="more">자세히 보기</span></article></div></div>
       <div class="tcar-nav"><button data-loop="-1"><i data-lucide="chevron-left"></i></button><button data-loop="1"><i data-lucide="chevron-right"></i></button></div>
     </div>
   </div>
@@ -2021,12 +2025,14 @@ function nkSwipe(el,o){if(!el||el._nk)return;el._nk=1;el.style.touchAction='pan-
   <button class="md-close" data-close><i data-lucide="x"></i></button>
   <div class="rv-split"><div class="img-placeholder"><i data-lucide="message-square-text"></i></div><div class="rv-txt" id="rvTxt"></div></div>
 </div></div>
-<template id="rv0"><h3>첫 임상 공유해둘게요</h3><p>첫 임상 공유해둘게용..!!
-바빠서 시술 한 사진은 못찍었지만ㅜㅜ 고객님 에딕트 쓰시고 너무 만족하시는중이에용
-편안한 밤되세요!</p><div class="note"><b>출처</b>마스터크루 단톡방 고객 만족 후기 메시지</div></template><template id="rv1"><h3>드디어 첫 번째 임상사진</h3><p>안녕하세요 ^_^
-드디어 첫번째 임상사진 올려봅니다
-[임상 사진은 고객 보호를 위해 가린 상태로 공유됩니다]</p><div class="note"><b>출처</b>마스터크루 단톡방 임상사진 첫 인증 게시물</div></template><template id="rv2"><h3>래쉬애딕트 그로우 세미나</h3><p>래쉬애딕트 그로우 세미나 현장입니다.
-[클라이언트 확인 필요: 세미나 일자 · 주제]</p><div class="note"><b>출처</b>세미나 현장 사진</div></template>
+<template id="rv0"><h3>첫 판매 인증합니다</h3><p>첫 판매 인증합니다!
+시술 끝나고 홈케어 루틴을 설명하면서 래쉬애딕트를 보여드렸는데, 고객님이 그 자리에서 바로 구매해 가셨어요.
+크루 교육에서 배운 상담 화법 그대로 했더니 설명이 훨씬 자연스러웠어요.</p><div class="note"><b>출처</b>마스터크루 원장님 래쉬애딕트 판매 인증 · <span class="tbd">[클라이언트 확인 필요: 실제 원장님 판매 후기 원문으로 교체]</span></div></template><template id="rv1"><h3>세럼까지 함께 챙겨 가셨어요</h3><p>속눈썹 영양제를 물어보신 고객님께 래쉬애딕트를 추천드렸어요.
+시술 결과를 오래 유지하는 방법으로 설명드리니, 세럼까지 고민 없이 함께 가져가셨어요.</p><div class="note"><b>출처</b>마스터크루 원장님 래쉬애딕트 판매 인증 · <span class="tbd">[클라이언트 확인 필요: 실제 원장님 판매 후기 원문으로 교체]</span></div></template><template id="rv2"><h3>재방문 고객님이 먼저 찾으세요</h3><p>지난번에 써보신 고객님이 다 떨어졌다며 먼저 찾아주셨어요.
+이제는 시술 예약하실 때 제품도 같이 준비해 달라고 말씀하세요.</p><div class="note"><b>출처</b>마스터크루 원장님 래쉬애딕트 판매 인증 · <span class="tbd">[클라이언트 확인 필요: 실제 원장님 판매 후기 원문으로 교체]</span></div></template><template id="rv3"><h3>시술 직후, 자연스럽게 판매로</h3><p>시술 끝나고 거울 보시는 순간에 제품 이야기를 꺼냈어요.
+결과에 만족하신 상태라 추천이 전혀 부담스럽지 않았고, 바로 구매로 이어졌어요.</p><div class="note"><b>출처</b>마스터크루 원장님 래쉬애딕트 판매 인증 · <span class="tbd">[클라이언트 확인 필요: 실제 원장님 판매 후기 원문으로 교체]</span></div></template><template id="rv4"><h3>객단가가 확실히 올랐어요</h3><p>시술만 할 때보다 객단가가 확실히 올랐어요.
+고객님 홈케어까지 챙겨드리니 샵에 대한 신뢰도 더 높아진 것 같아요.</p><div class="note"><b>출처</b>마스터크루 원장님 래쉬애딕트 판매 인증 · <span class="tbd">[클라이언트 확인 필요: 실제 원장님 판매 후기 원문으로 교체]</span></div></template><template id="rv5"><h3>선물용으로도 사 가세요</h3><p>쇼핑백까지 고급스러워서 선물용으로 사 가시는 고객님도 계세요.
+오늘도 두 분이나 구매해 가셨어요!</p><div class="note"><b>출처</b>마스터크루 원장님 래쉬애딕트 판매 인증 · <span class="tbd">[클라이언트 확인 필요: 실제 원장님 판매 후기 원문으로 교체]</span></div></template>
 
 <script>
 
@@ -2075,7 +2081,9 @@ function openMd(id){document.getElementById(id).classList.add('is-open');documen
 document.querySelectorAll('.md [data-close]').forEach(function(b){b.onclick=function(){b.closest('.md').classList.remove('is-open');document.body.style.overflow=''}});
 /* 후기 모달 */
 document.addEventListener('click',function(e){var c=e.target.closest('.rv-card');if(!c)return;
-  document.getElementById('rvTxt').innerHTML=document.getElementById('rv'+c.dataset.rv).innerHTML;openMd('rvMd')});
+  document.getElementById('rvTxt').innerHTML=document.getElementById('rv'+c.dataset.rv).innerHTML;
+  var im=c.querySelector('img'),ph=document.querySelector('#rvMd .rv-split .img-placeholder');if(im&&ph){ph.classList.add('has-img');ph.innerHTML='';var ni=new Image();ni.src=im.getAttribute('src');ni.alt=im.alt;ph.appendChild(ni)}
+  openMd('rvMd')});
 /* 결제 모달 */
 var opts=document.querySelectorAll('.pay-opt'),VAT=['VAT 별도','',''];
 function calc(d){var box=d.querySelector('.opts');if(!box)return;var r=box.querySelector('input:checked'),t=r?+r.value:0;
