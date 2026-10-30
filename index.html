@@ -1213,27 +1213,31 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .edu-img{position:relative;overflow:hidden;background:#eee}
 .edu-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
 /* AI 변환 과정 스테이지 */
-.ai-stage{position:relative;align-self:center;width:100%;max-width:560px;margin:0 auto;aspect-ratio:793/1000;border-radius:16px;overflow:hidden;background:#111;isolation:isolate;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
+.ai-stage{position:relative;align-self:center;width:100%;max-width:560px;margin:0 auto;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#111;isolation:isolate;box-shadow:0 30px 60px -30px rgba(0,0,0,.35)}
 .ai-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .ai-after{clip-path:inset(0 0 100% 0);filter:blur(4px) saturate(.92)}
 .ai-stage.is-gen .ai-after{clip-path:inset(0 0 0 0);filter:blur(4px) saturate(.92);transition:clip-path 1.53s linear}
 .ai-stage.is-done .ai-after{clip-path:inset(0 0 0 0);filter:none;transition:filter .53s ease}
 .ai-stage.is-reset .ai-after{opacity:0;transition:opacity .6s ease}
 .ai-grid{position:absolute;inset:0;z-index:2;background-image:radial-gradient(rgba(255,255,255,.55) 1px,transparent 1.4px);background-size:16px 16px;opacity:0;transition:opacity .6s;-webkit-mask:radial-gradient(70% 60% at 55% 55%,#000 30%,transparent 80%);mask:radial-gradient(70% 60% at 55% 55%,#000 30%,transparent 80%)}
-.ai-stage.is-detect .ai-grid,.ai-stage.is-lock .ai-grid,.ai-stage.is-gen .ai-grid{opacity:.55}
+.ai-stage.is-detect .ai-grid,.ai-stage.is-mask .ai-grid,.ai-stage.is-lock .ai-grid,.ai-stage.is-gen .ai-grid{opacity:.55}
 .ai-box{position:absolute;z-index:3;opacity:0;transform:scale(1.08);transition:opacity .45s,transform .6s cubic-bezier(.22,1,.36,1)}
 .ai-box em{position:absolute;left:0;bottom:calc(100% + 6px);font:600 11px/1 'Pretendard',sans-serif;font-style:normal;letter-spacing:-.01em;white-space:nowrap;padding:5px 8px;border-radius:6px}
-.ai-face{left:24%;top:17%;width:62%;height:74%;background:linear-gradient(#fff,#fff) 0 0/22px 2px,linear-gradient(#fff,#fff) 0 0/2px 22px,linear-gradient(#fff,#fff) 100% 0/22px 2px,linear-gradient(#fff,#fff) 100% 0/2px 22px,linear-gradient(#fff,#fff) 0 100%/22px 2px,linear-gradient(#fff,#fff) 0 100%/2px 22px,linear-gradient(#fff,#fff) 100% 100%/22px 2px,linear-gradient(#fff,#fff) 100% 100%/2px 22px;background-repeat:no-repeat}
+.ai-face{left:17%;top:11%;width:73%;height:74%;background:linear-gradient(#fff,#fff) 0 0/22px 2px,linear-gradient(#fff,#fff) 0 0/2px 22px,linear-gradient(#fff,#fff) 100% 0/22px 2px,linear-gradient(#fff,#fff) 100% 0/2px 22px,linear-gradient(#fff,#fff) 0 100%/22px 2px,linear-gradient(#fff,#fff) 0 100%/2px 22px,linear-gradient(#fff,#fff) 100% 100%/22px 2px,linear-gradient(#fff,#fff) 100% 100%/2px 22px;background-repeat:no-repeat}
 .ai-face em{background:#fff;color:#000}
-.ai-eyes{left:31%;top:40.5%;width:49%;height:9.5%;border:1.5px solid #0057ff;border-radius:8px;background:rgba(0,87,255,.14);box-shadow:0 0 0 4px rgba(0,87,255,.12)}
+.ai-eyes{left:19.5%;top:33.5%;width:49.5%;height:9%;border:1.5px solid #0057ff;border-radius:8px;background:rgba(0,87,255,.14);box-shadow:0 0 0 4px rgba(0,87,255,.12)}
 .ai-eyes em{background:#0057ff;color:#fff}
-.ai-stage.is-detect .ai-face,.ai-stage.is-lock .ai-face,.ai-stage.is-gen .ai-face{opacity:1;transform:none}
+.ai-stage.is-detect .ai-face,.ai-stage.is-mask .ai-face,.ai-stage.is-lock .ai-face,.ai-stage.is-gen .ai-face{opacity:1;transform:none}
 .ai-stage.is-lock .ai-eyes,.ai-stage.is-gen .ai-eyes{opacity:1;transform:none}
 .ai-stage.is-gen .ai-face{animation:aiPulse .7s ease-in-out infinite}
 @keyframes aiPulse{50%{opacity:.55}}
 .ai-stage.is-done .ai-face,.ai-stage.is-done .ai-grid{opacity:0;transition:opacity .35s .18s}
 .ai-stage.is-done .ai-eyes{opacity:0;transition:opacity .35s .82s}
 .ai-stage.is-done .ai-face{animation:none}
+.ai-mask{left:12.5%;top:42.5%;width:70%;height:43%;border:1.5px dashed rgba(255,255,255,.9);border-radius:14px;background:rgba(0,87,255,.10)}
+.ai-mask em{top:auto;bottom:10px;left:10px;background:#111;color:#fff}
+.ai-stage.is-mask .ai-mask,.ai-stage.is-lock .ai-mask,.ai-stage.is-gen .ai-mask{opacity:1;transform:none}
+.ai-stage.is-done .ai-mask{opacity:0;transition:opacity .35s}
 .ai-scan{position:absolute;left:0;right:0;top:0;z-index:4;height:90px;margin-top:-90px;opacity:0;background:linear-gradient(180deg,rgba(0,87,255,0) 0%,rgba(0,87,255,.28) 100%);border-bottom:2px solid #6fa0ff;box-shadow:0 8px 24px 2px rgba(0,87,255,.55)}
 .ai-stage.is-gen .ai-scan{opacity:1;transform:translateY(calc(var(--h) + 90px));transition:transform 1.53s linear}
 .ai-stage.is-done .ai-scan{opacity:0;transform:translateY(calc(var(--h) + 90px));transition:opacity .4s}
@@ -1251,7 +1255,7 @@ input[type=checkbox],input[type=radio]{accent-color:var(--pp)}
 .ai-bar{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.2);overflow:hidden}
 .ai-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#6fa0ff,#fff);transition:width .5s ease}
 .ai-pct{flex:none;width:38px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
-@media (max-width:768px){.ai-stage{max-width:none}.ai-hud{font-size:12px;padding:9px 11px;left:10px;right:10px;bottom:10px}.ai-st{min-width:96px}.ai-box em{font-size:10px}}
+@media (max-width:768px){.ai-stage{max-width:none}.ai-hud{font-size:12px;padding:9px 11px;left:10px;right:10px;bottom:10px}.ai-st{min-width:96px}.ai-box em{font-size:10px}.ai-face em{bottom:auto;top:8px;left:auto;right:8px}}
 /* 스토어 전체 보기 — 마스터크루 버튼과 같은 채움 효과 */
 .v2-store .btn-secondary{position:relative;isolation:isolate;overflow:hidden;background:transparent;color:#000;border-color:#000;transition:color .45s cubic-bezier(.65,0,.35,1),border-color .3s}
 .v2-store .btn-secondary::before{content:"";position:absolute;inset:0;z-index:-1;background:#000;transform:scaleX(0);transform-origin:left center;transition:transform .45s cubic-bezier(.65,0,.35,1)}
@@ -1534,11 +1538,11 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
         <a href="page_03.html" class="btn btn-primary btn-arrow">AI 마케팅 클래스 자세히 보기</a>
       </div>
       <div class="ai-stage" id="aiStage" aria-label="AI 얼굴 변환 과정: 가린 사진에서 시술 결과는 그대로 두고 얼굴만 변환">
-        <img class="ai-before" src="assets/ai/before.webp" alt="Before · 가린 사진" loading="lazy">
-        <img class="ai-after" src="assets/ai/after.webp" alt="After · AI 얼굴 변환" loading="lazy">
+        <img class="ai-before" src="assets/ai/before-mask.webp" alt="Before · 마스크로 얼굴을 가린 시술 사진" loading="lazy">
+        <img class="ai-after" src="assets/ai/after-mask.webp" alt="After · 속눈썹은 그대로, 얼굴만 AI로 변환한 사진" loading="lazy">
         <div class="ai-grid" aria-hidden="true"></div>
         <div class="ai-box ai-face" aria-hidden="true"><em>FACE · 98.6%</em></div>
-        <div class="ai-box ai-eyes" aria-hidden="true"><em>속눈썹 · 시술 결과 원본 유지</em></div>
+        <div class="ai-box ai-eyes" aria-hidden="true"><em>속눈썹 · 시술 결과 원본 유지</em></div><div class="ai-box ai-mask" aria-hidden="true"><em>마스크 · 가린 영역 AI 생성</em></div>
         <div class="ai-scan" aria-hidden="true"></div>
         <span class="ba-tag ai-tag"><b class="t-before">Before · 가린 사진</b><b class="t-after">After · AI 얼굴 변환</b></span>
         <div class="ai-hud" aria-hidden="true"><span class="ai-dot"></span><span class="ai-st">대기 중</span><span class="ai-bar"><i></i></span><b class="ai-pct">0%</b></div>
@@ -1808,7 +1812,7 @@ document.getElementById('hPrev').onclick=function(){go(hi-1);reset()};document.g
 /* AI 변환 과정 애니메이션: 가린 사진 → 얼굴 인식 → 시술 부위 보호 → 생성(스캔) → 완료 */
 (function(){var st=document.getElementById('aiStage');if(!st)return;
   var lab=st.querySelector('.ai-st'),bar=st.querySelector('.ai-bar i'),pct=st.querySelector('.ai-pct'),T=[],on=false,raf;
-  var P=['is-idle','is-detect','is-lock','is-gen','is-done','is-reset'];
+  var P=['is-idle','is-detect','is-mask','is-lock','is-gen','is-done','is-reset'];
   function size(){st.style.setProperty('--h',st.offsetHeight+'px')}
   function set(c,t,p){P.forEach(function(x){st.classList.toggle(x,x===c||(c==='is-gen'&&x==='is-lock')||(c==='is-done'&&x==='is-gen'))});if(t!=null)lab.textContent=t;if(p!=null){bar.style.width=p+'%';pct.textContent=p+'%'}}
   function count(a,b,d){var t0=performance.now();cancelAnimationFrame(raf);(function f(t){var k=Math.min(1,(t-t0)/d),v=Math.round(a+(b-a)*k);bar.style.transition='none';bar.style.width=v+'%';pct.textContent=v+'%';if(k<1)raf=requestAnimationFrame(f);else bar.style.transition=''})(t0)}
@@ -1816,11 +1820,12 @@ document.getElementById('hPrev').onclick=function(){go(hi-1);reset()};document.g
   function run(){T.forEach(clearTimeout);T=[];size();
     set('is-idle','대기 중',0);
     at(1300,function(){set('is-detect','얼굴 영역 인식 중',18)});
-    at(2600,function(){set('is-lock','시술 부위 보호',36)});
-    at(3800,function(){set('is-gen','AI 얼굴 생성 중');count(36,100,2600/S)});
-    at(6500,function(){set('is-done','변환 완료',100)});
-    at(9600,function(){set('is-reset','대기 중',0)});
-    at(10300,function(){if(on)run()});}
+    at(2500,function(){set('is-mask','가린 영역 확인',30)});
+    at(3700,function(){set('is-lock','속눈썹 원본 보호',42)});
+    at(4900,function(){set('is-gen','AI 얼굴 생성 중');count(42,100,2600/S)});
+    at(7600,function(){set('is-done','변환 완료',100)});
+    at(10700,function(){set('is-reset','대기 중',0)});
+    at(11400,function(){if(on)run()});}
   if(matchMedia('(prefers-reduced-motion: reduce)').matches){set('is-done','변환 완료',100);return}
   addEventListener('resize',size);
   var io=new IntersectionObserver(function(es){var v=es[0].isIntersecting;if(v&&!on){on=true;run()}else if(!v&&on){on=false;T.forEach(clearTimeout);T=[]}},{threshold:.35});io.observe(st);
