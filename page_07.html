@@ -863,13 +863,16 @@ br.m-br{display:none}
 /* ===== /v5 공통 보정 ===== */
 </style>
 <!--nk:newsbar--><style>
-@media (max-width:768px){
-.ph-first .container>div>.tabs{flex:1 1 100%;flex-wrap:nowrap;gap:6px;overflow-x:auto;scrollbar-width:none}
-.ph-first .container>div>.tabs::-webkit-scrollbar{display:none}
-.ph-first .container>div>.tabs button{flex:none;padding:8px 12px;font-size:13px;white-space:nowrap}
-.ph-first .container>div>form.search-box{flex:1 1 100%!important;max-width:none!important}
-.ph-first .container>div>form.search-box input{flex:1;width:auto;padding:8px 14px;font-size:14px}
-.ph-first .container>div>form.search-box .btn{padding:8px 16px;font-size:14px}}
+.faq-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+.faq-bar .tabs{margin:0;flex-wrap:nowrap;gap:6px}
+.faq-bar .tabs button{padding:8px 16px;font-size:14px;white-space:nowrap}
+.faq-bar .search-box{margin:0;max-width:none;flex:0 0 auto}
+.faq-bar .search-box input{flex:none;width:210px;min-width:0}
+.faq-bar .search-box input{padding:8px 14px;font-size:14px}
+.faq-bar .search-box .btn{padding:8px 16px;font-size:14px}
+@media (max-width:900px){.faq-bar{flex-direction:column;align-items:stretch}.faq-bar .tabs{overflow-x:auto;scrollbar-width:none}.faq-bar .tabs::-webkit-scrollbar{display:none}.faq-bar .search-box{max-width:none;flex:none}.faq-bar .search-box input{flex:1;width:auto}}
+@media (max-width:768px){.faq-bar .search-box .sb-tx{display:none}}
+.faq-bar .tabs button{flex-shrink:0}
 </style><!--/nk:newsbar--><!--nk:qfold--><style>.q-fab,.q-close{display:none}
 @media (max-width:768px){
 .fixcta .copy{display:block!important;text-align:center}
@@ -954,14 +957,14 @@ body:has(.fixcta.is-show) .q-aside{bottom:134px!important}
 <!-- ================= 섹션 1 : 페이지 헤드 ================= -->
 <!-- ================= 섹션 2 : 게시판 리스트 ================= -->
 <section class="section ph-first">
-  <div class="container">
+  <div class="container" style="max-width:960px">
     <div class="text-center store-hd">
       <h1 class="section-title">공지사항</h1>
       <p class="section-desc">교육 일정부터 신제품 출시,<br class="keep-br">이벤트까지 니잉의 새 소식을 가장 먼저 전해드려요.</p>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px">
-      <div class="tabs" style="margin:0"><button class="is-active">전체</button><button>교육 일정</button><button>신제품</button><button>이벤트</button><button>공지</button></div>
-      <form class="search-box" style="margin:0;max-width:360px;flex:1" onsubmit="return false"><input type="text" placeholder="제목으로 검색"><button class="btn btn-primary btn-sm"><i data-lucide="search"></i></button></form>
+    <div class="faq-bar">
+      <div class="tabs"><button class="is-active">전체</button><button>교육 일정</button><button>신제품</button><button>이벤트</button><button>공지</button></div>
+      <form class="search-box" onsubmit="return false"><input type="text" placeholder="제목으로 검색"><button class="btn btn-primary" aria-label="검색"><i data-lucide="search"></i><span class="sb-tx">검색</span></button></form>
     </div>
     <div class="tbl-scroll">
       <table class="board">
